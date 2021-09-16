@@ -12,6 +12,7 @@ const env = getClientEnvironment(publicUrl, '')
 
 module.exports = withTM({
   reactStrictMode: true,
+  basePath: '/nference-web',
   async rewrites() {
     return [
       {
