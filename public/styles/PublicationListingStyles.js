@@ -1,6 +1,6 @@
-import { makeStyles } from 'nferx-core-ui'
+import { makeStyles } from '@material-ui/styles'
 
-const PublicationListingStyles = makeStyles({
+const PublicationListingStyles = makeStyles((theme) => ({
   body: {
     marginLeft: '8.43%',
     marginRight: '8.43%',
@@ -630,6 +630,6 @@ const PublicationListingStyles = makeStyles({
       marginTop: '16px',
     },
   },
-})
+}))
 
 export default PublicationListingStyles

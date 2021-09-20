@@ -1,6 +1,6 @@
-import { makeStyles } from 'nferx-core-ui'
+import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   topline: {
     background:
       'linear-gradient(to right, rgba(0, 87, 255, 1), rgba(90, 238, 255, 1),rgba(222, 255, 222, 1),rgba(56, 232, 169, 1))',
@@ -218,7 +218,7 @@ const useStyles = makeStyles({
     marginBottom: '16px',
     marginTop: '12px',
   },
-})
+}))
 
 // const useStyle = makeStyles({
 //   list: {

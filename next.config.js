@@ -11,6 +11,7 @@ const publicUrl = publicPath.slice(0, -1)
 const env = getClientEnvironment(publicUrl, '')
 
 module.exports = withTM({
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   reactStrictMode: true,
   basePath: '/nference-web',
   async rewrites() {

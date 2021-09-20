@@ -1,6 +1,6 @@
-import { makeStyles, Typography as T } from 'nferx-core-ui'
+import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   desktop: {
     display: 'block',
     ['@media (max-width:780px)']: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     borderRadius: '20px',
   },
   head1: {
-    fontSize: '44px',
+    fontSize: '44px !important',
     fontWeight: '300',
     lineHeight: '150%',
     color: '#2C2C2C',
@@ -699,7 +699,10 @@ const useStyles = makeStyles({
   },
   link: {
     textDecorationLine: 'none',
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
-})
+}))
 
 export default useStyles
