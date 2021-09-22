@@ -10,6 +10,7 @@ import styles from '../../public/styles/MedicalStyles'
 import Prismic from '@prismicio/client'
 import { Date, RichText } from 'prismic-reactjs'
 import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 const HorizontalScroll = dynamic(
   () => {
     return import('nferx-core-ui/src/widgets/HorizontalScroll/HorizontalScroll')
@@ -30,12 +31,14 @@ const ListItem = dynamic(
 )
 const ChipFilterSelect = dynamic(
   () => {
-    return import('nferx-core-ui/src/widgets/ChipFilter/ChipFilter')
+    return import(
+      'nferx-core-ui/src/widgets/ChipFilter/ChipFilterSelect/ChipFilterSelect'
+    )
   },
   { ssr: false },
 )
 import _ from 'lodash'
-import dynamic from 'next/dynamic'
+
 import Link from 'next/link'
 
 const ReactReadMoreReadLess = dynamic(
