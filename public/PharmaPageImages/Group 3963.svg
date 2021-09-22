@@ -1,0 +1,38 @@
+<svg width="78" height="65" viewBox="0 0 78 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:multiply">
+<path d="M32 9L32 60" stroke="url(#paint0_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M23 21L23 60" stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M57 18L57 60" stroke="url(#paint2_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M1 64.0822H6.05949V45.8896L15.3173 32.0029H22.9603V64.0822H31.4646" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 64.082H19.0848V12.626L33.6173 24.3597H37.0621V64.082H43.0904" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.5898 64.0819V4.12158H50.0884V64.0819H60.5303" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45.4587 64.0822V48.3655L58.8072 39.4307L71.6174 48.3655V64.0822M45.4587 64.0822H71.6174M45.4587 64.0822H24H16M71.6174 64.0822H76.9998" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.6709 64.0823V14.9945L59.7757 12.5186L65.9117 14.9945V64.0823H68.3876" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M59.7764 12.5184V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 12.9487H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 9.07373H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 16.8242H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 20.6997H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 24.5752H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 28.4507H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.5527 32.3257H47.1816" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear" x1="31" y1="6" x2="31.0001" y2="61.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#14DDE0"/>
+<stop offset="1" stop-color="#4B5AFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="22" y1="18.7059" x2="22" y2="61.1471" gradientUnits="userSpaceOnUse">
+<stop stop-color="#14DDE0"/>
+<stop offset="1" stop-color="#4B5AFF"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="56" y1="15.5294" x2="56.0001" y2="61.2353" gradientUnits="userSpaceOnUse">
+<stop stop-color="#14DDE0"/>
+<stop offset="1" stop-color="#4B5AFF"/>
+</linearGradient>
+</defs>
+</svg>

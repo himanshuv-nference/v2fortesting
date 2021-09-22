@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoDiv: {
     display: 'flex',
-    gap: '52%',
+    gap: '45%',
   },
   line: {
     marginTop: '21px',

@@ -4,6 +4,8 @@ import ThemeProvider from 'nferx-core-ui/src/providers/ThemeProvider'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from '@material-ui/styles'
 import { QueryProvider } from '../components'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -36,7 +38,9 @@ function MyApp(props) {
       <QueryProvider>
         <ThemeProvider>
           <CssBaseline />
+          <Navbar />
           <Component {...pageProps} />
+          <Footer />
         </ThemeProvider>
       </QueryProvider>
     </JssProvider>
