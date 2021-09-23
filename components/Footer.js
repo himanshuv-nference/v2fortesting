@@ -2,18 +2,7 @@ import { makeStyles } from '@material-ui/styles'
 import { Typography as T } from '@material-ui/core'
 import { Icon } from '@material-ui/core'
 import dynamic from 'next/dynamic'
-const NferxModal = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/NferxModal/NferxModal')
-  },
-  { ssr: false },
-)
-const TextField = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/TextField/TextField')
-  },
-  { ssr: false },
-)
+import { TextField, NferxModal } from 'nferx-core-ui'
 import React from 'react'
 const logo = '/nference-web/NavbarImages/nferencelognav.svg'
 const fbicon = '/nference-web/FooterImages/Combined-Shape.svg'

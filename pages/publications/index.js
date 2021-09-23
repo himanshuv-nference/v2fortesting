@@ -11,32 +11,13 @@ import Prismic from '@prismicio/client'
 import { Date, RichText } from 'prismic-reactjs'
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-const HorizontalScroll = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/HorizontalScroll/HorizontalScroll')
-  },
-  { ssr: false },
-)
-const Pagination = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/Pagination/Pagination')
-  },
-  { ssr: false },
-)
-const ListItem = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/ListItem/ListItem')
-  },
-  { ssr: false },
-)
-const ChipFilterSelect = dynamic(
-  () => {
-    return import(
-      'nferx-core-ui/src/widgets/ChipFilter/ChipFilterSelect/ChipFilterSelect'
-    )
-  },
-  { ssr: false },
-)
+import {
+  HorizontalScroll,
+  Pagination,
+  ListItem,
+  ChipFilterSelect,
+} from 'nferx-core-ui'
+
 import _ from 'lodash'
 
 import Link from 'next/link'
@@ -419,7 +400,7 @@ function PublicationListing() {
       (pageNumber - 1) * 5,
       pageNumber * 5,
     )
-    console.log('filter are', usecasesFilter)
+    console.log('filter are', unique)
     console.log('filter page is', filterPublications.length)
 
     return (
