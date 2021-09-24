@@ -419,7 +419,12 @@ function Footer() {
                   <T className={styles.footerText}>Media</T>
                 </a>
               </Link>
-              {/* <NavLink to="/"" ><T className={styles.footerText}>Careers</T> */}
+              <Link href="/covid">
+                <a className={styles.link}>
+                  <T className={styles.footerText}>Covid</T>
+                </a>
+              </Link>
+
               {/* <NavLink to="/"" ><T className={styles.footerText}>Contact Us</T> */}
             </div>
 

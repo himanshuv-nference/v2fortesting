@@ -183,9 +183,20 @@ function Navbar() {
                 </a>
               </Link>
             </div>
-            {/* <div>
-              <T>Careers</T>
-            </div> */}
+            <div>
+              <Link href="/covid">
+                <a
+                  className={
+                    splitLocation[1] === 'covid'
+                      ? styles.activeLink
+                      : styles.link
+                  }
+                >
+                  <T>Covid</T>
+                </a>
+              </Link>
+            </div>
+
             <div className={styles.selected} onClick={ModalOpen}>
               <T>Contact Us</T>
             </div>
