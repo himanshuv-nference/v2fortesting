@@ -104,6 +104,7 @@ function CardRender(props) {
   const xx = PublicationListingStyles()
   const s = styles()
   const { news } = props
+  console.log('lund', news)
   return (
     <>
       <div className={s.desktop}>
@@ -117,7 +118,13 @@ function CardRender(props) {
                 <div></div>
               )}
             </div>
-            <T className={xx.newsTitle}>{RichText.asText(news.data.title)}</T>
+            <Link href={news.data.news_url.url}>
+              <a className={xx.nav}>
+                <T className={xx.newsTitle}>
+                  {RichText.asText(news.data.title)}
+                </T>
+              </a>
+            </Link>
             <T className={xx.newsDesc}>{news.data.description}</T>
             <T className={xx.newsDate}>{news.data.published_date}</T>
           </div>
@@ -140,9 +147,13 @@ function MobileCardRender(props) {
           <div className={xx.mobileLeft}>
             {/* <T className={xx.newsSource}>{news.data.news_category}</T> */}
             <T className={xx.newsSource}>{news.data.source_name}</T>
-            <T className={xx.newsTitle}>
-              {RichText.asText(news.data.title).slice(0, 96) + '...'}
-            </T>
+            <Link href={news.data.news_url.url}>
+              <a className={xx.nav}>
+                <T className={xx.newsTitle}>
+                  {RichText.asText(news.data.title).slice(0, 96) + '...'}
+                </T>
+              </a>
+            </Link>
             <div className={xx.Carddatediv}>
               <div className={xx.mobileauthcover}>
                 <T className={xx.sliderAuth}>{news.data.news_category}</T>

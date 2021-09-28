@@ -144,7 +144,7 @@ function CardRender(props) {
   return (
     <div className={xx.card}>
       <div className={xx.cardLeft}>
-        <Link href={`publications/${props.doc.id}`}>
+        <Link href={`/publications/${props.doc.id}`}>
           <a className={xx.nav}>
             <T className={xx.cardTitle}>
               {RichText.asText(props.doc.data.title)}

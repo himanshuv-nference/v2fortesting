@@ -15,7 +15,7 @@ const hutch = '/nference-web/AboutusImages/Mask Group.svg'
 // import anita from './AboutusImages/image 24.svg'
 const anita = '/nference-web/AboutusImages/image 24.svg'
 // import mike from './AboutusImages/Mask Group (1).svg'
-const mike = '/nference-web/AboutusImages/image 24.svg'
+const mike = '/nference-web/AboutusImages/Mask Group (1).svg'
 
 // import agustin from './AboutusImages/ag.svg'
 const agustin = '/nference-web/AboutusImages/ag.svg'
