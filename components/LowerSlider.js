@@ -4,11 +4,12 @@ import useStyles from '../public/styles/HomepageStyles'
 import { Typography as T } from '@material-ui/core'
 import React from 'react'
 import Prismic from '@prismicio/client'
-import { Date, Link, RichText } from 'prismic-reactjs'
+import { RichText } from 'prismic-reactjs'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import _ from 'lodash'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -33,9 +34,11 @@ function Slider2(props) {
               0,
               300,
             )}....`}</T>
-            {/* <NavLink className={styles.nav} to={`publications/${item.id}`}>
-              <T className={styles.slider2read}>Read more -{'>'}</T>
-            </NavLink> */}
+            <Link href={`/publications/${item.id}`}>
+              <a className={styles.link}>
+                <T className={styles.slider2read}>Read more -{'>'}</T>
+              </a>
+            </Link>
           </div>
         ))}
       </div>
@@ -60,9 +63,11 @@ function Slider2mobile(props) {
             0,
             200,
           )}....`}</T>
-          {/* <NavLink className={styles.nav} to={`publications/${item.id}`}>*/}
-          <T className={styles.slider2read}>Read more -{'>'}</T>
-          {/*</NavLink> */}
+          <Link href={`/publications/${item.id}`}>
+            <a className={styles.link}>
+              <T className={styles.slider2read}>Read more -{'>'}</T>
+            </a>
+          </Link>
         </div>
       </div>
     </>

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../public/styles/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
 import CovidStyles from '../../public/styles/CovidpageStyles'
-
+import clsx from 'clsx'
 const logo = '/nference-web/CovidPageImages/Group 4221.svg'
 const covidImage = '/nference-web/CovidPageImages/Group 4065.svg'
 const linkicon = '/nference-web/CovidPageImages/Frame 3077.svg'
@@ -64,6 +64,53 @@ function DesktopCard(props) {
     </div>
   )
 }
+
+function MobileCard(props) {
+  const style = CovidStyles()
+  const { Covid } = props
+  return (
+    <>
+      <div className={style.mobileCard}>
+        <div className={style.mobileDivdate}>
+          <T className={style.date}>{Covid.data.date_day}</T>
+          <T className={style.date}>{Covid.data.time}</T>
+        </div>
+        <div className={style.tagDiv}>
+          <div className={style.tag1}>
+            <T className={style.tag1Text}>{Covid.data.tag1}</T>
+          </div>
+          <div className={style.tag2}>
+            <T className={style.tag2Text}>{Covid.data.tag2}</T>
+          </div>
+        </div>
+        <T className={style.cardTitle}>{Covid.data.heading}</T>
+        <T className={style.desc}>{Covid.data.description}</T>
+        {Covid.data.image.url ? (
+          <img src={Covid.data.image.url} className={style.cardImage} />
+        ) : (
+          <div></div>
+        )}
+        <div className={style.mobileLinkandImages}>
+          <div className={style.mobilepubImages}>
+            {Covid.data.body[0].items.map((imagedata) => {
+              return (
+                <img
+                  className={style.pubImages}
+                  src={imagedata.publication_image.url}
+                />
+              )
+            })}
+          </div>
+          <div className={style.linkDiv}>
+            <T className={style.linkText}>publink</T>
+            <img src={linkicon} />
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
 function TopCard(props) {
   const style = CovidStyles()
   const { cardData } = props
@@ -78,7 +125,10 @@ function TopCard(props) {
         <T className={style.cardHead}>{cardData.data.heading}</T>
         <T className={style.carddesc}>{cardData.data.abstract}</T>
         <div className={style.linkandimageDiv}>
-          <img src={cardData.data.body[0].items[0].image1.url} />
+          <img
+            className={style.pubImages}
+            src={cardData.data.body[0].items[0].image1.url}
+          />
         </div>
       </div>
     </div>
@@ -118,7 +168,6 @@ function Covid() {
       new Date(a.data.date_and_time).getTime()
     )
   })
-  console.log('covid_carddata', data)
   return (
     <>
       <div className={s.body}>
@@ -131,14 +180,29 @@ function Covid() {
             Monitoring Real-world Evidence in Real-time
           </T>
         </div>
+      </div>
+      <div className={clsx(s.body, s.desktop)}>
         {cardData.map((data, index) => {
           return <TopCard cardData={data} key={index} />
         })}
+      </div>
+      <div className={clsx(s.mobile)}>
+        {cardData.map((data, index) => {
+          return <TopCard cardData={data} key={index} />
+        })}
+      </div>
+
+      <div className={clsx(s.desktop, s.body)}>
         <div className={style.cardContainer}>
           {data.map((data, index) => {
             return <DesktopCard Covid={data} key={index} />
           })}
         </div>
+      </div>
+      <div className={clsx(s.mobile, style.mobileCardConatiner)}>
+        {data.map((data, index) => {
+          return <MobileCard Covid={data} key={index} />
+        })}
       </div>
     </>
   )

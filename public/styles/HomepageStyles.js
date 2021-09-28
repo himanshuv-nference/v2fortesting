@@ -703,6 +703,63 @@ const useStyles = makeStyles((theme) => ({
       cursor: 'pointer',
     },
   },
+  box4new: {
+    background: 'linear-gradient(90deg, #0057FF 0%, #487BFC 100%);',
+    padding: '90px 60px 150px 60px',
+    ['@media (max-width:780px)']: {
+      padding: '1px 0px 50px 0px',
+    },
+  },
+  Powerdata: {
+    display: 'flex',
+    gap: '120px',
+    alignItems: 'end',
+    paddingRight: '60px',
+    paddingLeft: '60px',
+    ['@media (max-width:780px)']: {
+      flexDirection: 'column',
+      gap: '60px',
+      paddingRight: '0px',
+      paddingLeft: '0px',
+    },
+  },
+  box4newLine: {
+    border: '4px solid #FFFFFF',
+    borderRadius: '20px',
+    width: '40px',
+  },
+  addPaddingPowerbox: {
+    paddingLeft: '50px',
+    paddingRight: '50px',
+  },
+  powerTextcolor: {
+    color: '#FFFFFF',
+  },
+  box4subHead: {
+    fontSize: '16px',
+    fontWeight: '500',
+    lineHeight: '180%',
+    color: '#FFFFFF',
+    marginBottom: '16px',
+  },
+  covidsubHead: {
+    fontSize: '16px',
+    fontWeight: '500',
+    lineHeight: '180%',
+    color: '#1A2530',
+    marginBottom: '16px',
+    marginTop: '16px',
+  },
+  covidLinkDiv: {
+    display: 'flex',
+    gap: '101px',
+    ['@media (max-width:780px)']: {
+      gap: '25%',
+    },
+  },
+  link: {
+    textDecoration: 'none',
+  },
 }))
 
 export default useStyles

@@ -45,6 +45,9 @@ const Step2Icon = '/nference-web/HomePageImages/Group 4201.svg'
 const Step3Icon = '/nference-web/HomePageImages/Group 4202.svg'
 const Step4Icon = '/nference-web/HomePageImages/Group 4203.svg'
 const Step5Icon = '/nference-web/HomePageImages/Group 4204.svg'
+const ProductIcon = '/nference-web/HomePageImages/Group 4199.svg'
+const Covidlogo = '/nference-web/CovidPageImages/Group 4221.svg'
+
 import LowerSlider from '../components/LowerSlider'
 import useStyles from '../public/styles/HomepageStyles'
 
@@ -96,8 +99,6 @@ function Homepage() {
     fetchData()
   }, [])
   const styles = useStyles()
-
-  console.log('data is', data)
   return (
     <>
       <div className={styles.body}>
@@ -222,243 +223,87 @@ function Homepage() {
           </div>
         </div>
       </div>
-      <div>
+
+      <div className={styles.body}>
         <div>
-          <div className={styles.body}>
-            <div>
-              <T className={styles.new1}>NFERENCE PLATFORM</T>
-              <T className={styles.new2}>How the nference platform works</T>
-            </div>
-            <div className={styles.desktop}>
-              <div className={styles.box4}>
-                <div className={styles.allSteps}>
-                  <img src={AllSteps} />
-                </div>
-
-                <div>
-                  <div className={styles.stepd1data}>
-                    <div className={styles.iconName}>
-                      <img src={Step1Icon} className={styles.stepicons} />
-                      <T className={styles.stephead}>Existing EMR Data</T>
-                    </div>
-                    <T className={styles.stepsub}>
-                      Decades of rich but unprocessed data
-                    </T>
-                    <div className={styles.step1Line}></div>
-                    <T className={styles.stepdesc}>
-                      Electronic medical records (EMRs) contain a tremendous
-                      amount of information about human health, but is largely
-                      unstructured. The amount of data from Mayo Clinic alone -
-                      500M+ clinical notes, 4B+ images, 1B+ lab results and more
-                      - pose a challenge and an opportunity
-                    </T>
-                  </div>
-
-                  <div className={styles.stepd2data}>
-                    <div className={styles.iconName}>
-                      <img src={Step2Icon} className={styles.stepicons} />
-                      <T className={styles.stephead}>Data Creation</T>
-                    </div>
-                    <T className={styles.stepsub}>
-                      Pathology digitization and molecular sequencing
-                    </T>
-                    <div className={styles.step2Line}></div>
-                    <T className={styles.stepdesc}>
-                      We digitize tens of millions of archived pathology slides
-                      using high-throughput state-of-the-art scanning
-                      capabilities, and we work with sequencing partners to
-                      provide clinical-grade whole exome and transcriptome
-                      sequencing for patients seen at our partner centers. These
-                      data creation processes enrich the real world data
-                      currently existing in EMRs
-                    </T>
-                  </div>
-
-                  <div className={styles.stepd3data}>
-                    <div className={styles.iconName}>
-                      <img src={Step3Icon} className={styles.stepicons} />
-                      <T className={styles.stephead}>Deidentification</T>
-                    </div>
-                    <T className={styles.stepsub}>
-                      Best-in-class algorithms and ‘Data Under Glass’
-                    </T>
-                    <div className={styles.step3Line}></div>
-                    <T className={styles.stepdesc}>
-                      Patient and data privacy are at the core of everything we
-                      and our partners do. Our algorithms for deidentification,
-                      including for challenging data modalities such as
-                      unstructured (free-text) data, have been certified as
-                      best-in-class. Our “data under glass” approach ensures
-                      that the data, even after deidentification, always remains
-                      at the center.
-                    </T>
-                  </div>
-
-                  <div className={styles.stepd4data}>
-                    <div className={styles.iconName}>
-                      <img src={Step4Icon} className={styles.stepicons} />
-                      <T className={styles.stephead}>
-                        Augmented Curation · Harmonization
-                      </T>
-                    </div>
-                    <T className={styles.stepsub}>
-                      Making healthcare data computable
-                    </T>
-                    <div className={styles.step4Line}></div>
-                    <T className={styles.stepdesc}>
-                      The majority of EMR data exists in semi-structured or
-                      completely unstructured forms. A critical part of enabling
-                      artificial intelligence applications downstream is
-                      transforming this data into a structured labeled data. We
-                      leverage state-of-the-art technology coupled with deep
-                      biomedical expertise to transform semi-structured data
-                      (harmonization) and unstructured data (augmented
-                      curation), resulting in the largest labeled dataset in
-                      healthcare.{' '}
-                    </T>
-                  </div>
-
-                  <div className={styles.stepd5data}>
-                    <div className={styles.iconName}>
-                      <img src={Step5Icon} className={styles.stepicons} />
-                      <T className={styles.stephead}>
-                        Neutral Networks · Triangulation
-                      </T>
-                    </div>
-                    <T className={styles.stepsub}>
-                      Creating AI-enabled solutions for healthcare
-                    </T>
-                    <div className={styles.step5Line}></div>
-                    <T className={styles.stepdesc}>
-                      We use the labeled data on its own to train
-                      state-of-the-art neural networks that enable
-                      next-generation diagnostics and precision medicine. We
-                      also triangulate the labeled data with other datasets such
-                      as public literature, molecular and real world data to
-                      create solutions and support scientific discovery.{' '}
-                    </T>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <T className={styles.new1}>NFERENCE PLATFORM</T>
+          <T className={styles.new2}>How the nference platform works</T>
         </div>
+        <div className={styles.desktop}>
+          <div className={styles.box4}>
+            <div className={styles.allSteps}>
+              <img src={AllSteps} />
+            </div>
 
-        <div className={styles.mobile}>
-          <div className={styles.body}>
-            <img src={Step1} className={styles.Stepimages} />
-
-            <div className={styles.stepd1data}>
-              <div className={styles.iconName}>
-                <img src={Step1Icon} className={styles.stepicons} />
-                <T className={styles.stephead}>Existing EMR Data</T>
-              </div>
-              <T className={styles.stepsub}>
-                Decades of rich but unprocessed data
-              </T>
-              <div className={styles.step1Line}></div>
-              <T className={styles.stepdesc}>
-                <ReactReadMoreReadLess
-                  charLimit={120}
-                  readMoreText={'see all'}
-                  readLessText={'see less'}
-                  readMoreClassName={styles.seeAll}
-                  readLessClassName={styles.seeAll}
-                >
+            <div>
+              <div className={styles.stepd1data}>
+                <div className={styles.iconName}>
+                  <img src={Step1Icon} className={styles.stepicons} />
+                  <T className={styles.stephead}>Existing EMR Data</T>
+                </div>
+                <T className={styles.stepsub}>
+                  Decades of rich but unprocessed data
+                </T>
+                <div className={styles.step1Line}></div>
+                <T className={styles.stepdesc}>
                   Electronic medical records (EMRs) contain a tremendous amount
                   of information about human health, but is largely
                   unstructured. The amount of data from Mayo Clinic alone -
                   500M+ clinical notes, 4B+ images, 1B+ lab results and more -
                   pose a challenge and an opportunity
-                </ReactReadMoreReadLess>
-              </T>
-            </div>
-          </div>
-          <div className={styles.mobileSepartor} />
-          <div className={styles.body}>
-            <img src={Step2} className={styles.Stepimages} />
-
-            <div className={styles.stepd2data}>
-              <div className={styles.iconName}>
-                <img src={Step2Icon} className={styles.stepicons} />
-                <T className={styles.stephead}>Data Creation</T>
+                </T>
               </div>
-              <T className={styles.stepsub}>
-                Pathology digitization and molecular sequencing
-              </T>
-              <div className={styles.step2Line}></div>
-              <T className={styles.stepdesc}>
-                <ReactReadMoreReadLess
-                  charLimit={120}
-                  readMoreText={'see all'}
-                  readLessText={'see less'}
-                  readMoreClassName={styles.seeAll}
-                  readLessClassName={styles.seeAll}
-                >
+
+              <div className={styles.stepd2data}>
+                <div className={styles.iconName}>
+                  <img src={Step2Icon} className={styles.stepicons} />
+                  <T className={styles.stephead}>Data Creation</T>
+                </div>
+                <T className={styles.stepsub}>
+                  Pathology digitization and molecular sequencing
+                </T>
+                <div className={styles.step2Line}></div>
+                <T className={styles.stepdesc}>
                   We digitize tens of millions of archived pathology slides
                   using high-throughput state-of-the-art scanning capabilities,
                   and we work with sequencing partners to provide clinical-grade
                   whole exome and transcriptome sequencing for patients seen at
                   our partner centers. These data creation processes enrich the
                   real world data currently existing in EMRs
-                </ReactReadMoreReadLess>
-              </T>
-            </div>
-          </div>
-          <div className={styles.mobileSepartor} />
-          <div className={styles.body}>
-            <img src={Step3} className={styles.Stepimages} />
-
-            <div className={styles.stepd3data}>
-              <div className={styles.iconName}>
-                <img src={Step3Icon} className={styles.stepicons} />
-                <T className={styles.stephead}>Deidentification</T>
+                </T>
               </div>
-              <T className={styles.stepsub}>
-                Best-in-class algorithms and ‘Data Under Glass’
-              </T>
-              <div className={styles.step3Line}></div>
-              <T className={styles.stepdesc}>
-                <ReactReadMoreReadLess
-                  charLimit={120}
-                  readMoreText={'see all'}
-                  readLessText={'see less'}
-                  readMoreClassName={styles.seeAll}
-                  readLessClassName={styles.seeAll}
-                >
+
+              <div className={styles.stepd3data}>
+                <div className={styles.iconName}>
+                  <img src={Step3Icon} className={styles.stepicons} />
+                  <T className={styles.stephead}>Deidentification</T>
+                </div>
+                <T className={styles.stepsub}>
+                  Best-in-class algorithms and ‘Data Under Glass’
+                </T>
+                <div className={styles.step3Line}></div>
+                <T className={styles.stepdesc}>
                   Patient and data privacy are at the core of everything we and
                   our partners do. Our algorithms for deidentification,
                   including for challenging data modalities such as unstructured
                   (free-text) data, have been certified as best-in-class. Our
                   “data under glass” approach ensures that the data, even after
                   deidentification, always remains at the center.
-                </ReactReadMoreReadLess>
-              </T>
-            </div>
-          </div>
-          <div className={styles.mobileSepartor} />
-          <div className={styles.body}>
-            <img src={Step4} className={styles.Stepimages} />
-
-            <div className={styles.stepd4data}>
-              <div className={styles.iconName}>
-                <img src={Step4Icon} className={styles.stepicons} />
-                <T className={styles.stepheadAug}>
-                  Augmented Curation · Harmonization
                 </T>
               </div>
-              <T className={styles.stepsub}>
-                Making healthcare data computable
-              </T>
-              <div className={styles.step4Line}></div>
-              <T className={styles.stepdesc}>
-                <ReactReadMoreReadLess
-                  charLimit={120}
-                  readMoreText={'see all'}
-                  readLessText={'see less'}
-                  readMoreClassName={styles.seeAll}
-                  readLessClassName={styles.seeAll}
-                >
+
+              <div className={styles.stepd4data}>
+                <div className={styles.iconName}>
+                  <img src={Step4Icon} className={styles.stepicons} />
+                  <T className={styles.stephead}>
+                    Augmented Curation · Harmonization
+                  </T>
+                </div>
+                <T className={styles.stepsub}>
+                  Making healthcare data computable
+                </T>
+                <div className={styles.step4Line}></div>
+                <T className={styles.stepdesc}>
                   The majority of EMR data exists in semi-structured or
                   completely unstructured forms. A critical part of enabling
                   artificial intelligence applications downstream is
@@ -466,84 +311,277 @@ function Homepage() {
                   leverage state-of-the-art technology coupled with deep
                   biomedical expertise to transform semi-structured data
                   (harmonization) and unstructured data (augmented curation),
-                  resulting in the largest labeled dataset in healthcare.
-                </ReactReadMoreReadLess>
-              </T>
-            </div>
-          </div>
-          <div className={styles.mobileSepartor} />
-          <div className={styles.body}>
-            <img src={Step5} className={styles.Stepimages} />
-
-            <div className={styles.stepd5data}>
-              <div className={styles.iconName}>
-                <img src={Step5Icon} className={styles.stepicons} />
-                <T className={styles.stephead}>
-                  Neutral Networks · Triangulation
+                  resulting in the largest labeled dataset in healthcare.{' '}
                 </T>
               </div>
-              <T className={styles.stepsub}>
-                Creating AI-enabled solutions for healthcare
-              </T>
-              <div className={styles.step5Line}></div>
-              <T className={styles.stepdesc}>
-                <ReactReadMoreReadLess
-                  charLimit={120}
-                  readMoreText={'see all'}
-                  readLessText={'see less'}
-                  readMoreClassName={styles.seeAll}
-                  readLessClassName={styles.seeAll}
-                >
+
+              <div className={styles.stepd5data}>
+                <div className={styles.iconName}>
+                  <img src={Step5Icon} className={styles.stepicons} />
+                  <T className={styles.stephead}>
+                    Neutral Networks · Triangulation
+                  </T>
+                </div>
+                <T className={styles.stepsub}>
+                  Creating AI-enabled solutions for healthcare
+                </T>
+                <div className={styles.step5Line}></div>
+                <T className={styles.stepdesc}>
                   We use the labeled data on its own to train state-of-the-art
                   neural networks that enable next-generation diagnostics and
                   precision medicine. We also triangulate the labeled data with
                   other datasets such as public literature, molecular and real
                   world data to create solutions and support scientific
-                  discovery.
-                </ReactReadMoreReadLess>
-              </T>
-            </div>
-          </div>
-          <div className={styles.mobileSepartor} />
-        </div>
-
-        <div>
-          <div className={styles.boximage}>
-            <div className={styles.step5Line}></div>
-            <T className={styles.new1}>NEW VENTURES</T>
-            <T className={styles.vensub}>
-              Venture creation powered by the nference platform
-            </T>
-          </div>
-
-          <div className={styles.webdata}>
-            <div>
-              <img src={anumana} />
-              <div className={styles.step5Line}></div>
-
-              <T className={styles.stepdesc}>
-                Harnessing industry-leading AI and translational science to
-                decode the electrocardiogram as never before – as a deep
-                predictive tool and biomarker of disease – empowering care
-                providers to help patients early
-              </T>
-              <T className={styles.websitetext}> Anumana website -{'>'} </T>
-            </div>
-            <div>
-              <img src={pranama} />
-              <div className={styles.pLine}></div>
-
-              <T className={styles.stepdesc}>
-                Harnessing industry-leading AI and translational science to
-                decode the electrocardiogram as never before – as a deep
-                predictive tool and biomarker of disease – empowering care
-                providers to help patients early
-              </T>
-              <T className={styles.websitetext}> Pramana website -{'>'} </T>
+                  discovery.{' '}
+                </T>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div className={styles.mobile}>
+        <div className={styles.body}>
+          <img src={Step1} className={styles.Stepimages} />
+
+          <div className={styles.stepd1data}>
+            <div className={styles.iconName}>
+              <img src={Step1Icon} className={styles.stepicons} />
+              <T className={styles.stephead}>Existing EMR Data</T>
+            </div>
+            <T className={styles.stepsub}>
+              Decades of rich but unprocessed data
+            </T>
+            <div className={styles.step1Line}></div>
+            <T className={styles.stepdesc}>
+              <ReactReadMoreReadLess
+                charLimit={120}
+                readMoreText={'see all'}
+                readLessText={'see less'}
+                readMoreClassName={styles.seeAll}
+                readLessClassName={styles.seeAll}
+              >
+                Electronic medical records (EMRs) contain a tremendous amount of
+                information about human health, but is largely unstructured. The
+                amount of data from Mayo Clinic alone - 500M+ clinical notes,
+                4B+ images, 1B+ lab results and more - pose a challenge and an
+                opportunity
+              </ReactReadMoreReadLess>
+            </T>
+          </div>
+        </div>
+        <div className={styles.mobileSepartor} />
+        <div className={styles.body}>
+          <img src={Step2} className={styles.Stepimages} />
+
+          <div className={styles.stepd2data}>
+            <div className={styles.iconName}>
+              <img src={Step2Icon} className={styles.stepicons} />
+              <T className={styles.stephead}>Data Creation</T>
+            </div>
+            <T className={styles.stepsub}>
+              Pathology digitization and molecular sequencing
+            </T>
+            <div className={styles.step2Line}></div>
+            <T className={styles.stepdesc}>
+              <ReactReadMoreReadLess
+                charLimit={120}
+                readMoreText={'see all'}
+                readLessText={'see less'}
+                readMoreClassName={styles.seeAll}
+                readLessClassName={styles.seeAll}
+              >
+                We digitize tens of millions of archived pathology slides using
+                high-throughput state-of-the-art scanning capabilities, and we
+                work with sequencing partners to provide clinical-grade whole
+                exome and transcriptome sequencing for patients seen at our
+                partner centers. These data creation processes enrich the real
+                world data currently existing in EMRs
+              </ReactReadMoreReadLess>
+            </T>
+          </div>
+        </div>
+        <div className={styles.mobileSepartor} />
+        <div className={styles.body}>
+          <img src={Step3} className={styles.Stepimages} />
+
+          <div className={styles.stepd3data}>
+            <div className={styles.iconName}>
+              <img src={Step3Icon} className={styles.stepicons} />
+              <T className={styles.stephead}>Deidentification</T>
+            </div>
+            <T className={styles.stepsub}>
+              Best-in-class algorithms and ‘Data Under Glass’
+            </T>
+            <div className={styles.step3Line}></div>
+            <T className={styles.stepdesc}>
+              <ReactReadMoreReadLess
+                charLimit={120}
+                readMoreText={'see all'}
+                readLessText={'see less'}
+                readMoreClassName={styles.seeAll}
+                readLessClassName={styles.seeAll}
+              >
+                Patient and data privacy are at the core of everything we and
+                our partners do. Our algorithms for deidentification, including
+                for challenging data modalities such as unstructured (free-text)
+                data, have been certified as best-in-class. Our “data under
+                glass” approach ensures that the data, even after
+                deidentification, always remains at the center.
+              </ReactReadMoreReadLess>
+            </T>
+          </div>
+        </div>
+        <div className={styles.mobileSepartor} />
+        <div className={styles.body}>
+          <img src={Step4} className={styles.Stepimages} />
+
+          <div className={styles.stepd4data}>
+            <div className={styles.iconName}>
+              <img src={Step4Icon} className={styles.stepicons} />
+              <T className={styles.stepheadAug}>
+                Augmented Curation · Harmonization
+              </T>
+            </div>
+            <T className={styles.stepsub}>Making healthcare data computable</T>
+            <div className={styles.step4Line}></div>
+            <T className={styles.stepdesc}>
+              <ReactReadMoreReadLess
+                charLimit={120}
+                readMoreText={'see all'}
+                readLessText={'see less'}
+                readMoreClassName={styles.seeAll}
+                readLessClassName={styles.seeAll}
+              >
+                The majority of EMR data exists in semi-structured or completely
+                unstructured forms. A critical part of enabling artificial
+                intelligence applications downstream is transforming this data
+                into a structured labeled data. We leverage state-of-the-art
+                technology coupled with deep biomedical expertise to transform
+                semi-structured data (harmonization) and unstructured data
+                (augmented curation), resulting in the largest labeled dataset
+                in healthcare.
+              </ReactReadMoreReadLess>
+            </T>
+          </div>
+        </div>
+        <div className={styles.mobileSepartor} />
+        <div className={styles.body}>
+          <img src={Step5} className={styles.Stepimages} />
+
+          <div className={styles.stepd5data}>
+            <div className={styles.iconName}>
+              <img src={Step5Icon} className={styles.stepicons} />
+              <T className={styles.stephead}>
+                Neutral Networks · Triangulation
+              </T>
+            </div>
+            <T className={styles.stepsub}>
+              Creating AI-enabled solutions for healthcare
+            </T>
+            <div className={styles.step5Line}></div>
+            <T className={styles.stepdesc}>
+              <ReactReadMoreReadLess
+                charLimit={120}
+                readMoreText={'see all'}
+                readLessText={'see less'}
+                readMoreClassName={styles.seeAll}
+                readLessClassName={styles.seeAll}
+              >
+                We use the labeled data on its own to train state-of-the-art
+                neural networks that enable next-generation diagnostics and
+                precision medicine. We also triangulate the labeled data with
+                other datasets such as public literature, molecular and real
+                world data to create solutions and support scientific discovery.
+              </ReactReadMoreReadLess>
+            </T>
+          </div>
+        </div>
+        <div className={styles.mobileSepartor} />
+      </div>
+      <div className={styles.box4new}>
+        <div className={styles.body}>
+          <div className={styles.boximage}>
+            <div className={styles.box4newLine}></div>
+            <T className={clsx(styles.new1, styles.powerTextcolor)}>
+              THE NFERENCE PLATFORM
+            </T>
+            <T className={clsx(styles.vensub, styles.powerTextcolor)}>
+              Powers spincos, products and discoveries
+            </T>
+          </div>
+
+          <div className={styles.Powerdata}>
+            <div>
+              <img src={ProductIcon} />
+              <T className={styles.box4subHead}>Products</T>
+              <div className={styles.box4newLine}></div>
+
+              <T className={clsx(styles.stepdesc, styles.powerTextcolor)}>
+                nference software products enable rapid synthesis of biomedical
+                information, both publicly available data as well as information
+                contained in electronic medical records.
+              </T>
+            </div>
+            <div>
+              <T className={styles.box4subHead}>Spincos</T>
+              <div className={styles.box4newLine}></div>
+
+              <T className={clsx(styles.stepdesc, styles.powerTextcolor)}>
+                Our platform powers new venture creation through nference’s
+                ability to unlock our understanding of rich deep real-world
+                patient data.
+              </T>
+            </div>
+            <div>
+              <T className={styles.box4subHead}>Discoveries</T>
+              <div className={styles.box4newLine}></div>
+
+              <T className={clsx(styles.stepdesc, styles.powerTextcolor)}>
+                Our technology allows scientists to rapidly generate, evaluate
+                and validate novel hypotheses, leading to impactful discoveries.
+              </T>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.body}>
+        <div className={styles.boximage}>
+          <div className={styles.step5Line}></div>
+          <T className={styles.new1}>NEW VENTURES</T>
+          <T className={styles.vensub}>
+            Venture creation powered by the nference platform
+          </T>
+        </div>
+
+        <div className={styles.webdata}>
+          <div>
+            <img src={anumana} />
+            <div className={styles.step5Line}></div>
+
+            <T className={styles.stepdesc}>
+              Harnessing industry-leading AI and translational science to decode
+              the electrocardiogram as never before – as a deep predictive tool
+              and biomarker of disease – empowering care providers to help
+              patients early
+            </T>
+            <T className={styles.websitetext}> Anumana website -{'>'} </T>
+          </div>
+          <div>
+            <img src={pranama} />
+            <div className={styles.pLine}></div>
+
+            <T className={styles.stepdesc}>
+              Harnessing industry-leading AI and translational science to decode
+              the electrocardiogram as never before – as a deep predictive tool
+              and biomarker of disease – empowering care providers to help
+              patients early
+            </T>
+            <T className={styles.websitetext}> Pramana website -{'>'} </T>
+          </div>
+        </div>
+      </div>
+
       <div className={styles.box5}>
         <div className={styles.boximage}>
           <img src={productlogo} />
@@ -599,6 +637,37 @@ function Homepage() {
               your teams.
             </T>
             <T className={styles.websitetext}>Learn more -{'>'}</T>
+          </div>
+        </div>
+      </div>
+      <div className={styles.body}>
+        <div className={styles.boximage}>
+          <img src={Covidlogo} />
+
+          <T className={styles.covidsubHead}>OUR FEATURED DISCOVERIES</T>
+          <T className={clsx(styles.vensub)}>
+            See how our platform advanced research for Covid-19
+          </T>
+          <T className={styles.box2text}>
+            In the last year, nference has contributed to the world’s
+            understanding of Covid-19. Our platform and partnership with the
+            Mayo Clinic allowed for analysis of real-time real world evidence
+            relating to Covid-19 infections, treatments vaccinations, and
+            subsequent outcomes.
+          </T>
+          <div className={styles.covidLinkDiv}>
+            <Link href="/covid">
+              <a className={styles.link}>
+                <T className={styles.websitetext}>Covid-19 Spotlight -{'>'}</T>
+              </a>
+            </Link>
+            <Link href="/publications">
+              <a className={styles.link}>
+                <T className={styles.websitetext}>
+                  Link to all publications -{'>'}
+                </T>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
