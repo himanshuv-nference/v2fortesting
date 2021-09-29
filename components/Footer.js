@@ -223,7 +223,7 @@ const useStyles = makeStyles({
   },
 })
 
-function Footer() {
+export default function Footer() {
   const styles = useStyles()
   const [formData, setFormData] = React.useState({
     company: '',
@@ -446,5 +446,3 @@ function Footer() {
     </div>
   )
 }
-
-export default Footer

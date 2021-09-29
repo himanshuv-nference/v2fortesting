@@ -25,7 +25,7 @@ const TextField = dynamic(
   { ssr: false },
 )
 
-function Navbar() {
+export default function Navbar() {
   const styles = useStyles()
   const [open, setOpen] = React.useState(false)
   const [thankModal, setThankyoumodal] = React.useState(false)
@@ -435,5 +435,3 @@ function Navbar() {
     </div>
   )
 }
-
-export default Navbar

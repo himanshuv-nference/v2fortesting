@@ -6,6 +6,10 @@ import styles from '../../public/styles/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
 
 import useStyles from '../../public/styles/HomepageStyles'
+import Link from 'next/link'
+import { useState } from 'react'
+import LowerSlider from '../../components/LowerSlider'
+import Prismic from '@prismicio/client'
 
 const logo = '/nference-web/PharmaPageImages/Group 3963.svg'
 const mayologo = '/nference-web/HomePageImages/Group 2948.svg'
@@ -23,13 +27,25 @@ const early = '/nference-web/PharmaPageImages/Group 3978.svg'
 const journey = '/nference-web/PharmaPageImages/Group 3973.svg'
 const drug = '/nference-web/PharmaPageImages/Group 3977.svg'
 const symptoms = '/nference-web/PharmaPageImages/Group 3976.svg'
-import Link from 'next/link'
+//Data fetching from Prismic
+const apiEndpoint = 'https://nference.prismic.io/api/v2'
+const accessToken =
+  'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
-import LowerSlider from '../../components/LowerSlider'
+const Client = Prismic.client(apiEndpoint, { accessToken })
 
-function ForPharma() {
+export async function getStaticProps() {
+  const responseforLowerSlider = await Client.query(
+    Prismic.Predicates.at('document.type', 'publications'),
+  )
+  const pubInfo = responseforLowerSlider.results
+  return {
+    props: {
+      pubInfo: pubInfo,
+    },
+  }
+}
+function ForPharma({ pubInfo }) {
   const s = styles()
   const style = useStyles()
   const x = PharmaStyles()
@@ -463,7 +479,7 @@ function ForPharma() {
               </T>
             </div>
           </div>
-          <LowerSlider />
+          <LowerSlider doc={pubInfo} />
           <div className={s.desktop}>
             <div className={style.boximage}>
               <Link href="/publications">

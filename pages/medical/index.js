@@ -1,6 +1,11 @@
 import { Typography as T } from '@material-ui/core'
 import React from 'react'
 import clsx from 'clsx'
+import Link from 'next/link'
+import useStyles from '../../public/styles/HomepageStyles'
+import styles from '../../public/styles/MedicalStyles'
+import LowerSlider from '../../components/LowerSlider'
+import Prismic from '@prismicio/client'
 
 const topimage = '/nference-web/MedicalPageImages/Group 4215.svg'
 const box2image1 = '/nference-web/MedicalPageImages/Group 4196.svg'
@@ -23,13 +28,25 @@ const box9image2 = '/nference-web/MedicalPageImages/Group 4048.svg'
 const ncong = '/nference-web/MedicalPageImages/Frame 1258.png'
 const tringul = '/nference-web/HomePageImages/icon_2.svg'
 const signals = '/nference-web/HomePageImages/icon_3 (1).svg'
-import Link from 'next/link'
+//Data fetching from Prismic
+const apiEndpoint = 'https://nference.prismic.io/api/v2'
+const accessToken =
+  'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-import useStyles from '../../public/styles/HomepageStyles'
-import styles from '../../public/styles/MedicalStyles'
-import LowerSlider from '../../components/LowerSlider'
+const Client = Prismic.client(apiEndpoint, { accessToken })
 
-function ForMedical() {
+export async function getStaticProps() {
+  const responseforLowerSlider = await Client.query(
+    Prismic.Predicates.at('document.type', 'publications'),
+  )
+  const pubInfo = responseforLowerSlider.results
+  return {
+    props: {
+      pubInfo: pubInfo,
+    },
+  }
+}
+function ForMedical({ pubInfo }) {
   const s = styles()
   const style = useStyles()
 
@@ -316,7 +333,7 @@ function ForMedical() {
       </div>
       <div className={s.desktop}>
         <div className={s.body}>
-          <LowerSlider />
+          <LowerSlider doc={pubInfo} />
           <div className={s.desktop}>
             <div className={style.boximage}>
               <Link href="/publications">
@@ -333,7 +350,7 @@ function ForMedical() {
         </div>
       </div>
       <div className={s.mobile}>
-        <LowerSlider />
+        <LowerSlider doc={pubInfo} />
       </div>
     </>
   )

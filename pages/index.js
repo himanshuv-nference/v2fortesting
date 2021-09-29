@@ -1,20 +1,14 @@
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { Typography as T } from '@material-ui/core'
-const ReactReadMoreReadLess = dynamic(
-  () => {
-    return import('react-read-more-read-less')
-  },
-  { ssr: false },
-)
-const Carousel = dynamic(
-  () => {
-    return import('react-material-ui-carousel')
-  },
-  { ssr: false },
-)
+import ReactReadMoreReadLess from 'react-read-more-read-less'
+import Carousel from 'react-material-ui-carousel'
+import LowerSlider from '../components/LowerSlider'
+import useStyles from '../public/styles/HomepageStyles'
+import Prismic from '@prismicio/client'
+import Slider from '../components/HomePageCarousel'
 
+//Defining variables for images
 const circle = '/nference-web/HomePageImages/Group 4045.svg'
 const circle2 = '/nference-web/HomePageImages/Group 3794.svg'
 const mayologo = '/nference-web/HomePageImages/Group 2948.svg'
@@ -47,57 +41,30 @@ const Step4Icon = '/nference-web/HomePageImages/Group 4203.svg'
 const Step5Icon = '/nference-web/HomePageImages/Group 4204.svg'
 const ProductIcon = '/nference-web/HomePageImages/Group 4199.svg'
 const Covidlogo = '/nference-web/CovidPageImages/Group 4221.svg'
-
-import LowerSlider from '../components/LowerSlider'
-import useStyles from '../public/styles/HomepageStyles'
-
-import Prismic from '@prismicio/client'
-
-import { useState, useEffect } from 'react'
-// import { Typography as T } from 'nferx-core-ui/src/widgets/index'
+//APi Details
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
   'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-function Slider(props) {
-  const styles = useStyles()
-  const { item } = props
-  return (
-    <>
-      <div className={styles.slider}>
-        <div>
-          <img src={item.data.image.url} className={styles.slideImage} />
-        </div>
-        <div className={styles.dateDiv}>
-          <T className={styles.date}>{item.data.post_info}</T>
-          <T className={styles.date}>· {item.data.date}</T>
-        </div>
-        <div>
-          <T className={styles.imgDesciption}>{item.data.summary}</T>
-        </div>
-      </div>
-    </>
+export async function getStaticProps() {
+  const responseforUpperSlider = await Client.query(
+    Prismic.Predicates.at('document.type', 'homepage_carousel'),
   )
+  const responseforLowerSlider = await Client.query(
+    Prismic.Predicates.at('document.type', 'publications'),
+  )
+  const data = responseforUpperSlider.results
+  const pubInfo = responseforLowerSlider.results
+  return {
+    props: {
+      data: data,
+      pubInfo: pubInfo,
+    },
+  }
 }
-
-function Homepage() {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true)
-      const response = await Client.query(
-        Prismic.Predicates.at('document.type', 'homepage_carousel'),
-      ).then((response) => {
-        setData(response.results)
-        setLoading(false)
-      })
-    }
-    fetchData()
-  }, [])
+function Homepage({ data, pubInfo }) {
   const styles = useStyles()
   return (
     <>
@@ -162,9 +129,8 @@ function Homepage() {
 
           <div className={styles.box2part}>
             <div>
-              {/* <div className={styles.paharmaicon}> */}
               <img src={pharma} />
-              {/* </div> */}
+
               <T className={styles.pharmahead}>FOR PHARMA</T>
               <T className={styles.pharmaText}>
                 We work with biopharma companies who leverage our proprietary
@@ -680,7 +646,7 @@ function Homepage() {
       </div>
       <div className={styles.desktop}>
         <div className={styles.body}>
-          <LowerSlider />
+          <LowerSlider doc={pubInfo} />
           <div className={styles.boximage}>
             <Link href="/publications">
               <a className={styles.link}>
@@ -695,7 +661,7 @@ function Homepage() {
         </div>
       </div>
       <div className={styles.mobile}>
-        <LowerSlider />
+        <LowerSlider doc={pubInfo} />
       </div>
     </>
   )

@@ -5,7 +5,6 @@ import { Typography as T } from '@material-ui/core'
 import React from 'react'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-reactjs'
-import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import _ from 'lodash'
 import clsx from 'clsx'
@@ -56,7 +55,6 @@ function Slider2mobile(props) {
         <div className={styles.slider2}>
           <T className={styles.slider2Top}>{item.data.published_in.text}</T>
           <T className={styles.slider2head}>
-            {' '}
             {RichText.asText(item.data.title)}
           </T>
           <T className={styles.slider2disc}>{`${item.data.abstract.substring(
@@ -74,90 +72,72 @@ function Slider2mobile(props) {
   )
 }
 
-function LowerSlider() {
+function LowerSlider({ doc }) {
   const s = styles()
-  const [doc, setDocData] = useState(null)
   const location = useRouter()
   const { pathname } = location
   const splitLocation = pathname.split('/')
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await Client.query(
-        Prismic.Predicates.at('document.type', 'publications'),
-      ).then((response) => {
-        setDocData(response.results)
-      })
-    }
-    fetchData()
-  }, [])
-  console.log('doc is')
-
-  if (doc) {
-    let filteredPublication = []
-    if (splitLocation[1] === '') {
-      filteredPublication = doc.filter((x) =>
-        x.data.publication_types.some((us) => us.text === 'co-auth'),
-      )
-    }
-    if (splitLocation[1] === 'pharma') {
-      filteredPublication = doc.filter((x) =>
-        x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
-      )
-    }
-    if (splitLocation[1] === 'medical') {
-      filteredPublication = doc.filter((x) =>
-        x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
-      )
-      filteredPublication = doc.filter((x) =>
-        x.data.publication_types.some((us) => us.text === 'co-auth'),
-      )
-    }
-
-    let customItems2 = []
-    let sliderItems = []
-    filteredPublication.map((item, index) => {
-      sliderItems.push(item)
-      if (sliderItems.length === 3) {
-        customItems2.push(sliderItems)
-        sliderItems = []
-      }
-    })
-    if (sliderItems.length !== 0) {
-      customItems2.push(sliderItems)
-    }
-    console.log('custom items', customItems2)
-    return (
-      <>
-        <div className={s.desktop}>
-          <Carousel
-            indicators={true}
-            animation={'slide'}
-            timeout={900}
-            autoPlay={true}
-          >
-            {customItems2.map((item, index) => {
-              return <Slider2 item={item} key={index} />
-            })}
-          </Carousel>
-        </div>
-        <div className={clsx(s.mobile, s.mobileSLider)}>
-          <Carousel
-            indicators={true}
-            animation={'slide'}
-            timeout={700}
-            autoPlay={true}
-          >
-            {filteredPublication.map((item, index) => {
-              return <Slider2mobile item={item} key={index} />
-            })}
-          </Carousel>
-        </div>
-      </>
+  let filteredPublication = []
+  if (splitLocation[1] === '') {
+    filteredPublication = doc.filter((x) =>
+      x.data.publication_types.some((us) => us.text === 'co-auth'),
     )
-  } else {
-    return <T>Loading....</T>
   }
+  if (splitLocation[1] === 'pharma') {
+    filteredPublication = doc.filter((x) =>
+      x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
+    )
+  }
+  if (splitLocation[1] === 'medical') {
+    filteredPublication = doc.filter((x) =>
+      x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
+    )
+    filteredPublication = doc.filter((x) =>
+      x.data.publication_types.some((us) => us.text === 'co-auth'),
+    )
+  }
+
+  let customItems2 = []
+  let sliderItems = []
+  filteredPublication.map((item, index) => {
+    sliderItems.push(item)
+    if (sliderItems.length === 3) {
+      customItems2.push(sliderItems)
+      sliderItems = []
+    }
+  })
+  if (sliderItems.length !== 0) {
+    customItems2.push(sliderItems)
+  }
+  return (
+    <>
+      <div className={s.desktop}>
+        <Carousel
+          indicators={true}
+          animation={'slide'}
+          timeout={900}
+          autoPlay={true}
+        >
+          {customItems2.map((item, index) => {
+            return <Slider2 item={item} key={index} />
+          })}
+        </Carousel>
+      </div>
+      <div className={clsx(s.mobile, s.mobileSLider)}>
+        <Carousel
+          indicators={true}
+          animation={'slide'}
+          timeout={700}
+          autoPlay={true}
+        >
+          {filteredPublication.map((item, index) => {
+            return <Slider2mobile item={item} key={index} />
+          })}
+        </Carousel>
+      </div>
+    </>
+  )
 }
 
 export default LowerSlider
