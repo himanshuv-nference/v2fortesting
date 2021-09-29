@@ -9,13 +9,6 @@ import { useRouter } from 'next/router'
 import _ from 'lodash'
 import clsx from 'clsx'
 import Link from 'next/link'
-
-const apiEndpoint = 'https://nference.prismic.io/api/v2'
-const accessToken =
-  'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
-
-const Client = Prismic.client(apiEndpoint, { accessToken })
-
 function Slider2(props) {
   const styles = useStyles()
 

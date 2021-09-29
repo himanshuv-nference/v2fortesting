@@ -11,19 +11,7 @@ import useStyles from '../public/styles/NavbarStyles'
 import { emailjs } from 'emailjs-com'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-
-const NferxModal = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/NferxModal/NferxModal')
-  },
-  { ssr: false },
-)
-const TextField = dynamic(
-  () => {
-    return import('nferx-core-ui/src/widgets/TextField/TextField')
-  },
-  { ssr: false },
-)
+import { TextField, NferxModal } from 'nferx-core-ui'
 
 export default function Navbar() {
   const styles = useStyles()
@@ -86,15 +74,10 @@ export default function Navbar() {
           templateParams,
           'user_NDr8LLvItzOz9RUGuVouS',
         )
-        .then(
-          (result) => {
-            modalClose()
-            thankyouModalOpen()
-          },
-          (error) => {
-            console.log('formerror', error.text)
-          },
-        )
+        .then((result) => {
+          modalClose()
+          thankyouModalOpen()
+        })
     } else {
       setErrorFormData((prev) => {
         return {

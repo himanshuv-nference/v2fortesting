@@ -3,42 +3,33 @@ import Medicalstyles from '../../public/styles/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
 import clsx from 'clsx'
 import { Typography as T } from '@material-ui/core'
-// import murali from './AboutusImages/Group 3771.svg'
+
 const murali = '/nference-web/AboutusImages/Group 3771.svg'
-// import venky from './AboutusImages/Group 3772.svg'
+
 const venky = '/nference-web/AboutusImages/Group 3772.svg'
-// import micheal from './AboutusImages/Group 3775.svg'
+
 const micheal = '/nference-web/AboutusImages/Group 3775.svg'
-// import hutch from './AboutusImages/Mask Group.svg'
+
 const hutch = '/nference-web/AboutusImages/Mask Group.svg'
 
-// import anita from './AboutusImages/image 24.svg'
 const anita = '/nference-web/AboutusImages/image 24.svg'
-// import mike from './AboutusImages/Mask Group (1).svg'
+
 const mike = '/nference-web/AboutusImages/Mask Group (1).svg'
 
-// import agustin from './AboutusImages/ag.svg'
 const agustin = '/nference-web/AboutusImages/ag.svg'
 
-// import david from './AboutusImages/Mask Group (2).svg'
 const david = '/nference-web/AboutusImages/Mask Group (2).svg'
 
-// import ajit from './AboutusImages/ajit.svg'
 const ajit = '/nference-web/AboutusImages/ajit.svg'
 
-// import geogre from './AboutusImages/image 22.svg'
 const geogre = '/nference-web/AboutusImages/image 22.svg'
 
-// import cambridge from './AboutusImages/Group 3431.svg'
 const cambridge = '/nference-web/AboutusImages/Group 3431.svg'
 
-// import bangaluru from './AboutusImages/Vector 244.svg'
 const bangaluru = '/nference-web/AboutusImages/Vector 244.svg'
 
-// import Tornonto from './AboutusImages/Vector 245.svg'
 const Tornonto = '/nference-web/AboutusImages/Vector 245.svg'
 
-// import Rochester from './AboutusImages/Group 3432.svg'
 const Rochester = '/nference-web/AboutusImages/Group 3432.svg'
 
 function Aboutus() {
@@ -236,7 +227,7 @@ function Aboutus() {
             <T className={x.imagedesc}>
               545 King Street West Toronto, ON M5V 1M1
             </T>
-          </div>{' '}
+          </div>
           <div>
             <img src={Rochester} />
             <T className={x.imageName}>Rochester</T>
