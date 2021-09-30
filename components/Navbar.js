@@ -8,7 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import ClearIcon from '@material-ui/icons/Clear'
 import clsx from 'clsx'
 import useStyles from '../public/styles/NavbarStyles'
-import { emailjs } from 'emailjs-com'
+import emailjs from 'emailjs-com'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TextField, NferxModal } from 'nferx-core-ui'
@@ -66,7 +66,6 @@ export default function Navbar() {
         message: formData.message,
         url: window.location.href,
       }
-
       emailjs
         .send(
           'gmail',

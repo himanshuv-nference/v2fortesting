@@ -129,7 +129,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
     display: 'flex',
 
     ['@media (max-width:780px)']: {
-      gap: '30%',
+      gap: '25%',
     },
   },
   Newsdatediv: {
@@ -141,6 +141,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
   },
   Carddatediv: {
     display: 'flex',
+    gap: '10%',
   },
   authdiv: {
     display: 'flex',
@@ -169,7 +170,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
   },
   mobileContaniner: {
     marginTop: '31px',
-    padding: '0px 16px 0px 16px',
+    padding: '32px 16px 31px 16px',
     background: '#FAFBFC',
   },
   newsmobileContaniner: {
@@ -242,12 +243,12 @@ const PublicationListingStyles = makeStyles((theme) => ({
     ['@media (max-width:780px)']: {
       paddingTop: '20px',
       paddingBottom: '20px',
-      gap: '16px',
+      gap: '10px',
     },
   },
   labelImages: {
     ['@media (max-width:780px)']: {
-      width: '100px',
+      width: '90px',
     },
   },
   bloom: {
@@ -404,7 +405,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'auto auto',
+    // gridTemplateColumns: 'auto auto',
   },
   grid2: {
     display: 'grid',
@@ -584,7 +585,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
     color: '#6C7987',
     ['@media (max-width:780px)']: {
       fontSize: '11px',
-      marginLeft: '125px',
+      // marginLeft: '125px',
     },
   },
 
@@ -626,6 +627,11 @@ const PublicationListingStyles = makeStyles((theme) => ({
   pageButtom: {
     ['@media (max-width:780px)']: {
       marginTop: '16px',
+    },
+  },
+  mobileNewsFIlter: {
+    ['@media (max-width:780px)']: {
+      width: '150px',
     },
   },
 }))

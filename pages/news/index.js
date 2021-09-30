@@ -128,7 +128,7 @@ function NewsRoom({ newsData }) {
           <div className={xx.filterDivNews}>
             <ChipFilterSelect
               label={'Sorted by Most Recent'}
-              className={xx.select}
+              className={clsx(xx.select, xx.mobileNewsFIlter)}
               value={recentFilter}
               onChange={setRecentFilter}
               isDefault={_.isEqual(recentFilter, defaultValueDate)}
@@ -139,7 +139,7 @@ function NewsRoom({ newsData }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'All Topics'}
-              className={xx.select}
+              className={clsx(xx.select)}
               value={topicFilter}
               onChange={setTopicFilter}
               isDefault={_.isEqual(topicFilter, defaultValue)}

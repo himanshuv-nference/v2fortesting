@@ -154,6 +154,9 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '32px',
     },
   },
+  nameInput: {
+    width: '190px',
+  },
   inputname: {
     display: 'flex',
     gap: '18px',
@@ -196,12 +199,12 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     // paddingTop: '13%',
     padding: '38px',
-    width: '80%',
+    width: '80% !important',
     ['@media (max-width:780px)']: {
       height: '80%',
     },
     ['@media (min-width:100000px)']: {
-      width: '60%',
+      width: '60% !important',
     },
   },
   iconDiv: {
@@ -217,6 +220,9 @@ const useStyles = makeStyles((theme) => ({
   companyDiv: {
     marginBottom: '16px',
     marginTop: '12px',
+  },
+  thankmodal: {
+    width: '550px !important',
   },
 }))
 

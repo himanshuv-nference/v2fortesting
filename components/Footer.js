@@ -1,7 +1,5 @@
-import { createTheme } from '@material-ui/core/styles'
 import { Typography as T } from '@material-ui/core'
 import { Icon } from '@material-ui/core'
-import dynamic from 'next/dynamic'
 import { TextField, NferxModal } from 'nferx-core-ui'
 import React from 'react'
 const logo = '/nference-web/NavbarImages/nferencelognav.svg'

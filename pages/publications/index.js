@@ -39,6 +39,19 @@ export async function getStaticProps() {
     },
   }
 }
+// google analytics
+const injectGA = () => {
+  if (typeof window == 'undefined') {
+    return
+  }
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    window.dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+
+  gtag('config', 'UA-120810493-7')
+}
 function PublicationListing({ pubInfo }) {
   const defaultValue = []
   const deafaultDatevalue = null
@@ -381,6 +394,11 @@ function PublicationListing({ pubInfo }) {
           color: #1c2329 !important;
         }
       `}</style>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-120810493-7"
+      ></script>
+      <script>{injectGA()}</script>
     </>
   )
 }
