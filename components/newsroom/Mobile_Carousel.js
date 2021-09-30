@@ -5,30 +5,33 @@ import { RichText } from 'prismic-reactjs'
 import Link from 'next/link'
 
 export default function SliderMobile(props) {
-  const xx = PublicationListingStyles()
-  const s = styles()
+  const listingStyles = PublicationListingStyles()
+  const medicalStyles = styles()
   const { item } = props
   return (
     <>
-      <div className={xx.newsmobileContaniner}>
-        <div className={xx.newsmobileDatediv}>
-          <T className={xx.Slidertop}>{item.data.source_name}</T>
-          <T className={xx.sliderDate}>{item.data.published_date}</T>
+      <div className={listingStyles.newsmobileContaniner}>
+        <div className={listingStyles.newsmobileDatediv}>
+          <T className={listingStyles.Slidertop}>{item.data.source_name}</T>
+          <T className={listingStyles.sliderDate}>{item.data.published_date}</T>
         </div>
-        <T className={xx.SliderTitle}>{RichText.asText(item.data.title)}</T>
-        <T className={xx.sliderDesc}>{`${item.data.description.substring(
-          0,
-          150,
-        )}....`}</T>
-        <div className={xx.Newsdatediv}>
-          <div className={xx.authdiv}>
-            <div className={xx.mobileauthcover}>
-              <T className={xx.sliderAuth}>{item.data.news_category}</T>
+        <T className={listingStyles.SliderTitle}>
+          {RichText.asText(item.data.title)}
+        </T>
+        <T
+          className={listingStyles.sliderDesc}
+        >{`${item.data.description.substring(0, 150)}....`}</T>
+        <div className={listingStyles.Newsdatediv}>
+          <div className={listingStyles.authdiv}>
+            <div className={listingStyles.mobileauthcover}>
+              <T className={listingStyles.sliderAuth}>
+                {item.data.news_category}
+              </T>
             </div>
           </div>
           <Link href={item.data.news_url}>
             <a className={styles.nav}>
-              <T className={xx.readmore}>Read more -{'>'} </T>
+              <T className={listingStyles.readmore}>Read more -{'>'} </T>
             </a>
           </Link>
         </div>

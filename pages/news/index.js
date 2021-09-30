@@ -73,8 +73,8 @@ function NewsRoom({ newsData }) {
     })
   }
 
-  const xx = PublicationListingStyles()
-  const s = styles()
+  const listingStyles = PublicationListingStyles()
+  const medicalStyles = styles()
   let topicArray = []
   let filterNews = allNews
   allNews.map((li) => {
@@ -88,11 +88,11 @@ function NewsRoom({ newsData }) {
 
   return (
     <>
-      <div className={s.body}>
-        <T className={xx.head}>Featured News</T>
-        <div className={xx.headline}></div>
+      <div className={medicalStyles.body}>
+        <T className={listingStyles.head}>Featured News</T>
+        <div className={listingStyles.headline}></div>
       </div>
-      <div className={s.desktop}>
+      <div className={medicalStyles.desktop}>
         <Carousel
           indicators={true}
           animation={'slide'}
@@ -104,7 +104,7 @@ function NewsRoom({ newsData }) {
           })}
         </Carousel>
       </div>
-      <div className={s.mobile}>
+      <div className={medicalStyles.mobile}>
         <Carousel
           indicators={true}
           animation={'slide'}
@@ -116,19 +116,22 @@ function NewsRoom({ newsData }) {
           })}
         </Carousel>
       </div>
-      <div className={xx.newslabel}>
-        <img src={Bloomerg} className={xx.bloom} />
-        <img src={theWashingTimess} className={xx.wash} />
-        <img src={theNewYorksTimess} className={xx.newsyork} />
-        <img src={theSA} className={xx.SA} />
+      <div className={listingStyles.newslabel}>
+        <img src={Bloomerg} className={listingStyles.bloom} />
+        <img src={theWashingTimess} className={listingStyles.wash} />
+        <img src={theNewYorksTimess} className={listingStyles.newsyork} />
+        <img src={theSA} className={listingStyles.SA} />
       </div>
 
-      <div className={s.body}>
-        <div className={xx.mediaDiv}>
-          <div className={xx.filterDivNews}>
+      <div className={medicalStyles.body}>
+        <div className={listingStyles.mediaDiv}>
+          <div className={listingStyles.filterDivNews}>
             <ChipFilterSelect
               label={'Sorted by Most Recent'}
-              className={clsx(xx.select, xx.mobileNewsFIlter)}
+              className={clsx(
+                listingStyles.select,
+                listingStyles.mobileNewsFIlter,
+              )}
               value={recentFilter}
               onChange={setRecentFilter}
               isDefault={_.isEqual(recentFilter, defaultValueDate)}
@@ -139,7 +142,7 @@ function NewsRoom({ newsData }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'All Topics'}
-              className={clsx(xx.select)}
+              className={clsx(listingStyles.select)}
               value={topicFilter}
               onChange={setTopicFilter}
               isDefault={_.isEqual(topicFilter, defaultValue)}
@@ -150,25 +153,30 @@ function NewsRoom({ newsData }) {
               ))}
             </ChipFilterSelect>
           </div>
-          <T className={xx.mediaText}>
+          <T className={listingStyles.mediaText}>
             Media Contact {' | '} media@nference.net
           </T>
         </div>
-        <div className={xx.cardconatiner}>
+        <div className={listingStyles.cardconatiner}>
           {filterNews.map((news, index) => {
             return <CardRender news={news} key={index} />
           })}
         </div>
       </div>
-      <div className={s.mobile}>
+      <div className={medicalStyles.mobile}>
         {filterNews.map((news, index) => {
           return <MobileCardRender news={news} key={index} />
         })}
       </div>
-      <div className={s.body}>
-        <div className={clsx(xx.Pageconatiner, xx.pageButtom)}>
+      <div className={medicalStyles.body}>
+        <div
+          className={clsx(
+            listingStyles.Pageconatiner,
+            listingStyles.pageButtom,
+          )}
+        >
           <Pagination
-            className={xx.pageination}
+            className={listingStyles.pageination}
             value={pageNumber}
             totalCount={filteredNews.length}
             pageSize={pageSize}

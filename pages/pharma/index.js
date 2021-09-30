@@ -46,9 +46,9 @@ export async function getStaticProps() {
   }
 }
 function ForPharma({ pubInfo }) {
-  const s = styles()
-  const style = useStyles()
-  const x = PharmaStyles()
+  const medicalStyles = styles()
+  const homepageStyles = useStyles()
+  const pharmaStyles = PharmaStyles()
 
   const [show, setShow] = useState(false)
 
@@ -61,28 +61,28 @@ function ForPharma({ pubInfo }) {
 
   return (
     <>
-      <div className={s.body}>
-        <div className={x.box1}>
+      <div className={medicalStyles.body}>
+        <div className={pharmaStyles.box1}>
           <img src={logo} />
-          <T className={s.Tophead}>Collaborations for Pharma</T>
-          <T className={s.TopSub}>
+          <T className={medicalStyles.Tophead}>Collaborations for Pharma</T>
+          <T className={medicalStyles.TopSub}>
             Our scientists use the nference platform and data in collaboration
             with your teams to tackle your most important questions and
             challenges
           </T>
         </div>
-        <div className={x.box2}>
-          <div className={x.mayoIcon}>
-            <div className={style.mayo}>
+        <div className={pharmaStyles.box2}>
+          <div className={pharmaStyles.mayoIcon}>
+            <div className={homepageStyles.mayo}>
               <img src={mayologo} />
             </div>
           </div>
 
-          <T className={style.box2head}>
+          <T className={homepageStyles.box2head}>
             nference is creating the largest labeled EMR dataset in healthcare
           </T>
 
-          <T className={x.box2text}>
+          <T className={pharmaStyles.box2text}>
             EMR data contains longitudinal real-world, “deep data” rich in
             clinical phenotypes and outcomes spanning across therapeutic ares,
             but exists in in largely semi-structured and unstructured form. The
@@ -90,12 +90,12 @@ function ForPharma({ pubInfo }) {
             labeled EMR dataset.
           </T>
 
-          <div className={x.box2part}>
+          <div className={pharmaStyles.box2part}>
             <div>
               <img src={box1image2} />
 
-              <T className={style.pharmahead}>HARMONIZATION</T>
-              <T className={style.pharmaText}>
+              <T className={homepageStyles.pharmahead}>HARMONIZATION</T>
+              <T className={homepageStyles.pharmaText}>
                 We leverage our deep biomedical expertise to transform
                 semi-structured data (e.g. lab tests, procedures) into
                 structured data through technology-enabled data harmonization.
@@ -103,8 +103,8 @@ function ForPharma({ pubInfo }) {
             </div>
             <div>
               <img src={box1image3} />
-              <T className={style.pharmahead}>AUGMENTED CURATION</T>
-              <T className={style.pharmaText}>
+              <T className={homepageStyles.pharmahead}>AUGMENTED CURATION</T>
+              <T className={homepageStyles.pharmaText}>
                 We build upon state-of-the-art neural networks and Natural
                 Language Processing (NLP) methods to transform unstructured
                 clinical text (e.g. clinical notes...) into structured patient
@@ -114,14 +114,16 @@ function ForPharma({ pubInfo }) {
           </div>
         </div>
 
-        <div className={x.box3}>
-          <div className={x.box3part1}>
-            <T className={s.path}>BIOPHARMA COLLABORATIONS</T>
-            <T className={clsx(x.box3width, x.box3subhead)}>
+        <div className={pharmaStyles.box3}>
+          <div className={pharmaStyles.box3part1}>
+            <T className={medicalStyles.path}>BIOPHARMA COLLABORATIONS</T>
+            <T
+              className={clsx(pharmaStyles.box3width, pharmaStyles.box3subhead)}
+            >
               Triangulation across data and state of the art algorithms power
               collaborations
             </T>
-            <T className={clsx(x.box3width, s.box2desc)}>
+            <T className={clsx(pharmaStyles.box3width, medicalStyles.box2desc)}>
               Connecting structured, harmonized EMR data with publicly available
               literature, molecular and real world datasets and applying our
               powerful proprietary algorithms allows us to ask and answer
@@ -129,13 +131,13 @@ function ForPharma({ pubInfo }) {
             </T>
           </div>
 
-          <div className={x.box3part2}>
+          <div className={pharmaStyles.box3part2}>
             <div>
-              <img src={box2image1} className={x.box3Image} />
-              <T className={x.box3head}>
+              <img src={box2image1} className={pharmaStyles.box3Image} />
+              <T className={pharmaStyles.box3head}>
                 Triangulation with public and proprietary data1
               </T>
-              <T className={x.box3desc}>
+              <T className={pharmaStyles.box3desc}>
                 Integrating additional data sources with labeled, curated and
                 harmonized EMR data can strengthen the insights derived from
                 downstream data analysis. This data includes biomedical
@@ -147,10 +149,15 @@ function ForPharma({ pubInfo }) {
             <div>
               <img
                 src={box2image2}
-                className={clsx(x.box3Image, x.box3image2)}
+                className={clsx(
+                  pharmaStyles.box3Image,
+                  pharmaStyles.box3image2,
+                )}
               />
-              <T className={x.box3head}>State of the art algorithms</T>
-              <T className={x.box3desc}>
+              <T className={pharmaStyles.box3head}>
+                State of the art algorithms
+              </T>
+              <T className={pharmaStyles.box3desc}>
                 The labeled, curated and harmonized EMR data serves as a
                 starting point that enables training state-of-the-art AI
                 algorithms. We develop these algorithms as solutions to some of
@@ -162,182 +169,189 @@ function ForPharma({ pubInfo }) {
           </div>
         </div>
       </div>
-      <div className={x.box4}>
-        <T className={s.path}>NFERENCE COLLABORATIONS FOR BIOPHARMA</T>
-        <T className={clsx(s.Tophead, x.box4pad1)}>
+      <div className={pharmaStyles.box4}>
+        <T className={medicalStyles.path}>
+          NFERENCE COLLABORATIONS FOR BIOPHARMA
+        </T>
+        <T className={clsx(medicalStyles.Tophead, pharmaStyles.box4pad1)}>
           Work with our scientists to tackle hard problems in Pharma R{'&'}D,
           Medical Affairs and Strategy
         </T>
-        <T className={clsx(s.box2desc, x.box4pad2)}>
+        <T className={clsx(medicalStyles.box2desc, pharmaStyles.box4pad2)}>
           Our scientists will use the nference platform and data in
           collaboration with your teams to tackle the questions and challenges
           most important to you
         </T>
-        <div className={x.bo4part3}>
+        <div className={pharmaStyles.bo4part3}>
           {/* 
 
           Desktop view
           */}
 
-          <div className={s.desktop}>
+          <div className={medicalStyles.desktop}>
             <div>
-              <div className={x.box4row}>
+              <div className={pharmaStyles.box4row}>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Target discovery</T>
-                      <img src={discovery} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Target discovery</T>
+                      <img src={discovery} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Identify candidate targets with significant evidence for
                       potential therapeutic benefit for a selected indication
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Lifecycle Management</T>
-                      <img src={lifecycle} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Lifecycle Management</T>
+                      <img src={lifecycle} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Evaluate likelihood of drug success pre-launch and
                       identify opportunities for commercialized assets
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Clinical Trial Design</T>
-                      <img src={trial} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>
+                        Clinical Trial Design
+                      </T>
+                      <img src={trial} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Build complex patient cohorts using real world EMR data to
                       optimize clinial study criteria and study design. Read our
                       Publication
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Real World Outcomes</T>
-                      <img src={real} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Real World Outcomes</T>
+                      <img src={real} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Track patient-level outcomes following specific treatments
                       or interventions
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
               </div>
               {/* ROW 2nd */}
-              <div className={x.box4row}>
+              <div className={pharmaStyles.box4row}>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Precision Medicine</T>
-                      <img src={medicine} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Precision Medicine</T>
+                      <img src={medicine} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Identify biomarkers or correlates of disease progression
                       or treatment outcomes using our clinico-genomic data which
                       spans therapeutic areas
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Early Intervention</T>
-                      <img src={intervention} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Early Intervention</T>
+                      <img
+                        src={intervention}
+                        className={pharmaStyles.box4icons}
+                      />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Identify indicators of disease or disease progression to
                       support earlier, targeted treatment or intervention
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Early Diagnosis</T>
-                      <img src={early} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Early Diagnosis</T>
+                      <img src={early} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Leverage the longitudinality of our dataset and power of
                       our technology to identify early predictors of disease
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Drug Toxicity</T>
-                      <img src={drug} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Drug Toxicity</T>
+                      <img src={drug} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Identify drug side effects and understand the populations
                       most susceptible to them based on real world use
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
               </div>
               {/* Row 3rd */}
-              <div className={x.box4row}>
+              <div className={pharmaStyles.box4row}>
                 <div>
-                  <div className={x.workBox}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Symptoms</T>
-                      <img src={symptoms} className={x.box4icons} />
+                  <div className={pharmaStyles.workBox}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Symptoms</T>
+                      <img src={symptoms} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Identify disease symptoms and understand the populations
                       most susceptible to them
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
                 <div>
-                  <div className={clsx(x.workBox)}>
-                    <div className={x.nameImage}>
-                      <T className={s.path}>Patient Journey</T>
-                      <img src={journey} className={x.box4icons} />
+                  <div className={clsx(pharmaStyles.workBox)}>
+                    <div className={pharmaStyles.nameImage}>
+                      <T className={medicalStyles.path}>Patient Journey</T>
+                      <img src={journey} className={pharmaStyles.box4icons} />
                     </div>
-                    <T className={x.box4desc}>
+                    <T className={pharmaStyles.box4desc}>
                       Get disease area specific insight on the end-to-end
                       patient journey, leveraging longitudinal patient data
                     </T>
                   </div>
-                  <div className={x.separatorDiv}>
-                    <div className={x.separator} />
+                  <div className={pharmaStyles.separatorDiv}>
+                    <div className={pharmaStyles.separator} />
                   </div>
                 </div>
               </div>
@@ -347,113 +361,126 @@ function ForPharma({ pubInfo }) {
           Mobile view
 
            */}
-          <div className={s.mobile}>
+          <div className={medicalStyles.mobile}>
             <div>
-              <div className={x.nameImage}>
-                <T className={s.path}>Target discovery</T>
-                <img src={discovery} className={x.box4icons} />
+              <div className={pharmaStyles.nameImage}>
+                <T className={medicalStyles.path}>Target discovery</T>
+                <img src={discovery} className={pharmaStyles.box4icons} />
               </div>
-              <T className={x.box4desc}>
+              <T className={pharmaStyles.box4desc}>
                 Identify candidate targets with significant evidence for
                 potential therapeutic benefit for a selected indication
               </T>
             </div>
             <div>
-              <div className={x.nameImage}>
-                <T className={s.path}>Precision Medicine</T>
-                <img src={medicine} className={x.box4icons} />
+              <div className={pharmaStyles.nameImage}>
+                <T className={medicalStyles.path}>Precision Medicine</T>
+                <img src={medicine} className={pharmaStyles.box4icons} />
               </div>
-              <T className={x.box4desc}>
+              <T className={pharmaStyles.box4desc}>
                 Identify biomarkers or correlates of disease progression or
                 treatment outcomes using our clinico-genomic data which spans
                 therapeutic areas
               </T>
             </div>
             <div>
-              <div className={x.nameImage}>
-                <T className={s.path}>Symptoms</T>
-                <img src={symptoms} className={x.box4icons} />
+              <div className={pharmaStyles.nameImage}>
+                <T className={medicalStyles.path}>Symptoms</T>
+                <img src={symptoms} className={pharmaStyles.box4icons} />
               </div>
-              <T className={x.box4desc}>
+              <T className={pharmaStyles.box4desc}>
                 Identify disease symptoms and understand the populations most
                 susceptible to them
               </T>
             </div>
             <div>
-              <div className={x.nameImage}>
-                <T className={s.path}>Lifecycle Management</T>
-                <img src={lifecycle} className={x.box4icons} />
+              <div className={pharmaStyles.nameImage}>
+                <T className={medicalStyles.path}>Lifecycle Management</T>
+                <img src={lifecycle} className={pharmaStyles.box4icons} />
               </div>
-              <T className={x.box4desc}>
+              <T className={pharmaStyles.box4desc}>
                 Evaluate likelihood of drug success pre-launch and identify
                 opportunities for commercialized assets
               </T>
             </div>
             <div
               onClick={seeMore}
-              className={clsx({ [x.show]: !show, [x.hide]: show })}
+              className={clsx({
+                [pharmaStyles.show]: !show,
+                [pharmaStyles.hide]: show,
+              })}
             >
-              <T className={clsx(s.path, x.underline)}>See More</T>
+              <T className={clsx(medicalStyles.path, pharmaStyles.underline)}>
+                See More
+              </T>
             </div>
-            <div className={clsx({ [x.hide]: !show, [x.show]: show })}>
+            <div
+              className={clsx({
+                [pharmaStyles.hide]: !show,
+                [pharmaStyles.show]: show,
+              })}
+            >
               <div>
                 <div>
-                  <div className={x.nameImage}>
-                    <T className={s.path}>Early Intervention</T>
-                    <img src={intervention} className={x.box4icons} />
+                  <div className={pharmaStyles.nameImage}>
+                    <T className={medicalStyles.path}>Early Intervention</T>
+                    <img
+                      src={intervention}
+                      className={pharmaStyles.box4icons}
+                    />
                   </div>
-                  <T className={x.box4desc}>
+                  <T className={pharmaStyles.box4desc}>
                     Identify indicators of disease or disease progression to
                     support earlier, targeted treatment or intervention
                   </T>
                 </div>
                 <div>
-                  <div className={x.nameImage}>
-                    <T className={s.path}>Patient Journey</T>
-                    <img src={journey} className={x.box4icons} />
+                  <div className={pharmaStyles.nameImage}>
+                    <T className={medicalStyles.path}>Patient Journey</T>
+                    <img src={journey} className={pharmaStyles.box4icons} />
                   </div>
-                  <T className={x.box4desc}>
+                  <T className={pharmaStyles.box4desc}>
                     Get disease area specific insight on the end-to-end patient
                     journey, leveraging longitudinal patient data
                   </T>
                 </div>
                 <div>
-                  <div className={x.nameImage}>
-                    <T className={s.path}>Clinical Trial Design</T>
-                    <img src={trial} className={x.box4icons} />
+                  <div className={pharmaStyles.nameImage}>
+                    <T className={medicalStyles.path}>Clinical Trial Design</T>
+                    <img src={trial} className={pharmaStyles.box4icons} />
                   </div>
-                  <T className={x.box4desc}>
+                  <T className={pharmaStyles.box4desc}>
                     Build complex patient cohorts using real world EMR data to
                     optimize clinial study criteria and study design. Read our
                     Publication
                   </T>
                 </div>
                 <div>
-                  <div className={x.nameImage}>
-                    <T className={s.path}>Early Diagnosis</T>
-                    <img src={early} className={x.box4icons} />
+                  <div className={pharmaStyles.nameImage}>
+                    <T className={medicalStyles.path}>Early Diagnosis</T>
+                    <img src={early} className={pharmaStyles.box4icons} />
                   </div>
-                  <T className={x.box4desc}>
+                  <T className={pharmaStyles.box4desc}>
                     Leverage the longitudinality of our dataset and power of our
                     technology to identify early predictors of disease
                   </T>
                 </div>
                 <div>
-                  <div className={x.nameImage}>
-                    <T className={s.path}>Real World Outcomes</T>
-                    <img src={real} className={x.box4icons} />
+                  <div className={pharmaStyles.nameImage}>
+                    <T className={medicalStyles.path}>Real World Outcomes</T>
+                    <img src={real} className={pharmaStyles.box4icons} />
                   </div>
-                  <T className={x.box4desc}>
+                  <T className={pharmaStyles.box4desc}>
                     Track patient-level outcomes following specific treatments
                     or interventions
                   </T>
                 </div>
                 <div>
-                  <div className={x.nameImage}>
-                    <T className={s.path}>Drug Toxicity</T>
-                    <img src={drug} className={x.box4icons} />
+                  <div className={pharmaStyles.nameImage}>
+                    <T className={medicalStyles.path}>Drug Toxicity</T>
+                    <img src={drug} className={pharmaStyles.box4icons} />
                   </div>
-                  <T className={x.box4desc}>
+                  <T className={pharmaStyles.box4desc}>
                     Identify drug side effects and understand the populations
                     most susceptible to them based on real world use
                   </T>
@@ -461,31 +488,37 @@ function ForPharma({ pubInfo }) {
               </div>
 
               <div onClick={seeLess}>
-                <T className={clsx(s.path, x.underline)}>See Less</T>
+                <T className={clsx(medicalStyles.path, pharmaStyles.underline)}>
+                  See Less
+                </T>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={s.body}>
+      <div className={medicalStyles.body}>
         <div>
-          <div className={s.box10part1}>
+          <div className={medicalStyles.box10part1}>
             <div>
-              <T className={x.path}>NFERENCE PUBLICATIONS</T>
-              <T className={s.box2Subhead}>Peer-reviewed publications</T>
-              <T className={clsx(s.box2desc, s.box8desc)}>
+              <T className={pharmaStyles.path}>NFERENCE PUBLICATIONS</T>
+              <T className={medicalStyles.box2Subhead}>
+                Peer-reviewed publications
+              </T>
+              <T
+                className={clsx(medicalStyles.box2desc, medicalStyles.box8desc)}
+              >
                 Our partners and clients have used our data and analyses to
                 publish insights in a array of academic journals
               </T>
             </div>
           </div>
           <LowerSlider doc={pubInfo} />
-          <div className={s.desktop}>
-            <div className={style.boximage}>
+          <div className={medicalStyles.desktop}>
+            <div className={homepageStyles.boximage}>
               <Link href="/publications">
-                <a className={style.nav}>
-                  <div className={style.allpaper}>
-                    <T className={style.learnoretext}>
+                <a className={homepageStyles.nav}>
+                  <div className={homepageStyles.allpaper}>
+                    <T className={homepageStyles.learnoretext}>
                       See all our papers -{'>'}
                     </T>
                   </div>

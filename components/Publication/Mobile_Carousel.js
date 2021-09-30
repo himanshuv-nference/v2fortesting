@@ -6,34 +6,34 @@ import clsx from 'clsx'
 import Link from 'next/link'
 
 export default function SliderMobile(props) {
-  const xx = PublicationListingStyles()
-  const s = styles()
+  const listingStyles = PublicationListingStyles()
   const { item } = props
   return (
     <>
-      <div className={xx.mobileContaniner}>
-        <div className={xx.mobileDatediv}>
-          <T className={xx.Slidertop}>FEATURED</T>
-          <T className={xx.sliderDate}>{item.data.dt_published}</T>
+      <div className={listingStyles.mobileContaniner}>
+        <div className={listingStyles.mobileDatediv}>
+          <T className={listingStyles.Slidertop}>FEATURED</T>
+          <T className={listingStyles.sliderDate}>{item.data.dt_published}</T>
         </div>
-        <T className={xx.SliderTitle}>{RichText.asText(item.data.title)}</T>
-        <T className={xx.sliderDesc}>{`${item.data.abstract.substring(
-          0,
-          150,
-        )}....`}</T>
-        <div className={xx.datediv}>
-          <div className={xx.authdiv}>
+        <T className={listingStyles.SliderTitle}>
+          {RichText.asText(item.data.title)}
+        </T>
+        <T
+          className={listingStyles.sliderDesc}
+        >{`${item.data.abstract.substring(0, 150)}....`}</T>
+        <div className={listingStyles.datediv}>
+          <div className={listingStyles.authdiv}>
             {item.data.institutional_authors.map((item, index) => {
               return (
-                <div className={xx.mobileauthcover}>
-                  <T className={xx.sliderAuth}>{item.text}</T>
+                <div className={listingStyles.mobileauthcover}>
+                  <T className={listingStyles.sliderAuth}>{item.text}</T>
                 </div>
               )
             })}
           </div>
           <Link href={`publications/${item.id}`}>
             <a className={styles.nav}>
-              <T className={xx.readmore}>Read more -{'>'} </T>
+              <T className={listingStyles.readmore}>Read more -{'>'} </T>
             </a>
           </Link>
         </div>

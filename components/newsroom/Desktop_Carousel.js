@@ -4,22 +4,23 @@ import PublicationListingStyles from '../../public/styles/PublicationListingStyl
 import { RichText } from 'prismic-reactjs'
 
 export default function Slider(props) {
-  const xx = PublicationListingStyles()
-  const s = styles()
+  const listingStyles = PublicationListingStyles()
+  const medicalStyles = styles()
   const { item } = props
   return (
     <>
-      <div className={xx.slidercontainer}>
-        <img src={item.data.news_image.url} className={xx.sample} />
+      <div className={listingStyles.slidercontainer}>
+        <img src={item.data.news_image.url} className={listingStyles.sample} />
         <div>
-          <T className={xx.Slidertop}>{item.data.source_name}</T>
-          <T className={xx.SliderTitle}>{RichText.asText(item.data.title)}</T>
-          <T className={xx.sliderDesc}>{`${item.data.description.substring(
-            0,
-            300,
-          )}....`}</T>
+          <T className={listingStyles.Slidertop}>{item.data.source_name}</T>
+          <T className={listingStyles.SliderTitle}>
+            {RichText.asText(item.data.title)}
+          </T>
+          <T
+            className={listingStyles.sliderDesc}
+          >{`${item.data.description.substring(0, 300)}....`}</T>
 
-          <T className={xx.sliderDate}>{item.data.published_date}</T>
+          <T className={listingStyles.sliderDate}>{item.data.published_date}</T>
         </div>
       </div>
     </>

@@ -35,8 +35,8 @@ export async function getStaticProps() {
 }
 
 function Covid({ covidInfo, Card }) {
-  const s = styles()
-  const x = PharmaStyles()
+  const medicalStyles = styles()
+  const pharmaStyles = PharmaStyles()
   const style = CovidStyles()
   const [data, setData] = useState(covidInfo)
   const [cardData, setcardData] = useState(Card)
@@ -49,8 +49,8 @@ function Covid({ covidInfo, Card }) {
   })
   return (
     <>
-      <div className={s.body}>
-        <div className={x.box1}>
+      <div className={medicalStyles.body}>
+        <div className={pharmaStyles.box1}>
           <img src={logo} />
           <T className={style.Tophead}>
             FROM SCIENTIFIC DISCOVERY TO PUBLIC HEALTH POLICY IN 25 DAYS
@@ -60,25 +60,25 @@ function Covid({ covidInfo, Card }) {
           </T>
         </div>
       </div>
-      <div className={clsx(s.body, s.desktop)}>
+      <div className={clsx(medicalStyles.body, medicalStyles.desktop)}>
         {cardData.map((data, index) => {
           return <TopCard cardData={data} key={index} />
         })}
       </div>
-      <div className={clsx(s.mobile)}>
+      <div className={clsx(medicalStyles.mobile)}>
         {cardData.map((data, index) => {
           return <TopCard cardData={data} key={index} />
         })}
       </div>
 
-      <div className={clsx(s.desktop, s.body)}>
+      <div className={clsx(medicalStyles.desktop, medicalStyles.body)}>
         <div className={style.cardContainer}>
           {data.map((data, index) => {
             return <DesktopCard Covid={data} key={index} />
           })}
         </div>
       </div>
-      <div className={clsx(s.mobile, style.mobileCardConatiner)}>
+      <div className={clsx(medicalStyles.mobile, style.mobileCardConatiner)}>
         {data.map((data, index) => {
           return <MobileCard Covid={data} key={index} />
         })}

@@ -15,133 +15,149 @@ export default function CardRender(props) {
     setShow(false)
   }
 
-  const s = styles()
-  const a = String(props.doc.data.abstract)
+  const medicalStyles = styles()
   console.log(RichText.render(props.doc.data.featured_in))
-  const xx = PublicationListingStyles()
+  const listingStyles = PublicationListingStyles()
   return (
-    <div className={xx.card}>
-      <div className={xx.cardLeft}>
+    <div className={listingStyles.card}>
+      <div className={listingStyles.cardLeft}>
         <Link href={`/publications/${props.doc.id}`}>
-          <a className={xx.nav}>
-            <T className={xx.cardTitle}>
+          <a className={listingStyles.nav}>
+            <T className={listingStyles.cardTitle}>
               {RichText.asText(props.doc.data.title)}
             </T>
           </a>
         </Link>
-        <div className={xx.mobilePosted}>
-          {' '}
-          <div className={xx.postedIndiv}>
-            <T className={xx.postedIn}>Posted in</T>
-            <T className={clsx(xx.postedIn, xx.underline)}>
+        <div className={listingStyles.mobilePosted}>
+          <div className={listingStyles.postedIndiv}>
+            <T className={listingStyles.postedIn}>Posted in</T>
+            <T
+              className={clsx(listingStyles.postedIn, listingStyles.underline)}
+            >
               {RichText.render(props.doc.data.published_in)}
             </T>
           </div>
-          <div className={xx.postedIndiv}>
-            <T className={clsx(xx.postedIn, xx.pubflex)}>Featured in: </T>
+          <div className={listingStyles.postedIndiv}>
+            <T className={clsx(listingStyles.postedIn, listingStyles.pubflex)}>
+              Featured in:{' '}
+            </T>
 
-            <T className={clsx(xx.postedIn, xx.underline)}>
+            <T
+              className={clsx(listingStyles.postedIn, listingStyles.underline)}
+            >
               {RichText.render(props.doc.data.featured_in)}
             </T>
           </div>
         </div>
-        <div className={s.desktop}>
-          <div className={xx.postedIndiv}>
-            <T className={clsx(xx.postedIn, xx.pubflex)}>Cited by: </T>
-            <T className={clsx(xx.postedIn, xx.underline)}>
+        <div className={medicalStyles.desktop}>
+          <div className={listingStyles.postedIndiv}>
+            <T className={clsx(listingStyles.postedIn, listingStyles.pubflex)}>
+              Cited by:{' '}
+            </T>
+            <T
+              className={clsx(listingStyles.postedIn, listingStyles.underline)}
+            >
               {RichText.render(props.doc.data.cited_by)}
             </T>
           </div>
         </div>
-        <T className={xx.authors}>
+        <T className={listingStyles.authors}>
           <ReactReadMoreReadLess
             charLimit={60}
             readMoreText={'more'}
             readLessText={'less'}
-            readMoreClassName={xx.authormore}
-            readLessClassName={xx.authormore}
+            readMoreClassName={listingStyles.authormore}
+            readLessClassName={listingStyles.authormore}
           >
             {props.doc.data.authors}
           </ReactReadMoreReadLess>
         </T>
 
-        <T className={xx.cardesc}>
+        <T className={listingStyles.cardesc}>
           {`${props.doc.data.abstract.substring(0, 300)}....`}
         </T>
-        <T className={clsx(xx.cardesc, xx.desktop)}>
+        <T className={clsx(listingStyles.cardesc, listingStyles.desktop)}>
           Correspondence to: {props.doc.data.correspondence_to}
         </T>
       </div>
-      <div className={s.desktop}>
-        <div className={xx.cardRight}>
+      <div className={medicalStyles.desktop}>
+        <div className={listingStyles.cardRight}>
           <div>
-            <T className={xx.postedIn}>Use Cases</T>
+            <T className={listingStyles.postedIn}>Use Cases</T>
             {props.doc.data.usecase.map((item, index) => {
               return (
-                <div className={xx.usecaseboxes}>
-                  <T className={xx.usecaseText}>{item.text}</T>
+                <div className={listingStyles.usecaseboxes}>
+                  <T className={listingStyles.usecaseText}>{item.text}</T>
                 </div>
               )
             })}
           </div>
           <div>
-            <T className={xx.postedIn}>Therapeutic Area</T>
+            <T className={listingStyles.postedIn}>Therapeutic Area</T>
             {props.doc.data.therapeutic_area.map((item, index) => {
               return (
-                <div className={xx.areaboxes}>
-                  <T className={xx.usecaseText}>{item.text}</T>
+                <div className={listingStyles.areaboxes}>
+                  <T className={listingStyles.usecaseText}>{item.text}</T>
                 </div>
               )
             })}
           </div>
           <div>
-            <T className={xx.postedIn}>Institutional Authors</T>
+            <T className={listingStyles.postedIn}>Institutional Authors</T>
             {props.doc.data.institutional_authors.map((item, index) => {
               return (
-                <div className={xx.authboxes}>
-                  <T className={xx.usecaseText}>{item.text}</T>
+                <div className={listingStyles.authboxes}>
+                  <T className={listingStyles.usecaseText}>{item.text}</T>
                 </div>
               )
             })}
           </div>
         </div>
       </div>
-      <div className={s.mobile}>
-        <div className={xx.grid}>
+      <div className={medicalStyles.mobile}>
+        <div className={listingStyles.grid}>
           {props.doc.data.usecase.map((item, index) => {
             return (
-              <div className={xx.usecaseboxes}>
-                <T className={xx.usecaseText}>{item.text}</T>
+              <div className={listingStyles.usecaseboxes}>
+                <T className={listingStyles.usecaseText}>{item.text}</T>
               </div>
             )
           })}
         </div>
         <div
-          className={clsx({ [xx.show]: !show, [xx.hide]: show })}
+          className={clsx({
+            [listingStyles.show]: !show,
+            [listingStyles.hide]: show,
+          })}
           onClick={seeMore}
         >
-          <T className={xx.SeeMoreText}>more</T>
+          <T className={listingStyles.SeeMoreText}>more</T>
         </div>
 
-        <div className={clsx({ [xx.show]: show, [xx.hide]: !show })}>
-          <div className={xx.grid2}>
+        <div
+          className={clsx({
+            [listingStyles.show]: show,
+            [listingStyles.hide]: !show,
+          })}
+        >
+          <div className={listingStyles.grid2}>
             {props.doc.data.therapeutic_area.map((item, index) => {
               return (
-                <div className={xx.areaboxes}>
-                  <T className={xx.usecaseText}>{item.text}</T>
+                <div className={listingStyles.areaboxes}>
+                  <T className={listingStyles.usecaseText}>{item.text}</T>
                 </div>
               )
             })}
             {props.doc.data.institutional_authors.map((item, index) => {
               return (
-                <div className={xx.authboxes}>
-                  <T className={xx.usecaseText}>{item.text}</T>
+                <div className={listingStyles.authboxes}>
+                  <T className={listingStyles.usecaseText}>{item.text}</T>
                 </div>
               )
             })}
           </div>
           <div onClick={seeLess}>
-            <T className={xx.SeeMoreText}>less</T>
+            <T className={listingStyles.SeeMoreText}>less</T>
           </div>
         </div>
       </div>

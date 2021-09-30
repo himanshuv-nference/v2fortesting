@@ -122,8 +122,8 @@ function PublicationListing({ pubInfo }) {
     recentFilter,
   ])
 
-  const s = styles()
-  const xx = PublicationListingStyles()
+  const medicalStyles = styles()
+  const listingStyles = PublicationListingStyles()
 
   let usecaseArray = []
   let therepeuticAreaArray = []
@@ -173,11 +173,11 @@ function PublicationListing({ pubInfo }) {
 
   return (
     <>
-      <div className={xx.body}>
-        <T className={xx.head}>Featured Publications</T>
-        <div className={xx.headline}></div>
+      <div className={listingStyles.body}>
+        <T className={listingStyles.head}>Featured Publications</T>
+        <div className={listingStyles.headline}></div>
       </div>
-      <div className={s.desktop}>
+      <div className={medicalStyles.desktop}>
         <Carousel
           indicators={true}
           animation={'slide'}
@@ -189,7 +189,7 @@ function PublicationListing({ pubInfo }) {
           })}
         </Carousel>
       </div>
-      <div className={clsx(s.mobile)}>
+      <div className={clsx(medicalStyles.mobile)}>
         <Carousel
           indicators={true}
           animation={'slide'}
@@ -202,19 +202,19 @@ function PublicationListing({ pubInfo }) {
         </Carousel>
       </div>
 
-      <div className={xx.label} id="publicationTop">
-        <img src={Nlogo} className={xx.labelImages} />
-        <img src={Llogo} className={xx.labelImages} />
-        <img src={SAlogo} className={xx.labelImages} />
+      <div className={listingStyles.label} id="publicationTop">
+        <img src={Nlogo} className={listingStyles.labelImages} />
+        <img src={Llogo} className={listingStyles.labelImages} />
+        <img src={SAlogo} className={listingStyles.labelImages} />
       </div>
 
-      <div className={xx.body}>
-        <T className={xx.head2}>All Publications</T>
-        <div className={s.desktop}>
-          <div className={xx.filterDiv}>
+      <div className={listingStyles.body}>
+        <T className={listingStyles.head2}>All Publications</T>
+        <div className={medicalStyles.desktop}>
+          <div className={listingStyles.filterDiv}>
             <ChipFilterSelect
               label={'Use case'}
-              className={xx.select}
+              className={listingStyles.select}
               value={usecasesFilter}
               onChange={setUsecasesFilter}
               isDefault={_.isEqual(usecasesFilter, defaultValue)}
@@ -226,7 +226,7 @@ function PublicationListing({ pubInfo }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'Therapeutic Area'}
-              className={xx.select}
+              className={listingStyles.select}
               value={thAreaFilter}
               onChange={setthAreaFilter}
               isDefault={_.isEqual(thAreaFilter, defaultValue)}
@@ -238,7 +238,7 @@ function PublicationListing({ pubInfo }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'Institutional Authors'}
-              className={xx.select}
+              className={listingStyles.select}
               value={InstAuthFilter}
               onChange={setInstAuthFilter}
               isDefault={_.isEqual(InstAuthFilter, defaultValue)}
@@ -250,7 +250,7 @@ function PublicationListing({ pubInfo }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'Publication Type'}
-              className={xx.select}
+              className={listingStyles.select}
               value={typeFilter}
               onChange={settypeFilter}
               isDefault={_.isEqual(typeFilter, defaultValue)}
@@ -262,7 +262,7 @@ function PublicationListing({ pubInfo }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'Sorted by Most Recent'}
-              className={xx.select}
+              className={listingStyles.select}
               value={recentFilter}
               onChange={setRecentFilter}
               isDefault={_.isEqual(recentFilter, deafaultDatevalue)}
@@ -273,7 +273,7 @@ function PublicationListing({ pubInfo }) {
             </ChipFilterSelect>
             <ChipFilterSelect
               label={'Date'}
-              className={xx.select}
+              className={listingStyles.select}
               value={DateFilter}
               onChange={setDateFilter}
               isDefault={_.isEqual(DateFilter, defaultValue)}
@@ -290,12 +290,12 @@ function PublicationListing({ pubInfo }) {
           Mobile filters
 
            */}
-        <div className={s.mobile}>
-          <div className={xx.filterDiv}>
+        <div className={medicalStyles.mobile}>
+          <div className={listingStyles.filterDiv}>
             <HorizontalScroll>
               <ChipFilterSelect
                 label={'Use case'}
-                className={xx.select}
+                className={listingStyles.select}
                 value={usecasesFilter}
                 onChange={setUsecasesFilter}
                 isDefault={_.isEqual(usecasesFilter, defaultValue)}
@@ -307,7 +307,7 @@ function PublicationListing({ pubInfo }) {
               </ChipFilterSelect>
               <ChipFilterSelect
                 label={'Therapeutic Area'}
-                className={xx.select}
+                className={listingStyles.select}
                 value={thAreaFilter}
                 onChange={setthAreaFilter}
                 isDefault={_.isEqual(thAreaFilter, defaultValue)}
@@ -319,7 +319,7 @@ function PublicationListing({ pubInfo }) {
               </ChipFilterSelect>
               <ChipFilterSelect
                 label={'Institutional Authors'}
-                className={xx.select}
+                className={listingStyles.select}
                 value={InstAuthFilter}
                 onChange={setInstAuthFilter}
                 isDefault={_.isEqual(InstAuthFilter, defaultValue)}
@@ -331,7 +331,7 @@ function PublicationListing({ pubInfo }) {
               </ChipFilterSelect>
               <ChipFilterSelect
                 label={'Publication Type'}
-                className={xx.select}
+                className={listingStyles.select}
                 value={typeFilter}
                 onChange={settypeFilter}
                 isDefault={_.isEqual(typeFilter, defaultValue)}
@@ -343,7 +343,7 @@ function PublicationListing({ pubInfo }) {
               </ChipFilterSelect>
               <ChipFilterSelect
                 label={'Sorted by Most Recent'}
-                className={xx.select}
+                className={listingStyles.select}
                 value={recentFilter}
                 onChange={setRecentFilter}
                 isDefault={_.isEqual(recentFilter, deafaultDatevalue)}
@@ -354,7 +354,7 @@ function PublicationListing({ pubInfo }) {
               </ChipFilterSelect>
               <ChipFilterSelect
                 label={'Date'}
-                className={xx.select}
+                className={listingStyles.select}
                 value={DateFilter}
                 onChange={setDateFilter}
                 isDefault={_.isEqual(DateFilter, defaultValue)}
@@ -368,15 +368,15 @@ function PublicationListing({ pubInfo }) {
           </div>
         </div>
 
-        <div className={xx.cardconatiner}>
+        <div className={listingStyles.cardconatiner}>
           {filterPublications.map((filterPublications, index) => {
             return <CardRender doc={filterPublications} key={index} />
           })}
         </div>
 
-        <div className={xx.Pageconatiner}>
+        <div className={listingStyles.Pageconatiner}>
           <Pagination
-            className={xx.pageination}
+            className={listingStyles.pageination}
             value={pageNumber}
             totalCount={filteredData.length}
             pageSize={pageSize}

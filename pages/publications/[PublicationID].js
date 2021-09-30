@@ -211,9 +211,9 @@ const PublicationStyles = makeStyles({
 })
 
 function Publication() {
-  const s = styles()
-  const xx = PublicationListingStyles()
-  const z = PublicationStyles()
+  const medicalStyles = styles()
+  const listingStyles = PublicationListingStyles()
+  const pageStyles = PublicationStyles()
   const [doc, setDocData] = useState(null)
   const [pub, setPubData] = useState(null)
   const params = useRouter()
@@ -238,61 +238,71 @@ function Publication() {
   if (doc && pub) {
     return (
       <>
-        <div className={s.body}>
+        <div className={medicalStyles.body}>
           <Link href="/publications">
-            <a className={xx.nav}>
-              <T className={z.back}>{'<'} Back to All Publications</T>
+            <a className={listingStyles.nav}>
+              <T className={pageStyles.back}>{'<'} Back to All Publications</T>
             </a>
           </Link>
-          <div className={z.box}>
-            <div className={z.boxLeft}>
-              <T className={z.title}>{RichText.asText(pub.data.title)}</T>
-              <div className={z.datediv}>
-                <T className={z.date}>{pub.data.dt_published}</T>
-                <div className={z.icondiv}>
-                  <img className={xx.logo} src={twittericon} />
-                  <img className={xx.logo} src={linkIcon} />
+          <div className={pageStyles.box}>
+            <div className={pageStyles.boxLeft}>
+              <T className={pageStyles.title}>
+                {RichText.asText(pub.data.title)}
+              </T>
+              <div className={pageStyles.datediv}>
+                <T className={pageStyles.date}>{pub.data.dt_published}</T>
+                <div className={pageStyles.icondiv}>
+                  <img className={listingStyles.logo} src={twittericon} />
+                  <img className={listingStyles.logo} src={linkIcon} />
                 </div>
               </div>
-              <div className={z.line} />
+              <div className={pageStyles.line} />
               <div>
-                <img className={z.logo} src={pub.data.source_logo.url} />
+                <img
+                  className={pageStyles.logo}
+                  src={pub.data.source_logo.url}
+                />
               </div>
-              <T className={z.abstract}>{pub.data.abstract}</T>
-              <div className={z.authdiv}>
-                <T className={z.authhead}>Authors: </T>
-                <T className={z.authors}>{pub.data.authors} </T>
+              <T className={pageStyles.abstract}>{pub.data.abstract}</T>
+              <div className={pageStyles.authdiv}>
+                <T className={pageStyles.authhead}>Authors: </T>
+                <T className={pageStyles.authors}>{pub.data.authors} </T>
               </div>
-              <T className={z.authors}>{pub.data.authors_institute_address}</T>
+              <T className={pageStyles.authors}>
+                {pub.data.authors_institute_address}
+              </T>
             </div>
-            <div className={z.boxRight}>
+            <div className={pageStyles.boxRight}>
               <div>
-                <img src={pub.data.paper_image.url} className={z.pdfmobile} />
-                <T className={z.pdfText}>
+                <img
+                  src={pub.data.paper_image.url}
+                  className={pageStyles.pdfmobile}
+                />
+                <T className={pageStyles.pdfText}>
                   <a href={pub.data.download_pdf.url} target="_blank" download>
                     Download PDF
                   </a>
                 </T>
-                <div className={z.openfullDiv}>
-                  <T className={z.pdfText}>
-                    <img src={pdffull} className={z.openIcon} />
+                <div className={pageStyles.openfullDiv}>
+                  <T className={pageStyles.pdfText}>
+                    <img src={pdffull} className={pageStyles.openIcon} />
                     <a href={pub.data.download_pdf.url} target="blank">
                       Open Full publication
                     </a>
                   </T>
                 </div>
               </div>
-              <div className={z.authdiv}>
+              <div className={pageStyles.authdiv}>
                 {pub.data.institutional_authors.map((item, index) => {
                   return (
-                    <div className={z.mobileauthcover}>
-                      <T className={z.authtext}>{item.text}</T>
+                    <div className={pageStyles.mobileauthcover}>
+                      <T className={pageStyles.authtext}>{item.text}</T>
                     </div>
                   )
                 })}
               </div>
 
-              <T className={z.authhead}>Correspondence to:</T>
+              <T className={pageStyles.authhead}>Correspondence to:</T>
               <T>{pub.data.correspondence_to}</T>
             </div>
           </div>

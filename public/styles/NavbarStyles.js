@@ -222,7 +222,26 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '12px',
   },
   thankmodal: {
-    width: '550px !important',
+    margin: 'auto',
+    // paddingTop: '13%',
+
+    width: '1128px !important',
+
+    ['@media (max-width:780px)']: {
+      width: '300px  !important',
+
+      height: '80%',
+      padding: '0px',
+    },
+    ['@media (min-width:100000px)']: {
+      width: '60%  !important',
+    },
+  },
+  thankyoupad: {
+    padding: '145px 5px 100px 45px',
+    ['@media (max-width:780px)']: {
+      padding: '10px',
+    },
   },
 }))
 

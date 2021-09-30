@@ -3,32 +3,32 @@ import styles from '../public/styles/MedicalStyles'
 import useStyles from '../public/styles/HomepageStyles'
 import { Typography as T } from '@material-ui/core'
 import React from 'react'
-import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-reactjs'
 import { useRouter } from 'next/router'
 import _ from 'lodash'
 import clsx from 'clsx'
 import Link from 'next/link'
 function Slider2(props) {
-  const styles = useStyles()
+  const homepageStyles = useStyles()
 
   const { item } = props
   return (
     <>
-      <div className={styles.slider2container}>
+      <div className={homepageStyles.slider2container}>
         {item.map((item, index) => (
-          <div className={styles.slider2}>
-            <T className={styles.slider2Top}>{item.data.published_in.text}</T>
-            <T className={styles.slider2head}>
+          <div className={homepageStyles.slider2}>
+            <T className={homepageStyles.slider2Top}>
+              {item.data.published_in.text}
+            </T>
+            <T className={homepageStyles.slider2head}>
               {RichText.asText(item.data.title)}
             </T>
-            <T className={styles.slider2disc}>{`${item.data.abstract.substring(
-              0,
-              300,
-            )}....`}</T>
+            <T
+              className={homepageStyles.slider2disc}
+            >{`${item.data.abstract.substring(0, 300)}....`}</T>
             <Link href={`/publications/${item.id}`}>
-              <a className={styles.link}>
-                <T className={styles.slider2read}>Read more -{'>'}</T>
+              <a className={homepageStyles.link}>
+                <T className={homepageStyles.slider2read}>Read more -{'>'}</T>
               </a>
             </Link>
           </div>
@@ -38,25 +38,26 @@ function Slider2(props) {
   )
 }
 function Slider2mobile(props) {
-  const styles = useStyles()
+  const homepageStyles = useStyles()
 
   const { item } = props
 
   return (
     <>
-      <div className={styles.slider2container}>
-        <div className={styles.slider2}>
-          <T className={styles.slider2Top}>{item.data.published_in.text}</T>
-          <T className={styles.slider2head}>
+      <div className={homepageStyles.slider2container}>
+        <div className={homepageStyles.slider2}>
+          <T className={homepageStyles.slider2Top}>
+            {item.data.published_in.text}
+          </T>
+          <T className={homepageStyles.slider2head}>
             {RichText.asText(item.data.title)}
           </T>
-          <T className={styles.slider2disc}>{`${item.data.abstract.substring(
-            0,
-            200,
-          )}....`}</T>
+          <T
+            className={homepageStyles.slider2disc}
+          >{`${item.data.abstract.substring(0, 200)}....`}</T>
           <Link href={`/publications/${item.id}`}>
-            <a className={styles.link}>
-              <T className={styles.slider2read}>Read more -{'>'}</T>
+            <a className={homepageStyles.link}>
+              <T className={homepageStyles.slider2read}>Read more -{'>'}</T>
             </a>
           </Link>
         </div>
@@ -66,7 +67,7 @@ function Slider2mobile(props) {
 }
 
 function LowerSlider({ doc }) {
-  const s = styles()
+  const medicalStyles = styles()
   const location = useRouter()
   const { pathname } = location
   const splitLocation = pathname.split('/')
@@ -105,7 +106,7 @@ function LowerSlider({ doc }) {
   }
   return (
     <>
-      <div className={s.desktop}>
+      <div className={medicalStyles.desktop}>
         <Carousel
           indicators={true}
           animation={'slide'}
@@ -117,7 +118,7 @@ function LowerSlider({ doc }) {
           })}
         </Carousel>
       </div>
-      <div className={clsx(s.mobile, s.mobileSLider)}>
+      <div className={clsx(medicalStyles.mobile, medicalStyles.mobileSLider)}>
         <Carousel
           indicators={true}
           animation={'slide'}
