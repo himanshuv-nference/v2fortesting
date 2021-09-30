@@ -156,6 +156,9 @@ const useStyles = makeStyles((theme) => ({
   },
   nameInput: {
     width: '190px',
+    ['@media (max-width:780px)']: {
+      width: '110px',
+    },
   },
   inputname: {
     display: 'flex',
@@ -202,6 +205,7 @@ const useStyles = makeStyles((theme) => ({
     width: '80% !important',
     ['@media (max-width:780px)']: {
       height: '80%',
+      width: '100% !important',
     },
     ['@media (min-width:100000px)']: {
       width: '60% !important',
