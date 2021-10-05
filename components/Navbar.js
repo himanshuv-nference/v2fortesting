@@ -88,7 +88,7 @@ export default function Navbar() {
   }
 
   return (
-    <div>
+    <div className={styles.sticky}>
       <div className={styles.topline}></div>
       <div className={styles.body}>
         <div className={styles.nav}>
@@ -356,7 +356,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T>About US</T>
+                    <T onClick={toggle('top', false)}>About US</T>
                   </a>
                 </Link>
                 <Link href="/pharma">
@@ -367,7 +367,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T>For Pharma</T>
+                    <T onClick={toggle('top', false)}>For Pharma</T>
                   </a>
                 </Link>
 
@@ -379,7 +379,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T>For Medical Centers</T>
+                    <T onClick={toggle('top', false)}>For Medical Centers</T>
                   </a>
                 </Link>
 
@@ -391,7 +391,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T>Publications</T>
+                    <T onClick={toggle('top', false)}>Publications</T>
                   </a>
                 </Link>
                 <Link href="/news">
@@ -402,13 +402,13 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T>Media</T>
+                    <T onClick={toggle('top', false)}>Media</T>
                   </a>
                 </Link>
-                <T>Careers</T>
+                <T onClick={toggle('top', false)}>Careers</T>
               </div>
               <div className={styles.selected} onClick={ModalOpen}>
-                <T>Contact Us</T>
+                <T onClick={toggle('top', false)}>Contact Us</T>
               </div>
             </Drawer>
           </div>

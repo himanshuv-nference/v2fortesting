@@ -6,11 +6,13 @@ const useStyles = makeStyles((theme) => ({
       'linear-gradient(to right, rgba(0, 87, 255, 1), rgba(90, 238, 255, 1),rgba(222, 255, 222, 1),rgba(56, 232, 169, 1))',
     mixBlendMode: 'multiply',
     height: '8px',
-    marginBottom: '18px',
   },
   nav: {
     display: 'flex',
     flexDirection: 'row',
+    ['@media (max-width:780px)']: {
+      gap: '58%',
+    },
   },
   navItems: {
     ['@media (max-width:780px)']: {
@@ -33,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '16px',
     },
     marginLeft: '120px',
+    marginTop: '16px',
   },
   image: {
     flex: '0.9',
@@ -75,10 +78,12 @@ const useStyles = makeStyles((theme) => ({
   },
   logoDiv: {
     display: 'flex',
-    gap: '45%',
+    gap: '55%',
+    marginBottom: '15px',
+    marginTop: '15px',
+    alignItems: 'baseline',
   },
   line: {
-    marginTop: '21px',
     marginBottom: '17px',
     borderWidth: '2px',
     borderBottomStyle: 'solid',
@@ -246,6 +251,11 @@ const useStyles = makeStyles((theme) => ({
     ['@media (max-width:780px)']: {
       padding: '10px',
     },
+  },
+  sticky: {
+    position: 'sticky',
+    top: '0',
+    background: 'white',
   },
 }))
 
