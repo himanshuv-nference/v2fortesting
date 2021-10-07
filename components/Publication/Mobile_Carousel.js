@@ -8,6 +8,7 @@ import Link from 'next/link'
 export default function SliderMobile(props) {
   const listingStyles = PublicationListingStyles()
   const { item } = props
+
   return (
     <>
       <div className={listingStyles.mobileContaniner}>
@@ -18,9 +19,14 @@ export default function SliderMobile(props) {
         <T className={listingStyles.SliderTitle}>
           {RichText.asText(item.data.title)}
         </T>
-        <T
-          className={listingStyles.sliderDesc}
-        >{`${item.data.abstract.substring(0, 150)}....`}</T>
+        {item.data.abstract ? (
+          <T
+            className={listingStyles.sliderDesc}
+          >{`${item.data.abstract.substring(0, 150)}....`}</T>
+        ) : (
+          <div />
+        )}
+
         <div className={listingStyles.datediv}>
           <div className={listingStyles.authdiv}>
             {item.data.institutional_authors.map((item, index) => {

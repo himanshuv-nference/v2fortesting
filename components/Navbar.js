@@ -109,7 +109,7 @@ export default function Navbar() {
                       : styles.link
                   }
                 >
-                  <T>About us</T>
+                  <T>About Us</T>
                 </a>
               </Link>
             </div>
@@ -356,7 +356,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T onClick={toggle('top', false)}>About US</T>
+                    <T onClick={toggle('top', false)}>About Us</T>
                   </a>
                 </Link>
                 <Link href="/pharma">

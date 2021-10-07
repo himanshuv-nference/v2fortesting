@@ -186,9 +186,13 @@ const PharmaStyles = makeStyles((theme) => ({
     width: '270px',
   },
   box4icons: {
-    width: '12px',
-    height: '12px',
-    paddingTop: '15px',
+    // width: '12px',
+    // height: '12px',
+    // paddingTop: '15px',
+    ['@media (max-width:780px)']: {
+      width: '12px',
+    },
+    paddingBottom: '7px',
   },
   lastgrid: {
     paddingRight: '50%',

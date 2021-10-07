@@ -50,6 +50,15 @@ export default function Footer() {
         .then(
           (result) => {
             thankyouModalOpen()
+
+            setFormData({
+              company: '',
+              title: '',
+              firstName: '',
+              lastName: '',
+              email: '',
+              message: '',
+            })
           },
           (error) => {
             console.log('formerror', error.text)
@@ -83,12 +92,14 @@ export default function Footer() {
                 placeholder={'Company'}
                 variant={'underlined'}
                 className={styles.widthName}
+                value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e })}
               />
               <TextField
                 placeholder={'Title'}
                 variant={'underlined'}
                 className={styles.widthName}
+                value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e })}
               />
             </div>
@@ -96,6 +107,7 @@ export default function Footer() {
               <TextField
                 placeholder={'First Name'}
                 variant={'underlined'}
+                value={formData.firstName}
                 className={styles.widthName}
                 onChange={(e) => setFormData({ ...formData, firstName: e })}
               />
@@ -103,6 +115,7 @@ export default function Footer() {
                 placeholder={'Last Name'}
                 variant={'underlined'}
                 className={styles.widthName}
+                value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e })}
               />
             </div>
@@ -111,6 +124,7 @@ export default function Footer() {
                 placeholder={'Email'}
                 variant={'underlined'}
                 className={styles.inputemail}
+                value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e })}
                 helperText={
                   errorFormData.email
@@ -125,6 +139,7 @@ export default function Footer() {
                 placeholder={'Message'}
                 variant={'underlined'}
                 className={styles.inputmessage}
+                value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e })}
               />
             </div>

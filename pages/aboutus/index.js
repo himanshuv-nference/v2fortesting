@@ -9,7 +9,7 @@ const Cso = '/nference-web/AboutusImages/Group 3772.svg'
 const ChiefSalesofficer = '/nference-web/AboutusImages/Group 3775.svg'
 const CFO = '/nference-web/AboutusImages/Mask Group.svg'
 const ChiefaffairOfficer = '/nference-web/AboutusImages/image 24.svg'
-const SVP = '/nference-web/AboutusImages/Mask Group (1).svg'
+const COO = '/nference-web/AboutusImages/Mask Group (1).svg'
 const CPO = '/nference-web/AboutusImages/ag.svg'
 const ChiefStrategyoOfficer = '/nference-web/AboutusImages/Mask Group (2).svg'
 const CTO = '/nference-web/AboutusImages/ajit.svg'
@@ -111,12 +111,6 @@ function Aboutus() {
         <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
-            <img className={pharmaStyles.mobileimage} src={ChiefSalesofficer} />
-            <T className={pharmaStyles.imageName}>Michael Durso</T>
-            <T className={pharmaStyles.imagedesc}>Chief Sales Officer</T>
-          </div>
-          <div>
-            <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CFO} />
             <T className={pharmaStyles.imageName}>Hutch Fishman</T>
             <T className={pharmaStyles.imagedesc}>Chief Financial Officer </T>
@@ -132,16 +126,14 @@ function Aboutus() {
               Chief Corporate Affairs Officer
             </T>
           </div>
-        </div>
-        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
-            <img className={pharmaStyles.mobileimage} src={SVP} />
+            <img className={pharmaStyles.mobileimage} src={COO} />
             <T className={pharmaStyles.imageName}>Mike Koenig</T>
-            <T className={pharmaStyles.imagedesc}>
-              SVP of Strategic Partnerships
-            </T>
+            <T className={pharmaStyles.imagedesc}>Chief Commercial Officer</T>
           </div>
+        </div>
+        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CPO} />
@@ -157,20 +149,20 @@ function Aboutus() {
             <T className={pharmaStyles.imageName}>David McMullin</T>
             <T className={pharmaStyles.imagedesc}>Chief Strategy Officer</T>
           </div>
-        </div>
-        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CTO} />
             <T className={pharmaStyles.imageName}>Ajit Rajasekharan</T>
             <T className={pharmaStyles.imagedesc}>Chief Technology Officer </T>
           </div>
+        </div>
+        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={General_Counsel} />
             <T className={pharmaStyles.imageName}>George Shiebler</T>
             <T className={pharmaStyles.imagedesc}>
-              Senior Vice President {'&'} General_Counsel
+              Senior Vice President {'&'} General Counsel
             </T>
           </div>
         </div>

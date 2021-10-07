@@ -91,7 +91,12 @@ function LowerSlider({ doc }) {
       x.data.publication_types.some((us) => us.text === 'co-auth'),
     )
   }
-
+  filteredPublication.sort(function (a, b) {
+    return (
+      new Date(b.data.dt_published).getTime() -
+      new Date(a.data.dt_published).getTime()
+    )
+  })
   let customItems2 = []
   let sliderItems = []
   filteredPublication.map((item, index) => {
@@ -110,7 +115,8 @@ function LowerSlider({ doc }) {
         <Carousel
           indicators={true}
           animation={'slide'}
-          timeout={900}
+          timeout={2000}
+          interval={8000}
           autoPlay={true}
         >
           {customItems2.map((item, index) => {

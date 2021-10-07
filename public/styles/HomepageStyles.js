@@ -1,6 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
+  // largeScreen: {
+  //   ['@media (min-width:3000px)']: {
+  //     width: '1200px',
+  //     marginLeft: '8.43%',
+  //     marginRight: '8.43%',
+  //   },
+  // },
   desktop: {
     display: 'block',
     ['@media (max-width:780px)']: {
@@ -21,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
       marginRight: '16px',
     },
     ['@media (min-width:3000px)']: {
-      marginRight: '1200px',
-      marginLeft: '1200px',
+      width: '1200px',
+      marginLeft: '8.43%',
+      marginRight: '8.43%',
     },
   },
   circleImage: {
@@ -585,6 +593,7 @@ const useStyles = makeStyles((theme) => ({
     background: '#FAFBFC',
     padding: '118px 120px 80px 120px',
     marginTop: '60px',
+    marginBottom: '90px',
     ['@media (max-width:780px)']: {
       padding: '16px',
     },
@@ -706,6 +715,7 @@ const useStyles = makeStyles((theme) => ({
   box4new: {
     background: 'linear-gradient(90deg, #0057FF 0%, #487BFC 100%);',
     padding: '90px 60px 150px 60px',
+    marginBottom: '90px',
     ['@media (max-width:780px)']: {
       padding: '1px 0px 50px 0px',
     },
@@ -714,8 +724,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     gap: '120px',
     alignItems: 'end',
-    paddingRight: '60px',
-    paddingLeft: '60px',
     ['@media (max-width:780px)']: {
       flexDirection: 'column',
       gap: '60px',

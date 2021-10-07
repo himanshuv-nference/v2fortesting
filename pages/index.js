@@ -231,11 +231,12 @@ function Homepage({ data, pubInfo }) {
                 <div className={styles.step2Line}></div>
                 <T className={styles.stepdesc}>
                   We digitize tens of millions of archived pathology slides
-                  using high-throughput state-of-the-art scanning capabilities,
-                  and we work with sequencing partners to provide clinical-grade
-                  whole exome and transcriptome sequencing for patients seen at
-                  our partner centers. These data creation processes enrich the
-                  real world data currently existing in EMRs
+                  using high-throughput state-of-the-art scanning capabilities
+                  in partnership with Pramana, and we work with sequencing
+                  partners to provide clinical-grade whole exome and
+                  transcriptome sequencing for patients seen at our partner
+                  centers. These data creation processes enrich the real world
+                  data currently existing in EMRs.
                 </T>
               </div>
 

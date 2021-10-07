@@ -135,7 +135,7 @@ function ForPharma({ pubInfo }) {
             <div>
               <img src={box2image1} className={pharmaStyles.box3Image} />
               <T className={pharmaStyles.box3head}>
-                Triangulation with public and proprietary data1
+                Triangulation With Public and Proprietary Data
               </T>
               <T className={pharmaStyles.box3desc}>
                 Integrating additional data sources with labeled, curated and

@@ -17,9 +17,14 @@ export default function Slider(props) {
           <T className={listingStyles.SliderTitle}>
             {RichText.asText(item.data.title)}
           </T>
-          <T
-            className={listingStyles.sliderDesc}
-          >{`${item.data.abstract.substring(0, 300)}....`}</T>
+          {item.data.abstract ? (
+            <T
+              className={listingStyles.sliderDesc}
+            >{`${item.data.abstract.substring(0, 300)}....`}</T>
+          ) : (
+            <div />
+          )}
+
           <div className={listingStyles.datediv}>
             <div className={listingStyles.authdiv}>
               <T className={listingStyles.sliderAuth}>Authored by:</T>

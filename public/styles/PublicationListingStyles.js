@@ -217,7 +217,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
     paddingTop: '32px',
     paddingBottom: '32px',
     marginTop: '32px',
-    marginRight: '-10px',
+    // marginRight: '-10px',
     marginLeft: '-10px',
     ['@media (max-width:780px)']: {
       paddingTop: '20px',

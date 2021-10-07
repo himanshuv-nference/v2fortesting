@@ -72,10 +72,14 @@ export default function CardRender(props) {
             {props.doc.data.authors}
           </ReactReadMoreReadLess>
         </T>
+        {props.doc.data.abstract ? (
+          <T className={listingStyles.cardesc}>
+            {`${props.doc.data.abstract.substring(0, 300)}....`}
+          </T>
+        ) : (
+          <div />
+        )}
 
-        <T className={listingStyles.cardesc}>
-          {`${props.doc.data.abstract.substring(0, 300)}....`}
-        </T>
         <T className={clsx(listingStyles.cardesc, listingStyles.desktop)}>
           Correspondence to: {props.doc.data.correspondence_to}
         </T>
