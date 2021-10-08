@@ -1,5 +1,7 @@
 import { Typography as T } from '@material-ui/core'
 import CovidStyles from '../../public/styles/CovidpageStyles'
+import Link from 'next/link'
+
 const covidImage = '/nference-web/CovidPageImages/Group 4065.svg'
 const linkicon = '/nference-web/CovidPageImages/Frame 3077.svg'
 
@@ -41,12 +43,28 @@ export default function DesktopCard(props) {
           {Covid.data.body[0].items.map((imagedata) => {
             return <img src={imagedata.publication_image.url} />
           })}
-          <div className={style.linkDiv}>
-            <T className={style.linkText}>publink</T>
-            <img src={linkicon} />
-          </div>
+          {Covid.data.link ? (
+            <Link href={Covid.data.link}>
+              <a>
+                <div className={style.linkDiv}>
+                  <T className={style.linkText}>publink</T>
+                  <img src={linkicon} />
+                </div>
+              </a>
+            </Link>
+          ) : (
+            <div className={style.linkDiv}>
+              <T className={style.linkText}>publink</T>
+              <img src={linkicon} />
+            </div>
+          )}
         </div>
       </div>
+      <style jsx global>{`
+        a {
+          text-decoration: none !important;
+        }
+      `}</style>
     </div>
   )
 }

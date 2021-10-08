@@ -11,36 +11,46 @@ export default function MobileCardRender(props) {
   return (
     <>
       <div className={medicalStyles.mobile}>
-        <div className={listingStyles.newsCard}>
-          <div className={listingStyles.mobileLeft}>
-            {/* <T className={listingStyles.newsSource}>{news.data.news_category}</T> */}
-            <T className={listingStyles.newsSource}>{news.data.source_name}</T>
-            <Link href={news.data.news_url.url}>
-              <a className={listingStyles.nav}>
+        <Link href={news.data.news_url.url}>
+          <a className={listingStyles.nav}>
+            <div className={listingStyles.newsCard}>
+              <div className={listingStyles.mobileLeft}>
+                {/* <T className={listingStyles.newsSource}>{news.data.news_category}</T> */}
+                <T className={listingStyles.newsSource}>
+                  {news.data.source_name}
+                </T>
+
                 <T className={listingStyles.newsTitle}>
                   {RichText.asText(news.data.title).slice(0, 96) + '...'}
                 </T>
-              </a>
-            </Link>
-            <div className={listingStyles.Carddatediv}>
-              <div className={listingStyles.mobileauthcover}>
-                <T className={listingStyles.sliderAuth}>
-                  {news.data.news_category}
-                </T>
+
+                <div className={listingStyles.Carddatediv}>
+                  <div className={listingStyles.mobileauthcovernews}>
+                    <T className={listingStyles.sliderAuth}>
+                      {news.data.news_category}
+                    </T>
+                  </div>
+                  <T className={listingStyles.newsDate}>
+                    {news.data.published_date}
+                  </T>
+                </div>
               </div>
-              <T className={listingStyles.newsDate}>
-                {news.data.published_date}
-              </T>
+              <div className={listingStyles.mobileRight}>
+                <img
+                  className={listingStyles.newsCardImage}
+                  src={news.data.news_image.url}
+                />
+              </div>
             </div>
-          </div>
-          <div className={listingStyles.mobileRight}>
-            <img
-              className={listingStyles.newsCardImage}
-              src={news.data.news_image.url}
-            />
-          </div>
-        </div>
+          </a>
+        </Link>
       </div>
+      <style jsx global>{`
+        a {
+          color: #1c2329 !important;
+          text-decoration: none !important;
+        }
+      `}</style>
     </>
   )
 }

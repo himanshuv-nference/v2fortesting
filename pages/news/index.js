@@ -86,6 +86,8 @@ function NewsRoom({ newsData }) {
   }
   filterNews = filterNews.slice((pageNumber - 1) * 5, pageNumber * 5)
 
+  let sliderNews = allNews.filter((x) => x.tags.some((us) => us === 'featured'))
+
   return (
     <>
       <div className={medicalStyles.body}>
@@ -99,7 +101,7 @@ function NewsRoom({ newsData }) {
           timeout={800}
           autoPlay={true}
         >
-          {allNews.map((item, index) => {
+          {sliderNews.map((item, index) => {
             return <Slider item={item} key={index} />
           })}
         </Carousel>
@@ -111,7 +113,7 @@ function NewsRoom({ newsData }) {
           timeout={800}
           autoPlay={true}
         >
-          {allNews.map((item, index) => {
+          {sliderNews.map((item, index) => {
             return <SliderMobile item={item} key={index} />
           })}
         </Carousel>

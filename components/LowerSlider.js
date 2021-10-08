@@ -128,7 +128,8 @@ function LowerSlider({ doc }) {
         <Carousel
           indicators={true}
           animation={'slide'}
-          timeout={700}
+          timeout={2000}
+          interval={8000}
           autoPlay={true}
         >
           {filteredPublication.map((item, index) => {

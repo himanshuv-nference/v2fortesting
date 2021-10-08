@@ -86,7 +86,7 @@ export default function CardRender(props) {
       </div>
       <div className={medicalStyles.desktop}>
         <div className={listingStyles.cardRight}>
-          <div>
+          {/* <div>
             <T className={listingStyles.postedIn}>Use Cases</T>
             {props.doc.data.usecase.map((item, index) => {
               return (
@@ -95,7 +95,7 @@ export default function CardRender(props) {
                 </div>
               )
             })}
-          </div>
+          </div> */}
           <div>
             <T className={listingStyles.postedIn}>Therapeutic Area</T>
             {props.doc.data.therapeutic_area.map((item, index) => {
@@ -119,7 +119,7 @@ export default function CardRender(props) {
         </div>
       </div>
       <div className={medicalStyles.mobile}>
-        <div className={listingStyles.grid}>
+        {/* <div className={listingStyles.grid}>
           {props.doc.data.usecase.map((item, index) => {
             return (
               <div className={listingStyles.usecaseboxes}>
@@ -127,7 +127,14 @@ export default function CardRender(props) {
               </div>
             )
           })}
-        </div>
+        </div> */}
+        {props.doc.data.therapeutic_area.map((item, index) => {
+          return (
+            <div className={listingStyles.areaboxes}>
+              <T className={listingStyles.usecaseText}>{item.text}</T>
+            </div>
+          )
+        })}
         <div
           className={clsx({
             [listingStyles.show]: !show,
@@ -145,13 +152,6 @@ export default function CardRender(props) {
           })}
         >
           <div className={listingStyles.grid2}>
-            {props.doc.data.therapeutic_area.map((item, index) => {
-              return (
-                <div className={listingStyles.areaboxes}>
-                  <T className={listingStyles.usecaseText}>{item.text}</T>
-                </div>
-              )
-            })}
             {props.doc.data.institutional_authors.map((item, index) => {
               return (
                 <div className={listingStyles.authboxes}>

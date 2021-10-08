@@ -300,7 +300,7 @@ function ForMedical({ pubInfo }) {
               </T>
             </div>
           </div>
-          <div className={medicalStyles.productcontainer2}>
+          {/* <div className={medicalStyles.productcontainer2}>
             <div>
               <img src={ncong} />
               <T className={medicalStyles.productname}>NCOGNITO SOFTWARE</T>
@@ -366,7 +366,7 @@ function ForMedical({ pubInfo }) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className={medicalStyles.box10part1}>

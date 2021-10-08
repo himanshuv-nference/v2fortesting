@@ -23,7 +23,7 @@ export default function SliderMobile(props) {
         >{`${item.data.description.substring(0, 150)}....`}</T>
         <div className={listingStyles.Newsdatediv}>
           <div className={listingStyles.authdiv}>
-            <div className={listingStyles.mobileauthcover}>
+            <div className={listingStyles.mobileauthcovernews}>
               <T className={listingStyles.sliderAuth}>
                 {item.data.news_category}
               </T>

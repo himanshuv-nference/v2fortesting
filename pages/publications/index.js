@@ -170,7 +170,9 @@ function PublicationListing({ pubInfo }) {
     (pageNumber - 1) * 5,
     pageNumber * 5,
   )
-
+  let sliderPublication = allPublications.filter((x) =>
+    x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
+  )
   return (
     <>
       <div className={listingStyles.body}>
@@ -181,10 +183,11 @@ function PublicationListing({ pubInfo }) {
         <Carousel
           indicators={true}
           animation={'slide'}
-          timeout={800}
+          timeout={2500}
+          interval={8000}
           autoPlay={true}
         >
-          {allPublications.map((item, index) => {
+          {sliderPublication.map((item, index) => {
             return <Slider item={item} key={index} />
           })}
         </Carousel>
@@ -193,10 +196,11 @@ function PublicationListing({ pubInfo }) {
         <Carousel
           indicators={true}
           animation={'slide'}
-          timeout={800}
+          timeout={2000}
+          interval={8000}
           autoPlay={true}
         >
-          {allPublications.map((item, index) => {
+          {sliderPublication.map((item, index) => {
             return <SliderMobile item={item} key={index} />
           })}
         </Carousel>

@@ -189,6 +189,13 @@ const PublicationListingStyles = makeStyles((theme) => ({
     borderRadius: '4px',
     height: '16px',
   },
+  mobileauthcovernews: {
+    background: '#D9E6FF',
+    borderRadius: '4px',
+    height: '16px',
+    paddingRight: '5px',
+    paddingLeft: '5px',
+  },
   readmore: {
     fontSize: '14px',
     fontWeight: '500',
@@ -504,6 +511,11 @@ const PublicationListingStyles = makeStyles((theme) => ({
   newsCard: {
     display: 'flex',
     marginTop: '32px',
+    borderWidth: '1px',
+
+    borderStyle: 'dashed',
+    borderColor: '#627181',
+    boxSizing: 'border-box',
     ['@media (max-width:780px)']: {
       marginTop: '27px',
       background: '#FAFBFC',
@@ -517,14 +529,14 @@ const PublicationListingStyles = makeStyles((theme) => ({
   newsleft: {
     padding: '32px 60px 32px 60px',
     flex: 0.5,
-    borderTopWidth: '1px',
-    borderLeftWidth: '1px',
-    borderBottomWidth: '1px',
-    borderRightWidth: '0px',
+    // borderTopWidth: '1px',
+    // borderLeftWidth: '1px',
+    // borderBottomWidth: '1px',
+    // borderRightWidth: '0px',
 
-    borderStyle: 'dashed',
-    borderColor: '#627181',
-    boxSizing: 'border-box',
+    // borderStyle: 'dashed',
+    // borderColor: '#627181',
+    // boxSizing: 'border-box',
   },
   newsright: {
     flex: 0.5,
