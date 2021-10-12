@@ -27,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '16px',
       marginRight: '16px',
     },
-    ['@media (min-width:3000px)']: {
+    ['@media (min-width:1440px)']: {
       width: '1200px',
-      marginLeft: '8.43%',
-      marginRight: '8.43%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   },
   circleImage: {

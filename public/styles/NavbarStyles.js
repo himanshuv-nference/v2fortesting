@@ -10,8 +10,10 @@ const useStyles = makeStyles((theme) => ({
   nav: {
     display: 'flex',
     flexDirection: 'row',
+    paddingBottom: '20px',
     ['@media (max-width:780px)']: {
       gap: '58%',
+      marginBottom: '0px',
     },
   },
   navItems: {

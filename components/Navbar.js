@@ -76,6 +76,14 @@ export default function Navbar() {
         .then((result) => {
           modalClose()
           thankyouModalOpen()
+          setFormData({
+            company: '',
+            title: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: '',
+          })
         })
     } else {
       setErrorFormData((prev) => {

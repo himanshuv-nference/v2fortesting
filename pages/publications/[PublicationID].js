@@ -113,8 +113,6 @@ const PublicationStyles = makeStyles({
     ['@media (max-width:780px)']: {
       fontSize: '14px',
       lineHeight: '137%',
-
-      //   marginTop:'30px'
     },
   },
   pdfText: {
@@ -122,14 +120,12 @@ const PublicationStyles = makeStyles({
     fontWeight: '500',
     lineHeight: '180%',
     marginTop: '10px',
-    // marginBottom:'14px',
+
     letterSpacing: '0.005em',
     color: '#1C2329',
     textDecorationLine: 'underline',
     ['@media (max-width:780px)']: {
       fontSize: '14px',
-
-      //   marginTop:'30px'
     },
   },
   box: {
@@ -185,15 +181,11 @@ const PublicationStyles = makeStyles({
     fontSize: '12px',
     fontWeight: '300',
     lineHeight: '140%',
-    // marginTop:'10px',
-    // marginBottom:'14px',
-    // letterSpacing: '0.005em',
+
     color: '#0057FF',
-    // textDecorationLine: 'underline',
+
     ['@media (max-width:780px)']: {
       fontSize: '11px',
-
-      //   marginTop:'30px'
     },
   },
   pdfmobile: {

@@ -105,6 +105,8 @@ function ForMedical({ pubInfo }) {
           </div>
           <img src={box3image2} className={medicalStyles.box3image2} />
         </div>
+      </div>
+      <div className={medicalStyles.box4body}>
         <div className={medicalStyles.box4}>
           <img src={box4image1} className={medicalStyles.box4image1} />
           <T className={medicalStyles.box3head}>Data Creation</T>
@@ -160,6 +162,8 @@ function ForMedical({ pubInfo }) {
             <img src={box4image4} className={medicalStyles.mobile} />
           </div>
         </div>
+      </div>
+      <div className={medicalStyles.body}>
         <div className={medicalStyles.box5}>
           <div>
             <img src={box5image1} className={medicalStyles.box5image1} />

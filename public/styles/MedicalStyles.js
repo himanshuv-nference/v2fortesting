@@ -8,10 +8,11 @@ const Medicalstyles = makeStyles((theme) => ({
       marginRight: '16px',
       marginLeft: '16px',
     },
-    // ['@media (min-width:2000px)']: {
-    //   marginRight: '1200px',
-    //   marginLeft: '1200px',
-    // },
+    ['@media (min-width:1440px)']: {
+      width: '1200px',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
   },
   desktop: {
     ['@media (max-width:780px)']: {
@@ -22,6 +23,14 @@ const Medicalstyles = makeStyles((theme) => ({
     display: 'none',
     ['@media (max-width:780px)']: {
       display: 'block',
+    },
+  },
+  box4body: {
+    marginLeft: '5%',
+    marginRight: '5%',
+    ['@media (max-width:780px)']: {
+      marginRight: '16px',
+      marginLeft: '16px',
     },
   },
   Tophead: {

@@ -532,7 +532,11 @@ function Homepage({ data, pubInfo }) {
               and biomarker of disease – empowering care providers to help
               patients early
             </T>
-            <T className={styles.websitetext}> Anumana website -{'>'} </T>
+            <Link href="https://www.anumana.ai/">
+              <a className={styles.link}>
+                <T className={styles.websitetext}> Anumana website -{'>'} </T>
+              </a>
+            </Link>
           </div>
           <div>
             <img src={pranama} />

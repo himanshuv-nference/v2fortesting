@@ -18,6 +18,10 @@ const cambridge = '/nference-web/AboutusImages/Group 3431.svg'
 const bangaluru = '/nference-web/AboutusImages/Vector 244.svg'
 const Tornonto = '/nference-web/AboutusImages/Vector 245.svg'
 const Rochester = '/nference-web/AboutusImages/Group 3432.svg'
+const SVPsoftware = '/nference-web/AboutusImages/image 147.svg'
+const SVPdatascience = '/nference-web/AboutusImages/image(11).svg'
+const CPOpramana = '/nference-web/AboutusImages/image 145.svg'
+const SVPenginnering = '/nference-web/AboutusImages/image 148.svg'
 
 function Aboutus() {
   const pharmaStyles = PharmaStyles()
@@ -111,10 +115,24 @@ function Aboutus() {
         <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
+            <img className={pharmaStyles.mobileimage} src={SVPsoftware} />
+            <T className={pharmaStyles.imageName}>Sankar Ardhanari</T>
+            <T className={pharmaStyles.imagedesc}>SVP, Software</T>
+          </div>
+          <div>
+            <div className={pharmaStyles.imageLine} />
+            <img className={pharmaStyles.mobileimage} src={SVPdatascience} />
+            <T className={pharmaStyles.imageName}>Rakesh Barve</T>
+            <T className={pharmaStyles.imagedesc}>SVP, Data Sciences</T>
+          </div>
+          <div>
+            <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CFO} />
             <T className={pharmaStyles.imageName}>Hutch Fishman</T>
             <T className={pharmaStyles.imagedesc}>Chief Financial Officer </T>
           </div>
+        </div>
+        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
             <img
@@ -132,14 +150,14 @@ function Aboutus() {
             <T className={pharmaStyles.imageName}>Mike Koenig</T>
             <T className={pharmaStyles.imagedesc}>Chief Commercial Officer</T>
           </div>
-        </div>
-        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CPO} />
             <T className={pharmaStyles.imageName}>Agustin Lopez Marquez</T>
             <T className={pharmaStyles.imagedesc}>Chief Product Officer</T>
           </div>
+        </div>
+        <div className={pharmaStyles.imagesrow}>
           <div>
             <div className={pharmaStyles.imageLine} />
             <img
@@ -148,6 +166,14 @@ function Aboutus() {
             />
             <T className={pharmaStyles.imageName}>David McMullin</T>
             <T className={pharmaStyles.imagedesc}>Chief Strategy Officer</T>
+          </div>
+          <div>
+            <div className={pharmaStyles.imageLine} />
+            <img className={pharmaStyles.mobileimage} src={CPOpramana} />
+            <T className={pharmaStyles.imageName}>Prasanth Perugapalli</T>
+            <T className={pharmaStyles.imagedesc}>
+              Chief Product Officer, Pramana
+            </T>
           </div>
           <div>
             <div className={pharmaStyles.imageLine} />
@@ -165,6 +191,12 @@ function Aboutus() {
               Senior Vice President {'&'} General Counsel
             </T>
           </div>
+          <div>
+            <div className={pharmaStyles.imageLine} />
+            <img className={pharmaStyles.mobileimage} src={SVPenginnering} />
+            <T className={pharmaStyles.imageName}>Vishy Thiagarajan</T>
+            <T className={pharmaStyles.imagedesc}>SVP, Engineering</T>
+          </div>
         </div>
         <div className={medicalStyles.desktop}>
           <T className={clsx(pharmaStyles.aboutHead2Text, pharmaStyles.found)}>
@@ -180,19 +212,19 @@ function Aboutus() {
           <div className={pharmaStyles.imagesrow}>
             <div>
               <T className={pharmaStyles.imageName}>Murali Aravamudan</T>
-              <T className={pharmaStyles.imagedesc}>Brief description here</T>
+              {/* <T className={pharmaStyles.imagedesc}>Brief description here</T> */}
             </div>
             <div>
               <T className={pharmaStyles.imageName}>David Goel</T>
-              <T className={pharmaStyles.imagedesc}>Brief description here</T>
+              {/* <T className={pharmaStyles.imagedesc}>Brief description here</T> */}
             </div>
             <div>
               <T className={pharmaStyles.imageName}>John Halamka</T>
-              <T className={pharmaStyles.imagedesc}>Brief description here</T>
+              {/* <T className={pharmaStyles.imagedesc}>Brief description here</T> */}
             </div>
             <div>
               <T className={pharmaStyles.imageName}>Tim Barrows</T>
-              <T className={pharmaStyles.imagedesc}>Brief description here</T>
+              {/* <T className={pharmaStyles.imagedesc}>Brief description here</T> */}
             </div>
           </div>
         </div>
