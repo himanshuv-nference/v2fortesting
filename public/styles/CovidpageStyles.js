@@ -24,6 +24,11 @@ const CovidStyles = makeStyles((theme) => ({
       fontSize: '22px',
     },
   },
+  dateContainer:{
+    width:'fit-content',
+    position:'absolute',
+    right:100
+  },
   date: {
     fontSize: '14px',
     fontWeight: '500',
@@ -44,10 +49,11 @@ const CovidStyles = makeStyles((theme) => ({
     width: '77px',
     height: '0px',
     marginTop: '10px',
-    marginLeft: '12px',
+    marginLeft: '100px',
   },
   lineDiv: {
     display: 'flex',
+    position:'relative'
   },
   circle: {
     width: '11px',

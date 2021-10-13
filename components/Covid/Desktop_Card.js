@@ -12,11 +12,9 @@ export default function DesktopCard(props) {
   return (
     <div className={style.card}>
       <div className={style.lineDiv}>
-        <div>
-          <T className={style.date}>{Covid.data.date_day}</T>
-          <div className={style.time}>
-            <T className={style.date}>{Covid.data.time}</T>
-          </div>
+        <div className={style.dateContainer}>
+          <T className={style.date} align={'right'}>{Covid.data.date_day}</T>
+          <T className={style.date} align={'right'}>{Covid.data.time}</T>
         </div>
         <div className={style.line} />
         <div className={style.circleDiv}>
