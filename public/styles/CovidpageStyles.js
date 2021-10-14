@@ -81,6 +81,9 @@ const CovidStyles = makeStyles((theme) => ({
     gap: '60px',
     marginTop: '52px',
   },
+  newsContainer:{
+    width:'100%'
+  },
   tagDiv: {
     display: 'flex',
     gap: '8px',
@@ -157,13 +160,14 @@ const CovidStyles = makeStyles((theme) => ({
   },
   linkDiv: {
     display: 'flex',
-    gap: '10px',
+    gap: '10px'
   },
   linkandimageDiv: {
     marginTop: '24px',
     display: 'flex',
     justifyContent: 'end',
     gap: '20px',
+    alignItems:'center',
     ['@media (max-width:780px)']: {
       marginTop: '0px',
       justifyContent: 'left',

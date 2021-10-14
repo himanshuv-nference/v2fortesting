@@ -22,7 +22,7 @@ export default function DesktopCard(props) {
           <div className={style.standingLine} />
         </div>
       </div>
-      <div>
+      <div className={style.newsContainer}>
         <div className={style.tagDiv}>
           <div className={style.tag1}>
             <T className={style.tag1Text}>{Covid.data.tag1}</T>
