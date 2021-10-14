@@ -62,7 +62,7 @@ export default function CardRender(props) {
     return (
       <>
         <div className={medicalStyles.desktop}>
-          <Link href={data.news_url.url}>
+          <Link href={news.data.news_url.url}>
             <a className={listingStyles.nav}>
               <div className={listingStyles.newsCard}>
                 <div className={listingStyles.newsleft}>
