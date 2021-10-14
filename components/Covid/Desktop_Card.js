@@ -13,8 +13,12 @@ export default function DesktopCard(props) {
     <div className={style.card}>
       <div className={style.lineDiv}>
         <div className={style.dateContainer}>
-          <T className={style.date} align={'right'}>{Covid.data.date_day}</T>
-          <T className={style.date} align={'right'}>{Covid.data.time}</T>
+          <T className={style.date} align={'right'}>
+            {Covid.data.date_day}
+          </T>
+          <T className={style.date} align={'right'}>
+            {Covid.data.time}
+          </T>
         </div>
         <div className={style.line} />
         <div className={style.circleDiv}>
@@ -27,9 +31,13 @@ export default function DesktopCard(props) {
           <div className={style.tag1}>
             <T className={style.tag1Text}>{Covid.data.tag1}</T>
           </div>
-          <div className={style.tag2}>
-            <T className={style.tag2Text}>{Covid.data.tag2}</T>
-          </div>
+          {Covid.data.tag2 ? (
+            <div className={style.tag2}>
+              <T className={style.tag2Text}>{Covid.data.tag2}</T>
+            </div>
+          ) : (
+            <div />
+          )}
         </div>
         <div className={style.titleDiv}>
           <img src={covidImage} />
@@ -52,8 +60,7 @@ export default function DesktopCard(props) {
             </Link>
           ) : (
             <div className={style.linkDiv}>
-              <T className={style.linkText}>publink</T>
-              <img src={linkicon} />
+              <div />
             </div>
           )}
         </div>

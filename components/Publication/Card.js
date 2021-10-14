@@ -16,7 +16,6 @@ export default function CardRender(props) {
   }
 
   const medicalStyles = styles()
-  console.log(RichText.render(props.doc.data.featured_in))
   const listingStyles = PublicationListingStyles()
   return (
     <div className={listingStyles.card}>
@@ -37,29 +36,47 @@ export default function CardRender(props) {
               {RichText.render(props.doc.data.published_in)}
             </T>
           </div>
-          <div className={listingStyles.postedIndiv}>
-            <T className={clsx(listingStyles.postedIn, listingStyles.pubflex)}>
-              Featured in:{' '}
-            </T>
+          {props.doc.data.featured_in[0].text ? (
+            <div className={listingStyles.postedIndiv}>
+              <T
+                className={clsx(listingStyles.postedIn, listingStyles.pubflex)}
+              >
+                Featured in:{' '}
+              </T>
 
-            <T
-              className={clsx(listingStyles.postedIn, listingStyles.underline)}
-            >
-              {RichText.render(props.doc.data.featured_in)}
-            </T>
-          </div>
+              <T
+                className={clsx(
+                  listingStyles.postedIn,
+                  listingStyles.underline,
+                )}
+              >
+                {RichText.render(props.doc.data.featured_in)}
+              </T>
+            </div>
+          ) : (
+            <div />
+          )}
         </div>
         <div className={medicalStyles.desktop}>
-          <div className={listingStyles.postedIndiv}>
-            <T className={clsx(listingStyles.postedIn, listingStyles.pubflex)}>
-              Cited by:{' '}
-            </T>
-            <T
-              className={clsx(listingStyles.postedIn, listingStyles.underline)}
-            >
-              {RichText.render(props.doc.data.cited_by)}
-            </T>
-          </div>
+          {props.doc.data.cited_by[0].text ? (
+            <div className={listingStyles.postedIndiv}>
+              <T
+                className={clsx(listingStyles.postedIn, listingStyles.pubflex)}
+              >
+                Cited by
+              </T>
+              <T
+                className={clsx(
+                  listingStyles.postedIn,
+                  listingStyles.underline,
+                )}
+              >
+                {RichText.render(props.doc.data.cited_by)}
+              </T>
+            </div>
+          ) : (
+            <div />
+          )}
         </div>
         <T className={listingStyles.authors}>
           <ReactReadMoreReadLess
@@ -96,16 +113,20 @@ export default function CardRender(props) {
               )
             })}
           </div> */}
-          <div>
-            <T className={listingStyles.postedIn}>Therapeutic Area</T>
-            {props.doc.data.therapeutic_area.map((item, index) => {
-              return (
-                <div className={listingStyles.areaboxes}>
-                  <T className={listingStyles.usecaseText}>{item.text}</T>
-                </div>
-              )
-            })}
-          </div>
+          {props.doc.data.therapeutic_area[0].text ? (
+            <div>
+              <T className={listingStyles.postedIn}>Therapeutic Area</T>
+              {props.doc.data.therapeutic_area.map((item, index) => {
+                return (
+                  <div className={listingStyles.areaboxes}>
+                    <T className={listingStyles.usecaseText}>{item.text}</T>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <div />
+          )}
           <div>
             <T className={listingStyles.postedIn}>Institutional Authors</T>
             {props.doc.data.institutional_authors.map((item, index) => {

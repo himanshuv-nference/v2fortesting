@@ -135,13 +135,17 @@ function PublicationListing({ pubInfo }) {
       usecaseArray.push(usecases.text)
     })
     li.data.therapeutic_area.map((Tharea, index) => {
-      therepeuticAreaArray.push(Tharea.text)
+      if (Tharea.text !== '') {
+        therepeuticAreaArray.push(Tharea.text)
+      }
     })
     li.data.institutional_authors.map((Ia, index) => {
       instituteAuthArray.push(Ia.text)
     })
     li.data.publication_types.map((Ia, index) => {
-      TypeArray.push(Ia.text)
+      if (Ia.text !== '') {
+        TypeArray.push(Ia.text)
+      }
     })
   })
 
