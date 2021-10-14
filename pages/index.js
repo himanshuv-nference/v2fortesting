@@ -75,7 +75,7 @@ function Homepage({ data, pubInfo }) {
           <div className={styles.heroLeft}>
             <div>
               <T className={styles.head1}>
-                Transforming healthcare with science and technology
+                Powering quantum leaps in human health
               </T>
             </div>
             <div className={styles.description1Div}>

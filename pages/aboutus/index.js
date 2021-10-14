@@ -44,7 +44,7 @@ function Aboutus() {
             pharmaStyles.aboutHead2Div,
           )}
         >
-          Tranforming healthcare through science and technology
+          Powering quantum leaps in human health
         </T>
         <T className={clsx(pharmaStyles.aboutdescDiv, pharmaStyles.aboutdesc)}>
           The exponential growth of biomedical data, driven by the adoption of

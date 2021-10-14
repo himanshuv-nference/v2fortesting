@@ -189,11 +189,19 @@ export default function Footer() {
                   <T className={styles.footerText}>Terms of Use</T>
                 </a>
               </Link>
-              <T className={styles.footerText}>Trademark</T>
+              {/* <T className={styles.footerText}>Trademark</T> */}
               <div className={styles.sociallogos}>
-                <img className={styles.footerlogos} src={fbicon} />
-                <img className={styles.footerlogos} src={twittericon} />
-                <img className={styles.footerlogos} src={linkIcon} />
+                {/* <img className={styles.footerlogos} src={fbicon} /> */}
+                <Link href="https://twitter.com/_nference">
+                  <a className={styles.link}>
+                    <img className={styles.footerlogos} src={twittericon} />
+                  </a>
+                </Link>
+                <Link href="https://www.linkedin.com/company/nference">
+                  <a className={styles.link}>
+                    <img className={styles.footerlogos} src={linkIcon} />
+                  </a>
+                </Link>
               </div>
             </div>
             <div>

@@ -413,7 +413,18 @@ export default function Navbar() {
                     <T onClick={toggle('top', false)}>Media</T>
                   </a>
                 </Link>
-                <T onClick={toggle('top', false)}>Careers</T>
+                {/* <T onClick={toggle('top', false)}>Careers</T> */}
+                <Link href="/covid">
+                  <a
+                    className={
+                      splitLocation[1] === 'covid'
+                        ? styles.activeLink
+                        : styles.link
+                    }
+                  >
+                    <T onClick={toggle('top', false)}>Covid</T>
+                  </a>
+                </Link>
               </div>
               <div className={styles.selected} onClick={ModalOpen}>
                 <T onClick={toggle('top', false)}>Contact Us</T>
