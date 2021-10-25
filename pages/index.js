@@ -9,38 +9,38 @@ import Prismic from '@prismicio/client'
 import Slider from '../components/HomePageCarousel'
 
 //Defining variables for images
-const circle = '/nference-web/HomePageImages/Group 4045.svg'
-const circle2 = '/nference-web/HomePageImages/Group 3794.svg'
-const mayologo = '/nference-web/HomePageImages/Group 2948.svg'
-const pharma = '/nference-web/HomePageImages/Group 4047.svg'
-const medical = '/nference-web/HomePageImages/Group 4042.svg'
-const newspaper = '/nference-web/HomePageImages/Group 4060.svg'
-const blom = '/nference-web/HomePageImages/Group.svg'
-const wash = '/nference-web/HomePageImages/Group 1227.svg'
-const newy = '/nference-web/HomePageImages/new-york-times 3.svg'
-const fortune = '/nference-web/HomePageImages/Group 1268.svg'
-const wallStreet = '/nference-web/HomePageImages/Group 1274.svg'
-const scientifamerican = '/nference-web/HomePageImages/g14.svg'
-const Step1 = '/nference-web/HomePageImages/step1.svg'
-const Step2 = '/nference-web/HomePageImages/step2.svg'
-const Step3 = '/nference-web/HomePageImages/step3.svg'
-const Step4 = '/nference-web/HomePageImages/step4.svg'
-const Step5 = '/nference-web/HomePageImages/step5.svg'
-const AllSteps = '/nference-web/HomePageImages/Group 3504.svg'
-const anumana = '/nference-web/HomePageImages/anumana.svg'
-const pranama = '/nference-web/HomePageImages/Group 4286.svg'
-const productlogo = '/nference-web/HomePageImages/Group 4198.svg'
-const productphoto = '/nference-web/HomePageImages/icon_1.svg'
-const tringul = '/nference-web/HomePageImages/icon_2.svg'
-const signals = '/nference-web/HomePageImages/icon_3 (1).svg'
-const collabs = '/nference-web/HomePageImages/icon_4.svg'
-const Step1Icon = '/nference-web/HomePageImages/Group 3804.svg'
-const Step2Icon = '/nference-web/HomePageImages/Group 4201.svg'
-const Step3Icon = '/nference-web/HomePageImages/Group 4202.svg'
-const Step4Icon = '/nference-web/HomePageImages/Group 4203.svg'
-const Step5Icon = '/nference-web/HomePageImages/Group 4204.svg'
-const ProductIcon = '/nference-web/HomePageImages/Group 4199.svg'
-const Covidlogo = '/nference-web/CovidPageImages/Group 4221.svg'
+const circle = '/HomePageImages/Group 4045.svg'
+const circle2 = '/HomePageImages/Group 3794.svg'
+const mayologo = '/HomePageImages/Group 2948.svg'
+const pharma = '/HomePageImages/Group 4047.svg'
+const medical = '/HomePageImages/Group 4042.svg'
+const newspaper = '/HomePageImages/Group 4060.svg'
+const blom = '/HomePageImages/Group.svg'
+const wash = '/HomePageImages/Group 1227.svg'
+const newy = '/HomePageImages/new-york-times 3.svg'
+const fortune = '/HomePageImages/Group 1268.svg'
+const wallStreet = '/HomePageImages/Group 1274.svg'
+const scientifamerican = '/HomePageImages/g14.svg'
+const Step1 = '/HomePageImages/step1.svg'
+const Step2 = '/HomePageImages/step2.svg'
+const Step3 = '/HomePageImages/step3.svg'
+const Step4 = '/HomePageImages/step4.svg'
+const Step5 = '/HomePageImages/step5.svg'
+const AllSteps = '/HomePageImages/Group 3504.svg'
+const anumana = '/HomePageImages/anumana.svg'
+const pranama = '/HomePageImages/Group 4286.svg'
+const productlogo = '/HomePageImages/Group 4198.svg'
+const productphoto = '/HomePageImages/icon_1.svg'
+const tringul = '/HomePageImages/icon_2.svg'
+const signals = '/HomePageImages/icon_3 (1).svg'
+const collabs = '/HomePageImages/icon_4.svg'
+const Step1Icon = '/HomePageImages/Group 3804.svg'
+const Step2Icon = '/HomePageImages/Group 4201.svg'
+const Step3Icon = '/HomePageImages/Group 4202.svg'
+const Step4Icon = '/HomePageImages/Group 4203.svg'
+const Step5Icon = '/HomePageImages/Group 4204.svg'
+const ProductIcon = '/HomePageImages/Group 4199.svg'
+const Covidlogo = '/CovidPageImages/Group 4221.svg'
 //APi Details
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -548,7 +548,11 @@ function Homepage({ data, pubInfo }) {
               and biomarker of disease – empowering care providers to help
               patients early
             </T>
-            <T className={styles.websitetext}> Pramana website -{'>'} </T>
+            <Link href={'https://pramana.ai'}>
+              <a className={styles.link}>
+                <T className={styles.websitetext}>Pramana website -{'>'}</T>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -562,7 +566,7 @@ function Homepage({ data, pubInfo }) {
         </div>
         <div className={styles.productcontainer}>
           <div>
-            <T className={styles.pharmahead}>OUR EMR DATA PRODUCT</T>
+            <T className={styles.pharmahead}>OUR EMR PRODUCT</T>
             <T className={styles.stephead}>nfer Clinical nSights</T>
             <div className={styles.productLine}></div>
             <T className={styles.stepdesc}>

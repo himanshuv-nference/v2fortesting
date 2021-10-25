@@ -1,31 +1,64 @@
 import React from 'react'
 import Medicalstyles from '../../public/styles/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
+import AboutusStyle from '../../public/styles/AboutusStyle'
+import { Icon } from '@material-ui/core'
+import ClearIcon from '@material-ui/icons/Clear'
+
 import clsx from 'clsx'
 import { Typography as T } from '@material-ui/core'
+import { NferxModal } from 'nferx-core-ui'
+import Prismic from '@prismicio/client'
+const Ceo = '/AboutusImages/Group 3771.svg'
+const Cso = '/AboutusImages/Group 3772.svg'
+const ChiefSalesofficer = '/AboutusImages/Group 3775.svg'
+const CFO = '/AboutusImages/Mask Group.svg'
+const ChiefaffairOfficer = '/AboutusImages/image 24.svg'
+const COO = '/AboutusImages/Mask Group (1).svg'
+const CPO = '/AboutusImages/ag.svg'
+const ChiefStrategyoOfficer = '/AboutusImages/Mask Group (2).svg'
+const CTO = '/AboutusImages/ajit.svg'
+const General_Counsel = '/AboutusImages/image 22.svg'
+const cambridge = '/AboutusImages/Group 3431.svg'
+const bangaluru = '/AboutusImages/Vector 244.svg'
+const Tornonto = '/AboutusImages/Vector 245.svg'
+const Rochester = '/AboutusImages/Group 3432.svg'
+const SVPsoftware = '/AboutusImages/image 147.svg'
+const SVPdatascience = '/AboutusImages/image(11).svg'
+const CPOpramana = '/AboutusImages/image 145.svg'
+const SVPenginnering = '/AboutusImages/image 148.svg'
 
-const Ceo = '/nference-web/AboutusImages/Group 3771.svg'
-const Cso = '/nference-web/AboutusImages/Group 3772.svg'
-const ChiefSalesofficer = '/nference-web/AboutusImages/Group 3775.svg'
-const CFO = '/nference-web/AboutusImages/Mask Group.svg'
-const ChiefaffairOfficer = '/nference-web/AboutusImages/image 24.svg'
-const COO = '/nference-web/AboutusImages/Mask Group (1).svg'
-const CPO = '/nference-web/AboutusImages/ag.svg'
-const ChiefStrategyoOfficer = '/nference-web/AboutusImages/Mask Group (2).svg'
-const CTO = '/nference-web/AboutusImages/ajit.svg'
-const General_Counsel = '/nference-web/AboutusImages/image 22.svg'
-const cambridge = '/nference-web/AboutusImages/Group 3431.svg'
-const bangaluru = '/nference-web/AboutusImages/Vector 244.svg'
-const Tornonto = '/nference-web/AboutusImages/Vector 245.svg'
-const Rochester = '/nference-web/AboutusImages/Group 3432.svg'
-const SVPsoftware = '/nference-web/AboutusImages/image 147.svg'
-const SVPdatascience = '/nference-web/AboutusImages/image(11).svg'
-const CPOpramana = '/nference-web/AboutusImages/image 145.svg'
-const SVPenginnering = '/nference-web/AboutusImages/image 148.svg'
+const apiEndpoint = 'https://nference.prismic.io/api/v2'
+const accessToken =
+  'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-function Aboutus() {
+const Client = Prismic.client(apiEndpoint, { accessToken })
+
+export async function getStaticProps() {
+  const responseforBios = await Client.query(
+    Prismic.Predicates.at('document.type', 'bios_nference'),
+  )
+
+  const data = responseforBios.results
+  return {
+    props: {
+      data: data,
+    },
+  }
+}
+function Aboutus({ data }) {
+  const [open, setOpen] = React.useState(false)
+  const [bios, setbios] = React.useState('')
   const pharmaStyles = PharmaStyles()
   const medicalStyles = Medicalstyles()
+  const aboutusStyles = AboutusStyle()
+  const modalClose = () => setOpen(false)
+  const ModalOpen = (e) => {
+    setOpen(true)
+    const value = e.currentTarget.getAttribute('Name')
+    let singleBio = data.filter((x) => x.data.name === value)
+    setbios(singleBio)
+  }
 
   return (
     <>
@@ -83,7 +116,11 @@ function Aboutus() {
           </T>
         </div>
         <div className={pharmaStyles.imagesrow}>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Murali Aravamudan"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={Ceo} />
             <T className={pharmaStyles.imageName}>Murali Aravamudan</T>
@@ -91,7 +128,11 @@ function Aboutus() {
               Co-Founder {'&'} Chief Executive Officer
             </T>
           </div>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Venky Soundararajan, PhD"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={Cso} />
             <T className={pharmaStyles.imageName}>Venky Soundararajan, PhD</T>
@@ -292,6 +333,42 @@ function Aboutus() {
           </div>
         </div>
       </div>
+      <NferxModal
+        contentPad
+        // className={styles.modal}
+        open={open}
+        onClose={modalClose}
+        noCloseInRight
+      >
+        <div className={aboutusStyles.iconDiv}>
+          <Icon onClick={modalClose}>
+            <ClearIcon className={aboutusStyles.cursor} />
+          </Icon>
+        </div>
+        {bios ? (
+          <div>
+            <div className={aboutusStyles.headDiv}>
+              {bios[0].data.image ? (
+                <img src={bios[0].data.image.url} />
+              ) : (
+                <div />
+              )}
+
+              <div className={aboutusStyles.rightDiv}>
+                <T className={pharmaStyles.imageName}>{bios[0].data.name}</T>
+                <T className={pharmaStyles.imagedesc}>
+                  {bios[0].data.designation}
+                </T>
+              </div>
+            </div>
+            <div className={aboutusStyles.desc}>
+              <T className={pharmaStyles.imagedesc}>{bios[0].data.bios}</T>
+            </div>
+          </div>
+        ) : (
+          <div />
+        )}
+      </NferxModal>
     </>
   )
 }

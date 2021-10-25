@@ -1,10 +1,9 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import PublicationListingStyles from '../../public/styles/PublicationListingStyles'
-const Llogo = '/nference-web/PublicationPageImages/The_Lancet_logo 1.svg'
-const Nlogo = '/nference-web/PublicationPageImages/Vector.svg'
-const SAlogo =
-  '/nference-web/PublicationPageImages/Scientific_American_logo 1.svg'
+const Llogo = '/PublicationPageImages/The_Lancet_logo 1.svg'
+const Nlogo = '/PublicationPageImages/Vector.svg'
+const SAlogo = '/PublicationPageImages/Scientific_American_logo 1.svg'
 import clsx from 'clsx'
 import styles from '../../public/styles/MedicalStyles'
 import Prismic from '@prismicio/client'
@@ -107,6 +106,12 @@ function PublicationListing({ pubInfo }) {
           x.data.dt_published.slice(6, 11) == DateFilter ||
           _.isEqual(DateFilter, defaultValue),
       )
+      filterPublications.sort(function (a, b) {
+        return (
+          new Date(b.data.dt_published).getTime() -
+          new Date(a.data.dt_published).getTime()
+        )
+      })
       setfilteredData(filterPublications)
 
       setPageNumber(1)

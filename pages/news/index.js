@@ -5,10 +5,10 @@ import PublicationListingStyles from '../../public/styles/PublicationListingStyl
 import Prismic from '@prismicio/client'
 import { Date } from 'prismic-reactjs'
 import { useState, useEffect } from 'react'
-const theNewYorksTimess = '/nference-web/NewsRoomImages/Group 1213.svg'
-const Bloomerg = '/nference-web/NewsRoomImages/bloom.svg'
-const theWashingTimess = '/nference-web/NewsRoomImages/Group 1227.svg'
-const theSA = '/nference-web/NewsRoomImages/SA.svg'
+const theNewYorksTimess = '/NewsRoomImages/Group 1213.svg'
+const Bloomerg = '/NewsRoomImages/bloom.svg'
+const theWashingTimess = '/NewsRoomImages/Group 1227.svg'
+const theSA = '/NewsRoomImages/SA.svg'
 import Carousel from 'react-material-ui-carousel'
 import { Pagination, ListItem, ChipFilterSelect } from 'nferx-core-ui'
 import _ from 'lodash'
@@ -54,6 +54,12 @@ function NewsRoom({ newsData }) {
           topicFilter.includes(x.data.news_category) ||
           _.isEqual(topicFilter, defaultValue),
       )
+      filterNews.sort(function (a, b) {
+        return (
+          new Date(b.data.published_date).getTime() -
+          new Date(a.data.published_date).getTime()
+        )
+      })
       setFilteredNews(filterNews)
     }
   }, [topicFilter, allNews, pageNumber])
