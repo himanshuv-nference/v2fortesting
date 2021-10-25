@@ -4,7 +4,6 @@ import PharmaStyles from '../../public/styles/PharmaStyles'
 import AboutusStyle from '../../public/styles/AboutusStyle'
 import { Icon } from '@material-ui/core'
 import ClearIcon from '@material-ui/icons/Clear'
-
 import clsx from 'clsx'
 import { Typography as T } from '@material-ui/core'
 import { NferxModal } from 'nferx-core-ui'
@@ -27,6 +26,7 @@ const SVPsoftware = '/AboutusImages/image 147.svg'
 const SVPdatascience = '/AboutusImages/image(11).svg'
 const CPOpramana = '/AboutusImages/image 145.svg'
 const SVPenginnering = '/AboutusImages/image 148.svg'
+import { RichText } from 'prismic-reactjs'
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -362,7 +362,9 @@ function Aboutus({ data }) {
               </div>
             </div>
             <div className={aboutusStyles.desc}>
-              <T className={pharmaStyles.imagedesc}>{bios[0].data.bios}</T>
+              <T className={pharmaStyles.imagedesc}>
+                {RichText.asText(bios[0].data.bios)}
+              </T>
             </div>
           </div>
         ) : (
