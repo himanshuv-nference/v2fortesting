@@ -30,10 +30,13 @@ const Client = Prismic.client(apiEndpoint, { accessToken })
 export async function getStaticProps() {
   const response = await Client.query(
     Prismic.Predicates.at('document.type', 'publications'),
-    { pageSize: 24 },
+    // { pageSize: 20 },
   )
 
   const pubInfo = response.results
+  // const pubInfoFilter = pubInfo.filter((el) => {
+  //   return el != null && el != ''
+  // })
   return {
     props: {
       pubInfo: pubInfo,
@@ -184,7 +187,7 @@ function PublicationListing({ pubInfo }) {
   let sliderPublication = allPublications.filter((x) =>
     x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
   )
-  console.log('hero', filteredData)
+
   return (
     <>
       <div className={listingStyles.body}>
