@@ -84,7 +84,7 @@ function Aboutus({ data }) {
           electronic medical records (EMRs), provides an unprecedented
           opportunity to create transformative technologies and products in
           healthcare. nference partners with medical centers to turn decades of
-          rich but predominantly unstructured data captured in EMRs into
+          rich and predominantly unstructured data captured in EMRs into
           powerful solutions that enable scientists to discover and develop the
           next-generation of personalized diagnostics and treatments for
           patients worldwide. We believe that the greatest opportunity for our

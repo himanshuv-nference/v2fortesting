@@ -212,7 +212,7 @@ export default function Footer() {
               </Link>
               <Link href="/pharma">
                 <a className={styles.link}>
-                  <T className={styles.footerText}>For Pharma</T>
+                  <T className={styles.footerText}>For Life Sciences</T>
                 </a>
               </Link>
               <Link href="/medical">

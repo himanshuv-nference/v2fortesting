@@ -130,7 +130,7 @@ export default function Navbar() {
                       : styles.link
                   }
                 >
-                  For Pharma
+                  For Life Sciences
                 </a>
               </Link>
             </T>
@@ -375,7 +375,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T onClick={toggle('top', false)}>For Pharma</T>
+                    <T onClick={toggle('top', false)}>For Life Sciences</T>
                   </a>
                 </Link>
 

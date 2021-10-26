@@ -66,6 +66,10 @@ export async function getStaticProps() {
 }
 function Homepage({ data, pubInfo }) {
   const styles = useStyles()
+  data.sort(function (a, b) {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  })
+
   return (
     <>
       <div className={styles.body}>
@@ -81,7 +85,7 @@ function Homepage({ data, pubInfo }) {
             <div className={styles.description1Div}>
               <T className={styles.description1}>
                 nference partners with medical centers to turn decades of rich
-                but predominantly unstructured data captured in electronic
+                and predominantly unstructured data captured in electronic
                 medical records (EMR) into powerful software solutions that
                 enable scientists to discover and develop the next-generation of
                 personalized diagnostics and treatments for patients worldwide.
@@ -131,7 +135,7 @@ function Homepage({ data, pubInfo }) {
             <div>
               <img src={pharma} />
 
-              <T className={styles.pharmahead}>FOR PHARMA</T>
+              <T className={styles.pharmahead}>FOR LIFE SCIENCES</T>
               <T className={styles.pharmaText}>
                 We work with biopharma companies who leverage our proprietary
                 EMR data, software products and services to address important
@@ -480,7 +484,7 @@ function Homepage({ data, pubInfo }) {
 
           <div className={styles.Powerdata}>
             <div>
-              <img src={ProductIcon} />
+              {/* <img src={ProductIcon} /> */}
               <T className={styles.box4subHead}>Products</T>
               <div className={styles.box4newLine}></div>
 
@@ -576,7 +580,7 @@ function Homepage({ data, pubInfo }) {
               from structured and unstructured records of 6M+ patients from our
               academic medical center partners.
             </T>
-            <T className={styles.websitetextOUR}>Learn more -{'>'}</T>
+            {/* <T className={styles.websitetextOUR}>Learn more -{'>'}</T> */}
           </div>
           <img className={styles.productphoto} src={productphoto} />
         </div>
@@ -590,7 +594,7 @@ function Homepage({ data, pubInfo }) {
               unbiased triangulation of literature, molecular and real world
               evidence.
             </T>
-            <T className={styles.websitetext}>Learn more -{'>'}</T>
+            {/* <T className={styles.websitetext}>Learn more -{'>'}</T> */}
           </div>
           <div>
             <img src={signals} className={styles.productsPhotos} />
@@ -611,7 +615,7 @@ function Homepage({ data, pubInfo }) {
               world data and software to answer the questions most relevant to
               your teams.
             </T>
-            <T className={styles.websitetext}>Learn more -{'>'}</T>
+            {/* <T className={styles.websitetext}>Learn more -{'>'}</T> */}
           </div>
         </div>
       </div>

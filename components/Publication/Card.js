@@ -35,6 +35,11 @@ export default function CardRender(props) {
             >
               {RichText.render(props.doc.data.published_in)}
             </T>
+            <T
+              className={clsx(listingStyles.postedIn, listingStyles.underline)}
+            >
+              ({props.doc.data.dt_published})
+            </T>
           </div>
           {props.doc.data.featured_in[0].text ? (
             <div className={listingStyles.postedIndiv}>

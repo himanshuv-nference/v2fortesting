@@ -104,8 +104,10 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: 'border-box',
     borderRadius: '2px',
     padding: '24px',
+    height: '500px',
     ['@media (max-width:780px)']: {
       padding: '16px',
+      height: 'auto',
     },
   },
   slideImage: {

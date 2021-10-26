@@ -312,7 +312,7 @@ function Publication() {
       </>
     )
   } else {
-    return <T>Loading.....</T>
+    return <T></T>
   }
 }
 
