@@ -1,6 +1,6 @@
 import { Typography as T } from '@material-ui/core'
 import CovidStyles from '../../public/styles/CovidpageStyles'
-const linkicon = '/nference-web/CovidPageImages/Frame 3077.svg'
+const linkicon = '/CovidPageImages/Frame 3077.svg'
 
 export default function MobileCard(props) {
   const style = CovidStyles()

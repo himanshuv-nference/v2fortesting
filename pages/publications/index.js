@@ -30,33 +30,22 @@ const Client = Prismic.client(apiEndpoint, { accessToken })
 export async function getStaticProps() {
   const response = await Client.query(
     Prismic.Predicates.at('document.type', 'publications'),
-    // { pageSize: 20 },
+    { pageSize: 100 },
   )
 
   const pubInfo = response.results
-  // const pubInfoFilter = pubInfo.filter((el) => {
-  //   return el != null && el != ''
-  // })
+  const pubInfoFilter = pubInfo.filter((el) => {
+    return el != null && el != ''
+  })
   return {
     props: {
-      pubInfo: pubInfo,
+      pubInfo: pubInfoFilter,
     },
   }
 }
-// google analytics
-const injectGA = () => {
-  if (typeof window == 'undefined') {
-    return
-  }
-  window.dataLayer = window.dataLayer || []
-  function gtag() {
-    window.dataLayer.push(arguments)
-  }
-  gtag('js', new Date())
 
-  gtag('config', 'UA-120810493-7')
-}
 function PublicationListing({ pubInfo }) {
+  console.log('himanshu', pubInfo)
   const defaultValue = []
   const deafaultDatevalue = null
   const [allPublications, setallPublications] = useState(pubInfo)
@@ -413,11 +402,6 @@ function PublicationListing({ pubInfo }) {
           color: #1c2329 !important;
         }
       `}</style>
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-120810493-7"
-      ></script>
-      <script>{injectGA()}</script>
     </>
   )
 }

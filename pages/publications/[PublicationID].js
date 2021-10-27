@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/styles'
 const pdffull = '/PublicationPageImages/Group 3895.svg'
 const twittericon = '/FooterImages/Combined-Shape (1).svg'
 const linkIcon = '/FooterImages/Group 3627.svg'
+const pdfPlaceholder = '/PublicationPageImages/image49.svg'
+
 import { useState, useEffect } from 'react'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-reactjs'
@@ -266,10 +268,15 @@ function Publication() {
             </div>
             <div className={pageStyles.boxRight}>
               <div>
-                <img
-                  src={pub.data.paper_image.url}
-                  className={pageStyles.pdfmobile}
-                />
+                {pub.data.paper_image.url ? (
+                  <img
+                    src={pub.data.paper_image.url}
+                    className={pageStyles.pdfmobile}
+                  />
+                ) : (
+                  <img src={pdfPlaceholder} className={pageStyles.pdfmobile} />
+                )}
+
                 <T className={pageStyles.pdfText}>
                   <a href={pub.data.download_pdf.url} target="_blank" download>
                     Download PDF

@@ -51,6 +51,23 @@ class MyDocument extends Document {
             content="/favicons/browserconfig.xml"
           />
           <meta name="theme-color" content={config.primaryColor} />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-120810493-7"
+          ></script>
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-120810493-7', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />

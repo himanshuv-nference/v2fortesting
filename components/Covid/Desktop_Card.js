@@ -2,8 +2,8 @@ import { Typography as T } from '@material-ui/core'
 import CovidStyles from '../../public/styles/CovidpageStyles'
 import Link from 'next/link'
 
-const covidImage = '/nference-web/CovidPageImages/Group 4065.svg'
-const linkicon = '/nference-web/CovidPageImages/Frame 3077.svg'
+const covidImage = '/CovidPageImages/Group 4065.svg'
+const linkicon = '/CovidPageImages/Frame 3077.svg'
 
 export default function DesktopCard(props) {
   const style = CovidStyles()

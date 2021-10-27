@@ -17,6 +17,7 @@ export default function CardRender(props) {
 
   const medicalStyles = styles()
   const listingStyles = PublicationListingStyles()
+
   return (
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>
@@ -63,22 +64,29 @@ export default function CardRender(props) {
           )}
         </div>
         <div className={medicalStyles.desktop}>
-          {props.doc.data.cited_by[0].text ? (
-            <div className={listingStyles.postedIndiv}>
-              <T
-                className={clsx(listingStyles.postedIn, listingStyles.pubflex)}
-              >
-                Cited by
-              </T>
-              <T
-                className={clsx(
-                  listingStyles.postedIn,
-                  listingStyles.underline,
-                )}
-              >
-                {RichText.render(props.doc.data.cited_by)}
-              </T>
-            </div>
+          {props.doc.data.cited_by[0] ? (
+            props.doc.data.cited_by[0].text ? (
+              <div className={listingStyles.postedIndiv}>
+                <T
+                  className={clsx(
+                    listingStyles.postedIn,
+                    listingStyles.pubflex,
+                  )}
+                >
+                  Cited by
+                </T>
+                <T
+                  className={clsx(
+                    listingStyles.postedIn,
+                    listingStyles.underline,
+                  )}
+                >
+                  {RichText.render(props.doc.data.cited_by)}
+                </T>
+              </div>
+            ) : (
+              <div />
+            )
           ) : (
             <div />
           )}
