@@ -315,22 +315,51 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mediaImage: {
-    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '10px',
+    ['@media (max-width:780px)']: {
+      gap: '5px',
+    },
   },
-
+  bloomClass: {
+    width: '150px',
+    ['@media (max-width:780px)']: {
+      height: '16px',
+      width: '30px',
+    },
+  },
+  mobileImage: {
+    ['@media (max-width:780px)']: {
+      height: '16px',
+      width: '50px',
+    },
+  },
+  mobileImage2: {
+    ['@media (max-width:780px)']: {
+      height: '16px',
+      width: '30px',
+    },
+  },
   mediaImage2: {
-    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '10px',
     marginTop: '33px',
     marginBottom: '67px',
     ['@media (max-width:780px)']: {
       marginTop: '4px',
+      gap: '5px',
     },
   },
   mImage: {
-    marginRight: '31px',
+    // marginRight: '31px',
+    width: '220px',
     ['@media (max-width:780px)']: {
       height: '16px',
-      marginRight: '16px',
+      width: '80px',
     },
   },
   allSteps: {

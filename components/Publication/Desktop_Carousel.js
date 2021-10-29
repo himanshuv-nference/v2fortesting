@@ -11,7 +11,15 @@ export default function Slider(props) {
   return (
     <>
       <div className={listingStyles.slidercontainer}>
-        <img src={item.data.paper_image.url} className={listingStyles.sample} />
+        {item.data.paper_image.url ? (
+          <img
+            src={item.data.paper_image.url}
+            className={listingStyles.sample}
+          />
+        ) : (
+          <div />
+        )}
+
         <div>
           <T className={listingStyles.Slidertop}>FEATURED</T>
           <T className={listingStyles.SliderTitle}>
@@ -54,7 +62,7 @@ export default function Slider(props) {
               {RichText.render(item.data.featured_in)}
             </T>
           </div>
-          <div className={listingStyles.authdiv}>
+          {/* <div className={listingStyles.authdiv}>
             {' '}
             <T className={listingStyles.sliderAuth}>Cited by:</T>
             <T
@@ -65,7 +73,7 @@ export default function Slider(props) {
             >
               {RichText.render(item.data.cited_by)}
             </T>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

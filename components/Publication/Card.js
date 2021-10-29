@@ -29,19 +29,45 @@ export default function CardRender(props) {
           </a>
         </Link>
         <div className={listingStyles.mobilePosted}>
-          <div className={listingStyles.postedIndiv}>
-            <T className={listingStyles.postedIn}>Posted in</T>
-            <T
-              className={clsx(listingStyles.postedIn, listingStyles.underline)}
-            >
-              {RichText.render(props.doc.data.published_in)}
-            </T>
-            <T
-              className={clsx(listingStyles.postedIn, listingStyles.underline)}
-            >
-              ({props.doc.data.dt_published})
-            </T>
-          </div>
+          {props.doc.data.published_in[0] ? (
+            <div className={listingStyles.postedIndiv}>
+              <T className={listingStyles.postedIn}>Published in</T>
+              <T
+                className={clsx(
+                  listingStyles.postedIn,
+                  listingStyles.underline,
+                )}
+              >
+                {RichText.render(props.doc.data.published_in)}
+              </T>
+              <T
+                className={clsx(
+                  listingStyles.postedIn,
+                  listingStyles.underline,
+                )}
+              >
+                ({props.doc.data.dt_published})
+              </T>
+            </div>
+          ) : (
+            <div />
+          )}
+          {props.doc.data.posted_in[0] ? (
+            <div className={listingStyles.postedIndiv}>
+              <T className={listingStyles.postedIn}>Posted in</T>
+              <T
+                className={clsx(
+                  listingStyles.postedIn,
+                  listingStyles.underline,
+                )}
+              >
+                {RichText.render(props.doc.data.posted_in)}
+              </T>
+            </div>
+          ) : (
+            <div />
+          )}
+
           {props.doc.data.featured_in[0].text ? (
             <div className={listingStyles.postedIndiv}>
               <T

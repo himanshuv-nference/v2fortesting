@@ -18,7 +18,7 @@
     "next-seo": "^4.26.0",
     "next-sitemap": "^1.6.148",
     "next-transpile-modules": "^8.0.0",
-    "nferx-core-ui": "git+https://38db119c2ff3b51fa58c11b96151020da1dc2e02@github.com/lumenbiomics/nferx-core-ui.git#semver:^v3.1.130",
+    "nferx-core-ui": "git+https://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@github.com/lumenbiomics/nferx-core-ui.git#semver:^v3.1.130",
     "prettier": "^2.3.2",
     "prismic-dom": "^2.2.6",
     "prismic-reactjs": "^1.3.4",

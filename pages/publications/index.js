@@ -45,7 +45,6 @@ export async function getStaticProps() {
 }
 
 function PublicationListing({ pubInfo }) {
-  console.log('himanshu', pubInfo)
   const defaultValue = []
   const deafaultDatevalue = null
   const [allPublications, setallPublications] = useState(pubInfo)
@@ -174,7 +173,7 @@ function PublicationListing({ pubInfo }) {
     pageNumber * 5,
   )
   let sliderPublication = allPublications.filter((x) =>
-    x.data.publication_types.some((us) => us.text === 'peer-reviewed'),
+    x.data.publication_types.some((us) => us.text === 'featured'),
   )
 
   return (
@@ -187,8 +186,7 @@ function PublicationListing({ pubInfo }) {
         <Carousel
           indicators={true}
           animation={'slide'}
-          timeout={2500}
-          interval={8000}
+          timeout={1000}
           autoPlay={true}
         >
           {sliderPublication.map((item, index) => {
@@ -201,7 +199,6 @@ function PublicationListing({ pubInfo }) {
           indicators={true}
           animation={'slide'}
           timeout={2000}
-          interval={8000}
           autoPlay={true}
         >
           {sliderPublication.map((item, index) => {

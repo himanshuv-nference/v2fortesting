@@ -21,6 +21,15 @@ const newy = '/HomePageImages/new-york-times 3.svg'
 const fortune = '/HomePageImages/Group 1268.svg'
 const wallStreet = '/HomePageImages/Group 1274.svg'
 const scientifamerican = '/HomePageImages/g14.svg'
+const usatoday = '/HomePageImages/usaTodayColor.svg'
+const reuters = '/HomePageImages/Group333.svg'
+const TOI = '/HomePageImages/toiColor.svg'
+const stat = '/HomePageImages/Group4316.svg'
+const CBS = '/HomePageImages/Group122.svg'
+const faceNation = '/HomePageImages/Group4317.svg'
+const CNN = '/HomePageImages/Group222.svg'
+const foxNews = '/HomePageImages/foxColor.svg'
+const abc = '/HomePageImages/abcColor.svg'
 const Step1 = '/HomePageImages/step1.svg'
 const Step2 = '/HomePageImages/step2.svg'
 const Step3 = '/HomePageImages/step3.svg'
@@ -181,14 +190,23 @@ function Homepage({ data, pubInfo }) {
           </div>
           <div>
             <div className={styles.mediaImage}>
-              <img src={blom} className={styles.mImage} />
+              <img src={blom} className={styles.bloomClass} />
               <img src={wash} className={styles.mImage} />
               <img src={newy} className={styles.mImage} />
+              <img src={usatoday} className={styles.mobileImage} />
+              <img src={reuters} className={styles.mobileImage} />
+              <img src={TOI} className={styles.mobileImage} />
             </div>
             <div className={styles.mediaImage2}>
-              <img src={fortune} className={styles.mImage} />
+              <img src={fortune} className={styles.bloomClass} />
               <img src={wallStreet} className={styles.mImage} />
-              <img src={scientifamerican} className={styles.mImage} />
+              <img src={scientifamerican} className={styles.bloomClass} />
+              <img src={stat} className={styles.mobileImage2} />
+              <img src={CBS} className={styles.mobileImage2} />
+              <img src={faceNation} className={styles.mobileImage2} />
+              <img src={CNN} className={styles.mobileImage2} />
+              <img src={foxNews} className={styles.mobileImage2} />
+              <img src={abc} className={styles.mobileImage2} />
             </div>
           </div>
         </div>
