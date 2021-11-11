@@ -348,10 +348,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     gap: '10px',
     marginTop: '33px',
-    marginBottom: '67px',
+    marginBottom: '120px',
     ['@media (max-width:780px)']: {
       marginTop: '4px',
       gap: '5px',
+      marginBottom: '12px',
     },
   },
   mImage: {
