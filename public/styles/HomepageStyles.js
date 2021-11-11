@@ -536,7 +536,7 @@ const useStyles = makeStyles((theme) => ({
   },
   webdata: {
     display: 'flex',
-    gap: '120px',
+    gap: '140px',
     alignItems: 'baseline',
     paddingRight: '60px',
     paddingLeft: '60px',
@@ -798,6 +798,56 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
+  },
+  VideoBox: {
+    display: 'flex',
+    gap: '40px',
+    marginBottom: '90px',
+    marginTop: '120px',
+    background: '#FAFBFC',
+    borderWidth: '1px',
+    borderStyle: 'dashed',
+    borderColor: '#0C67EB',
+    boxSizing: 'border-box',
+    borderRadius: '1px',
+    padding: '47px 63px 61px 58px',
+    ['@media (max-width:780px)']: {
+      flexDirection: 'column',
+      padding: '5px 2px 10px 2px',
+      alignItems: 'center',
+      textAlign: 'center',
+      gap: '0px',
+      marginBottom: '0px',
+      marginTop: '60px',
+    },
+  },
+  videohead: {
+    fontSize: '14px',
+    fontWeight: 'normal',
+    lineHeight: '160%',
+    color: '#000000',
+    marginBottom: '20px',
+    ['@media (max-width:780px)']: {
+      fontSize: '10px',
+      marginBottom: '5px',
+    },
+  },
+  videotext: {
+    fontSize: '28px',
+    fontWeight: '500',
+    lineHeight: '140%',
+    color: '#000000',
+    ['@media (max-width:780px)']: {
+      fontSize: '14px',
+    },
+  },
+  videoDiv: {
+    width: '639px',
+    height: '378px',
+    ['@media (max-width:780px)']: {
+      width: '100px',
+      height: '100px',
+    },
   },
 }))
 

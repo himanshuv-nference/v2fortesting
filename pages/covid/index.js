@@ -49,7 +49,7 @@ function Covid({ covidInfo, Card }) {
   })
   return (
     <>
-      <div className={medicalStyles.body}>
+      {/* <div className={medicalStyles.body}>
         <div className={pharmaStyles.box1}>
           <img src={logo} />
           <T className={style.Tophead}>
@@ -82,7 +82,7 @@ function Covid({ covidInfo, Card }) {
         {data.map((data, index) => {
           return <MobileCard Covid={data} key={index} />
         })}
-      </div>
+      </div> */}
     </>
   )
 }

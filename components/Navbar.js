@@ -173,7 +173,7 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
-            <div>
+            {/* <div>
               <Link href="/covid">
                 <a
                   className={
@@ -185,7 +185,7 @@ export default function Navbar() {
                   <T>Covid</T>
                 </a>
               </Link>
-            </div>
+            </div> */}
 
             <div className={styles.selected} onClick={ModalOpen}>
               <T>Contact Us</T>
@@ -414,7 +414,7 @@ export default function Navbar() {
                   </a>
                 </Link>
                 {/* <T onClick={toggle('top', false)}>Careers</T> */}
-                <Link href="/covid">
+                {/* <Link href="/covid">
                   <a
                     className={
                       splitLocation[1] === 'covid'
@@ -424,7 +424,7 @@ export default function Navbar() {
                   >
                     <T onClick={toggle('top', false)}>Covid</T>
                   </a>
-                </Link>
+                </Link> */}
               </div>
               <div className={styles.selected} onClick={ModalOpen}>
                 <T onClick={toggle('top', false)}>Contact Us</T>

@@ -17,7 +17,7 @@ export default function CardRender(props) {
 
   const medicalStyles = styles()
   const listingStyles = PublicationListingStyles()
-
+  console.log('api', props.doc.data.posted_in[0])
   return (
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>
@@ -53,17 +53,21 @@ export default function CardRender(props) {
             <div />
           )}
           {props.doc.data.posted_in[0] ? (
-            <div className={listingStyles.postedIndiv}>
-              <T className={listingStyles.postedIn}>Posted in</T>
-              <T
-                className={clsx(
-                  listingStyles.postedIn,
-                  listingStyles.underline,
-                )}
-              >
-                {RichText.render(props.doc.data.posted_in)}
-              </T>
-            </div>
+            props.doc.data.posted_in[0].text ? (
+              <div className={listingStyles.postedIndiv}>
+                <T className={listingStyles.postedIn}>Posted in</T>
+                <T
+                  className={clsx(
+                    listingStyles.postedIn,
+                    listingStyles.underline,
+                  )}
+                >
+                  {RichText.render(props.doc.data.posted_in)}
+                </T>
+              </div>
+            ) : (
+              <div />
+            )
           ) : (
             <div />
           )}

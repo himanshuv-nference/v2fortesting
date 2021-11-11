@@ -7,6 +7,7 @@ import LowerSlider from '../components/LowerSlider'
 import useStyles from '../public/styles/HomepageStyles'
 import Prismic from '@prismicio/client'
 import Slider from '../components/HomePageCarousel'
+import ReactPlayer from 'react-player'
 
 //Defining variables for images
 const circle = '/HomePageImages/Group 4045.svg'
@@ -50,6 +51,10 @@ const Step4Icon = '/HomePageImages/Group 4203.svg'
 const Step5Icon = '/HomePageImages/Group 4204.svg'
 const ProductIcon = '/HomePageImages/Group 4199.svg'
 const Covidlogo = '/CovidPageImages/Group 4221.svg'
+//variable for video
+const KSK = '/video/homePage.mp4'
+const thumbNail = '/video/image58.svg'
+
 //APi Details
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -565,10 +570,9 @@ function Homepage({ data, pubInfo }) {
             <div className={styles.pLine}></div>
 
             <T className={styles.stepdesc}>
-              Harnessing industry-leading AI and translational science to decode
-              the electrocardiogram as never before – as a deep predictive tool
-              and biomarker of disease – empowering care providers to help
-              patients early
+              Partnering with pathology labs and medical centers to digitize
+              glass slides and associated metadata via a seamless and cost
+              effective Digital Pathology as a Service (DPaaS) solution
             </T>
             <Link href={'https://pramana.ai'}>
               <a className={styles.link}>
@@ -653,11 +657,11 @@ function Homepage({ data, pubInfo }) {
             subsequent outcomes.
           </T>
           <div className={styles.covidLinkDiv}>
-            <Link href="/covid">
+            {/* <Link href="/covid">
               <a className={styles.link}>
                 <T className={styles.websitetext}>Covid-19 Spotlight -{'>'}</T>
               </a>
-            </Link>
+            </Link> */}
             <Link href="/publications">
               <a className={styles.link}>
                 <T className={styles.websitetext}>
@@ -669,6 +673,24 @@ function Homepage({ data, pubInfo }) {
         </div>
       </div>
       <div className={styles.body}>
+        <div className={styles.VideoBox}>
+          <div>
+            <T className={styles.videohead}>
+              POWERING QUANTUM LEAPS IN HUMAN HEALTH
+            </T>
+            <T className={styles.videotext}>
+              Insights into today’s healthcare challenges and how nference is
+              leading the mission to solve them, from co-founder and Chief
+              Scientific Officer Venky Soundararajan
+            </T>
+          </div>
+          <div className={styles.desktop}>
+            <ReactPlayer controls url={KSK} width="639px" height="378px" />
+          </div>
+          <div className={styles.mobile}>
+            <ReactPlayer controls url={KSK} width="300px" height="300px" />
+          </div>
+        </div>
         <div className={styles.boximage}>
           <img src={newspaper} className={styles.newspaper} />
           <div className={styles.cirlceLine}></div>
