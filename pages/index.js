@@ -564,7 +564,7 @@ function Homepage({ data, pubInfo }) {
               THE NFERENCE PLATFORM
             </T>
             <T className={clsx(styles.vensub, styles.powerTextcolor)}>
-              Powers spincos, products and discoveries
+              Powers spinout companies, products and discoveries
             </T>
           </div>
 
@@ -581,7 +581,7 @@ function Homepage({ data, pubInfo }) {
               </T>
             </div>
             <div>
-              <T className={styles.box4subHead}>Spincos</T>
+              <T className={styles.box4subHead}>spinout companies</T>
               <div className={styles.box4newLine}></div>
 
               <T className={clsx(styles.stepdesc, styles.powerTextcolor)}>
