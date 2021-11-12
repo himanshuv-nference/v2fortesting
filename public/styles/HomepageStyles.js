@@ -324,6 +324,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   bloomClass: {
+    filter: 'opacity(0.5)',
+    '&:hover': {
+      filter: 'opacity(1)',
+    },
     width: '150px',
     ['@media (max-width:780px)']: {
       height: '16px',
@@ -331,12 +335,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mobileImage: {
+    filter: 'opacity(0.5)',
+    '&:hover': {
+      filter: 'opacity(1)',
+    },
     ['@media (max-width:780px)']: {
       height: '16px',
       width: '50px',
     },
   },
   mobileImage2: {
+    filter: 'opacity(0.5)',
+    '&:hover': {
+      filter: 'opacity(1)',
+    },
     ['@media (max-width:780px)']: {
       height: '16px',
       width: '30px',
@@ -357,6 +369,10 @@ const useStyles = makeStyles((theme) => ({
   },
   mImage: {
     // marginRight: '31px',
+    filter: 'opacity(0.5)',
+    '&:hover': {
+      filter: 'opacity(1)',
+    },
     width: '220px',
     ['@media (max-width:780px)']: {
       height: '16px',

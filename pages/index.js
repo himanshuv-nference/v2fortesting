@@ -581,7 +581,7 @@ function Homepage({ data, pubInfo }) {
               </T>
             </div>
             <div>
-              <T className={styles.box4subHead}>spinout companies</T>
+              <T className={styles.box4subHead}>Spinout Companies</T>
               <div className={styles.box4newLine}></div>
 
               <T className={clsx(styles.stepdesc, styles.powerTextcolor)}>
@@ -638,7 +638,7 @@ function Homepage({ data, pubInfo }) {
               effective Digital Pathology as a Service (DPaaS) solution
             </T>
             <Link href={'https://pramana.ai'}>
-              <a className={styles.link}>
+              <a className={styles.link} target="_blank">
                 <T className={styles.websitetext}>Pramana website -{'>'}</T>
               </a>
             </Link>

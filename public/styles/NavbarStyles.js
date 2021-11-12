@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
   },
   formboxFlex: {
     display: 'flex',
-    padding: '50px 38px 85px 45px',
+    padding: '30px 38px 55px 45px',
     gap: '60px',
 
     ['@media (max-width:780px)']: {

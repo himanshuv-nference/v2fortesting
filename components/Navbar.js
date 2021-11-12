@@ -212,7 +212,7 @@ export default function Navbar() {
                       Let’s talk about how we can work together.
                     </T>
                     <T className={styles.formsub}>
-                      Fill out the form and we’ll get right back href you.
+                      Fill out the form and we’ll get right back to you.
                     </T>
                   </div>
                   <div>
