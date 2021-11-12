@@ -230,11 +230,11 @@ export default function Footer() {
                   <T className={styles.footerText}>Media</T>
                 </a>
               </Link>
-              <Link href="/covid">
+              {/* <Link href="/covid">
                 <a className={styles.link}>
                   <T className={styles.footerText}>Covid</T>
                 </a>
-              </Link>
+              </Link> */}
 
               {/* <NavLink to="/"" ><T className={styles.footerText}>Contact Us</T> */}
             </div>

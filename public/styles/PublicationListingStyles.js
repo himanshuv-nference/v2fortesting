@@ -646,6 +646,10 @@ const PublicationListingStyles = makeStyles((theme) => ({
       width: '150px',
     },
   },
+  image: {
+    width: '550px',
+    height: '430px',
+  },
 }))
 
 export default PublicationListingStyles

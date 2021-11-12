@@ -173,11 +173,13 @@ const useStyles = makeStyles((theme) => ({
   },
   inputemail: {
     width: '100%',
+  },
+  inputemailDiv: {
     marginTop: '16px',
+    marginBottom: '16px',
   },
   inputmessage: {
     width: '100%',
-    marginTop: '16px',
     marginBottom: '58px',
   },
   learnoretext: {
@@ -198,8 +200,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '146px',
     padding: '8px 16px 8px 16px',
     marginBottom: '60px',
+    marginTop: '50px',
     ['@media (max-width:780px)']: {
       marginBottom: '28px',
+      marginTop: '0px',
     },
     '&:hover': {
       cursor: 'pointer',
@@ -258,7 +262,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'sticky',
     top: '0',
     background: 'white',
-    zIndex: 1
+    zIndex: 1,
   },
 }))
 

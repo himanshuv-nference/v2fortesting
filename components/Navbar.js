@@ -268,7 +268,7 @@ export default function Navbar() {
                           variant={'underlined'}
                         />
                       </div>
-                      <div>
+                      <div className={styles.inputemailDiv}>
                         <TextField
                           onChange={(e) =>
                             setFormData({ ...formData, email: e })
@@ -276,13 +276,13 @@ export default function Navbar() {
                           value={formData.email}
                           placeholder={'Email'}
                           variant={'underlined'}
-                          className={styles.inputemail}
                           helperText={
                             errorFormData.email
                               ? 'Please give valid email and try again'
                               : null
                           }
                           error={errorFormData.email}
+                          className={styles.inputemail}
                         />
                       </div>
                       <div>
