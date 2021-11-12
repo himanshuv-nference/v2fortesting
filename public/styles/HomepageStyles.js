@@ -324,9 +324,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   bloomClass: {
-    filter: 'opacity(0.5)',
+    filter: 'opacity(0.5) grayscale(1) ',
     '&:hover': {
-      filter: 'opacity(1)',
+      filter: 'opacity(1) grayscale(0) ',
     },
     width: '150px',
     ['@media (max-width:780px)']: {
@@ -335,9 +335,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mobileImage: {
-    filter: 'opacity(0.5)',
+    filter: 'opacity(0.5) grayscale(1) ',
     '&:hover': {
-      filter: 'opacity(1)',
+      filter: 'opacity(1) grayscale(0) ',
     },
     ['@media (max-width:780px)']: {
       height: '16px',
@@ -345,9 +345,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mobileImage2: {
-    filter: 'opacity(0.5)',
+    filter: 'opacity(0.5) grayscale(1) ',
     '&:hover': {
-      filter: 'opacity(1)',
+      filter: 'opacity(1) grayscale(0)  ',
     },
     ['@media (max-width:780px)']: {
       height: '16px',
@@ -369,9 +369,9 @@ const useStyles = makeStyles((theme) => ({
   },
   mImage: {
     // marginRight: '31px',
-    filter: 'opacity(0.5)',
+    filter: 'opacity(0.5) grayscale(1) ',
     '&:hover': {
-      filter: 'opacity(1)',
+      filter: 'opacity(1) grayscale(0) ',
     },
     width: '220px',
     ['@media (max-width:780px)']: {
