@@ -42,10 +42,10 @@ export default function Footer() {
 
       emailjs
         .send(
-          'gmail',
-          'template_icnp7rr',
+          'service_0mi5wzd',
+          'template_6l4v06p',
           templateParams,
-          'user_NDr8LLvItzOz9RUGuVouS',
+          'user_fQeVPH9zmJi1gOGNmbPJO',
         )
         .then(
           (result) => {
@@ -228,6 +228,11 @@ export default function Footer() {
               <Link href="/news">
                 <a className={styles.link}>
                   <T className={styles.footerText}>Media</T>
+                </a>
+              </Link>
+              <Link href="/career">
+                <a className={styles.link}>
+                  <T className={styles.footerText}>Careers</T>
                 </a>
               </Link>
               {/* <Link href="/covid">

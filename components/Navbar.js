@@ -68,10 +68,10 @@ export default function Navbar() {
       }
       emailjs
         .send(
-          'gmail',
-          'template_icnp7rr',
+          'service_0mi5wzd',
+          'template_6l4v06p',
           templateParams,
-          'user_NDr8LLvItzOz9RUGuVouS',
+          'user_fQeVPH9zmJi1gOGNmbPJO',
         )
         .then((result) => {
           modalClose()
@@ -170,6 +170,19 @@ export default function Navbar() {
                   }
                 >
                   <T>Media</T>
+                </a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/career">
+                <a
+                  className={
+                    splitLocation[1] === 'career'
+                      ? styles.activeLink
+                      : styles.link
+                  }
+                >
+                  <T>Careers</T>
                 </a>
               </Link>
             </div>

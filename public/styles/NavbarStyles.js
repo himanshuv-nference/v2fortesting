@@ -199,8 +199,7 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFFFFF',
     maxWidth: '146px',
     padding: '8px 16px 8px 16px',
-    marginBottom: '60px',
-    marginTop: '50px',
+
     ['@media (max-width:780px)']: {
       marginBottom: '28px',
       marginTop: '0px',
