@@ -168,6 +168,9 @@ const PublicationListingStyles = makeStyles((theme) => ({
   underline: {
     textDecorationLine: 'underline',
   },
+  underlineFlex: {
+    display: 'flex',
+  },
   mobileContaniner: {
     marginTop: '31px',
     padding: '32px 16px 31px 16px',

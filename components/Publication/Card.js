@@ -32,22 +32,24 @@ export default function CardRender(props) {
           {props.doc.data.published_in[0] ? (
             <div className={listingStyles.postedIndiv}>
               <T className={listingStyles.postedIn}>Published in</T>
-              <T
-                className={clsx(
-                  listingStyles.postedIn,
-                  listingStyles.underline,
-                )}
-              >
-                {RichText.render(props.doc.data.published_in)}
-              </T>
-              <T
-                className={clsx(
-                  listingStyles.postedIn,
-                  listingStyles.underline,
-                )}
-              >
-                ({props.doc.data.dt_published})
-              </T>
+              <div className={listingStyles.underlineFlex}>
+                <T
+                  className={clsx(
+                    listingStyles.postedIn,
+                    listingStyles.underline,
+                  )}
+                >
+                  {RichText.render(props.doc.data.published_in)}
+                </T>
+                <T
+                  className={clsx(
+                    listingStyles.postedIn,
+                    listingStyles.underline,
+                  )}
+                >
+                  ({props.doc.data.dt_published})
+                </T>
+              </div>
             </div>
           ) : (
             <div />
@@ -56,14 +58,24 @@ export default function CardRender(props) {
             props.doc.data.posted_in[0].text ? (
               <div className={listingStyles.postedIndiv}>
                 <T className={listingStyles.postedIn}>Posted in</T>
-                <T
-                  className={clsx(
-                    listingStyles.postedIn,
-                    listingStyles.underline,
-                  )}
-                >
-                  {RichText.render(props.doc.data.posted_in)}
-                </T>
+                <div className={listingStyles.underlineFlex}>
+                  <T
+                    className={clsx(
+                      listingStyles.postedIn,
+                      listingStyles.underline,
+                    )}
+                  >
+                    {RichText.render(props.doc.data.posted_in)}
+                  </T>
+                  <T
+                    className={clsx(
+                      listingStyles.postedIn,
+                      listingStyles.underline,
+                    )}
+                  >
+                    ({props.doc.data.dt_posted})
+                  </T>
+                </div>
               </div>
             ) : (
               <div />
