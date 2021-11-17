@@ -36,10 +36,10 @@ const CareersStyle = makeStyles((theme) => ({
     lineHeight: '180%',
     color: '#627181',
     width: '600px',
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '16px',
-    //   width: '343px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '16px',
+      width: '343px',
+    },
   },
   subHeadDiv: {
     display: 'flex',
@@ -51,9 +51,9 @@ const CareersStyle = makeStyles((theme) => ({
     lineHeight: '140%',
     color: '#0C67EB',
 
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '22px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '22px',
+    },
   },
   box2head: {
     fontSize: '44px',
@@ -62,20 +62,20 @@ const CareersStyle = makeStyles((theme) => ({
     color: ' #1A2530',
     marginBottom: '16px',
     marginTop: '16px',
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '22px',
-    //   marginBottom: '8px',
-    //   marginTop: '8px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '22px',
+      marginBottom: '8px',
+      marginTop: '8px',
+    },
   },
   box2subHead: {
     fontSize: '24px',
     fontWeight: '300',
     lineHeight: '180%',
     color: ' #1A2530',
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '14px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '14px',
+    },
   },
   abouthead: {
     fontSize: '16px',
@@ -83,31 +83,31 @@ const CareersStyle = makeStyles((theme) => ({
     lineHeight: '140%',
     color: ' #1A2530',
     marginBottom: '11px',
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '14px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '14px',
+    },
   },
   aboutDiv: {
     marginBottom: '48px',
-    // ['@media (max-width:780px)']: {
-    //   marginBottom: '32px',
-    // },
+    ['@media (max-width:780px)']: {
+      marginBottom: '32px',
+    },
   },
   aboutsubHead: {
     fontSize: '16px',
     fontWeight: '300',
     lineHeight: '200%',
     color: '#374554',
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '14px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '14px',
+    },
   },
   box2part1: {
     display: 'flex',
     alignItems: 'center',
-    // ['@media (max-width:780px)']: {
-    //   flexDirection: 'column',
-    // },
+    ['@media (max-width:780px)']: {
+      flexDirection: 'column',
+    },
   },
   box2div: {
     display: 'flex',
@@ -120,11 +120,11 @@ const CareersStyle = makeStyles((theme) => ({
     borderColor: '#000000',
     padding: '71px 60px 121px 60px',
     marginTop: '96px',
-    // ['@media (max-width:780px)']: {
-    //   padding: '16px 16px 16px 12px',
-    //   width: '343px',
-    //   marginTop: '48px',
-    // },
+    ['@media (max-width:780px)']: {
+      padding: '16px 16px 16px 12px',
+      width: '343px',
+      marginTop: '48px',
+    },
   },
   standingLine: {
     borderRightWidth: '1px',
@@ -135,8 +135,8 @@ const CareersStyle = makeStyles((theme) => ({
     borderStyle: 'dashed',
     borderColor: '#000000',
     flex: '1',
-    // width: '0px',
-    // transform: 'rotate(90deg)',
+    width: '0px',
+    transform: 'rotate(90deg)',
     height: '365px',
     marginLeft: '51px',
     marginRight: '60px',
@@ -158,17 +158,17 @@ const CareersStyle = makeStyles((theme) => ({
     lineHeight: '150%',
     color: '#627181',
     marginTop: '16px',
-    // ['@media (max-width:780px)']: {
-    //   fontSize: '16px',
-    //   marginBottom: '8px',
-    //   marginTop: '8px',
-    // },
+    ['@media (max-width:780px)']: {
+      fontSize: '16px',
+      marginBottom: '8px',
+      marginTop: '8px',
+    },
   },
   locationWidth: {
     width: '1200px',
-    // ['@media (max-width:780px)']: {
-    //   width: '290px',
-    // },
+    ['@media (max-width:780px)']: {
+      width: '290px',
+    },
   },
   locationDiv: {
     display: 'flex',
