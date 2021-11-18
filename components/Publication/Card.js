@@ -33,20 +33,10 @@ export default function CardRender(props) {
             <div className={listingStyles.postedIndiv}>
               <T className={listingStyles.postedIn}>Published in</T>
               <div className={listingStyles.underlineFlex}>
-                <T
-                  className={clsx(
-                    listingStyles.postedIn,
-                    listingStyles.underline,
-                  )}
-                >
+                <T className={clsx(listingStyles.postedIn)}>
                   {RichText.render(props.doc.data.published_in)}
                 </T>
-                <T
-                  className={clsx(
-                    listingStyles.postedIn,
-                    listingStyles.underline,
-                  )}
-                >
+                <T className={clsx(listingStyles.postedIn)}>
                   ({props.doc.data.dt_published})
                 </T>
               </div>
@@ -59,20 +49,10 @@ export default function CardRender(props) {
               <div className={listingStyles.postedIndiv}>
                 <T className={listingStyles.postedIn}>Posted in</T>
                 <div className={listingStyles.underlineFlex}>
-                  <T
-                    className={clsx(
-                      listingStyles.postedIn,
-                      listingStyles.underline,
-                    )}
-                  >
+                  <T className={clsx(listingStyles.postedIn)}>
                     {RichText.render(props.doc.data.posted_in)}
                   </T>
-                  <T
-                    className={clsx(
-                      listingStyles.postedIn,
-                      listingStyles.underline,
-                    )}
-                  >
+                  <T className={clsx(listingStyles.postedIn)}>
                     ({props.doc.data.dt_posted})
                   </T>
                 </div>
@@ -92,12 +72,7 @@ export default function CardRender(props) {
                 Featured in:{' '}
               </T>
 
-              <T
-                className={clsx(
-                  listingStyles.postedIn,
-                  listingStyles.underline,
-                )}
-              >
+              <T className={clsx(listingStyles.postedIn)}>
                 {RichText.render(props.doc.data.featured_in)}
               </T>
             </div>
