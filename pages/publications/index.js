@@ -4,6 +4,12 @@ import PublicationListingStyles from '../../public/styles/PublicationListingStyl
 const Llogo = '/PublicationPageImages/The_Lancet_logo 1.svg'
 const Nlogo = '/PublicationPageImages/Vector.svg'
 const SAlogo = '/PublicationPageImages/Scientific_American_logo 1.svg'
+const SRlogo = '/PublicationPageImages/Group33.svg'
+const elifelogo = '/PublicationPageImages/Group44.svg'
+const npjlogo = '/PublicationPageImages/Group55.svg'
+const jamalogo = '/PublicationPageImages/Group83.svg'
+const CPlogo = '/PublicationPageImages/Group4325.svg'
+
 import clsx from 'clsx'
 import styles from '../../public/styles/MedicalStyles'
 import Prismic from '@prismicio/client'
@@ -208,9 +214,14 @@ function PublicationListing({ pubInfo }) {
       </div>
 
       <div className={listingStyles.label} id="publicationTop">
-        <img src={Nlogo} className={listingStyles.labelImages} />
+        <img src={SRlogo} className={listingStyles.labelImages} />
         <img src={Llogo} className={listingStyles.labelImages} />
         <img src={SAlogo} className={listingStyles.labelImages} />
+        <img src={Nlogo} className={listingStyles.labelImages} />
+        <img src={elifelogo} className={listingStyles.labelImages} />
+        <img src={CPlogo} className={listingStyles.labelImages} />
+        <img src={jamalogo} className={listingStyles.labelImages} />
+        <img src={npjlogo} className={listingStyles.labelImages} />
       </div>
 
       <div className={listingStyles.body}>

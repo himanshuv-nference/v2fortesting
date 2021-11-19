@@ -232,7 +232,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
     ['@media (max-width:780px)']: {
       paddingTop: '20px',
       paddingBottom: '20px',
-      gap: '20px',
+      gap: '5px',
     },
   },
   Date: {
@@ -258,7 +258,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
   },
   labelImages: {
     ['@media (max-width:780px)']: {
-      width: '90px',
+      width: '40px',
     },
   },
   bloom: {
@@ -652,6 +652,18 @@ const PublicationListingStyles = makeStyles((theme) => ({
   image: {
     width: '550px',
     height: '430px',
+  },
+  logosDiv: {
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'end',
+  },
+  logos: {
+    width: '130px',
+  },
+  logoMargin: {
+    marginTop: '25px',
+    marginBottom: '16px',
   },
 }))
 

@@ -8,6 +8,12 @@ import Link from 'next/link'
 export default function Slider(props) {
   const listingStyles = PublicationListingStyles()
   const { item } = props
+  var x = RichText.asText(item.data.title)
+  if (
+    (x =
+      'Building a best-in-class de-identification tool for electronic medical records through ensemble learning')
+  )
+    console.log('images', item.data.body[0])
   return (
     <>
       <div className={listingStyles.slidercontainer}>
@@ -50,15 +56,26 @@ export default function Slider(props) {
               </T>
             </div>
           </div>
+          <div className={listingStyles.logosDiv}>
+            {item.data.body[0] ? (
+              item.data.body[0].items.map((logo, index) => {
+                return (
+                  <div className={listingStyles.logoMargin}>
+                    <img
+                      src={logo.image_carousel.url}
+                      className={listingStyles.logos}
+                    />
+                  </div>
+                )
+              })
+            ) : (
+              <div />
+            )}
+          </div>
           <div className={listingStyles.authdiv}>
             {' '}
             <T className={listingStyles.sliderAuth}>Featured in:</T>{' '}
-            <T
-              className={clsx(
-                listingStyles.underline,
-                listingStyles.sliderAuth,
-              )}
-            >
+            <T className={clsx(listingStyles.sliderAuth)}>
               {RichText.render(item.data.featured_in)}
             </T>
           </div>
