@@ -28,6 +28,7 @@ const box9image2 = '/MedicalPageImages/Group 4048.svg'
 const ncong = '/MedicalPageImages/Frame 1258.png'
 const tringul = '/HomePageImages/icon_2.svg'
 const signals = '/HomePageImages/icon_3 (1).svg'
+const paramanaLogo = '/nference-web/MedicalPageImages/Group4320.svg'
 //Data fetching from Prismic
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -136,6 +137,7 @@ function ForMedical({ pubInfo }) {
                 Selecting drug target-disease pairs to try in the clinic can be
                 highly subjective and subject-matter driven.{' '}
               </T>
+              <img src={paramanaLogo} />
             </div>
             <div>
               <div className={medicalStyles.pathdiv}>
@@ -373,7 +375,7 @@ function ForMedical({ pubInfo }) {
           </div> */}
         </div>
 
-        <div className={medicalStyles.box10part1}>
+        {/* <div className={medicalStyles.box10part1}>
           <div>
             <T className={medicalStyles.path}>NFERENCE PUBLICATIONS</T>
             <T className={medicalStyles.box2Subhead}>
@@ -384,7 +386,7 @@ function ForMedical({ pubInfo }) {
               medical centers such as the Mayo Clinic.
             </T>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className={medicalStyles.desktop}>
         <div className={medicalStyles.body}>
