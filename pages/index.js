@@ -149,7 +149,7 @@ function Homepage({ data, pubInfo }) {
             <div>
               <img src={pharma} />
 
-              <T className={styles.pharmahead}>FOR LIFE SCIENCES</T>
+              <T className={styles.pharmahead}>FOR BIOPHARMAS</T>
               <T className={styles.pharmaText}>
                 We work with biopharma companies who leverage our proprietary
                 EMR data, software products and services to address important
@@ -693,7 +693,7 @@ function Homepage({ data, pubInfo }) {
           </div>
           <div>
             <img src={collabs} className={styles.productsPhotos} />
-            <T className={styles.productname}>Collaborations</T>
+            <T className={styles.productname}>Strategic Collaborations</T>
             <div className={styles.collabLine}></div>
             <T className={styles.stepdesc}>
               We work with pharma and biotech companies to leverage our real
