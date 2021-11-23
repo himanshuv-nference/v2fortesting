@@ -134,6 +134,17 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '75px',
     },
   },
+  boximage2: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  mobilePubImage: {
+    ['@media (max-width:780px)']: {
+      marginTop: '60px',
+      marginBottom: '60px',
+    },
+  },
   box2head: {
     fontSize: '44px',
     fontWeight: '300',
@@ -274,7 +285,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '120px',
     marginBottom: '12px',
     ['@media (max-width:780px)']: {
-      marginTop: '80px',
+      marginTop: '0px',
     },
   },
   new1: {

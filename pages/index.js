@@ -183,8 +183,8 @@ function Homepage({ data, pubInfo }) {
           </div>
         </div>
 
-        <div>
-          <div className={styles.boximage}>
+        <div className={styles.mobilePubImage}>
+          <div className={styles.boximage2}>
             <img src={newspaper} className={styles.newspaper} />
             <div className={styles.cirlceLine}></div>
             <T className={styles.new1}>LEADING SCIENCE AND RESEARCH</T>
