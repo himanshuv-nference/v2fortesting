@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/styles'
 import { QueryProvider } from '../components'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -24,6 +25,8 @@ const useStyles = makeStyles((theme) => {
 function MyApp(props) {
   const { Component, pageProps } = props
   const classes = useStyles()
+  const router = useRouter()
+  const showHeader = router.pathname === '/covid' ? false : true
 
   React.useEffect(() => {
     // We don't need the static css any more once we have launched our application.
@@ -32,19 +35,31 @@ function MyApp(props) {
       ssStyles.parentNode.removeChild(ssStyles)
     }
   }, [])
-
-  return (
-    <JssProvider>
-      <QueryProvider>
-        <ThemeProvider>
-          <CssBaseline />
-          <Navbar />
-          <Component {...pageProps} />
-          <Footer />
-        </ThemeProvider>
-      </QueryProvider>
-    </JssProvider>
-  )
+  if (showHeader) {
+    return (
+      <JssProvider>
+        <QueryProvider>
+          <ThemeProvider>
+            <CssBaseline />
+            <Navbar />
+            <Component {...pageProps} />
+            <Footer />
+          </ThemeProvider>
+        </QueryProvider>
+      </JssProvider>
+    )
+  } else {
+    return (
+      <JssProvider>
+        <QueryProvider>
+          <ThemeProvider>
+            <CssBaseline />
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </QueryProvider>
+      </JssProvider>
+    )
+  }
 }
 
 export default MyApp

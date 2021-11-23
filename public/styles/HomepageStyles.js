@@ -316,7 +316,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mediaImage: {
     display: 'flex',
-    alignItems: 'center',
+    // alignItems: 'center',
     justifyContent: 'center',
     gap: '10px',
     ['@media (max-width:780px)']: {
@@ -330,8 +330,17 @@ const useStyles = makeStyles((theme) => ({
     },
     width: '150px',
     ['@media (max-width:780px)']: {
-      height: '16px',
-      width: '30px',
+      height: '22px',
+    },
+  },
+  fortuneImagemob: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    ['@media (max-width:780px)']: {
+      height: '19px',
+      width: '84px',
     },
   },
   mobileImage: {
@@ -339,10 +348,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       filter: 'opacity(1) grayscale(0) ',
     },
-    ['@media (max-width:780px)']: {
-      height: '16px',
-      width: '50px',
-    },
+    // ['@media (max-width:780px)']: {
+    //   height: '16px',
+    //   width: '50px',
+    // },
   },
   mobileImage2: {
     filter: 'opacity(0.5) grayscale(1) ',
@@ -350,8 +359,7 @@ const useStyles = makeStyles((theme) => ({
       filter: 'opacity(1) grayscale(0)  ',
     },
     ['@media (max-width:780px)']: {
-      height: '16px',
-      width: '30px',
+      height: '23px',
     },
   },
   mediaImage2: {
@@ -363,7 +371,20 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '120px',
     ['@media (max-width:780px)']: {
       marginTop: '4px',
-      gap: '5px',
+      gap: '15px',
+      marginBottom: '12px',
+    },
+  },
+  mediaImage3: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    marginTop: '33px',
+    marginBottom: '120px',
+    ['@media (max-width:780px)']: {
+      marginTop: '4px',
+
       marginBottom: '12px',
     },
   },
@@ -375,8 +396,8 @@ const useStyles = makeStyles((theme) => ({
     },
     width: '220px',
     ['@media (max-width:780px)']: {
-      height: '16px',
-      width: '80px',
+      height: '28px',
+      width: '183px',
     },
   },
   allSteps: {

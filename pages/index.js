@@ -16,21 +16,21 @@ const mayologo = '/HomePageImages/Group 2948.svg'
 const pharma = '/HomePageImages/Group 4047.svg'
 const medical = '/HomePageImages/Group 4042.svg'
 const newspaper = '/HomePageImages/Group 4060.svg'
-const blom = '/HomePageImages/Group33.svg'
-const wash = '/HomePageImages/Group1227.svg'
-const newy = '/HomePageImages/new-york-times32.svg'
-const fortune = '/HomePageImages/Group1268.svg'
-const wallStreet = '/HomePageImages/Group1274.svg'
-const scientifamerican = '/HomePageImages/g411.svg'
-const usatoday = '/HomePageImages/usaTodayColor1.svg'
-const reuters = '/HomePageImages/Group44.svg'
-const TOI = '/HomePageImages/toiColor1.svg'
-const stat = '/HomePageImages/Group4316.svg'
-const CBS = '/HomePageImages/Group55.svg'
-const faceNation = '/HomePageImages/Group43171.svg'
-const CNN = '/HomePageImages/Group6.svg'
-const foxNews = '/HomePageImages/foxColor1.svg'
-const abc = '/HomePageImages/abcColor1.svg'
+const blom = '/nference-web/HomePageImages/Group33.svg'
+const wash = '/nference-web/HomePageImages/Group1227.svg'
+const newy = '/nference-web/HomePageImages/new-york-times32.svg'
+const fortune = '/nference-web/HomePageImages/Group1268.svg'
+const wallStreet = '/nference-web/HomePageImages/Group1274.svg'
+const scientifamerican = '/nference-web/HomePageImages/g411.svg'
+const usatoday = '/nference-web/HomePageImages/usaTodayColor1.svg'
+const reuters = '/nference-web/HomePageImages/Group44.svg'
+const TOI = '/nference-web/HomePageImages/toiColor1.svg'
+const stat = '/nference-web/HomePageImages/Group4316.svg'
+const CBS = '/nference-web/HomePageImages/Group55.svg'
+const faceNation = '/nference-web/HomePageImages/Group43171.svg'
+const CNN = '/nference-web/HomePageImages/Group6.svg'
+const foxNews = '/nference-web/HomePageImages/foxColor1.svg'
+const abc = '/nference-web/HomePageImages/abcColor1.svg'
 const Step1 = '/HomePageImages/step1.svg'
 const Step2 = '/HomePageImages/step2.svg'
 const Step3 = '/HomePageImages/step3.svg'
@@ -193,88 +193,184 @@ function Homepage({ data, pubInfo }) {
               See nference’s work in the news and our latest publications
             </T>
           </div>
-          <div>
-            <div className={styles.mediaImage}>
-              <Link
-                className={styles.link}
-                href="https://www.bloomberg.com/news/articles/2021-02-17/mayo-clinic-ai-study-shows-covid-shots-work-well-in-real-world"
-              >
-                <a target="_blank">
-                  <img src={blom} className={styles.bloomClass} />
-                </a>
-              </Link>
-              <Link href="https://www.washingtonpost.com/health/2020/08/08/asymptomatic-coronavirus-covid/">
-                <a target="_blank">
-                  <img src={wash} className={styles.mImage} />
-                </a>
-              </Link>
-              <Link href="https://www.nytimes.com/2020/07/29/health/coronavirus-vaccines.html">
-                <a target="_blank">
-                  <img src={newy} className={styles.mImage} />
-                </a>
-              </Link>
-              <Link href="https://www.usatoday.com/story/news/health/2021/08/16/covid-booster-shots-vaccination-united-states-biden-administration/8160915002/">
-                <a target="_blank">
-                  <img src={usatoday} className={styles.mobileImage} />
-                </a>
-              </Link>
-              <Link href="https://www.reuters.com/article/us-health-coronavirus-science/riskier-blood-thinner-used-more-often-in-black-patients-psychiatric-issues-linked-to-covid-19-idUSKBN27R2T9">
-                <a target="_blank">
-                  <img src={reuters} className={styles.mobileImage} />
-                </a>
-              </Link>
-              <Link href="https://timesofindia.indiatimes.com/home/science/hypertensive-patients-most-likely-to-develop-post-covid-complications-study/articleshow/84777503.cms">
-                <a target="_blank">
-                  <img src={TOI} className={styles.mobileImage} />
-                </a>
-              </Link>
+          <div className={styles.desktop}>
+            <div>
+              <div className={styles.mediaImage}>
+                <Link
+                  className={styles.link}
+                  href="https://www.bloomberg.com/news/articles/2021-02-17/mayo-clinic-ai-study-shows-covid-shots-work-well-in-real-world"
+                >
+                  <a target="_blank">
+                    <img src={blom} className={styles.bloomClass} />
+                  </a>
+                </Link>
+                <Link href="https://www.washingtonpost.com/health/2020/08/08/asymptomatic-coronavirus-covid/">
+                  <a target="_blank">
+                    <img src={wash} className={styles.mImage} />
+                  </a>
+                </Link>
+                <Link href="https://www.nytimes.com/2020/07/29/health/coronavirus-vaccines.html">
+                  <a target="_blank">
+                    <img src={newy} className={styles.mImage} />
+                  </a>
+                </Link>
+                <Link href="https://www.usatoday.com/story/news/health/2021/08/16/covid-booster-shots-vaccination-united-states-biden-administration/8160915002/">
+                  <a target="_blank">
+                    <img src={usatoday} className={styles.mobileImage} />
+                  </a>
+                </Link>
+                <Link href="https://www.reuters.com/article/us-health-coronavirus-science/riskier-blood-thinner-used-more-often-in-black-patients-psychiatric-issues-linked-to-covid-19-idUSKBN27R2T9">
+                  <a target="_blank">
+                    <img src={reuters} className={styles.mobileImage} />
+                  </a>
+                </Link>
+                <Link href="https://timesofindia.indiatimes.com/home/science/hypertensive-patients-most-likely-to-develop-post-covid-complications-study/articleshow/84777503.cms">
+                  <a target="_blank">
+                    <img src={TOI} className={styles.mobileImage} />
+                  </a>
+                </Link>
+              </div>
+              <div className={styles.mediaImage2}>
+                <Link href="https://fortune.com/2020/08/20/coronavirus-health-care-innovation-collaboration/">
+                  <a target="_blank">
+                    <img src={fortune} className={styles.bloomClass} />
+                  </a>
+                </Link>
+                <Link href="https://www.wsj.com/articles/nference-gets-backing-to-synthesize-medical-knowledge-1528279200">
+                  <a target="_blank">
+                    <img src={wallStreet} className={styles.mImage} />
+                  </a>
+                </Link>
+                <Link href="https://www.scientificamerican.com/article/a-flu-shot-might-reduce-coronavirus-infections-early-research-suggests/">
+                  <a target="_blank">
+                    <img src={scientifamerican} className={styles.bloomClass} />
+                  </a>
+                </Link>
+                <Link href="https://www.statnews.com/2020/06/26/from-nose-to-toe-covid19-virus-attacks-like-no-other-respiratory-infection/">
+                  <a target="_blank">
+                    <img src={stat} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://www.cbsnews.com/news/coronavirus-florida-covid-deaths-record-third-day-straight/">
+                  <a target="_blank">
+                    <img src={CBS} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://www.cbsnews.com/news/transcript-gianrico-farrugia-on-face-the-nation-march-29-2020/">
+                  <a target="_blank">
+                    <img src={faceNation} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://edition.cnn.com/2020/08/11/health/us-coronavirus-tuesday/index.html">
+                  <a target="_blank">
+                    <img src={CNN} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://www.foxnews.com/health/pfizer-covid-19-vaccine-42-infection-delta-preprint">
+                  <a target="_blank">
+                    <img src={foxNews} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://abcnews.go.com/Health/long-covid-19-vaccine-booster/story?id=79430314">
+                  <a target="_blank">
+                    <img src={abc} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+              </div>
             </div>
-            <div className={styles.mediaImage2}>
-              <Link href="https://fortune.com/2020/08/20/coronavirus-health-care-innovation-collaboration/">
-                <a target="_blank">
-                  <img src={fortune} className={styles.bloomClass} />
-                </a>
-              </Link>
-              <Link href="https://www.wsj.com/articles/nference-gets-backing-to-synthesize-medical-knowledge-1528279200">
-                <a target="_blank">
-                  <img src={wallStreet} className={styles.mImage} />
-                </a>
-              </Link>
-              <Link href="https://www.scientificamerican.com/article/a-flu-shot-might-reduce-coronavirus-infections-early-research-suggests/">
-                <a target="_blank">
-                  <img src={scientifamerican} className={styles.bloomClass} />
-                </a>
-              </Link>
-              <Link href="https://www.statnews.com/2020/06/26/from-nose-to-toe-covid19-virus-attacks-like-no-other-respiratory-infection/">
-                <a target="_blank">
-                  <img src={stat} className={styles.mobileImage2} />
-                </a>
-              </Link>
-              <Link href="https://www.cbsnews.com/news/coronavirus-florida-covid-deaths-record-third-day-straight/">
-                <a target="_blank">
-                  <img src={CBS} className={styles.mobileImage2} />
-                </a>
-              </Link>
-              <Link href="https://www.cbsnews.com/news/transcript-gianrico-farrugia-on-face-the-nation-march-29-2020/">
-                <a target="_blank">
-                  <img src={faceNation} className={styles.mobileImage2} />
-                </a>
-              </Link>
-              <Link href="https://edition.cnn.com/2020/08/11/health/us-coronavirus-tuesday/index.html">
-                <a target="_blank">
-                  <img src={CNN} className={styles.mobileImage2} />
-                </a>
-              </Link>
-              <Link href="https://www.foxnews.com/health/pfizer-covid-19-vaccine-42-infection-delta-preprint">
-                <a target="_blank">
-                  <img src={foxNews} className={styles.mobileImage2} />
-                </a>
-              </Link>
-              <Link href="https://abcnews.go.com/Health/long-covid-19-vaccine-booster/story?id=79430314">
-                <a target="_blank">
-                  <img src={abc} className={styles.mobileImage2} />
-                </a>
-              </Link>
+          </div>
+          <div className={styles.mobile}>
+            <div>
+              <div className={styles.mediaImage}>
+                <Link
+                  className={styles.link}
+                  href="https://www.bloomberg.com/news/articles/2021-02-17/mayo-clinic-ai-study-shows-covid-shots-work-well-in-real-world"
+                >
+                  <a target="_blank">
+                    <img src={blom} className={styles.bloomClass} />
+                  </a>
+                </Link>
+                <Link href="https://www.washingtonpost.com/health/2020/08/08/asymptomatic-coronavirus-covid/">
+                  <a target="_blank">
+                    <img src={wash} className={styles.mImage} />
+                  </a>
+                </Link>
+              </div>
+              <div className={styles.mediaImage}>
+                <Link href="https://www.nytimes.com/2020/07/29/health/coronavirus-vaccines.html">
+                  <a target="_blank">
+                    <img src={newy} className={styles.mImage} />
+                  </a>
+                </Link>
+                <Link href="https://www.usatoday.com/story/news/health/2021/08/16/covid-booster-shots-vaccination-united-states-biden-administration/8160915002/">
+                  <a target="_blank">
+                    <img src={usatoday} className={styles.mobileImage} />
+                  </a>
+                </Link>
+              </div>
+              <div className={styles.mediaImage}>
+                <Link href="https://www.reuters.com/article/us-health-coronavirus-science/riskier-blood-thinner-used-more-often-in-black-patients-psychiatric-issues-linked-to-covid-19-idUSKBN27R2T9">
+                  <a target="_blank">
+                    <img src={reuters} className={styles.mobileImage} />
+                  </a>
+                </Link>
+                <Link href="https://timesofindia.indiatimes.com/home/science/hypertensive-patients-most-likely-to-develop-post-covid-complications-study/articleshow/84777503.cms">
+                  <a target="_blank">
+                    <img src={TOI} className={styles.mobileImage} />
+                  </a>
+                </Link>
+                <Link href="https://fortune.com/2020/08/20/coronavirus-health-care-innovation-collaboration/">
+                  <a target="_blank">
+                    <img src={fortune} className={styles.fortuneImagemob} />
+                  </a>
+                </Link>
+              </div>
+              <div className={styles.mediaImage3}>
+                <Link href="https://www.wsj.com/articles/nference-gets-backing-to-synthesize-medical-knowledge-1528279200">
+                  <a target="_blank">
+                    <img src={wallStreet} className={styles.mImage} />
+                  </a>
+                </Link>
+                <Link href="https://www.scientificamerican.com/article/a-flu-shot-might-reduce-coronavirus-infections-early-research-suggests/">
+                  <a target="_blank">
+                    <img src={scientifamerican} className={styles.bloomClass} />
+                  </a>
+                </Link>
+              </div>
+              <div className={styles.mediaImage2}>
+                <Link href="https://www.statnews.com/2020/06/26/from-nose-to-toe-covid19-virus-attacks-like-no-other-respiratory-infection/">
+                  <a target="_blank">
+                    <img src={stat} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://www.cbsnews.com/news/coronavirus-florida-covid-deaths-record-third-day-straight/">
+                  <a target="_blank">
+                    <img src={CBS} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://www.cbsnews.com/news/transcript-gianrico-farrugia-on-face-the-nation-march-29-2020/">
+                  <a target="_blank">
+                    <img src={faceNation} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+              </div>
+              <div className={styles.mediaImage2}>
+                <Link href="https://edition.cnn.com/2020/08/11/health/us-coronavirus-tuesday/index.html">
+                  <a target="_blank">
+                    <img src={CNN} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://www.foxnews.com/health/pfizer-covid-19-vaccine-42-infection-delta-preprint">
+                  <a target="_blank">
+                    <img src={foxNews} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+                <Link href="https://abcnews.go.com/Health/long-covid-19-vaccine-booster/story?id=79430314">
+                  <a target="_blank">
+                    <img src={abc} className={styles.mobileImage2} />
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
