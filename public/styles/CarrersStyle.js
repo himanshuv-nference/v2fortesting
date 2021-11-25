@@ -136,7 +136,7 @@ const CareersStyle = makeStyles((theme) => ({
     borderColor: '#000000',
     flex: '1',
     width: '0px',
-    transform: 'rotate(90deg)',
+    // transform: 'rotate(90deg)',
     height: '365px',
     marginLeft: '51px',
     marginRight: '60px',

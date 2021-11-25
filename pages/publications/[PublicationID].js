@@ -217,6 +217,7 @@ function Publication() {
       if (!params.isReady) return
       const response = await Client.query(
         Prismic.Predicates.at('document.type', 'publications'),
+        { pageSize: 100 },
       ).then((response) => {
         {
           const resultPublication = response.results.find((x) => x.id === ID)

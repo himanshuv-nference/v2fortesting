@@ -170,6 +170,7 @@ const PublicationListingStyles = makeStyles((theme) => ({
   },
   underlineFlex: {
     display: 'flex',
+    gap: '5px',
   },
   mobileContaniner: {
     marginTop: '31px',

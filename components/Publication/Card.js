@@ -92,12 +92,7 @@ export default function CardRender(props) {
                 >
                   Cited by
                 </T>
-                <T
-                  className={clsx(
-                    listingStyles.postedIn,
-                    listingStyles.underline,
-                  )}
-                >
+                <T className={clsx(listingStyles.postedIn)}>
                   {RichText.render(props.doc.data.cited_by)}
                 </T>
               </div>
