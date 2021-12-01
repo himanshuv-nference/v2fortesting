@@ -17,7 +17,7 @@ export default function CardRender(props) {
 
   const medicalStyles = styles()
   const listingStyles = PublicationListingStyles()
-  console.log('api', props.doc.data.posted_in[0])
+  // console.log('title', props.doc.data.title[0].text.slice(0, 20))
   return (
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>

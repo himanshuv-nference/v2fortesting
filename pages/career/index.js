@@ -3,10 +3,11 @@ import { Typography as T } from '@material-ui/core'
 import clsx from 'clsx'
 import CareersStyle from '../../public/styles/CarrersStyle'
 import PharmaStyles from '../../public/styles/PharmaStyles'
-const cambridge = '/AboutusImages/Group 3431.svg'
-const bangaluru = '/AboutusImages/Vector 244.svg'
-const Tornonto = '/AboutusImages/Vector 245.svg'
-const Rochester = '/AboutusImages/Group 3432.svg'
+const cambridge = '/nference-web/AboutusImages/Group 3431.svg'
+const bangaluru = '/nference-web/AboutusImages/Vector 244.svg'
+const Tornonto = '/nference-web/AboutusImages/Vector 245.svg'
+const Rochester = '/nference-web/AboutusImages/Group 3432.svg'
+const NC = '/nference-web/AboutusImages/trNC.svg'
 
 function career() {
   const styles = CareersStyle()
@@ -64,12 +65,13 @@ function career() {
           <T className={styles.locationsubText}>
             Email your resume and ideal role to us.
           </T>
-          <div className={pharmaStyles.offrow}>
+          <div className={styles.offrow}>
             <div>
               <img src={cambridge} />
               <T className={pharmaStyles.imageName}>
                 Cambridge, MA (Headquarters)
               </T>
+              <T className={pharmaStyles.abouthead}>careers-USA@nference.net</T>
               <T className={pharmaStyles.imagedesc}>
                 One Main Street, Suite 400 East Arcade, 4th Floor Cambridge, MA
                 02142
@@ -79,6 +81,7 @@ function career() {
             <div>
               <img src={bangaluru} />
               <T className={pharmaStyles.imageName}>Bangalore</T>
+              <T className={styles.email}>careers@nference.net</T>
               <T className={pharmaStyles.imagedesc}>
                 2nd Floor, Indiqube Golf View Homes, 3rd Cross Road, S R Layout
                 Wind Tunnnel Road, Murugesh Palaya Bengaluru 560017
@@ -86,8 +89,15 @@ function career() {
               <T className={pharmaStyles.imagedesc}>India</T>
             </div>{' '}
             <div>
+              <img src={NC} />
+              <T className={pharmaStyles.imageName}>Research Triangle, NC</T>
+              <T className={pharmaStyles.imagedesc}>Coming soon!</T>
+              {/* <T className={pharmaStyles.imagedesc}>Canada</T> */}
+            </div>
+            <div>
               <img src={Tornonto} />
               <T className={pharmaStyles.imageName}>Toronto</T>
+              <T className={styles.email}>careers-Canada@nference.net</T>
               <T className={pharmaStyles.imagedesc}>
                 545 King Street West Toronto, ON M5V 1M1
               </T>
@@ -96,6 +106,7 @@ function career() {
             <div>
               <img src={Rochester} />
               <T className={pharmaStyles.imageName}>Rochester</T>
+              <T className={styles.email}>careers-USA@nference.net</T>
               <T className={pharmaStyles.imagedesc}>
                 18 3rd Street S.W. Suite #201 Rochester, MN 55902
               </T>

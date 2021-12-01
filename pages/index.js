@@ -472,7 +472,7 @@ function Homepage({ data, pubInfo }) {
                 <div className={styles.iconName}>
                   <img src={Step5Icon} className={styles.stepicons} />
                   <T className={styles.stephead}>
-                    Neutral Networks · Triangulation
+                    Neural Networks · Triangulation
                   </T>
                 </div>
                 <T className={styles.stepsub}>
@@ -625,9 +625,7 @@ function Homepage({ data, pubInfo }) {
           <div className={styles.stepd5data}>
             <div className={styles.iconName}>
               <img src={Step5Icon} className={styles.stepicons} />
-              <T className={styles.stephead}>
-                Neutral Networks · Triangulation
-              </T>
+              <T className={styles.stephead}>Neural Networks · Triangulation</T>
             </div>
             <T className={styles.stepsub}>
               Creating AI-enabled solutions for healthcare

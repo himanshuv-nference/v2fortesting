@@ -87,6 +87,17 @@ const CareersStyle = makeStyles((theme) => ({
       fontSize: '14px',
     },
   },
+  email: {
+    fontSize: '16px',
+    fontWeight: '500',
+    lineHeight: '140%',
+    color: ' #1A2530',
+    marginBottom: '16px',
+    marginTop: '16px',
+    ['@media (max-width:780px)']: {
+      fontSize: '14px',
+    },
+  },
   aboutDiv: {
     marginBottom: '48px',
     ['@media (max-width:780px)']: {
@@ -173,6 +184,19 @@ const CareersStyle = makeStyles((theme) => ({
   locationDiv: {
     display: 'flex',
     justifyContent: 'center',
+  },
+  offrow: {
+    marginTop: '48px',
+    display: 'flex',
+    gap: '50px',
+    alignItems: 'baseline',
+    textAlign: 'center',
+    marginBottom: '56px',
+    ['@media (max-width:780px)']: {
+      marginTop: '32px',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
 }))
 
