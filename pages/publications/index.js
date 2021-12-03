@@ -100,16 +100,41 @@ function PublicationListing({ pubInfo }) {
           x.data.publication_types.some((us) => typeFilter.includes(us.text)) ||
           _.isEqual(typeFilter, defaultValue),
       )
-      filterPublications = filterPublications.filter(
-        (x) =>
-          x.data.dt_published.slice(6, 11) == DateFilter ||
-          _.isEqual(DateFilter, defaultValue),
-      )
+
+      filterPublications = filterPublications.filter((x) => {
+        if (DateFilter.length == 0) {
+          return true
+        } else {
+          if (x.data.dt_published) {
+            return (
+              x.data.dt_published.slice(6, 11) == DateFilter ||
+              _.isEqual(DateFilter, defaultValue)
+            )
+          }
+        }
+      })
+      // filterPublications = filterPublications.filter((x) => {
+      //   x.data.dt_published.slice(6, 11) == DateFilter ||
+      //     _.isEqual(DateFilter, defaultValue)
+      // })
+      var latestDateTime = new Date()
       filterPublications.sort(function (a, b) {
-        return (
-          new Date(b.data.dt_published).getTime() -
-          new Date(a.data.dt_published).getTime()
-        )
+        if (a.data.dt_published && b.data.dt_published) {
+          return (
+            new Date(b.data.dt_published).getTime() -
+            new Date(a.data.dt_published).getTime()
+          )
+        } else if (b.data.dt_published) {
+          return (
+            new Date(latestDateTime).getTime() -
+            new Date(b.data.dt_published).getTime()
+          )
+        } else {
+          return (
+            new Date(latestDateTime).getTime() -
+            new Date(a.data.dt_published).getTime()
+          )
+        }
       })
       setfilteredData(filterPublications)
 
@@ -160,17 +185,42 @@ function PublicationListing({ pubInfo }) {
 
   let filterPublications = [...filteredData]
   if (recentFilter) {
+    var latestDateTime = new Date()
     filterPublications.sort(function (a, b) {
       if (recentFilter === 1) {
-        return (
-          new Date(b.data.dt_published).getTime() -
-          new Date(a.data.dt_published).getTime()
-        )
+        if (a.data.dt_published && b.data.dt_published) {
+          return (
+            new Date(b.data.dt_published).getTime() -
+            new Date(a.data.dt_published).getTime()
+          )
+        } else if (b.data.dt_published) {
+          return (
+            new Date(b.data.dt_published).getTime() -
+            new Date(latestDateTime).getTime()
+          )
+        } else {
+          return (
+            new Date(latestDateTime).getTime() -
+            new Date(a.data.dt_published).getTime()
+          )
+        }
       } else {
-        return (
-          new Date(a.data.dt_published).getTime() -
-          new Date(b.data.dt_published).getTime()
-        )
+        if (a.data.dt_published && b.data.dt_published) {
+          return (
+            new Date(a.data.dt_published).getTime() -
+            new Date(b.data.dt_published).getTime()
+          )
+        } else if (b.data.dt_published) {
+          return (
+            new Date(latestDateTime).getTime() -
+            new Date(b.data.dt_published).getTime()
+          )
+        } else {
+          return (
+            new Date(a.data.dt_published).getTime() -
+            new Date(latestDateTime).getTime()
+          )
+        }
       }
     })
   }

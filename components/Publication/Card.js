@@ -17,7 +17,7 @@ export default function CardRender(props) {
 
   const medicalStyles = styles()
   const listingStyles = PublicationListingStyles()
-  // console.log('title', props.doc.data.title[0].text.slice(0, 20))
+  console.log('title', props.doc)
   return (
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>
@@ -29,7 +29,7 @@ export default function CardRender(props) {
           </a>
         </Link>
         <div className={listingStyles.mobilePosted}>
-          {props.doc.data.published_in[0] ? (
+          {props.doc.data.published_in[0].text ? (
             <div className={listingStyles.postedIndiv}>
               <T className={listingStyles.postedIn}>Published in</T>
               <div className={listingStyles.underlineFlex}>

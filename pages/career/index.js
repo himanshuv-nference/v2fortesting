@@ -3,11 +3,11 @@ import { Typography as T } from '@material-ui/core'
 import clsx from 'clsx'
 import CareersStyle from '../../public/styles/CarrersStyle'
 import PharmaStyles from '../../public/styles/PharmaStyles'
-const cambridge = '/nference-web/AboutusImages/Group 3431.svg'
-const bangaluru = '/nference-web/AboutusImages/Vector 244.svg'
-const Tornonto = '/nference-web/AboutusImages/Vector 245.svg'
-const Rochester = '/nference-web/AboutusImages/Group 3432.svg'
-const NC = '/nference-web/AboutusImages/trNC.svg'
+const cambridge = '/AboutusImages/Group 3431.svg'
+const bangaluru = '/AboutusImages/Vector 244.svg'
+const Tornonto = '/AboutusImages/Vector 245.svg'
+const Rochester = '/AboutusImages/Group 3432.svg'
+const NC = '/AboutusImages/trNC.svg'
 
 function career() {
   const styles = CareersStyle()
