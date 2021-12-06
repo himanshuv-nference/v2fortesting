@@ -7,7 +7,7 @@ function Slider(props) {
   return (
     <>
       <div className={styles.slider}>
-        <div>
+        <div className={styles.carouselImage}>
           <img src={item.data.image.url} className={styles.slideImage} />
         </div>
         <div className={styles.dateDiv}>

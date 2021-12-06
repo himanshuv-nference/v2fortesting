@@ -495,7 +495,9 @@ function Homepage({ data, pubInfo }) {
 
       <div className={styles.mobile}>
         <div className={styles.body}>
-          <img src={Step1} className={styles.Stepimages} />
+          <div className={styles.carouselImage}>
+            <img src={Step1} className={styles.Stepimages} />
+          </div>
 
           <div className={styles.stepd1data}>
             <div className={styles.iconName}>
@@ -525,7 +527,9 @@ function Homepage({ data, pubInfo }) {
         </div>
         <div className={styles.mobileSepartor} />
         <div className={styles.body}>
-          <img src={Step2} className={styles.Stepimages} />
+          <div className={styles.carouselImage}>
+            <img src={Step2} className={styles.Stepimages} />
+          </div>
 
           <div className={styles.stepd2data}>
             <div className={styles.iconName}>
@@ -556,7 +560,9 @@ function Homepage({ data, pubInfo }) {
         </div>
         <div className={styles.mobileSepartor} />
         <div className={styles.body}>
-          <img src={Step3} className={styles.Stepimages} />
+          <div className={styles.carouselImage}>
+            <img src={Step3} className={styles.Stepimages} />
+          </div>
 
           <div className={styles.stepd3data}>
             <div className={styles.iconName}>
@@ -587,7 +593,9 @@ function Homepage({ data, pubInfo }) {
         </div>
         <div className={styles.mobileSepartor} />
         <div className={styles.body}>
-          <img src={Step4} className={styles.Stepimages} />
+          <div className={styles.carouselImage}>
+            <img src={Step4} className={styles.Stepimages} />
+          </div>
 
           <div className={styles.stepd4data}>
             <div className={styles.iconName}>
@@ -620,7 +628,9 @@ function Homepage({ data, pubInfo }) {
         </div>
         <div className={styles.mobileSepartor} />
         <div className={styles.body}>
-          <img src={Step5} className={styles.Stepimages} />
+          <div className={styles.carouselImage}>
+            <img src={Step5} className={styles.Stepimages} />
+          </div>
 
           <div className={styles.stepd5data}>
             <div className={styles.iconName}>
@@ -849,12 +859,12 @@ function Homepage({ data, pubInfo }) {
           </div>
         </div>
         <div className={styles.boximage}>
-          <img src={newspaper} className={styles.newspaper} />
+          {/* <img src={newspaper} className={styles.newspaper} />
           <div className={styles.cirlceLine}></div>
-          <T className={styles.new2}>Featured publications</T>
+          <T className={styles.new2}>Featured publications</T> */}
         </div>
       </div>
-      <div className={styles.desktop}>
+      {/* <div className={styles.desktop}>
         <div className={styles.body}>
           <LowerSlider doc={pubInfo} />
           <div className={styles.boximage}>
@@ -869,10 +879,10 @@ function Homepage({ data, pubInfo }) {
             </Link>
           </div>
         </div>
-      </div>
-      <div className={styles.mobile}>
+      </div> */}
+      {/* <div className={styles.mobile}>
         <LowerSlider doc={pubInfo} />
-      </div>
+      </div> */}
     </>
   )
 }

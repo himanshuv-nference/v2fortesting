@@ -877,17 +877,21 @@ const useStyles = makeStyles((theme) => ({
     color: '#000000',
     marginBottom: '20px',
     ['@media (max-width:780px)']: {
-      fontSize: '10px',
-      marginBottom: '5px',
+      fontSize: '12px',
+      marginBottom: '8px',
+      marginTop: '25px',
+      lineHeight: '140%',
     },
   },
   videotext: {
-    fontSize: '28px',
-    fontWeight: '500',
-    lineHeight: '140%',
+    fontSize: '24px',
+    fontWeight: '300',
+    lineHeight: '180%',
     color: '#000000',
     ['@media (max-width:780px)']: {
-      fontSize: '14px',
+      fontSize: '16px',
+      color: '#627181',
+      marginBottom: '16px',
     },
   },
   videoDiv: {
@@ -897,6 +901,9 @@ const useStyles = makeStyles((theme) => ({
       width: '100px',
       height: '100px',
     },
+  },
+  carouselImage: {
+    textAlign: 'center',
   },
 }))
 
