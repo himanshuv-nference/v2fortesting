@@ -178,7 +178,7 @@ function ForMedical({ pubInfo }) {
               By transforming unstructured clinical notes data into structured
               form through the extraction of key sentiments and relationships
               from text, our “augmented curation” uses neural networks to
-              effectively automaticlaly transofrm unstructured text from the EMR
+              effectively automaticlaly transform unstructured text from the EMR
               into labeled patient datasets.
             </T>
           </div>
