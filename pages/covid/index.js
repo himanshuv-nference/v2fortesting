@@ -4,7 +4,7 @@ import PharmaStyles from '../../public/styles/PharmaStyles'
 import CovidStyles from '../../public/styles/CovidpageStyles'
 import clsx from 'clsx'
 const logo = '/CovidPageImages/Group 4221.svg'
-import { Typography as T } from '@material-ui/core'
+import { Typography as T } from 'nferx-core-ui'
 import Prismic from '@prismicio/client'
 import { Date } from 'prismic-reactjs'
 import { useState } from 'react'
@@ -49,6 +49,10 @@ function Covid({ covidInfo, Card }) {
   })
   return (
     <>
+      <T variant={'body1'} align={'center'} className={style.head}>
+        COVID-19 Vaccine Safety
+      </T>
+      <div className={style.colorunderLine} />
       {/* <div className={medicalStyles.body}>
         <div className={pharmaStyles.box1}>
           <img src={logo} />

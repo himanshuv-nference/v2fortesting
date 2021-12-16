@@ -24,10 +24,10 @@ const CovidStyles = makeStyles((theme) => ({
       fontSize: '22px',
     },
   },
-  dateContainer:{
-    width:'fit-content',
-    position:'absolute',
-    right:100
+  dateContainer: {
+    width: 'fit-content',
+    position: 'absolute',
+    right: 100,
   },
   date: {
     fontSize: '14px',
@@ -53,7 +53,7 @@ const CovidStyles = makeStyles((theme) => ({
   },
   lineDiv: {
     display: 'flex',
-    position:'relative'
+    position: 'relative',
   },
   circle: {
     width: '11px',
@@ -81,8 +81,8 @@ const CovidStyles = makeStyles((theme) => ({
     gap: '60px',
     marginTop: '52px',
   },
-  newsContainer:{
-    width:'100%'
+  newsContainer: {
+    width: '100%',
   },
   tagDiv: {
     display: 'flex',
@@ -160,14 +160,14 @@ const CovidStyles = makeStyles((theme) => ({
   },
   linkDiv: {
     display: 'flex',
-    gap: '10px'
+    gap: '10px',
   },
   linkandimageDiv: {
     marginTop: '24px',
     display: 'flex',
     justifyContent: 'end',
     gap: '20px',
-    alignItems:'center',
+    alignItems: 'center',
     ['@media (max-width:780px)']: {
       marginTop: '0px',
       justifyContent: 'left',
@@ -271,6 +271,20 @@ const CovidStyles = makeStyles((theme) => ({
   mobileCardConatiner: {
     marginTop: '40px',
     marginBottom: '100px',
+  },
+
+  // New covid page style here
+  head: {
+    marginBottom: '10px',
+    marginTop: '27px',
+  },
+  colorunderLine: {
+    background:
+      'linear-gradient(to right, rgba(20, 221, 224, 1), rgba(75, 90, 255, 1))',
+    mixBlendMode: 'multiply',
+    height: '4px',
+    width: '30px',
+    borderRadius: '20px',
   },
 }))
 export default CovidStyles

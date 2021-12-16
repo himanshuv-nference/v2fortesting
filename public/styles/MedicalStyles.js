@@ -241,7 +241,7 @@ const Medicalstyles = makeStyles((theme) => ({
     fontSize: '16px',
     fontWeight: '500',
     lineHeight: '140%',
-    textTransform: 'capitalize',
+    // textTransform: 'capitalize',
     marginTop: '8px',
     marginBottom: '12px',
     color: '#1A2530',

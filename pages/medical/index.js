@@ -215,7 +215,7 @@ function ForMedical({ pubInfo }) {
             <div className={medicalStyles.box7part2}>
               <div>
                 <T className={medicalStyles.path}>
-                  Triangulation with public and proprietary data1
+                  Triangulation with public and proprietary data
                 </T>
                 <T className={medicalStyles.box3desc}>
                   Integrating additional data sources with labeled, curated and
@@ -270,7 +270,7 @@ function ForMedical({ pubInfo }) {
           <T className={medicalStyles.path}>NFERENCE PRODUCTS</T>
           <T className={medicalStyles.box2Subhead}>Software product access</T>
           <T className={clsx(medicalStyles.box2desc, medicalStyles.box8desc)}>
-            Medical centers we partners with have access to nference developed
+            Medical centers we partner with have access to nference developed
             software built on EMR data
           </T>
           <div className={medicalStyles.box9part2}>
@@ -287,7 +287,7 @@ function ForMedical({ pubInfo }) {
             <div>
               <div className={medicalStyles.box9line} />
               <T className={medicalStyles.path}>
-                Nfer Clinical nSights Software | our emr data product
+                Nfer Clinical NSights Software | Our EMR Data Product
               </T>
               <T className={medicalStyles.box3desc}>
                 Powered by the largest set of deep, longitudinal de-identified

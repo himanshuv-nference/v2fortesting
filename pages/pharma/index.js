@@ -84,7 +84,7 @@ function ForPharma({ pubInfo }) {
 
           <T className={pharmaStyles.box2text}>
             EMR data contains longitudinal real-world, “deep data” rich in
-            clinical phenotypes and outcomes spanning across therapeutic ares,
+            clinical phenotypes and outcomes spanning across therapeutic areas,
             but exists in in largely semi-structured and unstructured form. The
             nference platform powers the tranformation of the raw data into a
             labeled EMR dataset.
@@ -107,7 +107,7 @@ function ForPharma({ pubInfo }) {
               <T className={homepageStyles.pharmaText}>
                 We build upon state-of-the-art neural networks and Natural
                 Language Processing (NLP) methods to transform unstructured
-                clinical text (e.g. clinical notes...) into structured patient
+                clinical text (e.g. clinical notes) into structured patient
                 features.
               </T>
             </div>

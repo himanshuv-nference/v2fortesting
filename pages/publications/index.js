@@ -33,14 +33,29 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
+function isLastelement(arr) {
+  let lastElement = arr[arr.length - 1]
+  return lastElement === undefined ? true : false
+}
 export async function getStaticProps() {
-  const response = await Client.query(
-    Prismic.Predicates.at('document.type', 'publications'),
-    { pageSize: 100 },
-  )
-
-  const pubInfo = response.results
-  const pubInfoFilter = pubInfo.filter((el) => {
+  let publications = []
+  let result = []
+  let pageNumber = 1
+  do {
+    publications = await Client.query(
+      Prismic.Predicates.at('document.type', 'publications'),
+      { pageSize: 2, page: pageNumber },
+    )
+    result = [...result, ...publications.results]
+    pageNumber++
+    console.log('pageNumber', pageNumber)
+    console.log(
+      'last element',
+      publications.results[publications.results.length - 1],
+    )
+    console.log('function', isLastelement(publications.results))
+  } while (!isLastelement(publications.results))
+  const pubInfoFilter = result.filter((el) => {
     return el != null && el != ''
   })
   return {
@@ -231,7 +246,7 @@ function PublicationListing({ pubInfo }) {
   let sliderPublication = allPublications.filter((x) =>
     x.data.publication_types.some((us) => us.text === 'featured'),
   )
-
+  console.log('data', filterPublications)
   return (
     <>
       <div className={listingStyles.body}>

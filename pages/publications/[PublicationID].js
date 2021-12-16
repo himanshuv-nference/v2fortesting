@@ -7,7 +7,7 @@ const pdffull = '/PublicationPageImages/Group 3895.svg'
 const twittericon = '/FooterImages/Combined-Shape (1).svg'
 const linkIcon = '/FooterImages/Group 3627.svg'
 const pdfPlaceholder = '/PublicationPageImages/image49.svg'
-
+import { Loading } from 'nferx-core-ui'
 import { useState, useEffect } from 'react'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-reactjs'
@@ -220,7 +220,9 @@ function Publication() {
         { pageSize: 100 },
       ).then((response) => {
         {
-          const resultPublication = response.results.find((x) => x.id === ID)
+          const resultPublication = response.results.find(
+            (x) => x.id === ID || x.data.url === ID,
+          )
 
           setDocData(response.results)
           setPubData(resultPublication)
@@ -320,7 +322,11 @@ function Publication() {
       </>
     )
   } else {
-    return <T></T>
+    return (
+      <T>
+        <Loading />
+      </T>
+    )
   }
 }
 
