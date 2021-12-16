@@ -248,10 +248,10 @@ function Publication() {
               </T>
               <div className={pageStyles.datediv}>
                 <T className={pageStyles.date}>{pub.data.dt_published}</T>
-                <div className={pageStyles.icondiv}>
+                {/* <div className={pageStyles.icondiv}>
                   <img className={listingStyles.logo} src={twittericon} />
                   <img className={listingStyles.logo} src={linkIcon} />
-                </div>
+                </div> */}
               </div>
               <div className={pageStyles.line} />
               <div>
@@ -260,7 +260,9 @@ function Publication() {
                   src={pub.data.source_logo.url}
                 />
               </div>
-              <T className={pageStyles.abstract}>{pub.data.abstract}</T>
+              <T className={pageStyles.abstract}>
+                {RichText.asText(pub.data.summary)}
+              </T>
               <div className={pageStyles.authdiv}>
                 <T className={pageStyles.authhead}>Authors: </T>
                 <T className={pageStyles.authors}>{pub.data.authors} </T>

@@ -21,13 +21,23 @@ export default function CardRender(props) {
   return (
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>
-        <Link href={`/publications/${props.doc.id}`}>
-          <a className={listingStyles.nav}>
-            <T className={listingStyles.cardTitle}>
-              {RichText.asText(props.doc.data.title)}
-            </T>
-          </a>
-        </Link>
+        {props.doc.data.url ? (
+          <Link href={`/publications/${props.doc.data.url}`}>
+            <a className={listingStyles.nav}>
+              <T className={listingStyles.cardTitle}>
+                {RichText.asText(props.doc.data.title)}
+              </T>
+            </a>
+          </Link>
+        ) : (
+          <Link href={`/publications/${props.doc.id}`}>
+            <a className={listingStyles.nav}>
+              <T className={listingStyles.cardTitle}>
+                {RichText.asText(props.doc.data.title)}
+              </T>
+            </a>
+          </Link>
+        )}
         <div className={listingStyles.mobilePosted}>
           {props.doc.data.published_in[0].text ? (
             <div className={listingStyles.postedIndiv}>
