@@ -42,10 +42,10 @@ export default function Footer() {
 
       emailjs
         .send(
-          'service_0mi5wzd',
-          'template_6l4v06p',
+          'service_bob70pe',
+          'template_sfpnc9t',
           templateParams,
-          'user_fQeVPH9zmJi1gOGNmbPJO',
+          'user_32nN4SKZK8dvFkPRc3Sba',
         )
         .then(
           (result) => {
