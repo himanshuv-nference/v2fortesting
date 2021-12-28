@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '16px',
       marginRight: '16px',
     },
-    ['@media (min-width:2000px)']: {
+    ['@media (min-width:4000px)']: {
       // width: '1200px',
       marginLeft: '1200px',
       marginRight: '1200px',
@@ -774,7 +774,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: '8.43%',
     },
 
-    ['@media (min-width:3000px)']: {
+    ['@media (min-width:4000px)']: {
       marginRight: '1200px',
       marginLeft: '1200px',
     },
