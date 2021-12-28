@@ -8,7 +8,7 @@ const Medicalstyles = makeStyles((theme) => ({
       marginRight: '16px',
       marginLeft: '16px',
     },
-    ['@media (min-width:2000px)']: {
+    ['@media (min-width:4000px)']: {
       // width: '1200px',
       marginLeft: '1200px',
       marginRight: '1200px',
