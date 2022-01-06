@@ -270,7 +270,7 @@ function Aboutus({ data }) {
           <T
             className={clsx(pharmaStyles.founderText, pharmaStyles.founderdev)}
           >
-            To date nference has raised more than $185M capital from Matrix
+            To date nference has raised more than $150M capital from Matrix
             Capital Management, Matrix Partners, Mayo Clinic Ventures and NTTVC.
           </T>
 

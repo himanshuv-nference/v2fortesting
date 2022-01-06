@@ -254,12 +254,24 @@ function Publication() {
                 </div> */}
               </div>
               <div className={pageStyles.line} />
+
               <div>
-                <img
-                  className={pageStyles.logo}
-                  src={pub.data.source_logo.url}
-                />
+                <a href={pub.data.download_pdf.url} target="blank">
+                  <img
+                    className={pageStyles.logo}
+                    src={pub.data.source_logo.url}
+                  />
+                </a>
+                <div className={pageStyles.openfullDiv}>
+                  <T className={pageStyles.pdfText}>
+                    <img src={pdffull} className={pageStyles.openIcon} />
+                    <a href={pub.data.download_pdf.url} target="blank">
+                      Open Full publication
+                    </a>
+                  </T>
+                </div>
               </div>
+
               <T className={pageStyles.abstract}>
                 {RichText.asText(pub.data.summary)}
               </T>
@@ -287,14 +299,14 @@ function Publication() {
                     Download PDF
                   </a>
                 </T>
-                <div className={pageStyles.openfullDiv}>
+                {/* <div className={pageStyles.openfullDiv}>
                   <T className={pageStyles.pdfText}>
                     <img src={pdffull} className={pageStyles.openIcon} />
                     <a href={pub.data.download_pdf.url} target="blank">
                       Open Full publication
                     </a>
                   </T>
-                </div>
+                </div> */}
               </div>
               <div className={pageStyles.authdiv}>
                 {pub.data.institutional_authors.map((item, index) => {
