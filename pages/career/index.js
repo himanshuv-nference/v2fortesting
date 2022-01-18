@@ -81,7 +81,7 @@ function career() {
             <div>
               <img src={bangaluru} />
               <T className={pharmaStyles.imageName}>Bangalore</T>
-              <T className={styles.email}>careers@nference.net</T>
+              <T className={styles.email}>india@nference.net</T>
               <T className={pharmaStyles.imagedesc}>
                 2nd Floor, Indiqube Golf View Homes, 3rd Cross Road, S R Layout
                 Wind Tunnnel Road, Murugesh Palaya Bengaluru 560017

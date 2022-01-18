@@ -77,6 +77,7 @@ export default function News() {
     }
     fetchData()
   }, [params.isReady])
+  console.log('randi', news)
   if (news) {
     return (
       <>
@@ -87,7 +88,10 @@ export default function News() {
             </a>
           </Link>
           <T className={style.title}>{RichText.asText(news.data.title)}</T>
-          <T>{news.data.internal_article}</T>
+
+          <T>
+            <RichText render={news.data.internal_article_richtext} />
+          </T>
         </div>
         <style jsx global>{`
           p {

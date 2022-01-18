@@ -776,7 +776,7 @@ function Homepage({ data, pubInfo }) {
         <div className={styles.productcontainer2}>
           <div>
             <img src={tringul} className={styles.productsPhotos} />
-            <T className={styles.productname}>Nfer Triangulation software</T>
+            <T className={styles.productname}>nfer Triangulation software</T>
             <div className={styles.tringLine}></div>
             <T className={styles.stepdesc}>
               Optimize lifecycle management and target discovery through
@@ -787,7 +787,7 @@ function Homepage({ data, pubInfo }) {
           </div>
           <div>
             <img src={signals} className={styles.productsPhotos} />
-            <T className={styles.productname}>Nfer signals software</T>
+            <T className={styles.productname}>nfer Landscape software</T>
             <div className={styles.signalLine}></div>
             <T className={styles.stepdesc}>
               Automated real-time synthesis of associated concepts, key opinion
