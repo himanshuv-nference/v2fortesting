@@ -327,11 +327,12 @@ const useStyles = makeStyles((theme) => ({
   },
   mediaImage: {
     display: 'flex',
-    // alignItems: 'center',
+    alignItems: 'center',
     justifyContent: 'center',
+
     gap: '10px',
     ['@media (max-width:780px)']: {
-      gap: '5px',
+      gap: '10px',
     },
   },
   bloomClass: {
@@ -341,7 +342,163 @@ const useStyles = makeStyles((theme) => ({
     },
     width: '150px',
     ['@media (max-width:780px)']: {
+      height: '15px',
+      width: '78px',
+    },
+  },
+  fortune: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '94px',
+    ['@media (max-width:780px)']: {
       height: '22px',
+    },
+  },
+  scientifamerican: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '94px',
+    ['@media (max-width:780px)']: {
+      height: '13px',
+      width: '47px',
+    },
+  },
+  cbs_news: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '36px',
+    ['@media (max-width:780px)']: {
+      width: 'auto',
+
+      height: '13px',
+    },
+  },
+  NYM: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '104px',
+    ['@media (max-width:780px)']: {
+      height: '16px',
+      width: '68px',
+    },
+  },
+  kurier: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '100px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  politico: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '100px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  fierce: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '75px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  NatGeo: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '59px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  Group4334: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '23px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  NIH: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '38px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  AACR: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '91px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  Lancet: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '169px',
+    ['@media (max-width:780px)']: {
+      height: '22px',
+    },
+  },
+  TOI: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    width: '305px',
+    ['@media (max-width:780px)']: {
+      width: '130px',
+      height: '16px',
+    },
+  },
+  wash: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    ['@media (max-width:780px)']: {
+      height: '18px',
+      width: '117px',
+    },
+  },
+  newy: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    ['@media (max-width:780px)']: {
+      height: '16px',
+      width: '114px',
     },
   },
   fortuneImagemob: {
@@ -350,8 +507,28 @@ const useStyles = makeStyles((theme) => ({
       filter: 'opacity(1) grayscale(0) ',
     },
     ['@media (max-width:780px)']: {
-      height: '19px',
-      width: '84px',
+      height: '12px',
+      width: '54px',
+    },
+  },
+  faceNation: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    ['@media (max-width:780px)']: {
+      height: '12px',
+      width: '54px',
+    },
+  },
+  wallStreet: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0) ',
+    },
+    ['@media (max-width:780px)']: {
+      height: '12px',
+      width: '74px',
     },
   },
   mobileImage: {
@@ -359,10 +536,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       filter: 'opacity(1) grayscale(0) ',
     },
-    // ['@media (max-width:780px)']: {
-    //   height: '16px',
-    //   width: '50px',
-    // },
+    ['@media (max-width:780px)']: {
+      height: '18px',
+      width: '96px',
+    },
   },
   mobileImage2: {
     filter: 'opacity(0.5) grayscale(1) ',
@@ -370,7 +547,18 @@ const useStyles = makeStyles((theme) => ({
       filter: 'opacity(1) grayscale(0)  ',
     },
     ['@media (max-width:780px)']: {
-      height: '23px',
+      width: '48px',
+      height: '13px',
+    },
+  },
+  mobileImage3: {
+    filter: 'opacity(0.5) grayscale(1) ',
+    '&:hover': {
+      filter: 'opacity(1) grayscale(0)  ',
+    },
+    ['@media (max-width:780px)']: {
+      width: 'auto',
+      height: '13px',
     },
   },
   mediaImage2: {
@@ -378,8 +566,21 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     gap: '10px',
-    marginTop: '33px',
-    marginBottom: '120px',
+    // marginTop: '23px',
+    marginBottom: '18px',
+    ['@media (max-width:780px)']: {
+      marginTop: '4px',
+      gap: '12px',
+      marginBottom: '12px',
+    },
+  },
+  mediaImage4: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '10px',
+    marginTop: '23px',
+    marginBottom: '150px',
     ['@media (max-width:780px)']: {
       marginTop: '4px',
       gap: '15px',
