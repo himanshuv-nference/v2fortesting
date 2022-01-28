@@ -160,7 +160,7 @@ function Homepage({ data, pubInfo }) {
                 and data creation via digitization of pathology and molecular
                 sequencing.
               </T>
-              <Link href="/pharma">
+              <Link href="/medical">
                 <div className={clsx(styles.learnmore, styles.link)}>
                   <T className={styles.learnoretext}>Learn more -{'>'}</T>
                 </div>
