@@ -179,12 +179,12 @@ export default function Footer() {
           <img className={styles.footerhead} src={logo} />
           <div className={styles.footercontainer}>
             <div>
-              <Link href="https://nference.ai/privacy-policy">
+              <Link href="/privacy-policy">
                 <a className={styles.link}>
                   <T className={styles.footerText}>Privacy policy</T>
                 </a>
               </Link>
-              <Link href="https://nference.ai/terms">
+              <Link href="/terms-of-use">
                 <a className={styles.link}>
                   <T className={styles.footerText}>Terms of Use</T>
                 </a>
