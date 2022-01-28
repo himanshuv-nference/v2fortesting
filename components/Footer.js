@@ -246,7 +246,7 @@ export default function Footer() {
 
             <div className={styles.copyrightDesktop}>
               <T className={styles.footerText}>
-                @2021 nference, Inc. All rights reserved.
+                @{new Date().getFullYear()} nference, Inc. All rights reserved.
               </T>
             </div>
           </div>
