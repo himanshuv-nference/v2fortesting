@@ -48,12 +48,6 @@ export async function getStaticProps() {
     )
     result = [...result, ...publications.results]
     pageNumber++
-    console.log('pageNumber', pageNumber)
-    console.log(
-      'last element',
-      publications.results[publications.results.length - 1],
-    )
-    console.log('function', isLastelement(publications.results))
   } while (!isLastelement(publications.results))
   const pubInfoFilter = result.filter((el) => {
     return el != null && el != ''
@@ -246,7 +240,7 @@ function PublicationListing({ pubInfo }) {
   let sliderPublication = allPublications.filter((x) =>
     x.data.publication_types.some((us) => us.text === 'featured'),
   )
-  console.log('data', filterPublications)
+
   return (
     <>
       <div className={listingStyles.body}>

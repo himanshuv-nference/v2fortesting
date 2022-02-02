@@ -13,6 +13,7 @@ const Cso = '/AboutusImages/MaskGroup.svg'
 const ChiefSalesofficer = '/AboutusImages/Group 3775.svg'
 const CFO = '/AboutusImages/Mask Group.svg'
 const ChiefaffairOfficer = '/AboutusImages/image 24.svg'
+const ChiefPeopleOfficer = '/AboutusImages/EllisBW.jpg'
 const COO = '/AboutusImages/Mask Group (1).svg'
 const CPO = '/AboutusImages/ag.svg'
 const ChiefStrategyoOfficer = '/AboutusImages/Mask Group (2).svg'
@@ -154,13 +155,21 @@ function Aboutus({ data }) {
         </div>
 
         <div className={pharmaStyles.imagesrow}>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Agustin Lopez Marquez"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CPO} />
             <T className={pharmaStyles.imageName}>Agustin Lopez Marquez</T>
             <T className={pharmaStyles.imagedesc}>Chief Product Officer</T>
           </div>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Ajit Rajasekharan"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CTO} />
             <T className={pharmaStyles.imageName}>Ajit Rajasekharan</T>
@@ -177,7 +186,11 @@ function Aboutus({ data }) {
               Chief Corporate Affairs Officer
             </T>
           </div> */}
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="David McMullin"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img
               className={pharmaStyles.mobileimage}
@@ -188,7 +201,11 @@ function Aboutus({ data }) {
           </div>
         </div>
         <div className={pharmaStyles.imagesrow}>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="George Shiebler"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={General_Counsel} />
             <T className={pharmaStyles.imageName}>George Shiebler</T>
@@ -207,7 +224,11 @@ function Aboutus({ data }) {
               Chief Corporate Affairs Officer
             </T>
           </div> */}
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Hutch Fishman"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CFO} />
             <T className={pharmaStyles.imageName}>Hutch Fishman</T>
@@ -220,7 +241,11 @@ function Aboutus({ data }) {
             <T className={pharmaStyles.imageName}>Agustin Lopez Marquez</T>
             <T className={pharmaStyles.imagedesc}>Chief Product Officer</T>
           </div> */}
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Mike Koenig"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={COO} />
             <T className={pharmaStyles.imageName}>Mike Koenig</T>
@@ -228,7 +253,11 @@ function Aboutus({ data }) {
           </div>
         </div>
         <div className={pharmaStyles.imagesrow}>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Prasanth Perugapalli"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CPOpramana} />
             <T className={pharmaStyles.imageName}>Prasanth Perugapalli</T>
@@ -236,7 +265,11 @@ function Aboutus({ data }) {
               Chief Product Officer, Pramana
             </T>
           </div>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Rakesh Barve"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={SVPdatascience} />
             <T className={pharmaStyles.imageName}>Rakesh Barve</T>
@@ -248,7 +281,11 @@ function Aboutus({ data }) {
             <T className={pharmaStyles.imageName}>Ajit Rajasekharan</T>
             <T className={pharmaStyles.imagedesc}>Chief Technology Officer </T>
           </div> */}
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Sankar Ardhanari"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={SVPsoftware} />
             <T className={pharmaStyles.imageName}>Sankar Ardhanari</T>
@@ -256,7 +293,27 @@ function Aboutus({ data }) {
           </div>
         </div>
         <div className={pharmaStyles.imagesrow}>
-          <div>
+          <div
+            onClick={ModalOpen}
+            Name="Tricia Ellis"
+            className={aboutusStyles.cursor}
+          >
+            <div className={pharmaStyles.imageLine} />
+            <img
+              className={clsx(
+                pharmaStyles.mobileimage,
+                aboutusStyles.Leaderimage,
+              )}
+              src={ChiefPeopleOfficer}
+            />
+            <T className={pharmaStyles.imageName}>Tricia Ellis</T>
+            <T className={pharmaStyles.imagedesc}>Chief People Officer</T>
+          </div>
+          <div
+            onClick={ModalOpen}
+            Name="Vishy Thiagarajan"
+            className={aboutusStyles.cursor}
+          >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={SVPenginnering} />
             <T className={pharmaStyles.imageName}>Vishy Thiagarajan</T>
@@ -371,7 +428,7 @@ function Aboutus({ data }) {
             <ClearIcon className={aboutusStyles.cursor} />
           </Icon>
         </div>
-        {bios ? (
+        {bios.length > 0 ? (
           <div>
             <div className={aboutusStyles.headDiv}>
               {bios[0].data.image ? (
@@ -394,7 +451,9 @@ function Aboutus({ data }) {
             </div>
           </div>
         ) : (
-          <div />
+          <div>
+            <T className={aboutusStyles.err}>Coming Soon! </T>
+          </div>
         )}
       </NferxModal>
     </>

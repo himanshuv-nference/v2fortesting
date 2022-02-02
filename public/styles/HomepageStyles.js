@@ -1046,9 +1046,9 @@ const useStyles = makeStyles((theme) => ({
       gap: '25%',
     },
   },
-  link: {
-    textDecoration: 'none',
-  },
+  // link: {
+  //   textDecoration: 'none',
+  // },
   VideoBox: {
     display: 'flex',
     gap: '40px',
