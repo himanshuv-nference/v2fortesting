@@ -9,7 +9,7 @@ const bangaluru = '/AboutusImages/Vector 244.svg'
 const Tornonto = '/AboutusImages/Vector 245.svg'
 const Rochester = '/AboutusImages/Group 3432.svg'
 const NC = '/AboutusImages/trNC.svg'
-const hook = '/nference-web/PublicationPageImages/Group 3895.svg'
+const hook = '/PublicationPageImages/Group 3895.svg'
 
 function career() {
   const styles = CareersStyle()
