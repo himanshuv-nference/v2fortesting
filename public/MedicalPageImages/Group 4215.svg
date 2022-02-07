@@ -1,0 +1,73 @@
+<svg width="80" height="76" viewBox="0 0 80 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.5 64.5H14.5" stroke="black" stroke-linecap="round"/>
+<path d="M71 64.5H54" stroke="black" stroke-linecap="round"/>
+<path d="M31.8604 22.2617L19.0005 28L22.3722 64.4998H31.8604" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.1396 22.2617L66.9995 28L63.6278 64.4998H54.1396" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<mask id="path-5-inside-1" fill="white">
+<path d="M29 12H56V67.3571H29V12Z"/>
+</mask>
+<path d="M29 12H56V67.3571H29V12Z" fill="white"/>
+<path d="M29 12V11H28V12H29ZM56 12H57V11H56V12ZM56 67.3571V68.3571H57V67.3571H56ZM29 67.3571H28V68.3571H29V67.3571ZM29 13H56V11H29V13ZM55 12V67.3571H57V12H55ZM56 66.3571H29V68.3571H56V66.3571ZM30 67.3571V12H28V67.3571H30Z" fill="black" mask="url(#path-5-inside-1)"/>
+<rect x="34" y="17" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="23" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="29" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="41" y="17" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="41" y="23" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="41" y="29" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="48" y="17" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="48" y="23" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="48" y="29" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="20.5" cy="17.5" r="2.5" fill="url(#paint0_linear)"/>
+<mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="0" width="76" height="76">
+<circle cx="42" cy="38" r="37" stroke="url(#paint1_linear)" stroke-width="2" stroke-dasharray="5.5 5.5"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="4" y="-2" width="76" height="67" fill="url(#paint2_linear)"/>
+</g>
+<path d="M20 40L25 38" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="27.5" y="10.5" width="30" height="3" fill="white" stroke="black"/>
+<rect x="27.5" y="35.5" width="30" height="3" fill="white" stroke="black"/>
+<rect x="48" y="42" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="48" y="48" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="48" y="54" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="42" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="48" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="54" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="41" y="42" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="41" y="48" width="3" height="3" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<g style="mix-blend-mode:multiply">
+<path d="M75 64L56 64" stroke="url(#paint3_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="40" y="55" width="6" height="12" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5 54.5C16.5 55.3956 16.2915 56.1818 15.9801 56.7268C15.6606 57.2859 15.2954 57.5 15 57.5C14.7046 57.5 14.3394 57.2859 14.0199 56.7268C13.7085 56.1818 13.5 55.3956 13.5 54.5C13.5 53.6044 13.7085 52.8182 14.0199 52.2732C14.3394 51.7141 14.7046 51.5 15 51.5C15.2954 51.5 15.6606 51.7141 15.9801 52.2732C16.2915 52.8182 16.5 53.6044 16.5 54.5Z" fill="white" stroke="black"/>
+<path d="M71.5 54.5C71.5 55.3956 71.2915 56.1818 70.9801 56.7268C70.6606 57.2859 70.2954 57.5 70 57.5C69.7046 57.5 69.3394 57.2859 69.0199 56.7268C68.7085 56.1818 68.5 55.3956 68.5 54.5C68.5 53.6044 68.7085 52.8182 69.0199 52.2732C69.3394 51.7141 69.7046 51.5 70 51.5C70.2954 51.5 70.6606 51.7141 70.9801 52.2732C71.2915 52.8182 71.5 53.6044 71.5 54.5Z" fill="white" stroke="black"/>
+<path d="M15 57V64.5" stroke="black"/>
+<path d="M70 57V64.5" stroke="black"/>
+<path d="M42 60V61.5" stroke="black" stroke-linecap="round"/>
+<path d="M25 30L20 32" stroke="black" stroke-linecap="round"/>
+<path d="M25 34L20 36" stroke="black" stroke-linecap="round"/>
+<path d="M61 30L66 32" stroke="black" stroke-linecap="round"/>
+<path d="M61 34L66 36" stroke="black" stroke-linecap="round"/>
+<path d="M61 38L66 40" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear" x1="18" y1="15" x2="23" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="4" y1="0" x2="80" y2="3.05111e-08" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="4" y1="-2" x2="80" y2="-2" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="76.1176" y1="63" x2="55.4412" y2="63" gradientUnits="userSpaceOnUse">
+<stop stop-color="#14DDE0"/>
+<stop offset="1" stop-color="#4B5AFF"/>
+</linearGradient>
+</defs>
+</svg>

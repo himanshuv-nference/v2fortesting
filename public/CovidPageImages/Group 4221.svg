@@ -1,0 +1,65 @@
+<svg width="44" height="47" viewBox="0 0 44 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="23.5" cy="14.5" r="11" stroke="black"/>
+<circle cx="21" cy="13" r="1.5" stroke="black"/>
+<circle cx="27" cy="20" r="1.5" stroke="black"/>
+<circle cx="18" cy="19" r="0.5" fill="black" stroke="black"/>
+<circle cx="3" cy="26" r="0.5" fill="black" stroke="black"/>
+<circle cx="41" cy="24" r="0.5" fill="black" stroke="black"/>
+<circle cx="29" cy="15" r="0.5" fill="black" stroke="black"/>
+<circle cx="24" cy="9" r="0.5" fill="black" stroke="black"/>
+<circle cx="40.5" cy="7.5" r="2" stroke="black"/>
+<line x1="21.8799" y1="0.5" x2="24.6799" y2="0.5" stroke="black"/>
+<line x1="23.5" y1="1" x2="23.5" y2="3.8" stroke="black"/>
+<line x1="33.0723" y1="3.95504" x2="35.0522" y2="5.93494" stroke="black"/>
+<line x1="33.8643" y1="5.45414" x2="31.8844" y2="7.43404" stroke="black"/>
+<line x1="8.5" y1="16.1201" x2="8.5" y2="13.3201" stroke="black"/>
+<line x1="9" y1="14.5" x2="11.8" y2="14.5" stroke="black"/>
+<line x1="12.0068" y1="5.53902" x2="13.9867" y2="3.55913" stroke="black"/>
+<line x1="13.5059" y1="4.74703" x2="15.4858" y2="6.72693" stroke="black"/>
+<line x1="24.6797" y1="29.5" x2="21.8797" y2="29.5" stroke="black"/>
+<line x1="23.0596" y1="29" x2="23.0596" y2="26.2" stroke="black"/>
+<line x1="13.9863" y1="25.8809" x2="12.0064" y2="23.901" stroke="black"/>
+<line x1="13.1943" y1="24.3818" x2="15.1742" y2="22.4019" stroke="black"/>
+<line x1="37.5" y1="13.3203" x2="37.5" y2="16.1203" stroke="black"/>
+<line x1="37" y1="14.9404" x2="34.2" y2="14.9404" stroke="black"/>
+<line x1="34.4922" y1="24.0655" x2="32.5123" y2="26.0454" stroke="black"/>
+<line x1="32.9931" y1="24.8575" x2="31.0132" y2="22.8776" stroke="black"/>
+<g style="mix-blend-mode:multiply">
+<path d="M2 45L42 45" stroke="url(#paint0_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M42 9.5C41.1716 9.5 40.5 8.82843 40.5 8C40.5 7.17157 41.1716 6.5 42 6.5C42.8284 6.5 43.5 7.17157 43.5 8C43.5 8.82843 42.8284 9.5 42 9.5Z" fill="url(#paint1_linear)"/>
+<path d="M42 9.5C41.1716 9.5 40.5 8.82843 40.5 8C40.5 7.17157 41.1716 6.5 42 6.5C42.8284 6.5 43.5 7.17157 43.5 8C43.5 8.82843 42.8284 9.5 42 9.5Z" stroke="url(#paint2_linear)"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<circle cx="21.5" cy="13.5" r="5" fill="url(#paint3_linear)"/>
+<circle cx="21.5" cy="13.5" r="5" stroke="url(#paint4_linear)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="2" y1="45" x2="42" y2="45" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="44" y1="6" x2="44" y2="10" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="44" y1="6" x2="44" y2="10" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="16" y1="8" x2="27" y2="8" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+<linearGradient id="paint4_linear" x1="16" y1="8" x2="27" y2="8" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057FF"/>
+<stop offset="0.588542" stop-color="#5AEEFF"/>
+<stop offset="1" stop-color="#DEFFDE"/>
+</linearGradient>
+</defs>
+</svg>
