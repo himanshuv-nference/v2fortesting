@@ -198,6 +198,33 @@ const CareersStyle = makeStyles((theme) => ({
       alignItems: 'center',
     },
   },
+  linkText: {
+    fontSize: '16px',
+    fontWeight: '500',
+    lineHeight: '140%',
+    color: '#1A2530',
+    textDecoration: 'underline',
+    ['@media (max-width:780px)']: {
+      fontSize: '14px',
+    },
+  },
+  linkDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    marginTop: '32px',
+    gap: '9px',
+    width: 'max-content',
+    ['@media (max-width:780px)']: {
+      // fontSize: '16px',
+      // marginBottom: '8px',
+      gap: '4px',
+
+      marginTop: '8px',
+    },
+  },
+  link: {
+    textDecoration: 'none',
+  },
 }))
 
 export default CareersStyle

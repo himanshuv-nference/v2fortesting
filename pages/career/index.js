@@ -3,11 +3,13 @@ import { Typography as T } from '@material-ui/core'
 import clsx from 'clsx'
 import CareersStyle from '../../public/styles/CarrersStyle'
 import PharmaStyles from '../../public/styles/PharmaStyles'
+import Link from 'next/link'
 const cambridge = '/AboutusImages/Group 3431.svg'
 const bangaluru = '/AboutusImages/Vector 244.svg'
 const Tornonto = '/AboutusImages/Vector 245.svg'
 const Rochester = '/AboutusImages/Group 3432.svg'
 const NC = '/AboutusImages/trNC.svg'
+const hook = '/nference-web/PublicationPageImages/Group 3895.svg'
 
 function career() {
   const styles = CareersStyle()
@@ -34,6 +36,15 @@ function career() {
                 According to the Tech Tribune 2021 list of Best Tech Startups in
                 Cambridge!
               </T>
+
+              <Link href="https://thetechtribune.com/10-best-tech-startups-in-cambridge/">
+                <a target="_blank" className={styles.link}>
+                  <div className={styles.linkDiv}>
+                    <img src={hook} />
+                    <T className={styles.linkText}>Tech Tribune list of 2021</T>
+                  </div>
+                </a>
+              </Link>
             </div>
 
             <div className={clsx(styles.standingLine, styles.desktop)} />

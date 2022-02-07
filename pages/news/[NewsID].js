@@ -77,7 +77,6 @@ export default function News() {
     }
     fetchData()
   }, [params.isReady])
-  console.log('randi', news)
   if (news) {
     return (
       <>

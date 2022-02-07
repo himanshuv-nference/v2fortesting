@@ -209,6 +209,9 @@ const useStyles = makeStyles((theme) => ({
       cursor: 'pointer',
     },
   },
+  hide: {
+    display: 'none',
+  },
 }))
 
 export default useStyles

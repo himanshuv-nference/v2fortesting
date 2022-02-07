@@ -432,7 +432,10 @@ function Aboutus({ data }) {
           <div>
             <div className={aboutusStyles.headDiv}>
               {bios[0].data.image ? (
-                <img src={bios[0].data.image.url} />
+                <img
+                  src={bios[0].data.image.url}
+                  className={aboutusStyles.biosImage}
+                />
               ) : (
                 <div />
               )}

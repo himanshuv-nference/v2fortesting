@@ -17,7 +17,6 @@ export default function CardRender(props) {
 
   const medicalStyles = styles()
   const listingStyles = PublicationListingStyles()
-  console.log('title', props.doc)
   return (
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>

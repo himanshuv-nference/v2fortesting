@@ -2,6 +2,8 @@ import { Typography as T } from '@material-ui/core'
 import { Icon } from '@material-ui/core'
 import { TextField, NferxModal } from 'nferx-core-ui'
 import React from 'react'
+import { useRouter } from 'next/router'
+
 const logo = '/NavbarImages/nferencelognav.svg'
 const fbicon = '/FooterImages/Combined-Shape.svg'
 const twittericon = '/FooterImages/Combined-Shape (1).svg'
@@ -12,6 +14,9 @@ import Link from 'next/link'
 import useStyles from '../public/styles/FooterStyles'
 
 export default function Footer() {
+  const location = useRouter()
+  const { pathname } = location
+  const splitLocation = pathname.split('/')
   const styles = useStyles()
   const [formData, setFormData] = React.useState({
     company: '',
@@ -76,101 +81,108 @@ export default function Footer() {
 
   return (
     <div>
-      <div className={styles.formcontanier}>
-        <div className={styles.formbox}>
-          <div>
-            <T className={styles.formhead}>
-              Let’s talk about how we can work together.
-            </T>
-            <T className={styles.formsub}>
-              Fill out the form and we’ll get right back to you.
-            </T>
-          </div>
-          <div>
-            <div className={styles.inputname}>
-              <TextField
-                placeholder={'Company'}
-                variant={'underlined'}
-                className={styles.widthName}
-                value={formData.company}
-                onChange={(e) => setFormData({ ...formData, company: e })}
-              />
-              <TextField
-                placeholder={'Title'}
-                variant={'underlined'}
-                className={styles.widthName}
-                value={formData.title}
-                onChange={(e) => setFormData({ ...formData, title: e })}
-              />
-            </div>
-            <div className={styles.inputname}>
-              <TextField
-                placeholder={'First Name'}
-                variant={'underlined'}
-                value={formData.firstName}
-                className={styles.widthName}
-                onChange={(e) => setFormData({ ...formData, firstName: e })}
-              />
-              <TextField
-                placeholder={'Last Name'}
-                variant={'underlined'}
-                className={styles.widthName}
-                value={formData.lastName}
-                onChange={(e) => setFormData({ ...formData, lastName: e })}
-              />
+      <div
+        className={splitLocation[1] === 'career' ? styles.hide : styles.none}
+      >
+        <div className={styles.formcontanier}>
+          <div className={styles.formbox}>
+            <div>
+              <T className={styles.formhead}>
+                Let’s talk about how we can work together.
+              </T>
+              <T className={styles.formsub}>
+                Fill out the form and we’ll get right back to you.
+              </T>
             </div>
             <div>
-              <TextField
-                placeholder={'Email'}
-                variant={'underlined'}
-                className={styles.inputemail}
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e })}
-                helperText={
-                  errorFormData.email
-                    ? 'Please give valid email and try again'
-                    : null
-                }
-                error={errorFormData.email}
-              />
-            </div>
-            <div>
-              <TextField
-                placeholder={'Message'}
-                variant={'underlined'}
-                className={styles.inputmessage}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e })}
-              />
-            </div>
+              <div className={styles.inputname}>
+                <TextField
+                  placeholder={'Company'}
+                  variant={'underlined'}
+                  className={styles.widthName}
+                  value={formData.company}
+                  onChange={(e) => setFormData({ ...formData, company: e })}
+                />
+                <TextField
+                  placeholder={'Title'}
+                  variant={'underlined'}
+                  className={styles.widthName}
+                  value={formData.title}
+                  onChange={(e) => setFormData({ ...formData, title: e })}
+                />
+              </div>
+              <div className={styles.inputname}>
+                <TextField
+                  placeholder={'First Name'}
+                  variant={'underlined'}
+                  value={formData.firstName}
+                  className={styles.widthName}
+                  onChange={(e) => setFormData({ ...formData, firstName: e })}
+                />
+                <TextField
+                  placeholder={'Last Name'}
+                  variant={'underlined'}
+                  className={styles.widthName}
+                  value={formData.lastName}
+                  onChange={(e) => setFormData({ ...formData, lastName: e })}
+                />
+              </div>
+              <div>
+                <TextField
+                  placeholder={'Email'}
+                  variant={'underlined'}
+                  className={styles.inputemail}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e })}
+                  helperText={
+                    errorFormData.email
+                      ? 'Please give valid email and try again'
+                      : null
+                  }
+                  error={errorFormData.email}
+                />
+              </div>
+              <div>
+                <TextField
+                  placeholder={'Message'}
+                  variant={'underlined'}
+                  className={styles.inputmessage}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e })}
+                />
+              </div>
 
-            <div className={styles.learnmore} onClick={handleSubmit}>
-              <T className={styles.learnoretext}>Let’s talk -{'>'}</T>
-            </div>
-            <NferxModal
-              contentPad
-              className={styles.thankmodal}
-              open={thankModal}
-              onClose={thankyouModalClose}
-              noCloseInRight
-            >
-              <div className={styles.formcontanier}>
-                <div className={styles.thankbox}>
-                  <div className={styles.iconDiv}>
-                    <Icon onClick={thankyouModalClose} className={styles.icon}>
-                      <ClearIcon />
-                    </Icon>
-                  </div>
+              <div className={styles.learnmore} onClick={handleSubmit}>
+                <T className={styles.learnoretext}>Let’s talk -{'>'}</T>
+              </div>
+              <NferxModal
+                contentPad
+                className={styles.thankmodal}
+                open={thankModal}
+                onClose={thankyouModalClose}
+                noCloseInRight
+              >
+                <div className={styles.formcontanier}>
+                  <div className={styles.thankbox}>
+                    <div className={styles.iconDiv}>
+                      <Icon
+                        onClick={thankyouModalClose}
+                        className={styles.icon}
+                      >
+                        <ClearIcon />
+                      </Icon>
+                    </div>
 
-                  <div className={styles.thankyoupad}>
-                    <T className={styles.formhead}>Thank You!</T>
-                    <T className={styles.formsub}>
-                      Our team will contact you soon
-                    </T>
+                    <div className={styles.thankyoupad}>
+                      <T className={styles.formhead}>Thank You!</T>
+                      <T className={styles.formsub}>
+                        Our team will contact you soon
+                      </T>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </NferxModal>
+              </NferxModal>
+            </div>
           </div>
         </div>
       </div>

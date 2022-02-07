@@ -35,5 +35,11 @@ const AboutusStyle = makeStyles((theme) => ({
     width: '304px',
     height: '238px',
   },
+  biosImage: {
+    width: '240px',
+    height: '240px',
+    borderRadius: '15px',
+    marginBottom: '18px',
+  },
 }))
 export default AboutusStyle
