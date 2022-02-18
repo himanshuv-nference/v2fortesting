@@ -13,7 +13,7 @@ const env = getClientEnvironment(publicUrl, '')
 module.exports = withTM({
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   reactStrictMode: true,
-  basePath: '',
+  // basePath: '/' Enable this in dev
   async rewrites() {
     return [
       {
