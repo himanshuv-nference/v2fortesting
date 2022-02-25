@@ -16,14 +16,22 @@ const BlogListingStyles = makeStyles((theme) => ({
         fontSize: '24px',
         lineHeight: '36px',
         color: '#627181',
-        textAlign: 'center'
+        textAlign: 'center',
+        ['@media (max-width:780px)']: {
+            fontSize: '14px',
+            lineHeight: '21px',
+        },
     },
     imageContainer1: {
         display: 'flex',
         flexDirection: 'column',
         gap: '20px',
         marginLeft: '500px',
-        marginRight: '100px'
+        marginRight: '100px',
+        ['@media (max-width:780px)']: {
+            marginLeft: '70px',
+            marginRight: '0px',
+        },
     },
     imageContainer2: {
         display: 'flex',
@@ -35,6 +43,10 @@ const BlogListingStyles = makeStyles((theme) => ({
         lineHeight: '28px',
         fontWeight: '300',
         color: '#627181',
+        ['@media (max-width:780px)']: {
+            fontSize: '10px',
+            lineHeight: '20px',
+        },
     },
 
     imageContainerImage: {
@@ -47,14 +59,14 @@ const BlogListingStyles = makeStyles((theme) => ({
         marginLeft: '8.43%',
         marginRight: '8.43%',
         ['@media (max-width:780px)']: {
-          marginRight: '10px',
-          marginLeft: '10px',
+            marginRight: '10px',
+            marginLeft: '10px',
         },
         ['@media (min-width:3000px)']: {
-          marginRight: '1200px',
-          marginLeft: '1200px',
+            marginRight: '1200px',
+            marginLeft: '1200px',
         },
-      },
+    },
     head: {
         fontSize: '44px',
         fontWeight: '300',
@@ -78,187 +90,6 @@ const BlogListingStyles = makeStyles((theme) => ({
 
         borderRadius: '20px',
     },
-    slidercontainer: {
-        marginTop: '40px',
-        marginLeft: '60px',
-        marginRight: '60px',
-        background: '#FAFBFC',
-        display: 'flex',
-        padding: '40px 60px 28px 60px',
-        gap: '45px',
-    },
-    Slidertop: {
-        fontSize: '14px',
-        fontWeight: 'normal',
-        lineHeight: '160%',
-        letterSpacing: '0.005em',
-        // marginTop:'70px',
-        marginBottom: '8px',
-        color: '#000000;',
-        ['@media (max-width:780px)']: {
-            fontSize: '12px',
-            fontWeight: '500',
-            lineHeight: '140%',
-            color: '#0C67EB',
-            marginTop: '0px',
-        },
-    },
-    SliderTitle: {
-        fontSize: '28px',
-        fontWeight: '500',
-        lineHeight: '140%',
-        // letterSpacing:'0.005em',
-        // marginTop:'70px',
-        marginBottom: '16px',
-        color: '#000000;',
-        ['@media (max-width:780px)']: {
-            fontSize: '16px',
-            //   marginTop:'16px'
-        },
-    },
-    sliderDesc: {
-        fontSize: '18px',
-        fontWeight: 'noraml',
-        lineHeight: '180%',
-        letterSpacing: '0.005em',
-        // marginTop:'70px',
-        marginBottom: '16px',
-        color: '#374554',
-        ['@media (max-width:780px)']: {
-            fontSize: '14px',
-            color: '#627181',
-            marginBottom: '24px',
-
-            //   marginTop:'16px'
-        },
-    },
-    sliderAuth: {
-        fontSize: '14px',
-        fontWeight: 'normal',
-        lineHeight: '180%',
-        letterSpacing: '0.005em',
-        // marginTop:'70px',
-        // marginBottom: '8px',
-        color: '#1C2329',
-        ['@media (max-width:780px)']: {
-            fontSize: '11px',
-            fontWeight: '300',
-            lineHeight: '140%',
-            color: '#0057FF',
-            width: 'max-content',
-            //   marginTop:'16px'
-        },
-    },
-    sliderDate: {
-        fontSize: '14px',
-        fontWeight: 'noraml',
-        lineHeight: '180%',
-        letterSpacing: '0.005em',
-        // marginTop:'70px',
-        // marginBottom:'16px',
-        color: '#374554',
-        ['@media (max-width:780px)']: {
-            fontSize: '12px',
-            fontWeight: 'normal',
-            lineHeight: '140%',
-            letterSpacing: '0.005em',
-            // marginTop:'70px',
-            marginBottom: '14px',
-            color: '#6C7987',
-        },
-    },
-    datediv: {
-        display: 'flex',
-
-        ['@media (max-width:780px)']: {
-            gap: '25%',
-        },
-    },
-    Newsdatediv: {
-        display: 'flex',
-
-        ['@media (max-width:780px)']: {
-            gap: '45%',
-        },
-    },
-    Carddatediv: {
-        display: 'flex',
-        gap: '10%',
-    },
-    authdiv: {
-        display: 'flex',
-        gap: '8px',
-        alignItems: 'center',
-        marginBottom: '13px',
-    },
-    authcover: {
-        background: '#FFFFFF',
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        borderColor: '#14DDE0',
-        boxSizing: 'border-box',
-        borderRadius: '40px',
-        textAlign: 'center',
-        width: 'max-content',
-        padding: '5px 11px 5px 11px',
-    },
-    sample: {
-        height: '284px',
-        width: '412px',
-        marginTop: '40px',
-    },
-    underline: {
-        textDecorationLine: 'underline',
-    },
-    underlineFlex: {
-        display: 'flex',
-        gap: '5px',
-    },
-    mobileContaniner: {
-        marginTop: '31px',
-        padding: '32px 16px 31px 16px',
-        background: '#FAFBFC',
-    },
-    newsmobileContaniner: {
-        marginTop: '31px',
-        padding: '32px 16px 32px 16px',
-        marginLeft: '16px',
-        marginRight: '16px',
-        borderWidth: '1px',
-        borderStyle: 'dashed',
-        borderColor: '#0C67EB',
-        boxSizing: 'border-box',
-        borderRadius: '1px',
-    },
-    mobileauthcover: {
-        background: '#D9E6FF',
-        borderRadius: '4px',
-        height: '16px',
-    },
-    mobileauthcovernews: {
-        background: '#D9E6FF',
-        borderRadius: '4px',
-        height: '16px',
-        paddingRight: '5px',
-        paddingLeft: '5px',
-    },
-    readmore: {
-        fontSize: '14px',
-        fontWeight: '500',
-        lineHeight: '17px',
-        letterSpacing: '0.005em',
-        // marginTop:'70px',
-        // marginBottom:'16px',
-        color: '#374554',
-    },
-    mobileDatediv: {
-        display: 'flex',
-        gap: '50%',
-    },
-    newsmobileDatediv: {
-        display: 'flex',
-        gap: '40%',
-    },
     label: {
         background:
             'linear-gradient(90deg, rgba(20, 221, 224, 0.05) -5.88%, rgba(75, 90, 255, 0.05) 102.94%)',
@@ -281,48 +112,6 @@ const BlogListingStyles = makeStyles((theme) => ({
     Date: {
         flex: '1',
         textAlign: 'end',
-    },
-    newslabel: {
-        background:
-            'linear-gradient(90deg, rgba(20, 221, 224, 0.05) -5.88%, rgba(75, 90, 255, 0.05) 102.94%)',
-        borderRadius: '2px',
-        display: 'flex',
-        gap: '100px',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: '32px',
-        paddingBottom: '32px',
-        marginTop: '32px',
-        ['@media (max-width:780px)']: {
-            paddingTop: '20px',
-            paddingBottom: '20px',
-            gap: '10px',
-        },
-    },
-    labelImages: {
-        ['@media (max-width:780px)']: {
-            width: '40px',
-        },
-    },
-    bloom: {
-        ['@media (max-width:780px)']: {
-            width: '57.2px',
-        },
-    },
-    wash: {
-        ['@media (max-width:780px)']: {
-            width: '89.6px',
-        },
-    },
-    newsyork: {
-        ['@media (max-width:780px)']: {
-            width: '96.5px',
-        },
-    },
-    SA: {
-        ['@media (max-width:780px)']: {
-            width: '50.8px',
-        },
     },
     head2: {
         fontSize: '44px',
@@ -377,7 +166,8 @@ const BlogListingStyles = makeStyles((theme) => ({
         display: 'flex',
         gap: '5px',
     },
-    authors: {
+
+    authorsBlog: {
         fontSize: '20px',
         fontWeight: '400',
         lineHeight: '28px',
@@ -387,8 +177,9 @@ const BlogListingStyles = makeStyles((theme) => ({
         color: '#627181',
         textAlign: 'left',
         ['@media (max-width:780px)']: {
-            fontSize: '12px',
-            marginTop: '8px',
+            fontSize: '14px',
+            marginTop: '4px',
+            lineHeight: '20px',
         },
     },
 
@@ -401,6 +192,14 @@ const BlogListingStyles = makeStyles((theme) => ({
         ['@media (max-width:780px)']: {
             fontSize: '12px',
             marginTop: '8px',
+            lineHeight: '10px',
+        },
+    },
+
+    blogDesc: {
+        ['@media (max-width:780px)']: {
+            marginTop: '0px',
+            marginBottom: '0px'
         },
     },
 
@@ -414,78 +213,6 @@ const BlogListingStyles = makeStyles((theme) => ({
         ['@media (max-width:780px)']: {
             fontSize: '12px',
         },
-    },
-    usecaseText: {
-        fontSize: '16px',
-        fontWeight: 'normal',
-        lineHeight: '140%',
-        color: ' #1C2329',
-        ['@media (max-width:780px)']: {
-            fontSize: '11px',
-        },
-    },
-    usecaseboxes: {
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        borderColor: '#0057FF',
-        boxSizing: 'border-box',
-        borderRadius: '40px',
-        textAlign: 'center',
-        width: 'max-content',
-        // height:'32px'
-        marginBottom: '8px',
-        padding: '6px 12px 6px 12px',
-        ['@media (max-width:780px)']: {
-            padding: '2.5px 12px 2.5px 12px',
-        },
-    },
-    areaboxes: {
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        borderColor: '#10BF80',
-        boxSizing: 'border-box',
-        borderRadius: '40px',
-        textAlign: 'center',
-        width: 'max-content',
-        // height:'32px'
-        marginBottom: '8px',
-        padding: '6px 12px 6px 12px',
-        ['@media (max-width:780px)']: {
-            padding: '2.5px 12px 2.5px 12px',
-        },
-    },
-
-    authboxes: {
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        borderColor: '#14DDE0',
-        boxSizing: 'border-box',
-        borderRadius: '40px',
-        textAlign: 'center',
-        width: 'max-content',
-        // height:'32px'
-        marginBottom: '8px',
-        padding: '6px 12px 6px 12px',
-        ['@media (max-width:780px)']: {
-            padding: '2.5px 12px 2.5px 12px',
-        },
-    },
-    grid: {
-        display: 'grid',
-        // gridTemplateColumns: 'auto auto',
-    },
-    grid2: {
-        display: 'grid',
-        gridTemplateColumns: 'auto auto',
-        gridColumnGap: '90px',
-    },
-    SeeMoreText: {
-        fontSize: '11px',
-        fontWeight: 'normal',
-        lineHeight: '140%',
-        color: '#627181',
-        textDecorationLine: 'underline',
-        marginLeft: '10px',
     },
     cardRight: {
         display: 'flex',
@@ -515,23 +242,6 @@ const BlogListingStyles = makeStyles((theme) => ({
     },
     pageination: {
         color: 'red',
-    },
-    authormore: {
-        fontSize: '16px',
-        fontWeight: 'bold',
-        textDecorationLine: 'underline',
-        lineHeight: '124.5%',
-        letterSpacing: '0.005em',
-        marginTop: '32px',
-        marginBottom: '8px',
-        color: '#627181',
-        ['@media (max-width:780px)']: {
-            fontSize: '12px',
-            marginTop: '8px',
-        },
-    },
-    pubflex: {
-        flex: 'none',
     },
     nav: {
         textDecorationLine: 'none',
@@ -586,6 +296,25 @@ const BlogListingStyles = makeStyles((theme) => ({
         },
     },
 
+    blogCard: {
+        display: 'flex',
+        marginTop: '32px',
+        borderWidth: '1px',
+
+        borderStyle: 'dashed',
+        borderColor: '#627181',
+        boxSizing: 'border-box',
+        ['@media (max-width:780px)']: {
+            flexDirection: 'column',
+            marginTop: '27px',
+            background: '#FAFBFC',
+            borderRadius: '2px',
+            marginLeft: '15px',
+            marginRight: '15px',
+            padding: '10px 14px 17px 15px',
+        },
+    },
+
     newsleft: {
         padding: '32px 50px 32px 60px',
         flex: 0.5,
@@ -597,6 +326,13 @@ const BlogListingStyles = makeStyles((theme) => ({
         // borderStyle: 'dashed',
         // borderColor: '#627181',
         // boxSizing: 'border-box',
+    },
+    blogLeft: {
+        padding: '32px 50px 32px 60px',
+        flex: 0.5,
+        ['@media (max-width:780px)']: {
+            padding: '10px 14px 0px 0px',
+        },
     },
     newsright: {
         flex: 0.5,
@@ -633,6 +369,22 @@ const BlogListingStyles = makeStyles((theme) => ({
             marginBottom: '11px',
         },
     },
+    blogTitle: {
+        fontSize: '28px',
+        fontWeight: '500',
+        lineHeight: '48px',
+        textAlign: 'left',
+        // letterSpacing:'0.005em',
+        marginTop: '16px',
+        marginBottom: '16px',
+        color: '#1A2530;',
+        ['@media (max-width:780px)']: {
+            fontSize: '14px',
+            marginBottom: '0px',
+            marginTop: '0px',
+            lineHeight: '28px',
+        },
+    },
     newsDesc: {
         fontSize: '16px',
         fontWeight: '300',
@@ -648,6 +400,23 @@ const BlogListingStyles = makeStyles((theme) => ({
             marginBottom: '24px',
 
             //   marginTop:'16px'
+        },
+    },
+
+    blogDesc: {
+        fontSize: '16px',
+        fontWeight: '300',
+        lineHeight: '32px%',
+        letterSpacing: '0.005em',
+        textAlign: 'left',
+        // marginTop:'70px',
+        marginBottom: '24px',
+        color: '#374554',
+        ['@media (max-width:780px)']: {
+            fontSize: '14px',
+            color: '#627181',
+            marginBottom: '24px',
+            lineHeight: '25px',
         },
     },
     newsDate: {
@@ -680,10 +449,10 @@ const BlogListingStyles = makeStyles((theme) => ({
         marginTop: '20px',
         marginRight: '20px',
         ['@media (max-width:780px)']: {
-            width: '90px',
-            height: '84.32px',
+            width: '100%',
+            height: '100%',
             objectFit: 'cover',
-            marginTop: '15px',
+            marginTop: '0px',
         },
     },
 
@@ -692,10 +461,9 @@ const BlogListingStyles = makeStyles((theme) => ({
         height: '336px',
         objectFit: 'cover',
         ['@media (max-width:780px)']: {
-            width: '90px',
-            height: '84.32px',
+            width: '120px',
+            height: '120px',
             objectFit: 'cover',
-            marginTop: '15px',
         },
     },
 
@@ -704,34 +472,6 @@ const BlogListingStyles = makeStyles((theme) => ({
     },
     hide: {
         display: 'none',
-    },
-    mediaText: {
-        fontSize: '16px',
-        fontWeight: 'normal',
-        lineHeight: '140%',
-        color: '#A9B9C9',
-        ['@media (max-width:780px)']: {
-            fontSize: '11px',
-            marginTop: '16px',
-        },
-    },
-    mediaDiv: {
-        display: 'flex',
-        alignItems: 'baseline',
-        gap: '45%',
-        ['@media (max-width:780px)']: {
-            flexDirection: 'column',
-        },
-    },
-    pageButtom: {
-        ['@media (max-width:780px)']: {
-            marginTop: '16px',
-        },
-    },
-    mobileNewsFIlter: {
-        ['@media (max-width:780px)']: {
-            width: '150px',
-        },
     },
     image: {
         width: '550px',
@@ -756,7 +496,10 @@ const BlogListingStyles = makeStyles((theme) => ({
         marginTop: '25px',
         marginBottom: '25px',
         marginRight: '20px',
-        borderRight: '1px dashed #627181'
+        borderRight: '1px dashed #627181',
+        ['@media (max-width:780px)']: {
+            display: 'none'
+        },
     }
 }))
 

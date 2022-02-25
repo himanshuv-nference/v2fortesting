@@ -106,8 +106,9 @@ export default function News() {
               </T>
             </div>
           </div>
-
+          <div className={listingStyles.blogDesc}>
           <T className={style.title}>{article.data.blog_title[0].text}</T>
+          </div>
           <img
             className={listingStyles.newsCardImageInd}
             src={article.data.blog_image.url}

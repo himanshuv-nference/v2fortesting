@@ -5,17 +5,15 @@ import Link from 'next/link'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
 
 export default function CardRender(props) {
-  console.warn(props);
   const listingStyles = BlogListingStyles()
   const medicalStyles = styles()
   if (props.doc.data.internal) {
     return (
       <>
-        <div className={medicalStyles.desktop}>
           <Link href={`/blog/${props.doc.id}`}>
             <a className={listingStyles.nav}>
-              <div className={listingStyles.newsCard}>
-                <div className={listingStyles.newsleft}>
+              <div className={listingStyles.blogCard}>
+                <div className={listingStyles.blogLeft}>
                   <div className={listingStyles.newscardhead}>
                     {props.doc.data.blog_date_published ? (
                       <div className={listingStyles.postedIndiv}>
@@ -31,17 +29,17 @@ export default function CardRender(props) {
                     )}
                   </div>
 
-                  <T className={listingStyles.newsTitle}>
+                  <T className={listingStyles.blogTitle}>
                     {props.doc.data.blog_title[0].text}
                   </T>
 
-                  <T className={listingStyles.authors}>
+                  <T className={listingStyles.authorsBlog}>
                     {props.doc.data.blog_post_author}
                   </T>
 
                   <div className={listingStyles.headline}></div>
 
-                  <T className={listingStyles.newsDesc}>
+                  <T className={listingStyles.blogDesc}>
                     {props.doc.data.blog_brief_summary[0].text}
                   </T>
                 </div>
@@ -55,7 +53,6 @@ export default function CardRender(props) {
               </div>
             </a>
           </Link>
-        </div>
         <style jsx global>{`
           a {
             color: #1c2329 !important;
@@ -67,11 +64,10 @@ export default function CardRender(props) {
   } else {
     return (
       <>
-        <div className={medicalStyles.desktop}>
           <Link href={props.doc.data.blog_link.url}>
           <a target="_blank" className={listingStyles.nav}>
-              <div className={listingStyles.newsCard}>
-                <div className={listingStyles.newsleft}>
+              <div className={listingStyles.blogCard}>
+                <div className={listingStyles.blogLeft}>
                   <div className={listingStyles.newscardhead}>
                     {props.doc.data.blog_date_published ? (
                       <div className={listingStyles.postedIndiv}>
@@ -87,17 +83,17 @@ export default function CardRender(props) {
                     )}
                   </div>
 
-                  <T className={listingStyles.newsTitle}>
+                  <T className={listingStyles.blogTitle}>
                     {props.doc.data.blog_title[0].text}
                   </T>
 
-                  <T className={listingStyles.authors}>
+                  <T className={listingStyles.authorsBlog}>
                     {props.doc.data.blog_post_author}
                   </T>
 
                   <div className={listingStyles.headline}></div>
 
-                  <T className={listingStyles.newsDesc}>
+                  <T className={listingStyles.blogDesc}>
                     {props.doc.data.blog_brief_summary[0].text}
                   </T>
                 </div>
@@ -111,7 +107,6 @@ export default function CardRender(props) {
               </div>
             </a>
           </Link>
-        </div>
         <style jsx global>{`
           a {
             color: #1c2329 !important;

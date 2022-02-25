@@ -178,8 +178,9 @@ function PublicationListing({ pubInfo }) {
 
   allPublications.map((li) => {
     li.data.usecase.map((usecases, index) => {
-      if(usecases.text!=='')
-      usecaseArray.push(usecases.text)
+      if (usecases.text !== '') {
+        usecaseArray.push(usecases.text)
+      }
     })
     li.data.therapeutic_area.map((Tharea, index) => {
       if (Tharea.text !== '') {

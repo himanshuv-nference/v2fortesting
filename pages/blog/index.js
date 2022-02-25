@@ -1,18 +1,12 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
-import PublicationListingStyles from '../../public/styles/PublicationListingStyles'
 
-import clsx from 'clsx'
 import styles from '../../public/styles/MedicalStyles'
 import Prismic from '@prismicio/client'
-import { Date } from 'prismic-reactjs'
 import { useState, useEffect } from 'react'
 import {
-  HorizontalScroll,
   Pagination,
-  ListItem,
-  ChipFilterSelect,
 } from 'nferx-core-ui'
 
 import _ from 'lodash'
@@ -52,23 +46,14 @@ export async function getStaticProps() {
 }
 
 function BlogListing({ pubInfo }) {
-  const defaultValue = []
-  const deafaultDatevalue = null
   const [allPublications, setallPublications] = useState(pubInfo)
-  const [doc, setDocData] = useState(null)
   const [pageNumber, setPageNumber] = useState(1)
-  const [TotalPages, setTotalPages] = useState(1)
   const [pageSize, setpageSize] = useState(5)
 
-  const [recentFilter, setRecentFilter] = useState(deafaultDatevalue)
-
   useEffect(() => {
-    setTotalPages(pubInfo.length)
     setallPublications(pubInfo)
   }, [pageNumber])
 
-
-  const medicalStyles = styles()
   const listingStyles = BlogListingStyles()
 
 
@@ -77,7 +62,7 @@ function BlogListing({ pubInfo }) {
       <div className={listingStyles.box1}>
         <T className={listingStyles.nferenceBlog}>nference blog</T>
         <T className={listingStyles.blogWith}>With Ajit Rajasekharan + Venky Soundararajan</T>
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', gap: '30px'}}>
           <div className={listingStyles.imageContainer1}>
           <T className={listingStyles.imageContainerText}>Chief Technology Officer</T>
           <img src={person1} className={listingStyles.imageContainerImage}/>
