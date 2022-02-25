@@ -247,6 +247,11 @@ export default function Footer() {
                   <T className={styles.footerText}>Careers</T>
                 </a>
               </Link>
+              <Link href="/blog">
+                <a className={styles.link}>
+                  <T className={styles.footerText}>Blog</T>
+                </a>
+              </Link>
               {/* <Link href="/covid">
                 <a className={styles.link}>
                   <T className={styles.footerText}>Covid</T>

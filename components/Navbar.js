@@ -186,6 +186,19 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
+            <div>
+              <Link href="/blog">
+                <a
+                  className={
+                    splitLocation[1] === 'blog'
+                      ? styles.activeLink
+                      : styles.link
+                  }
+                >
+                  <T>Blog</T>
+                </a>
+              </Link>
+            </div>
             {/* <div>
               <Link href="/covid">
                 <a
@@ -424,6 +437,17 @@ export default function Navbar() {
                     }
                   >
                     <T onClick={toggle('top', false)}>Media</T>
+                  </a>
+                </Link>
+                <Link href="/blog">
+                  <a
+                    className={
+                      splitLocation[1] === 'blog'
+                        ? styles.activeLink
+                        : styles.link
+                    }
+                  >
+                    <T onClick={toggle('top', false)}>Blog</T>
                   </a>
                 </Link>
                 {/* <T onClick={toggle('top', false)}>Careers</T> */}

@@ -50,6 +50,10 @@ class MyDocument extends Document {
             name="msapplication-config"
             content="/favicons/browserconfig.xml"
           />
+          <meta
+          itemprop="image"
+          content="/favicons/nference.svg"
+        ></meta>
           <meta name="theme-color" content={config.primaryColor} />
           <script
             async
