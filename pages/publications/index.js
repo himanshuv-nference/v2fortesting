@@ -83,6 +83,14 @@ function PublicationListing({ pubInfo }) {
   }, [pageNumber])
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, [pageNumber]);
+
+  useEffect(() => {
     let filterPublications = []
     if (allPublications) {
       filterPublications = allPublications.filter(
@@ -170,6 +178,7 @@ function PublicationListing({ pubInfo }) {
 
   allPublications.map((li) => {
     li.data.usecase.map((usecases, index) => {
+      if(usecases.text!=='')
       usecaseArray.push(usecases.text)
     })
     li.data.therapeutic_area.map((Tharea, index) => {

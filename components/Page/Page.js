@@ -44,6 +44,7 @@ function Page(props) {
         <Button className={classes.button}>Publications</Button>
         <Button className={classes.button}>Media</Button>
         <Button className={classes.button}>Careers</Button>
+        <Button className={classes.button}>Blog</Button>
         <Button className={classes.button}>Contact Us</Button>
       </Toolbar>
     </AppBar>
@@ -61,6 +62,7 @@ function Page(props) {
         <div>Publications</div>
         <div>Media</div>
         <div>Careers</div>
+        <div>Blog</div>
         <div>Contact Us</div>
     </div>
     </div>
