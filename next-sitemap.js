@@ -1,5 +1,5 @@
 // https://www.npmjs.com/package/next-sitemap
-const url = 'https://nference.ai'
+const url = 'https://nference.com'
 module.exports = {
   siteUrl: url,
   generateRobotsTxt: true,
