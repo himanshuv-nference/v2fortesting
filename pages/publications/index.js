@@ -60,6 +60,7 @@ export async function getStaticProps() {
 }
 
 function PublicationListing({ pubInfo }) {
+  
   const defaultValue = []
   const deafaultDatevalue = null
   const [allPublications, setallPublications] = useState(pubInfo)
@@ -77,18 +78,27 @@ function PublicationListing({ pubInfo }) {
 
   const [recentFilter, setRecentFilter] = useState(deafaultDatevalue)
 
+  const executeScroll = () => {
+    var element = document.getElementById('scroll');
+    var headerOffset = 100;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+  }   
+
   useEffect(() => {
     setTotalPages(pubInfo.length)
     setallPublications(pubInfo)
   }, [pageNumber])
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
-  }, [pageNumber]);
+  const onChangePage = (page) => {
+    setPageNumber(page)
+    executeScroll()
+  }
 
   useEffect(() => {
     let filterPublications = []
@@ -293,7 +303,7 @@ function PublicationListing({ pubInfo }) {
         <img src={npjlogo} className={listingStyles.labelImages} />
       </div>
 
-      <div className={listingStyles.body}>
+      <div className={listingStyles.body} id={'scroll'}>
         <T className={listingStyles.head2}>All Publications</T>
         <div className={medicalStyles.desktop}>
           <div className={listingStyles.filterDiv}>
@@ -465,7 +475,7 @@ function PublicationListing({ pubInfo }) {
             value={pageNumber}
             totalCount={filteredData.length}
             pageSize={pageSize}
-            onChange={setPageNumber}
+            onChange={onChangePage}
           />
         </div>
       </div>

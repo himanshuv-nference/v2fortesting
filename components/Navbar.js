@@ -67,12 +67,12 @@ export default function Navbar() {
         url: window.location.href,
       }
       emailjs
-        .send(
-          'service_90ll5yw',
-          'template_guicvl9',
+      .send(
+        'service_el2cvyo',
+          'template_3duokn9',
           templateParams,
-          'user_9mmorA7Ut9Zy0UlpnZfCS',
-        )
+          'user_805xdXJj2kUpbZjzH67Gx',
+      )
         .then((result) => {
           modalClose()
           thankyouModalOpen()
