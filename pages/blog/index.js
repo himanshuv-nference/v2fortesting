@@ -30,7 +30,7 @@ export async function getStaticProps() {
   do {
     publications = await Client.query(
       Prismic.Predicates.at('document.type', 'nference_blog'),
-      { pageSize: 2, page: pageNumber },
+      { pageSize: 50, page: pageNumber },
     )
     result = [...result, ...publications.results]
     pageNumber++
@@ -47,15 +47,25 @@ export async function getStaticProps() {
 
 function BlogListing({ pubInfo }) {
   const [allPublications, setallPublications] = useState(pubInfo)
+  const [filteredPublications, setFilteredPublications] = useState([])
   const [pageNumber, setPageNumber] = useState(1)
   const [pageSize, setpageSize] = useState(5)
-
-  useEffect(() => {
-    setallPublications(pubInfo)
-  }, [pageNumber])
-
+  
   const listingStyles = BlogListingStyles()
 
+  useEffect(() => {
+    let filterPublications =[]
+    filterPublications =  allPublications.sort(function (a, b) {
+      return (
+        new Date(b.data.blog_date_published).getTime() -
+        new Date(a.data.blog_date_published).getTime()
+      )
+    })
+    setFilteredPublications(filterPublications)
+  }, [pageNumber])
+
+  let filterPublications = allPublications
+  filterPublications = filterPublications.slice((pageNumber - 1) * 5, pageNumber * 5)
 
   return (
     <>
@@ -75,7 +85,7 @@ function BlogListing({ pubInfo }) {
       </div>
       <div className={listingStyles.body}>
         <div className={listingStyles.cardconatiner}>
-          {allPublications.map((allPublications, index) => {
+          {filterPublications.map((allPublications, index) => {
             return <CardRender doc={allPublications} key={index} />
           })}
         </div>
@@ -84,7 +94,7 @@ function BlogListing({ pubInfo }) {
           <Pagination
             className={listingStyles.pageination}
             value={pageNumber}
-            totalCount={allPublications.length}
+            totalCount={filteredPublications.length}
             pageSize={pageSize}
             onChange={setPageNumber}
           />
