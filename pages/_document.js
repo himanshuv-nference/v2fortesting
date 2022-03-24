@@ -55,11 +55,11 @@ class MyDocument extends Document {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 	<title>nference - Powering quantum leaps in human health</title>
 	<meta name="title" content="nference - Powering quantum leaps in human health" />
-	<meta name="image" content="https://nference.com/image/nference_logo.png" />
+	<meta name="image" content="https://nference.com/image/nferencelogo.png" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://nference.com" />
 	<meta property="og:description" content="nference partners with medical centers to turn decades of rich and predominantly unstructured data captured in electronic medical records (EMR) into powerful software solutions that enable scientists to discover and develop the next-generation of personalized diagnostics and treatments for patients worldwide." />
-	<meta property="og:image" content="https://nference.com/image/nference_logo.png" />
+	<meta property="og:image" content="https://nference.com/image/nferencelogo.png" />
 	<meta name="twitter:description" content="nference partners with medical centers to turn decades of rich and predominantly unstructured data captured in electronic medical records (EMR) into powerful software solutions that enable scientists to discover and develop the next-generation of personalized diagnostics and treatments for patients worldwide." />
 	<meta name="twitter:title" content="nference - Powering quantum leaps in human health" />
   <meta property="twitter:image" content="https://nference.com/image/nferencelogo.png" />
