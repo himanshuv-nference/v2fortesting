@@ -1,5 +1,8 @@
 ## Upcoming - v1.2.0
 
+### 20220324 - Koshi
+- Updated meta tag for twitter
+
 ### 20220321 - Koshi
 - Added Customer Security Standards Page
 - Fixed Scrolling issues in Publications page
