@@ -62,6 +62,7 @@ class MyDocument extends Document {
 	<meta property="og:image" content="https://nference.com/image/nference_logo.png" />
 	<meta name="twitter:description" content="nference partners with medical centers to turn decades of rich and predominantly unstructured data captured in electronic medical records (EMR) into powerful software solutions that enable scientists to discover and develop the next-generation of personalized diagnostics and treatments for patients worldwide." />
 	<meta name="twitter:title" content="nference - Powering quantum leaps in human health" />
+  <meta property="twitter:image" content="https://nference.com/image/nferencelogo.png" />
 	<meta itemprop="description" content="nference partners with medical centers to turn decades of rich and predominantly unstructured data captured in electronic medical records (EMR) into powerful software solutions that enable scientists to discover and develop the next-generation of personalized diagnostics and treatments for patients worldwide." />
 	<meta itemprop="name" content="nference - Powering quantum leaps in human health" />
 	<meta name="og:description" content="nference partners with medical centers to turn decades of rich and predominantly unstructured data captured in electronic medical records (EMR) into powerful software solutions that enable scientists to discover and develop the next-generation of personalized diagnostics and treatments for patients worldwide." />
