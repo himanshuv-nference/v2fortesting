@@ -1,5 +1,8 @@
 ## Upcoming - v1.2.0
 
+### 20220325 - Baji
+* Update readme
+
 ### 20220324 - Koshi
 - Updated meta tag for twitter
 
