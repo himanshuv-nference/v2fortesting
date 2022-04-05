@@ -231,7 +231,7 @@ function ForPharma({ pubInfo }) {
                     </div>
                     <T className={pharmaStyles.box4desc}>
                       Build complex patient cohorts using real world EMR data to
-                      optimize clinial study criteria and study design. Read our
+                      optimize clinical study criteria and study design. Read our
                       Publication
                     </T>
                   </div>
@@ -451,7 +451,7 @@ function ForPharma({ pubInfo }) {
                   </div>
                   <T className={pharmaStyles.box4desc}>
                     Build complex patient cohorts using real world EMR data to
-                    optimize clinial study criteria and study design. Read our
+                    optimize clinical study criteria and study design. Read our
                     Publication
                   </T>
                 </div>
