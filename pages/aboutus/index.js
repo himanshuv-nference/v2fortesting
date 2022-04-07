@@ -18,7 +18,7 @@ const COO = '/AboutusImages/Mask Group (1).svg'
 const CPO = '/AboutusImages/ag.svg'
 const ChiefStrategyoOfficer = '/AboutusImages/Mask Group (2).svg'
 const CTO = '/AboutusImages/ajit.svg'
-const General_Counsel = '/AboutusImages/image 22.svg'
+const General_Counsel = '/AboutusImages/Group 4299.svg'
 const cambridge = '/AboutusImages/Group 3431.svg'
 const bangaluru = '/AboutusImages/Vector 244.svg'
 const Tornonto = '/AboutusImages/Vector 245.svg'
@@ -157,16 +157,6 @@ function Aboutus({ data }) {
         <div className={pharmaStyles.imagesrow}>
           <div
             onClick={ModalOpen}
-            Name="Agustin Lopez Marquez"
-            className={aboutusStyles.cursor}
-          >
-            <div className={pharmaStyles.imageLine} />
-            <img className={pharmaStyles.mobileimage} src={CPO} />
-            <T className={pharmaStyles.imageName}>Agustin Lopez Marquez</T>
-            <T className={pharmaStyles.imagedesc}>Chief Product Officer</T>
-          </div>
-          <div
-            onClick={ModalOpen}
             Name="Ajit Rajasekharan"
             className={aboutusStyles.cursor}
           >
@@ -199,18 +189,28 @@ function Aboutus({ data }) {
             <T className={pharmaStyles.imageName}>David McMullin</T>
             <T className={pharmaStyles.imagedesc}>Chief Strategy Officer</T>
           </div>
+          <div
+            onClick={ModalOpen}
+            Name="Vishy Thiagarajan"
+            className={aboutusStyles.cursor}
+          >
+            <div className={pharmaStyles.imageLine} />
+            <img className={pharmaStyles.mobileimage} src={SVPenginnering} />
+            <T className={pharmaStyles.imageName}>Vishy Thiagarajan</T>
+            <T className={pharmaStyles.imagedesc}>SVP, Engineering</T>
+          </div>
         </div>
         <div className={pharmaStyles.imagesrow}>
           <div
             onClick={ModalOpen}
-            Name="George Shiebler"
+            Name="Kyle Bettigole"
             className={aboutusStyles.cursor}
           >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={General_Counsel} />
-            <T className={pharmaStyles.imageName}>George Shiebler</T>
+            <T className={pharmaStyles.imageName}>Kyle Bettigole</T>
             <T className={pharmaStyles.imagedesc}>
-              Senior Vice President {'&'} General Counsel
+              General Counsel
             </T>
           </div>
           {/* <div>
@@ -308,16 +308,6 @@ function Aboutus({ data }) {
             />
             <T className={pharmaStyles.imageName}>Tricia Ellis</T>
             <T className={pharmaStyles.imagedesc}>Chief People Officer</T>
-          </div>
-          <div
-            onClick={ModalOpen}
-            Name="Vishy Thiagarajan"
-            className={aboutusStyles.cursor}
-          >
-            <div className={pharmaStyles.imageLine} />
-            <img className={pharmaStyles.mobileimage} src={SVPenginnering} />
-            <T className={pharmaStyles.imageName}>Vishy Thiagarajan</T>
-            <T className={pharmaStyles.imagedesc}>SVP, Engineering</T>
           </div>
         </div>
         <div className={medicalStyles.desktop}>
