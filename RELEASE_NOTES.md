@@ -1,5 +1,10 @@
 ## Upcoming - v1.2.0
 
+### 20220412 - Koshi
+- Updated images for about us page to be smaller in size
+- Added Tom and removed Hutch from About Us page
+- Fixed CSS on News article page
+
 ### 20220325 - Baji
 * Update readme
 

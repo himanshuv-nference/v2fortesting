@@ -9,23 +9,23 @@ import { Typography as T } from '@material-ui/core'
 import { NferxModal } from 'nferx-core-ui'
 import Prismic from '@prismicio/client'
 const Ceo = '/AboutusImages/MaskGroup11.svg'
-const Cso = '/AboutusImages/MaskGroup.svg'
+const Cso = '/AboutusImages/Venky.png'
 const ChiefSalesofficer = '/AboutusImages/Group 3775.svg'
-const CFO = '/AboutusImages/Mask Group.svg'
+const CFO = '/AboutusImages/tom_grayscale.png'
 const ChiefaffairOfficer = '/AboutusImages/image 24.svg'
 const ChiefPeopleOfficer = '/AboutusImages/TriciaEllis.png'
-const COO = '/AboutusImages/Mask Group (1).svg'
+const COO = '/AboutusImages/mike.png'
 const CPO = '/AboutusImages/ag.svg'
-const ChiefStrategyoOfficer = '/AboutusImages/Mask Group (2).svg'
+const ChiefStrategyoOfficer = '/AboutusImages/dave.png'
 const CTO = '/AboutusImages/ajit.svg'
-const General_Counsel = '/AboutusImages/Group 4299.svg'
+const General_Counsel = '/AboutusImages/kyle.png'
 const cambridge = '/AboutusImages/Group 3431.svg'
 const bangaluru = '/AboutusImages/Vector 244.svg'
 const Tornonto = '/AboutusImages/Vector 245.svg'
 const Rochester = '/AboutusImages/Group 3432.svg'
 const SVPsoftware = '/AboutusImages/image 147.svg'
-const SVPdatascience = '/AboutusImages/image(11).svg'
-const CPOpramana = '/AboutusImages/image 145.svg'
+const SVPdatascience = '/AboutusImages/Mask Group.png'
+const CPOpramana = '/AboutusImages/Prasanth_photo.png'
 const SVPenginnering = '/AboutusImages/image 148.svg'
 import { RichText } from 'prismic-reactjs'
 
@@ -210,7 +210,7 @@ function Aboutus({ data }) {
             <img className={pharmaStyles.mobileimage} src={General_Counsel} />
             <T className={pharmaStyles.imageName}>Kyle Bettigole</T>
             <T className={pharmaStyles.imagedesc}>
-              General Counsel
+              SVP, General Counsel
             </T>
           </div>
           {/* <div>
@@ -226,12 +226,12 @@ function Aboutus({ data }) {
           </div> */}
           <div
             onClick={ModalOpen}
-            Name="Hutch Fishman"
+            Name="Tom McNaughton"
             className={aboutusStyles.cursor}
           >
             <div className={pharmaStyles.imageLine} />
             <img className={pharmaStyles.mobileimage} src={CFO} />
-            <T className={pharmaStyles.imageName}>Hutch Fishman</T>
+            <T className={pharmaStyles.imageName}>Tom McNaughton</T>
             <T className={pharmaStyles.imagedesc}>Chief Financial Officer </T>
           </div>
 

@@ -93,10 +93,6 @@ export default function News() {
           </T>
         </div>
         <style jsx global>{`
-          p {
-            margin-top: 0px;
-            margin-bottom: 0px;
-          }
 
           a {
             color: #1c2329 !important;
