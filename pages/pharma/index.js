@@ -85,8 +85,8 @@ function ForPharma({ pubInfo }) {
           <T className={pharmaStyles.box2text}>
             EMR data contains longitudinal real-world, “deep data” rich in
             clinical phenotypes and outcomes spanning across therapeutic areas,
-            but exists in in largely semi-structured and unstructured form. The
-            nference platform powers the tranformation of the raw data into a
+            but exists in largely semi-structured and unstructured form. The
+            nference platform powers the transformation of the raw data into a
             labeled EMR dataset.
           </T>
 
