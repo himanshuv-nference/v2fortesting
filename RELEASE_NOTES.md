@@ -1,5 +1,8 @@
 ## Upcoming - v1.2.0
 
+### 20220511 - Koshi
+- Added support for dynamic content in Prismic
+
 ### 20220509 - Koshi
 - Fixed typos on BioPharma page
 
