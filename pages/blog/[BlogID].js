@@ -109,13 +109,27 @@ export default function News() {
           <div className={listingStyles.blogDesc}>
           <T className={style.title}>{article.data.blog_title[0].text}</T>
           </div>
-          <img
-            className={listingStyles.newsCardImageInd}
-            src={article.data.blog_image.url}
-          />
-          <T className={listingStyles.newsDesc}>
-            {article.data.blog_content[0].text}
-          </T>
+          <div>
+            <img
+              className={listingStyles.newsCardImageInd}
+              src={article.data.blog_image.url}
+            />
+            <T className={listingStyles.newsDesc}>
+              {article.data.blog_content[0].text}
+            </T>
+          </div>
+          <div>
+            {
+              article.data.body.map(obj =>
+              (
+                <div className={listingStyles.blogImageContainer}>
+                  <img className={listingStyles.blogImage} src={obj.primary.image.url} ></img>
+                  <T className={listingStyles.blogImageCaption}>{obj.primary.caption[0].text}</T>
+
+                </div>
+              ))
+            }
+          </div>
 
           <div className={listingStyles.headline}></div>
           <div className={listingStyles.logosDiv}>

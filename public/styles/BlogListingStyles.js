@@ -444,11 +444,13 @@ const BlogListingStyles = makeStyles((theme) => ({
 
     newsCardImageBlog: {
         width: '80%',
-        height: '80%',
         objectFit: 'cover',
         marginTop: '20px',
-        marginRight: '20px',
+        marginLeft: '40px',
+        marginRight: 'auto',
         ['@media (max-width:780px)']: {
+            marginLeft: 'auto',
+            marginRight: 'auto',
             width: '100%',
             height: '100%',
             objectFit: 'cover',
@@ -458,11 +460,9 @@ const BlogListingStyles = makeStyles((theme) => ({
 
     newsCardImageInd: {
         width: '600px',
-        height: '336px',
         objectFit: 'cover',
         ['@media (max-width:780px)']: {
-            width: '120px',
-            height: '120px',
+            width: '300px',
             objectFit: 'cover',
         },
     },
@@ -500,6 +500,23 @@ const BlogListingStyles = makeStyles((theme) => ({
         ['@media (max-width:780px)']: {
             display: 'none'
         },
+    },
+    blogImage:{
+        display: 'block',
+        width: '750px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        ['@media (max-width:780px)']: {
+            width: '300px'
+        },
+    },
+    blogImageContainer:{
+        marginBottom: '35px'
+    },
+    blogImageCaption:{
+        width: '70%',
+        margin: 'auto',
+        textAlign: 'center'
     }
 }))
 
