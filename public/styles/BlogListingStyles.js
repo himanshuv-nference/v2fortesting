@@ -506,8 +506,18 @@ const BlogListingStyles = makeStyles((theme) => ({
         width: '750px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        '&:hover': {
+            cursor: 'pointer',
+          },
         ['@media (max-width:780px)']: {
             width: '300px'
+        },
+    },
+    blogImageBig:{
+        width: '1000px',
+        ['@media (max-width:780px)']: {
+            width: '100%',
+            height: '100%',
         },
     },
     blogImageContainer:{
@@ -517,6 +527,15 @@ const BlogListingStyles = makeStyles((theme) => ({
         width: '70%',
         margin: 'auto',
         textAlign: 'center'
+    },
+    modal:{
+        width: '1020px',
+        padding: '10px',
+        ['@media (max-width:780px)']: {
+            width: '90%',
+            height: '100%',
+            margin: '20px',
+        },
     }
 }))
 

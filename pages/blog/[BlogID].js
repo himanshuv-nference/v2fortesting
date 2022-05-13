@@ -9,6 +9,7 @@ import { RichText } from 'prismic-reactjs'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
+import { NferxModal } from 'nferx-core-ui'
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -63,7 +64,8 @@ export default function News() {
   const listingStyles = BlogListingStyles()
   const [article, setArticleData] = useState(null)
   const params = useRouter()
-  const [doc, setDocData] = useState(null)
+  const [open, setOpen] = useState(false)
+  const [imageIndex, setImageIndex] = useState(-1)
 
   const ID = params.query.BlogID
   const style = NewStyles()
@@ -120,12 +122,27 @@ export default function News() {
           </div>
           <div>
             {
-              article.data.body.map(obj =>
+              article.data.body.map((obj, index) =>
               (
                 <div className={listingStyles.blogImageContainer}>
-                  <img className={listingStyles.blogImage} src={obj.primary.image.url} ></img>
+                  <div>
+                    <img
+                      onClick={() => {
+                        setOpen(true)
+                        setImageIndex(index)
+                      }}
+                      className={listingStyles.blogImage} src={obj.primary.image.url} >
+                    </img>
+                    {open && <NferxModal
+                      className={listingStyles.modal}
+                      open={true && index === imageIndex}
+                      onClose={() => setOpen(false)}
+                    >
+                      <img className={listingStyles.blogImageBig} src={obj.primary.image.url} ></img>
+                    </NferxModal>
+                    }
+                  </div>
                   <T className={listingStyles.blogImageCaption}>{obj.primary.caption[0].text}</T>
-
                 </div>
               ))
             }
@@ -133,9 +150,9 @@ export default function News() {
 
           <div className={listingStyles.headline}></div>
           <div className={listingStyles.logosDiv}>
-                  <img className={listingStyles.logo} src={twittericon} />
-                  <img className={listingStyles.logo} src={linkIcon} />
-        </div> 
+            <img className={listingStyles.logo} src={twittericon} />
+            <img className={listingStyles.logo} src={linkIcon} />
+        </div>
         </div>
         <style jsx global>{`
           p {
