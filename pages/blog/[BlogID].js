@@ -9,7 +9,13 @@ import { RichText } from 'prismic-reactjs'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
+import dynamic from 'next/dynamic'
 import { NferxModal } from 'nferx-core-ui'
+
+const DynamicOpenSeaViewer = dynamic(
+  () => import('../../components/SeaDragonViewer'),
+  { ssr: false }
+)
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -93,11 +99,12 @@ export default function News() {
             </a>
           </Link>
           <div style={{ display: 'flex', marginTop: '20px' }}>
-            <div style={{ margin: '5px 5px 0px 0px'}}>
+            <div style={{ margin: '5px 5px 0px 0px' }}>
               <img
-                style={{ width: '60px', borderRadius: '4px'}}
+                style={{ width: '60px', borderRadius: '4px' }}
                 src={article.data.blog_image.url}
               />
+
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', marginTop: '5px' }}>
               <T className={listingStyles.authorDate}>
@@ -109,7 +116,7 @@ export default function News() {
             </div>
           </div>
           <div className={listingStyles.blogDesc}>
-          <T className={style.title}>{article.data.blog_title[0].text}</T>
+            <T className={style.title}>{article.data.blog_title[0].text}</T>
           </div>
           <div>
             <img
@@ -119,6 +126,7 @@ export default function News() {
             <T className={listingStyles.newsDesc}>
               {article.data.blog_content[0].text}
             </T>
+
           </div>
           <div>
             {
@@ -137,8 +145,11 @@ export default function News() {
                       className={listingStyles.modal}
                       open={true && index === imageIndex}
                       onClose={() => setOpen(false)}
+                      noCloseInRight={true}
                     >
-                      <img className={listingStyles.blogImageBig} src={obj.primary.image.url} ></img>
+                      <div className={listingStyles.blogImageModal}>
+                        <DynamicOpenSeaViewer className={listingStyles.viewer} src={obj.primary.image.url} test={article.data.blog_image} />
+                      </div>
                     </NferxModal>
                     }
                   </div>
@@ -152,7 +163,7 @@ export default function News() {
           <div className={listingStyles.logosDiv}>
             <img className={listingStyles.logo} src={twittericon} />
             <img className={listingStyles.logo} src={linkIcon} />
-        </div>
+          </div>
         </div>
         <style jsx global>{`
           p {
