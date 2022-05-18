@@ -1,5 +1,8 @@
 ## Upcoming - v1.2.0
 
+### 20220517 - Koshi
+- Added support for zoom in/zoom out for blog images
+
 ### 20220511 - Koshi
 - Added support for dynamic content in Prismic
 

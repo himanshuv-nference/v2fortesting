@@ -56,7 +56,7 @@ export default function CardRender(props) {
           {props.doc.data.posted_in[0] ? (
             props.doc.data.posted_in[0].text ? (
               <div className={listingStyles.postedIndiv}>
-                <T className={listingStyles.postedIn}>Posted in</T>
+                <T className={listingStyles.postedIn}>Preprint : </T>
                 <div className={listingStyles.underlineFlex}>
                   <T className={clsx(listingStyles.postedIn)}>
                     {RichText.render(props.doc.data.posted_in)}

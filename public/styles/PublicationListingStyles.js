@@ -610,10 +610,8 @@ const PublicationListingStyles = makeStyles((theme) => ({
     height: '100%',
     objectFit: 'cover',
     ['@media (max-width:780px)']: {
-      width: '90px',
-      height: '84.32px',
-      objectFit: 'cover',
-      marginTop: '15px',
+      width: '100px',
+      objectFit: 'contain',
     },
   },
   show: {
