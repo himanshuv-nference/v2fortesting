@@ -553,7 +553,19 @@ const BlogListingStyles = makeStyles((theme) => ({
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'column'
-    }
+    },
+    iconDiv: {
+        display: 'flex',
+        justifyContent: 'end',
+      },
+      cursor: {
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      },
+      iconDivIndex:{
+        zIndex: 1,
+      }
 }))
 
 export default BlogListingStyles
