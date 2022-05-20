@@ -262,7 +262,7 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     background: 'white',
     zIndex: 1,
-  },
+  }
 }))
 
 // const useStyle = makeStyles({

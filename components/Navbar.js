@@ -12,6 +12,7 @@ import emailjs from 'emailjs-com'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TextField, NferxModal } from 'nferx-core-ui'
+import MenuComponent from './MenuComponent'
 
 export default function Navbar() {
   const styles = useStyles()
@@ -67,12 +68,12 @@ export default function Navbar() {
         url: window.location.href,
       }
       emailjs
-      .send(
-        'service_el2cvyo',
+        .send(
+          'service_el2cvyo',
           'template_3duokn9',
           templateParams,
           'user_805xdXJj2kUpbZjzH67Gx',
-      )
+        )
         .then((result) => {
           modalClose()
           thankyouModalOpen()
@@ -161,17 +162,12 @@ export default function Navbar() {
               </Link>
             </div>
             <div>
-              <Link href="/news">
-                <a
-                  className={
-                    splitLocation[1] === 'news'
-                      ? styles.activeLink
-                      : styles.link
-                  }
-                >
-                  <T>Media</T>
-                </a>
-              </Link>
+              <MenuComponent 
+               className={
+                splitLocation[1] === 'news' || splitLocation[1] === 'blog'
+                  ? styles.activeLink
+                  : styles.link
+              }/>
             </div>
             <div>
               <Link href="/career">
@@ -183,19 +179,6 @@ export default function Navbar() {
                   }
                 >
                   <T>Careers</T>
-                </a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/blog">
-                <a
-                  className={
-                    splitLocation[1] === 'blog'
-                      ? styles.activeLink
-                      : styles.link
-                  }
-                >
-                  <T>Blog</T>
                 </a>
               </Link>
             </div>
@@ -436,7 +419,7 @@ export default function Navbar() {
                         : styles.link
                     }
                   >
-                    <T onClick={toggle('top', false)}>Media</T>
+                    <T onClick={toggle('top', false)}>News</T>
                   </a>
                 </Link>
                 <Link href="/blog">

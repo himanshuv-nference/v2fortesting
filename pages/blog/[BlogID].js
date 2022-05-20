@@ -11,6 +11,8 @@ import Link from 'next/link'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
 import dynamic from 'next/dynamic'
 import { NferxModal } from 'nferx-core-ui'
+import { Icon } from '@material-ui/core'
+import ClearIcon from '@material-ui/icons/Clear'
 
 const DynamicOpenSeaViewer = dynamic(
   () => import('../../components/SeaDragonViewer'),
@@ -72,6 +74,7 @@ export default function News() {
   const params = useRouter()
   const [open, setOpen] = useState(false)
   const [imageIndex, setImageIndex] = useState(-1)
+  const modalClose = () => setOpen(false)
 
   const ID = params.query.BlogID
   const style = NewStyles()
@@ -142,11 +145,17 @@ export default function News() {
                       className={listingStyles.blogImage} src={obj.primary.image.url} >
                     </img>
                     {open && <NferxModal
+                      contentPad
                       className={listingStyles.modal}
                       open={true && index === imageIndex}
-                      onClose={() => setOpen(false)}
+                      onClose={modalClose}
                       noCloseInRight={true}
                     >
+                      <div className={listingStyles.iconDiv}>
+                        <Icon className={listingStyles.iconDivIndex} onClick={modalClose}>
+                          <ClearIcon className={listingStyles.cursor} />
+                        </Icon>
+                      </div>
                       <div className={listingStyles.blogImageModal}>
                         <DynamicOpenSeaViewer className={listingStyles.viewer} src={obj.primary.image.url} test={article.data.blog_image} />
                       </div>

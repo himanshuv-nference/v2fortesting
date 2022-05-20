@@ -1,5 +1,9 @@
 ## Upcoming - v1.2.0
 
+### 20220519 - Koshi
+- Media title on hover shows news and blog options on desktop
+- Added X button to close images modal in blog
+
 ### 20220517 - Koshi
 - Added support for zoom in/zoom out for blog images
 
