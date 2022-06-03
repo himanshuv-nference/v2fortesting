@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Medicalstyles from '../../public/styles/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
 import AboutusStyle from '../../public/styles/AboutusStyle'
@@ -47,9 +47,11 @@ export async function getStaticProps() {
     },
   }
 }
-function Aboutus({ data }) {
-  const [open, setOpen] = React.useState(false)
-  const [bios, setbios] = React.useState('')
+function Aboutus() {
+  const [open, setOpen] = useState(false)
+  const [bios, setbios] = useState('')
+  const [data, setData] = useState({})
+
   const pharmaStyles = PharmaStyles()
   const medicalStyles = Medicalstyles()
   const aboutusStyles = AboutusStyle()
@@ -60,6 +62,16 @@ function Aboutus({ data }) {
     let singleBio = data.filter((x) => x.data.name === value)
     setbios(singleBio)
   }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const responseforBios = await Client.query(
+        Prismic.Predicates.at('document.type', 'bios_nference'),
+      )
+      setData(responseforBios.results)
+    }
+    fetchData()
+  }, [])
 
   return (
     <>
