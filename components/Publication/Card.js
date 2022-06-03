@@ -21,8 +21,8 @@ export default function CardRender(props) {
     <div className={listingStyles.card}>
       <div className={listingStyles.cardLeft}>
         {props.doc.data.url ? (
-          <Link href={`/publications/${props.doc.data.url}`}>
-            <a className={listingStyles.nav}>
+          <Link href={props.doc.data.url}>
+            <a target="_blank" className={listingStyles.nav}>
               <T className={listingStyles.cardTitle}>
                 {RichText.asText(props.doc.data.title)}
               </T>
