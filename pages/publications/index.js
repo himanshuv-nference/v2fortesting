@@ -90,7 +90,7 @@ function PublicationListing() {
     setallPublications(pubInfoFilter)
   }
   fetchData()
-  }, [pubInfo])
+  }, [])
 
   useEffect(() => {
     setTotalPages(pubInfo.length)

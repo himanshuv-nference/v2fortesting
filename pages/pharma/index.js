@@ -56,7 +56,7 @@ function ForPharma() {
       setPubInfo(response.results)
     }
     fetchData()
-  }, [pubInfo])
+  }, [])
 
   return (
     <>

@@ -24,7 +24,7 @@ function PrivacyPolicy() {
       ))
     }
     fetchData()
-  }, [info])
+  }, [])
 
   return (
     <div>

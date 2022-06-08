@@ -59,7 +59,7 @@ function Aboutus() {
       setData(responseforBios.results)
     }
     fetchData()
-  }, [data])
+  }, [])
 
   return (
     <>

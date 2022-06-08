@@ -44,7 +44,7 @@ function NewsRoom() {
       setallNews(response.results)
     }
     fetchData()
-  }, [newsData])
+  }, [])
 
   useEffect(() => {
     let filterNews = []
