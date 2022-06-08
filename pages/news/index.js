@@ -23,28 +23,29 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const response = await Client.query(
-    Prismic.Predicates.at('document.type', 'news_room'),
-  )
-  const newsData = response.results
-  return {
-    props: {
-      newsData: newsData,
-    },
-  }
-}
-
-function NewsRoom({ newsData }) {
+function NewsRoom() {
+  const [newsData, setNewsData] = useState([])
   const defaultValue = []
   const defaultValueDate = null
-  const [allNews, setallNews] = useState(newsData)
+  const [allNews, setallNews] = useState([])
   const [recentFilter, setRecentFilter] = useState(defaultValueDate)
   const [topicFilter, setTopicFilter] = useState(defaultValue)
   const [filteredNews, setFilteredNews] = useState(defaultValue)
   const [pageNumber, setPageNumber] = useState(1)
   const [TotalPages, setTotalPages] = useState(1)
   const [pageSize, setpageSize] = useState(5)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at('document.type', 'news_room'),
+      )
+      setNewsData(response.results)
+      setallNews(response.results)
+    }
+    fetchData()
+    console.warn(newsData)
+  }, [newsData])
 
   useEffect(() => {
     let filterNews = []

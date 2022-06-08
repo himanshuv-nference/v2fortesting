@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Typography as T } from '@material-ui/core'
 import clsx from 'clsx'
 
@@ -7,7 +7,6 @@ import PharmaStyles from '../../public/styles/PharmaStyles'
 
 import useStyles from '../../public/styles/HomepageStyles'
 import Link from 'next/link'
-import { useState } from 'react'
 import LowerSlider from '../../components/LowerSlider'
 import Prismic from '@prismicio/client'
 
@@ -34,18 +33,8 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const responseforLowerSlider = await Client.query(
-    Prismic.Predicates.at('document.type', 'publications'),
-  )
-  const pubInfo = responseforLowerSlider.results
-  return {
-    props: {
-      pubInfo: pubInfo,
-    },
-  }
-}
-function ForPharma({ pubInfo }) {
+function ForPharma() {
+  const [pubInfo, setPubInfo] = useState([])
   const medicalStyles = styles()
   const homepageStyles = useStyles()
   const pharmaStyles = PharmaStyles()
@@ -58,6 +47,16 @@ function ForPharma({ pubInfo }) {
   const seeLess = () => {
     setShow(false)
   }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at('document.type', 'publications'),
+      )
+      setPubInfo(response.results)
+    }
+    fetchData()
+  }, [pubInfo])
 
   return (
     <>

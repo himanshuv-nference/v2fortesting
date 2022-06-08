@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import TermsStyle from '../public/styles/termsStyle'
 import { Typography as T } from '@material-ui/core'
 import Prismic from '@prismicio/client'
@@ -10,29 +10,29 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const response = await Client.query(
-    Prismic.Predicates.at('document.type', 'terms_and_policy'),
-  )
-  let data = response.results.filter(
-    (x) => x.data.name === 'Nference-Terms-of-us',
-  )
-  return {
-    props: {
-      info: data,
-    },
-  }
-}
 
-function Termsofuse({ info }) {
+function Termsofuse() {
   const style = TermsStyle()
+  const [info, setInfo] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at('document.type', 'terms_and_policy'),
+      )
+      setInfo(response.results.filter(
+        (x) => x.data.name === 'Nference-Terms-of-us',
+      ))
+    }
+    fetchData()
+  }, [info])
 
   return (
     <div>
       <T className={style.head}>Terms of Use</T>
       <T className={style.subHead}>NFERENCE, INC.</T>
       <T className={style.content}>
-        <RichText render={info[0].data.content} />
+        <RichText render={info[0]?.data.content} />
       </T>
     </div>
   )

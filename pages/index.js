@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { Typography as T } from '@material-ui/core'
@@ -48,27 +49,29 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const responseforUpperSlider = await Client.query(
-    Prismic.Predicates.at('document.type', 'homepage_carousel'),
-  )
-  const responseforLowerSlider = await Client.query(
-    Prismic.Predicates.at('document.type', 'publications'),
-  )
-  const data = responseforUpperSlider.results
-  const pubInfo = responseforLowerSlider.results
-  return {
-    props: {
-      data: data,
-      pubInfo: pubInfo,
-    },
-  }
-}
-function Homepage({ data, pubInfo }) {
+function Homepage() {
   const styles = useStyles()
+  const [data, setData] = useState([])
+  const [pubInfo, setPubInfo] = useState([])
+
   data.sort(function (a, b) {
     return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const responseforUpperSlider = await Client.query(
+        Prismic.Predicates.at('document.type', 'homepage_carousel'),
+      )
+      const responseforLowerSlider = await Client.query(
+        Prismic.Predicates.at('document.type', 'publications'),
+      )
+      setData(responseforUpperSlider.results)
+      setPubInfo(responseforLowerSlider.results)
+    }
+    fetchData()
+  }, [data, pubInfo])
+
 
   return (
     <>

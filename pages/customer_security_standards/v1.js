@@ -10,23 +10,22 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const response = await Client.query(
-    Prismic.Predicates.at('document.type', 'terms_and_policy'),
-  )
-  let data = response.results.filter(
-    (x) => x.data.name ===  'customer_security_standards/v1',
-  )
-  return {
-    props: {
-      info: data,
-    },
-  }
-}
-
-function PrivacyPolicy({info}) {
+function PrivacyPolicy() {
   const style = TermsStyle()
+  const [info, setInfo] = useState([])
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at('document.type', 'terms_and_policy'),
+      )
+      setInfo(response.results.filter(
+        (x) => x.data.name ===  'customer_security_standards/v1',
+      ))
+    }
+    fetchData()
+  }, [info])
+  
   return (
     <div>   
        <T className={style.head}>Customer Security Standards</T>
