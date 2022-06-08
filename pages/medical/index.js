@@ -48,7 +48,7 @@ function ForMedical() {
       setPubInfo(response.results)
     }
     fetchData()
-  }, [pubInfo])
+  }, [])
 
   const medicalStyles = styles()
   const homepageStyles = useStyles()

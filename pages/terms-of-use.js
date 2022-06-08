@@ -25,7 +25,7 @@ function Termsofuse() {
       ))
     }
     fetchData()
-  }, [info])
+  }, [])
 
   return (
     <div>

@@ -53,7 +53,7 @@ function BlogListing() {
     setallPublications(pubInfoFilter)
   }
   fetchData()
-  }, [pubInfo])
+  }, [])
 
   useEffect(() => {
     let filterPublications =[]
@@ -64,7 +64,7 @@ function BlogListing() {
       )
     })
     setFilteredPublications(filterPublications)
-  }, [pageNumber])
+  }, [allPublications])
 
   let filterPublications = allPublications
   filterPublications = filterPublications.slice((pageNumber - 1) * 5, pageNumber * 5)
