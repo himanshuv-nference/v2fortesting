@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import TermsStyle from '../../public/styles/termsStyle'
 import { Typography as T } from '@material-ui/core'
 import Prismic from '@prismicio/client'
@@ -31,7 +31,7 @@ function PrivacyPolicy() {
        <T className={style.head}>Customer Security Standards</T>
        <T className={style.subHead}>NFERENCE, INC.</T> 
        <T className={style.content}>
-        <RichText render={info[0].data.content} />
+        <RichText render={info[0]?.data.content} />
       </T> 
     </div>
   )
