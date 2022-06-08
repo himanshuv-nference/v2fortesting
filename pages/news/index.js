@@ -44,7 +44,6 @@ function NewsRoom() {
       setallNews(response.results)
     }
     fetchData()
-    console.warn(newsData)
   }, [newsData])
 
   useEffect(() => {
