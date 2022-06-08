@@ -35,22 +35,10 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const responseforBios = await Client.query(
-    Prismic.Predicates.at('document.type', 'bios_nference'),
-  )
-
-  const data = responseforBios.results
-  return {
-    props: {
-      data: data,
-    },
-  }
-}
 function Aboutus() {
   const [open, setOpen] = useState(false)
   const [bios, setbios] = useState('')
-  const [data, setData] = useState({})
+  const [data, setData] = useState([])
 
   const pharmaStyles = PharmaStyles()
   const medicalStyles = Medicalstyles()
@@ -71,7 +59,7 @@ function Aboutus() {
       setData(responseforBios.results)
     }
     fetchData()
-  }, [])
+  }, [data])
 
   return (
     <>

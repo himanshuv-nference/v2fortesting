@@ -1,5 +1,5 @@
 import { Typography as T } from '@material-ui/core'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import useStyles from '../../public/styles/HomepageStyles'
@@ -36,18 +36,20 @@ const accessToken =
 
 const Client = Prismic.client(apiEndpoint, { accessToken })
 
-export async function getStaticProps() {
-  const responseforLowerSlider = await Client.query(
-    Prismic.Predicates.at('document.type', 'publications'),
-  )
-  const pubInfo = responseforLowerSlider.results
-  return {
-    props: {
-      pubInfo: pubInfo,
-    },
-  }
-}
-function ForMedical({ pubInfo }) {
+function ForMedical() {
+
+  const [pubInfo, setPubInfo] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at('document.type', 'publications'),
+      )
+      setPubInfo(response.results)
+    }
+    fetchData()
+  }, [pubInfo])
+
   const medicalStyles = styles()
   const homepageStyles = useStyles()
 

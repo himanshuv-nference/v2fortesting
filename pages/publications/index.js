@@ -37,33 +37,13 @@ function isLastelement(arr) {
   let lastElement = arr[arr.length - 1]
   return lastElement === undefined ? true : false
 }
-export async function getStaticProps() {
-  let publications = []
-  let result = []
-  let pageNumber = 1
-  do {
-    publications = await Client.query(
-      Prismic.Predicates.at('document.type', 'publications'),
-      { pageSize: 2, page: pageNumber },
-    )
-    result = [...result, ...publications.results]
-    pageNumber++
-  } while (!isLastelement(publications.results))
-  const pubInfoFilter = result.filter((el) => {
-    return el != null && el != ''
-  })
-  return {
-    props: {
-      pubInfo: pubInfoFilter,
-    },
-  }
-}
 
-function PublicationListing({ pubInfo }) {
-  
+function PublicationListing() {
+
+  const [pubInfo, setPubInfo] = useState([])
   const defaultValue = []
   const deafaultDatevalue = null
-  const [allPublications, setallPublications] = useState(pubInfo)
+  const [allPublications, setallPublications] = useState([])
   const [doc, setDocData] = useState(null)
   const [pageNumber, setPageNumber] = useState(1)
   const [TotalPages, setTotalPages] = useState(1)
@@ -89,6 +69,28 @@ function PublicationListing({ pubInfo }) {
          behavior: "smooth"
     });
   }   
+
+  useEffect(() => {
+    const fetchData = async () =>{
+    let publications = []
+    let result = []
+    let pageNumber = 1
+    do {
+      publications = await Client.query(
+        Prismic.Predicates.at('document.type', 'publications'),
+        { pageSize: 5, page: pageNumber },
+      )
+      result = [...result, ...publications.results]
+      pageNumber++
+    } while (!isLastelement(publications.results))
+    const pubInfoFilter = result.filter((el) => {
+      return el != null && el != ''
+    })
+    setPubInfo(pubInfoFilter)
+    setallPublications(pubInfoFilter)
+  }
+  fetchData()
+  }, [pubInfo])
 
   useEffect(() => {
     setTotalPages(pubInfo.length)
