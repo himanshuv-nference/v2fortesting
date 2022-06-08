@@ -1,31 +1,37 @@
 import React from 'react'
-import { Typography as T } from '@material-ui/core'
+import {Typography as T} from '@material-ui/core'
 import styles from '../../public/styles/MedicalStyles'
-import PublicationListingStyles from '../../public/styles/PublicationListingStyles'
-import Prismic from '@prismicio/client'
-import { Date } from 'prismic-reactjs'
-import { useState, useEffect } from 'react'
+import PublicationListingStyles
+  from '../../public/styles/PublicationListingStyles'
+import * as prismic from '@prismicio/client'
+import {Date} from 'prismic-reactjs'
+import {useState, useEffect} from 'react'
+
 const theNewYorksTimess = '/NewsRoomImages/Group 1213.svg'
 const Bloomerg = '/NewsRoomImages/bloom.svg'
 const theWashingTimess = '/NewsRoomImages/Group 1227.svg'
 const theSA = '/NewsRoomImages/SA.svg'
 import Carousel from 'react-material-ui-carousel'
-import { Pagination, ListItem, ChipFilterSelect } from 'nferx-core-ui'
+import ChipFilterSelect
+  from "../../components/ChipFilter/ChipFilterSelect/ChipFilterSelect";
+import Pagination from '../../components/Pagination/Pagination'
+import ListItem from "../../components/ListItem/ListItem";
 import _ from 'lodash'
 import clsx from 'clsx'
 import Slider from '../../components/newsroom/Desktop_Carousel'
 import SliderMobile from '../../components/newsroom/Mobile_Carousel'
 import CardRender from '../../components/newsroom/Desktop_Card'
 import MobileCardRender from '../../components/newsroom/Mobile_Card'
+
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
   'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-const Client = Prismic.client(apiEndpoint, { accessToken })
+const client = prismic.createClient(apiEndpoint, { accessToken })
 
 export async function getStaticProps() {
-  const response = await Client.query(
-    Prismic.Predicates.at('document.type', 'news_room'),
+  const response = await client.query(
+    prismic.predicate.at('document.type', 'news_room'),
   )
   const newsData = response.results
   return {

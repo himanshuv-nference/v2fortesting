@@ -7,9 +7,9 @@ const pdffull = '/PublicationPageImages/Group 3895.svg'
 const twittericon = '/FooterImages/Combined-Shape (1).svg'
 const linkIcon = '/FooterImages/Group 3627.svg'
 const pdfPlaceholder = '/PublicationPageImages/image49.svg'
-import { Loading } from 'nferx-core-ui'
 import { useState, useEffect } from 'react'
-import Prismic from '@prismicio/client'
+import Loading from '../../components/Loading/Loading'
+import * as prismic from '@prismicio/client'
 import { RichText } from 'prismic-reactjs'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -18,7 +18,7 @@ const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
   'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-const Client = Prismic.client(apiEndpoint, { accessToken })
+const client = prismic.createClient(apiEndpoint, { accessToken })
 
 const PublicationStyles = makeStyles({
   back: {
@@ -215,8 +215,8 @@ function Publication() {
   useEffect(() => {
     const fetchData = async () => {
       if (!params.isReady) return
-      const response = await Client.query(
-        Prismic.Predicates.at('document.type', 'publications'),
+      const response = await client.query(
+        prismic.predicate.at('document.type', 'publications'),
         { pageSize: 100 },
       ).then((response) => {
         {

@@ -6,8 +6,8 @@ import { Icon } from '@material-ui/core'
 import ClearIcon from '@material-ui/icons/Clear'
 import clsx from 'clsx'
 import { Typography as T } from '@material-ui/core'
-import { NferxModal } from 'nferx-core-ui'
-import Prismic from '@prismicio/client'
+import NferxModal from '../../components/NferxModal/NferxModal'
+import * as prismic from '@prismicio/client'
 const Ceo = '/AboutusImages/MaskGroup11.svg'
 const Cso = '/AboutusImages/Venky.png'
 const ChiefSalesofficer = '/AboutusImages/Group 3775.svg'
@@ -33,11 +33,11 @@ const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
   'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-const Client = Prismic.client(apiEndpoint, { accessToken })
+const client = prismic.createClient(apiEndpoint, { accessToken })
 
 export async function getStaticProps() {
-  const responseforBios = await Client.query(
-    Prismic.Predicates.at('document.type', 'bios_nference'),
+  const responseforBios = await client.query(
+    prismic.predicate.at('document.type', 'bios_nference'),
   )
 
   const data = responseforBios.results
@@ -65,8 +65,8 @@ function Aboutus() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseforBios = await Client.query(
-        Prismic.Predicates.at('document.type', 'bios_nference'),
+      const responseforBios = await client.query(
+        prismic.predicate.at('document.type', 'bios_nference'),
       )
       setData(responseforBios.results)
     }

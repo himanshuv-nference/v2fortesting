@@ -3,12 +3,9 @@ import { Typography as T } from '@material-ui/core'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
 
 import styles from '../../public/styles/MedicalStyles'
-import Prismic from '@prismicio/client'
+import * as prismic from '@prismicio/client'
 import { useState, useEffect } from 'react'
-import {
-  Pagination,
-} from 'nferx-core-ui'
-
+import Pagination from '../../components/Pagination/Pagination'
 import _ from 'lodash'
 import CardRender from '../../components/Blog/Card'
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
@@ -17,7 +14,7 @@ const accessToken =
 
 const person1 = '/BlogImages/Group3927.svg' 
 const person2 = '/BlogImages/Group1254.svg' 
-const Client = Prismic.client(apiEndpoint, { accessToken })
+const client = prismic.createClient(apiEndpoint, { accessToken })
 
 function isLastelement(arr) {
   let lastElement = arr[arr.length - 1]
@@ -28,8 +25,8 @@ export async function getStaticProps() {
   let result = []
   let pageNumber = 1
   do {
-    publications = await Client.query(
-      Prismic.Predicates.at('document.type', 'nference_blog'),
+    publications = await client.query(
+      prismic.predicate.at('document.type', 'nference_blog'),
       { pageSize: 50, page: pageNumber },
     )
     result = [...result, ...publications.results]

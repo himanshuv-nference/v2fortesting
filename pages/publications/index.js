@@ -12,26 +12,26 @@ const CPlogo = '/PublicationPageImages/Group4325.svg'
 
 import clsx from 'clsx'
 import styles from '../../public/styles/MedicalStyles'
-import Prismic from '@prismicio/client'
-import { Date } from 'prismic-reactjs'
-import { useState, useEffect } from 'react'
-import {
-  HorizontalScroll,
-  Pagination,
-  ListItem,
-  ChipFilterSelect,
-} from 'nferx-core-ui'
-
+import * as prismic from '@prismicio/client'
+import {Date} from 'prismic-reactjs'
+import {useState, useEffect} from 'react'
+import ChipFilterSelect
+  from '../../components/ChipFilter/ChipFilterSelect/ChipFilterSelect'
+import HorizontalScroll
+  from '../../components/HorizontalScroll/HorizontalScroll'
+import Pagination from '../../components/Pagination/Pagination'
+import ListItem from "../../components/ListItem/ListItem";
 import _ from 'lodash'
 import Slider from '../../components/Publication/Desktop_Carousel'
 import SliderMobile from '../../components/Publication/Mobile_Carousel'
 import CardRender from '../../components/Publication/Card'
 import Carousel from 'react-material-ui-carousel'
+
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
   'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-const Client = Prismic.client(apiEndpoint, { accessToken })
+const client = prismic.createClient(apiEndpoint, { accessToken })
 
 function isLastelement(arr) {
   let lastElement = arr[arr.length - 1]
@@ -42,8 +42,8 @@ export async function getStaticProps() {
   let result = []
   let pageNumber = 1
   do {
-    publications = await Client.query(
-      Prismic.Predicates.at('document.type', 'publications'),
+    publications = await client.query(
+      prismic.predicate.at('document.type', 'publications'),
       { pageSize: 2, page: pageNumber },
     )
     result = [...result, ...publications.results]
