@@ -1,7 +1,7 @@
 import { Typography as T } from '@material-ui/core'
 import styles from '../../public/styles/MedicalStyles'
 import PublicationListingStyles from '../../public/styles/PublicationListingStyles'
-import { RichText } from 'prismic-reactjs'
+import { RichText } from '@prismicio/react'
 import Link from 'next/link'
 
 export default function CardRender(props) {

@@ -1,7 +1,7 @@
 import styles from '../../public/styles/MedicalStyles'
 import PublicationListingStyles from '../../public/styles/PublicationListingStyles'
 import { Typography as T } from '@material-ui/core'
-import { RichText } from 'prismic-reactjs'
+import { RichText } from '@prismicio/react'
 import clsx from 'clsx'
 import Link from 'next/link'
 

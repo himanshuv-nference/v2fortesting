@@ -3,7 +3,7 @@ import { Typography as T } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import { useState, useEffect } from 'react'
 import * as prismic from '@prismicio/client'
-import { RichText } from 'prismic-reactjs'
+import { RichText } from '@prismicio/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 

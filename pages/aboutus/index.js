@@ -27,7 +27,7 @@ const SVPsoftware = '/AboutusImages/image 147.svg'
 const SVPdatascience = '/AboutusImages/Mask Group.png'
 const CPOpramana = '/AboutusImages/Prasanth_photo.png'
 const SVPenginnering = '/AboutusImages/image 148.svg'
-import { RichText } from 'prismic-reactjs'
+import { RichText } from '@prismicio/react'
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =

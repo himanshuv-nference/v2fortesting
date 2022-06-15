@@ -2,7 +2,7 @@ import React from 'react'
 import TermsStyle from '../public/styles/termsStyle'
 import { Typography as T } from '@material-ui/core'
 import * as prismic from '@prismicio/client'
-import { RichText } from 'prismic-reactjs'
+import { RichText } from '@prismicio/react'
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =

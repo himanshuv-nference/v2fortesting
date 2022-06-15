@@ -7,6 +7,8 @@ import Footer from '../components/Footer/Footer'
 import { useRouter } from 'next/router'
 import JssProvider from '../components/Styles/JssProvider'
 import ThemeProvider from '../components/Styles/ThemeProvider'
+import { PrismicProvider } from '@prismicio/react'
+import {prismicClient} from "../utils/prismic";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -37,16 +39,18 @@ function MyApp(props) {
   }, [])
 
     return (
-      <JssProvider>
-        <QueryProvider>
-          <ThemeProvider>
-            <CssBaseline />
-            {showHeader && <Navbar />}
-            <Component {...pageProps} />
-            <Footer />
-          </ThemeProvider>
-        </QueryProvider>
-      </JssProvider>
+      <PrismicProvider client={prismicClient}>
+        <JssProvider>
+          <QueryProvider>
+            <ThemeProvider>
+              <CssBaseline />
+              {showHeader && <Navbar />}
+              <Component {...pageProps} />
+              <Footer />
+            </ThemeProvider>
+          </QueryProvider>
+        </JssProvider>
+      </PrismicProvider>
     )
 }
 

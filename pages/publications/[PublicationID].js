@@ -10,7 +10,7 @@ const pdfPlaceholder = '/PublicationPageImages/image49.svg'
 import { useState, useEffect } from 'react'
 import Loading from '../../components/Loading/Loading'
 import * as prismic from '@prismicio/client'
-import { RichText } from 'prismic-reactjs'
+import { RichText } from '@prismicio/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
