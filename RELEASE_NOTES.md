@@ -1,5 +1,8 @@
 ## Upcoming - v1.2.0
 
+### 20220608 - Koshi
+- Replacing getStaticProps with useEffect to remove webhooks dependency
+
 ### 20220519 - Koshi
 - Media title on hover shows news and blog options on desktop
 - Added X button to close images modal in blog
