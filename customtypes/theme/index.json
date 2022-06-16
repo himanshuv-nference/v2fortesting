@@ -1,0 +1,31 @@
+{
+  "id": "theme",
+  "label": "Theme",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "facebook": {
+        "type": "Text",
+        "config": {
+          "label": "Facebook",
+          "placeholder": ""
+        }
+      },
+      "twitter": {
+        "type": "Text",
+        "config": {
+          "label": "Twitter",
+          "placeholder": ""
+        }
+      },
+      "linkedIn": {
+        "type": "Text",
+        "config": {
+          "label": "Linked In",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

@@ -1,78 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-  button: {
-    textTransform: 'none'
-  },
-  mainContent: {
-    padding: '24px'
-  }
-}));
+import Navbar from '../Navbar'
+import Footer from '../Footer/Footer'
+import { useRouter } from 'next/router'
+import { SliceZone } from '@prismicio/react'
+import { components } from '../../slices'
 
 function Page(props) {
   const { children } = props
-  const { title, description } = props
-  const classes = useStyles();
+  const { content, mainMenu, footer } = props
+
+  const router = useRouter()
+  const showHeader = router.pathname !== '/covid' // TODO find a better way to do this
 
   return (
     <>
-    <div className={classes.root}>
-    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
-      <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          Nference
-        </Typography>
-        <Button className={classes.button}>About Us</Button>
-        <Button className={classes.button}>For Pharma</Button>
-        <Button className={classes.button}>For Medical Centers</Button>
-        <Button className={classes.button}>Publications</Button>
-        <Button className={classes.button}>Media</Button>
-        <Button className={classes.button}>Careers</Button>
-        <Button className={classes.button}>Blog</Button>
-        <Button className={classes.button}>Contact Us</Button>
-      </Toolbar>
-    </AppBar>
-      <div className={classes.mainContent}>
-      <NextSeo title={title} description={description} />
+      {showHeader && <Navbar menu={mainMenu} />}
+      <NextSeo
+        title={content?.data?.seoTitle}
+        description={content?.data?.seoDescription}
+      />
       {children}
-      </div>
-    <div style={{ marginLeft: '20px'}}>
-        <Typography variant="h6" className={classes.title}>
-          Nference
-        </Typography>
-        <div>About Us</div>
-        <div>For Pharma</div>
-        <div>For Medical Centers</div>
-        <div>Publications</div>
-        <div>Media</div>
-        <div>Careers</div>
-        <div>Blog</div>
-        <div>Contact Us</div>
-    </div>
-    </div>
+      <SliceZone slices={content.data.slices} components={components} />
+      <Footer data={footer} />
     </>
   )
 }
 
 Page.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  content: PropTypes.shape({
+    data: PropTypes.shape({
+      seoTitle: PropTypes.string.isRequired,
+      seoDescription: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  theme: PropTypes.shape({}).isRequired,
+  mainMenu: PropTypes.shape({}).isRequired,
+  footer: PropTypes.shape({}).isRequired,
 }
 
 export default Page

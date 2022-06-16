@@ -24,7 +24,7 @@ export async function getStaticProps() {
   }
 }
 
-function PrivacyPolicy({ info }) {
+function PrivacyPolicy_old({ info }) {
   const style = TermsStyle()
 
   return (
@@ -38,4 +38,4 @@ function PrivacyPolicy({ info }) {
   )
 }
 
-export default PrivacyPolicy
+export default PrivacyPolicy_old

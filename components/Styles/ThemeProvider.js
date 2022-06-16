@@ -106,7 +106,14 @@ function computeTheme(primaryColor = '#3367d6', appBg) {
       divider: 'rgba(0,0,0,0.1)',
     },
 
-    pad: t.pad,
+    pad: {
+      xxs: 4,
+      xs: 8,
+      sm: 16,
+      md: 28,
+      lg: 42,
+      xl: 72,
+    },
 
     typography: {
       color: textColor,
