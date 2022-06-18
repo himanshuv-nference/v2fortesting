@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    textAlign: 'left',
   },
   title: {
     marginTop: theme.pad.sm,

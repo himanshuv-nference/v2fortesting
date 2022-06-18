@@ -23,10 +23,10 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      id,
+      id: 'homepage',
       content, // must be named content
-      data,
-      pubInfo,
+      data: data.results,
+      pubInfo: pubInfo.results,
       ...globals,
     },
   }

@@ -88,24 +88,12 @@ const styles = (theme) => {
     },
     marginBottom: {
       marginBottom: theme.pad.sm,
-
-      [theme.breakpoints.down('sm')]: {
-        marginBottom: theme.pad.xs,
-      },
     },
     marginTop: {
       marginTop: theme.pad.sm,
-
-      [theme.breakpoints.down('sm')]: {
-        marginTop: theme.pad.xs,
-      },
     },
     contentPad: {
       padding: theme.pad.sm,
-
-      [theme.breakpoints.down('xs')]: {
-        padding: theme.pad.xs,
-      },
     },
     contentWrapper: {
       flexGrow: 1,
@@ -309,10 +297,13 @@ class NferxCard extends Component {
           >
             {left && <div className={classes.leftWrapper}>{left}</div>}
             <div className={classes.textWrapper}>
-              {title && (
+              {title && typeof title === 'string' && (
                 <Typography variant={'h5'} className={classes.title}>
                   {title}
                 </Typography>
+              )}
+              {title && typeof title !== 'string' && (
+                <div className={classes.title}>{title}</div>
               )}
               {subtitle && (
                 <Typography variant={'caption'} className={classes.subtitle}>
