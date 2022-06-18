@@ -3,7 +3,7 @@ import { Page } from '../../components'
 import BlogPostContents from '../../layouts/Blog/BlogPostContents'
 import * as prismicH from '@prismicio/helpers'
 
-export default function NewsListPage(props) {
+export default function BlogListPage(props) {
   return (
     <Page {...props}>
       <BlogPostContents article={props.blog} />

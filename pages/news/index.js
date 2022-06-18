@@ -2,7 +2,7 @@ import { fetchPrismicGlobals, prismicClient } from '../../utils/prismic'
 import { Page } from '../../components'
 import NewsListContents from '../../layouts/News/NewsListContents'
 
-export default function PublicationsPage(props) {
+export default function NewsItemPage(props) {
   return (
     <Page {...props}>
       <NewsListContents newsData={props.news} />

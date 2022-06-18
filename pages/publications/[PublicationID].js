@@ -3,7 +3,7 @@ import { Page } from '../../components'
 import PublicationContents from '../../layouts/Publications/PublicationContents'
 import * as prismicH from '@prismicio/helpers'
 
-export default function DynamicPage(props) {
+export default function PublicationPage(props) {
   return (
     <Page {...props}>
       <PublicationContents publication={props.publication} />
