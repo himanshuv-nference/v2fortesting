@@ -27,7 +27,7 @@ const journey = '/PharmaPageImages/Group 3973.svg'
 const drug = '/PharmaPageImages/Group 3977.svg'
 const symptoms = '/PharmaPageImages/Group 3976.svg'
 
-function ForPharma({ pubInfo }) {
+function PharmaContents({ pubInfo }) {
   const medicalStyles = styles()
   const homepageStyles = useStyles()
   const pharmaStyles = PharmaStyles()
@@ -514,4 +514,4 @@ function ForPharma({ pubInfo }) {
   )
 }
 
-export default ForPharma
+export default PharmaContents

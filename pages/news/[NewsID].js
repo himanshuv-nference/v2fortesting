@@ -13,8 +13,7 @@ export default function NewsListPage(props) {
 
 export async function getStaticPaths() {
   const news = await prismicClient.getAllByType('news_room')
-  const ids = news.map((news) => news.id)
-  const paths = ids.map((id) => ({ params: { NewsID: id } }))
+  const paths = news.map((news) => ({ params: { NewsID: news.id } }))
 
   return {
     paths,
@@ -33,7 +32,7 @@ export async function getStaticProps(context) {
   const content = {
     data: {
       seoTitle: 'nference | ' + prismicH.asText(news.data.title),
-      seoDescription: prismicH.asText(news.data.summary),
+      seoDescription: prismicH.asText(news.data.description_richtext),
     },
   }
 

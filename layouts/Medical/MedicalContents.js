@@ -30,7 +30,7 @@ const tringul = '/HomePageImages/icon_2.svg'
 const signals = '/HomePageImages/icon_3 (1).svg'
 const paramanaLogo = '/nference-web/MedicalPageImages/Group4320.svg'
 
-function ForMedical({ pubInfo }) {
+function MedicalContents({ pubInfo }) {
   const medicalStyles = styles()
   const homepageStyles = useStyles()
 
@@ -396,4 +396,4 @@ function ForMedical({ pubInfo }) {
   )
 }
 
-export default ForMedical
+export default MedicalContents

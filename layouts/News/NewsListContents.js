@@ -40,7 +40,7 @@ export async function getStaticProps() {
   }
 }
 
-function NewsRoom({ newsData }) {
+function NewsListContents({ newsData }) {
   const defaultValue = []
   const defaultValueDate = null
   const [allNews, setallNews] = useState(newsData)
@@ -201,4 +201,4 @@ function NewsRoom({ newsData }) {
   )
 }
 
-export default NewsRoom
+export default NewsListContents

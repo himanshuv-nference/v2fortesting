@@ -13,8 +13,9 @@ export default function DynamicPage(props) {
 
 export async function getStaticPaths() {
   const publications = await prismicClient.getAllByType('publications')
-  const ids = publications.map((page) => page.id)
-  const paths = ids.map((id) => ({ params: { PublicationID: id } }))
+  const paths = publications.map((pub) => ({
+    params: { PublicationID: pub.id },
+  }))
 
   return {
     paths,

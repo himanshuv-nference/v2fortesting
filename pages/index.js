@@ -1,12 +1,12 @@
 import { fetchPrismicGlobals, prismicClient } from '../utils/prismic'
 import { Page } from '../components'
-import HomepageContent from '../layouts/Homepage/HomepageContent'
+import HomepageContents from '../layouts/Homepage/HomepageContents'
 import * as prismic from '@prismicio/client'
 
 export default function Homepage(props) {
   return (
     <Page {...props}>
-      <HomepageContent data={props.data} pubInfo={props.pubInfo} />
+      <HomepageContents data={props.data} pubInfo={props.pubInfo} />
     </Page>
   )
 }

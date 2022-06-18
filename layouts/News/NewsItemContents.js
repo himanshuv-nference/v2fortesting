@@ -1,18 +1,9 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
-import { useState, useEffect } from 'react'
-import * as prismic from '@prismicio/client'
 import { PrismicRichText } from '@prismicio/react'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 import * as prismicH from '@prismicio/helpers'
-
-const apiEndpoint = 'https://nference.prismic.io/api/v2'
-const accessToken =
-  'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
-
-const client = prismic.createClient(apiEndpoint, { accessToken })
 
 const NewStyles = makeStyles({
   body: {
@@ -57,7 +48,7 @@ const NewStyles = makeStyles({
   },
 })
 
-export default function News({ news }) {
+export default function NewsItemContents({ news }) {
   const style = NewStyles()
 
   return (

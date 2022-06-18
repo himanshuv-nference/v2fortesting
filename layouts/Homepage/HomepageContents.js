@@ -41,7 +41,7 @@ const Covidlogo = '/CovidPageImages/Group 4221.svg'
 const KSK = '/video/homePage.mp4'
 const thumbNail = '/video/image58.svg'
 
-function Homepage({ data, pubInfo }) {
+function HomepageContents({ data, pubInfo }) {
   const styles = useStyles()
   data.sort(function (a, b) {
     return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
@@ -671,4 +671,4 @@ function Homepage({ data, pubInfo }) {
   )
 }
 
-export default Homepage
+export default HomepageContents
