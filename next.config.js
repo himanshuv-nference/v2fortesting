@@ -11,6 +11,11 @@ module.exports = {
         destination: '/careers',
         permanent: true,
       },
+      {
+        source: '/customer_security_standards/v1',
+        destination: '/customer-security-standards',
+        permanent: true,
+      },
     ]
   },
   images: {
