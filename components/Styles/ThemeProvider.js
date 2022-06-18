@@ -13,7 +13,7 @@ function computeTheme(primaryColor = '#3367d6', appBg) {
    * */
   const t = createTheme({})
 
-  const textColor = '#1A2530'
+  const textColor = '#2C2C2C'
   const textColorLight = '#6C7987'
   const textColorMedium = '#5f6368'
 
@@ -124,10 +124,10 @@ function computeTheme(primaryColor = '#3367d6', appBg) {
       fontSizeSm: 12,
 
       h1: {
-        fontSize: 36,
-        lineHeight: 1.2,
+        fontSize: 44,
+        lineHeight: 1.4,
         marginLeft: 0,
-        fontWeight: 400,
+        fontWeight: 300,
         color: textColor,
         fontFamily: t.typography.fontFamily,
       },
@@ -160,7 +160,6 @@ function computeTheme(primaryColor = '#3367d6', appBg) {
       h5: {
         fontSize: 20,
         color: textColor,
-        fontWeight: 600,
         marginLeft: 0,
         lineHeight: 1.2,
         fontFamily: t.typography.fontFamily,
@@ -272,6 +271,7 @@ function computeTheme(primaryColor = '#3367d6', appBg) {
       sm: 780,
       md: 920,
       lg: 1220,
+      xl: 1440,
     },
 
     borderRadius,

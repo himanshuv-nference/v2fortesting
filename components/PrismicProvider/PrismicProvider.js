@@ -7,28 +7,21 @@ import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles((theme) => ({
   h1: {
-    textAlign: 'center',
-    marginTop: theme.pad.xl,
-    marginBottom: theme.pad.lg,
+    marginBottom: theme.pad.md,
   },
   h2: {
-    marginTop: theme.pad.lg,
     marginBottom: theme.pad.md,
   },
   h3: {
-    marginTop: theme.pad.lg,
     marginBottom: theme.pad.md,
   },
   h4: {
-    marginTop: theme.pad.lg,
     marginBottom: theme.pad.md,
   },
   h5: {
-    marginTop: theme.pad.lg,
     marginBottom: theme.pad.md,
   },
   h6: {
-    marginTop: theme.pad.lg,
     marginBottom: theme.pad.md,
   },
   p: {

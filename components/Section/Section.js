@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => {
     lg: {
       maxWidth: theme.sectionWidth.lg,
     },
+    xl: {
+      maxWidth: theme.sectionWidth.xl,
+    },
     sm: {
       maxWidth: theme.sectionWidth.sm,
     },
@@ -54,6 +57,7 @@ function Section(props) {
       <div
         className={cx(classes.inner, {
           [classes.lg]: size === 'lg',
+          [classes.xl]: size === 'xl',
           [classes.sm]: size === 'sm',
         })}
       >

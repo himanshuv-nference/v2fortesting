@@ -67,16 +67,16 @@ const styles = (theme) => {
     },
     textWrapper: {
       margin: ['auto', 0],
-      padding: [theme.pad.xs, theme.pad.sm],
+      padding: [theme.pad.sm, theme.pad.sm],
       flexGrow: 1,
       ...theme.overflowEllipsis,
     },
     rightWrapper: {
       marginLeft: 'auto',
-      marginRight: theme.pad.sm,
+      padding: [theme.pad.xs, theme.pad.xs, theme.pad.xs, 0],
       whiteSpace: 'nowrap',
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       color: theme.typography.colorLight,
     },
     leftWrapper: {

@@ -8,7 +8,7 @@ import CloseIcon from '@material-ui/icons/Close'
 
 import { withStyles } from '@material-ui/core/styles'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',
@@ -107,13 +107,13 @@ class NferxModal extends Component {
         onClose={onClose}
         className={cx(classes.root, modalClassName)}
         disableBackdropClick={disableBackdropClick}
-        onClick={e => {
+        onClick={(e) => {
           e.stopPropagation()
         }}
-        onMouseDown={e => {
+        onMouseDown={(e) => {
           e.stopPropagation()
         }}
-        onFocus={e => {
+        onFocus={(e) => {
           e.stopPropagation()
         }}
         {...restOfModalProps}

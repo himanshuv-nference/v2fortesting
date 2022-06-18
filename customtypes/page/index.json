@@ -19,6 +19,9 @@
           "choices": {
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "grid": {
+              "type": "SharedSlice"
             }
           }
         }
