@@ -6,6 +6,11 @@ module.exports = {
         destination: '/about-us',
         permanent: true,
       },
+      {
+        source: '/career',
+        destination: '/careers',
+        permanent: true,
+      },
     ]
   },
   images: {

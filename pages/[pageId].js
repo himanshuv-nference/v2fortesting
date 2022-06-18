@@ -2,12 +2,14 @@ import { fetchPrismicGlobals, prismicClient } from '../utils/prismic'
 import { Page } from '../components'
 import PharmaContents from '../layouts/Pharma/PharmaContents'
 import MedicalContents from '../layouts/Medical/MedicalContents'
+import CareersContents from "../layouts/Career/CareersContents";
 
 export default function DynamicPage(props) {
   return (
     <Page {...props}>
       {props.id === 'pharma' && <PharmaContents />}
       {props.id === 'medical' && <MedicalContents />}
+      {props.id === 'careers' && <CareersContents />}
     </Page>
   )
 }
