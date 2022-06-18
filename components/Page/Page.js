@@ -22,7 +22,9 @@ function Page(props) {
         description={content?.data?.seoDescription}
       />
       {children}
-      <SliceZone slices={content.data.slices} components={components} />
+      {content?.data?.slices && (
+        <SliceZone slices={content.data.slices} components={components} />
+      )}
       <Footer data={footer} />
     </>
   )
