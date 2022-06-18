@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../public/styles/MedicalStyles'
+import styles from '../../layouts/Medical/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
 import CovidStyles from '../../public/styles/CovidpageStyles'
 import clsx from 'clsx'

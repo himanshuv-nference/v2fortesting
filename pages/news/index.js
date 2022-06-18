@@ -1,10 +1,9 @@
 import React from 'react'
 import {Typography as T} from '@material-ui/core'
-import styles from '../../public/styles/MedicalStyles'
+import styles from '../../layouts/Medical/MedicalStyles'
 import PublicationListingStyles
   from '../../public/styles/PublicationListingStyles'
 import * as prismic from '@prismicio/client'
-import {Date} from '@prismicio/react'
 import {useState, useEffect} from 'react'
 
 const theNewYorksTimess = '/NewsRoomImages/Group 1213.svg'

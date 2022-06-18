@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import BlogListingStyles from '../../public/styles/BlogListingStyles'
 
-import styles from '../../public/styles/MedicalStyles'
+import styles from '../../layouts/Medical/MedicalStyles'
 import * as prismic from '@prismicio/client'
 import { useState, useEffect } from 'react'
 import Pagination from '../../components/Pagination/Pagination'

@@ -3,7 +3,7 @@ import React from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import useStyles from '../../public/styles/HomepageStyles'
-import styles from '../../public/styles/MedicalStyles'
+import styles from './MedicalStyles'
 import LowerSlider from '../../components/LowerSlider'
 import * as prismic from '@prismicio/client'
 
@@ -29,24 +29,7 @@ const ncong = '/MedicalPageImages/Frame 1258.png'
 const tringul = '/HomePageImages/icon_2.svg'
 const signals = '/HomePageImages/icon_3 (1).svg'
 const paramanaLogo = '/nference-web/MedicalPageImages/Group4320.svg'
-//Data fetching from Prismic
-const apiEndpoint = 'https://nference.prismic.io/api/v2'
-const accessToken =
-  'MC5ZUi1ZbXhJQUFDd0FXY05N.FEXvv73vv73vv70L77-977-977-9bVlJeh8dfO-_vQUpMzEMYO-_ve-_ve-_vVfvv70JS--_vQg' // This is where you would add your access token for a Private repository
 
-const client = prismic.createClient(apiEndpoint, { accessToken })
-
-export async function getStaticProps() {
-  const responseforLowerSlider = await client.query(
-    prismic.predicate.at('document.type', 'publications'),
-  )
-  const pubInfo = responseforLowerSlider.results
-  return {
-    props: {
-      pubInfo: pubInfo,
-    },
-  }
-}
 function ForMedical({ pubInfo }) {
   const medicalStyles = styles()
   const homepageStyles = useStyles()

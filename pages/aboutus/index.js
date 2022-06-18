@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Medicalstyles from '../../public/styles/MedicalStyles'
+import Medicalstyles from '../../layouts/Medical/MedicalStyles'
 import PharmaStyles from '../../public/styles/PharmaStyles'
 import AboutusStyle from '../../public/styles/AboutusStyle'
 import { Icon } from '@material-ui/core'
@@ -27,7 +27,7 @@ const SVPsoftware = '/AboutusImages/image 147.svg'
 const SVPdatascience = '/AboutusImages/Mask Group.png'
 const CPOpramana = '/AboutusImages/Prasanth_photo.png'
 const SVPenginnering = '/AboutusImages/image 148.svg'
-import { RichText } from '@prismicio/react'
+import * as prismicH from '@prismicio/helpers'
 
 const apiEndpoint = 'https://nference.prismic.io/api/v2'
 const accessToken =
@@ -451,7 +451,7 @@ function Aboutus() {
             </div>
             <div className={aboutusStyles.desc}>
               <T className={pharmaStyles.imagedesc}>
-                {RichText.asText(bios[0].data.bios)}
+                {prismicH.asText(bios[0].data.bios)}
               </T>
             </div>
           </div>

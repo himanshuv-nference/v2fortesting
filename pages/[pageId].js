@@ -1,8 +1,15 @@
 import { fetchPrismicGlobals, prismicClient } from '../utils/prismic'
 import { Page } from '../components'
+import PharmaContents from '../layouts/Pharma/PharmaContents'
+import MedicalContents from '../layouts/Medical/MedicalContents'
 
 export default function DynamicPage(props) {
-  return <Page {...props} />
+  return (
+    <Page {...props}>
+      {props.id === 'pharma' && <PharmaContents />}
+      {props.id === 'medical' && <MedicalContents />}
+    </Page>
+  )
 }
 
 export async function getStaticPaths() {
