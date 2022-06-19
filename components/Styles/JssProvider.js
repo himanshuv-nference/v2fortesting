@@ -19,7 +19,7 @@ const jss = create({
 
 export default function JssProvider({ children, ...rest }) {
   return (
-    <StylesProvider jss={jss} {...rest}>
+    <StylesProvider jss={jss} {...rest} injectFirst={false}>
       {children}
     </StylesProvider>
   )

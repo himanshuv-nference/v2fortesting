@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../../slices'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 function Page(props) {
   const { children } = props
