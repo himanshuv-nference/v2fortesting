@@ -1,0 +1,345 @@
+{
+  "slices": {
+    "components": {
+      "grid": {
+        "library": "slices",
+        "id": "grid",
+        "name": "Grid",
+        "description": "Grid",
+        "model": {
+          "id": "grid",
+          "type": "SharedSlice",
+          "name": "Grid",
+          "description": "Grid",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Grid",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,strong,em,hyperlink"
+                  }
+                },
+                "border": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Add gradient border above image",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  }
+                },
+                "centerText": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Center Text",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                },
+                "columnSize": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Column Size",
+                    "placeholder": "300"
+                  }
+                }
+              },
+              "items": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "multi": "heading5,strong,em"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,strong,em,hyperlink"
+                  }
+                },
+                "photo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Photo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "expandedDescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Expanded Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "grid",
+            "items": [
+              {
+                "title": [
+                  {
+                    "type": "heading5",
+                    "text": "Drive ubiquitous metrics",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Adipisicing laboris labore ullamco esse duis quis ullamco Lorem nulla qui minim irure non. Ex mollit et in minim est. Nostrud dolor proident nisi do nisi.",
+                    "spans": []
+                  }
+                ],
+                "photo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+                },
+                "expandedDescription": [
+                  {
+                    "type": "paragraph",
+                    "text": "Deserunt cillum ea elit cupidatat id ea id do consectetur aliquip. Minim id mollit aliquip magna in. Lorem labore irure quis do.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "title": [
+                  {
+                    "type": "heading5",
+                    "text": "Orchestrate intuitive functionalities",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Velit veniam anim occaecat sit ea nostrud laborum pariatur labore et.",
+                    "spans": []
+                  }
+                ],
+                "photo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+                },
+                "expandedDescription": [
+                  {
+                    "type": "paragraph",
+                    "text": "Irure deserunt eu magna enim pariatur fugiat culpa proident nostrud anim irure.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "title": [
+                  {
+                    "type": "heading5",
+                    "text": "Deliver visionary experiences",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Laborum Lorem qui reprehenderit dolor laborum aute ex nostrud ad nisi.",
+                    "spans": []
+                  }
+                ],
+                "photo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+                },
+                "expandedDescription": [
+                  {
+                    "type": "paragraph",
+                    "text": "Consectetur ut minim esse amet anim esse ipsum in dolor aliqua quis culpa amet eu.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Integrate back-end vortals",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Officia ea id velit quis consectetur fugiat consequat ullamco sint eu deserunt.",
+                  "spans": []
+                }
+              ],
+              "border": false,
+              "centerText": false,
+              "columnSize": 300
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/austinsheppard/dev/nference/nference-web/.slicemachine/assets/slices/Grid/default/preview.png",
+            "width": 800,
+            "height": 1053
+          }
+        }
+      },
+      "rich_text": {
+        "library": "slices",
+        "id": "rich_text",
+        "name": "RichText",
+        "description": "RichText",
+        "model": {
+          "id": "rich_text",
+          "type": "SharedSlice",
+          "name": "RichText",
+          "description": "RichText",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RichText",
+              "primary": {},
+              "items": {
+                "richText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Rich Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "rich_text",
+            "items": [
+              {
+                "richText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Magna ea laboris pariatur ea Lorem elit eu do. Culpa ex nisi ipsum aute esse irure magna enim duis adipisicing. Ullamco anim officia non laborum ut magna et anim eu.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "richText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Elit laborum aliquip ad. In labore do non nostrud esse ut aliquip minim velit et. Nulla incididunt amet eu ut id veniam dolor et ipsum.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "richText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Magna est anim duis. Duis magna exercitation nisi voluptate cillum sint proident officia Lorem. Duis eiusmod irure consectetur mollit nostrud ad eu dolore laborum magna occaecat ex.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "richText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Consequat do enim ea consequat sint nostrud. Voluptate est ipsum mollit enim ad exercitation dolore dolor nostrud. Eu duis ut ex ad ut.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "richText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Non aliqua proident eiusmod quis elit est exercitation. Dolor qui in cupidatat esse Lorem ullamco mollit magna est consectetur incididunt nulla. Amet in anim duis aliqua ad.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/austinsheppard/dev/nference/nference-web/.slicemachine/assets/slices/RichText/default/preview.png",
+            "width": 800,
+            "height": 424
+          }
+        }
+      }
+    }
+  }
+}
