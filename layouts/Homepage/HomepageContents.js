@@ -39,7 +39,6 @@ const ProductIcon = '/HomePageImages/Group 4199.svg'
 const Covidlogo = '/CovidPageImages/Group 4221.svg'
 //variable for video
 const KSK = '/video/homePage.mp4'
-const thumbNail = '/video/image58.svg'
 
 function HomepageContents({ data, pubInfo }) {
   const styles = useStyles()

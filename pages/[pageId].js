@@ -15,9 +15,12 @@ export default function DynamicPage(props) {
 }
 
 export async function getStaticPaths() {
+  const excludedPages = new Set(['news', 'publications', 'blog'])
   const pages = await prismicClient.getAllByType('page')
   const ids = pages.map((page) => page.uid)
-  const paths = ids.map((id) => ({ params: { pageId: id } }))
+  const paths = ids
+    .filter((id) => !excludedPages.has(id))
+    .map((id) => ({ params: { pageId: id } }))
 
   return {
     paths,

@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic'
 import { Icon } from '@material-ui/core'
 import ClearIcon from '@material-ui/icons/Clear'
 import NferxModal from '../../components/NferxModal/NferxModal'
+import * as prismicH from '@prismicio/helpers'
 
 const DynamicOpenSeaViewer = dynamic(
   () => import('../../components/SeaDragonViewer'),
@@ -98,7 +99,7 @@ export default function BlogPostContents({ article }) {
           </div>
         </div>
         <div className={listingStyles.blogDesc}>
-          <T className={style.title}>{article.data.blog_title[0].text}</T>
+          <T className={style.title}>{prismicH.asText(article.data.blog_title)}</T>
         </div>
         <div>
           <img
@@ -106,7 +107,7 @@ export default function BlogPostContents({ article }) {
             src={article.data.blog_image.url}
           />
           <T className={listingStyles.newsDesc}>
-            {article.data.blog_content[0].text}
+            {prismicH.asText(article.data.blog_content)}
           </T>
         </div>
         <div>
@@ -120,7 +121,7 @@ export default function BlogPostContents({ article }) {
                   }}
                   className={listingStyles.blogImage}
                   src={obj.primary.image.url}
-                ></img>
+                />
                 {open && (
                   <NferxModal
                     contentPad
