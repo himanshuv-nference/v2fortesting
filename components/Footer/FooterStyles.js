@@ -22,48 +22,35 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerText: {
-    fontSize: '14px',
+    display: 'block',
+    fontSize: theme.typography.fontSize,
     fontWeight: 'normal',
-    lineHeight: '17px',
-    color: '#627181',
-    marginBottom: '16px',
+    color: theme.typography.colorLight,
+    textDecoration: 'none',
+
+    '& + &': {
+      marginTop: theme.pad.sm,
+    },
   },
-  footercontainer: {
+  menusContainer: {
     display: 'flex',
-    gap: '52px',
+    gap: theme.pad.xl,
   },
-  sociallogos: {
-    paddingTop: '90px',
+  firstContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   footerlogos: {
-    paddingRight: '12px',
+    '& + &': {
+      marginLeft: theme.pad.sm,
+    },
   },
   copyrightDesktop: {
-    paddingTop: '200px',
-    paddingLeft: '45%',
-    display: 'block',
-    ['@media (max-width:780px)']: {
-      paddingTop: '20px',
-      paddingLeft: '0px',
-      display: 'none',
-    },
-  },
-  copyrightMobile: {
-    paddingTop: '200px',
-    paddingLeft: '45%',
-    display: 'none',
-    ['@media (max-width:780px)']: {
-      paddingTop: '20px',
-      paddingLeft: '0px',
-      display: 'block',
-    },
+    marginTop: theme.pad.xl,
   },
   footerhead: {
-    marginBottom: '28px',
-    marginTop: '96px',
-    ['@media (max-width:780px)']: {
-      marginTop: '35px',
-    },
+    marginBottom: theme.pad.md,
   },
   formhead: {
     fontSize: '44px',
@@ -166,9 +153,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     marginTop: '16px',
     marginBottom: '58px',
-  },
-  link: {
-    textDecorationLine: 'none',
   },
   widthName: {
     width: '200px',

@@ -9,26 +9,26 @@ const useStyles = makeStyles((theme) => {
       backgroundColor: theme.palette.primary.main,
     },
     secondary: {
-      backgroundColor: '#FFF1EE'
+      backgroundColor: '#FFF1EE',
     },
     root: {
       display: 'flex',
       justifyContent: 'center',
       maxWidth: '100%',
       minWidth: '100%',
+      padding: [theme.pad.xl, theme.pad.lg],
+
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.pad.sm,
+      },
     },
     grey: {
       backgroundColor: theme.palette.background.default,
     },
     inner: {
       flex: 1,
-      padding: [theme.pad.xl, theme.pad.md],
       width: '100%',
       maxWidth: theme.sectionWidth.md,
-
-      [theme.breakpoints.down('sm')]: {
-        padding: [theme.pad.md, theme.pad.sm],
-      },
     },
     lg: {
       maxWidth: theme.sectionWidth.lg,

@@ -9,8 +9,10 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     display: 'flex',
+    flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
+    maxWidth: theme.sectionWidth.xl,
   },
   navItems: {
     [theme.breakpoints.down('sm')]: {
@@ -18,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     display: 'flex',
     flexDirection: 'row',
-    gap: theme.pad.lg,
+    gap: theme.pad.md,
     alignItems: 'center',
   },
   mobile: {
@@ -30,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
 
   body: {
     padding: [theme.pad.sm, theme.pad.lg],
+    display: 'flex',
+    justifyContent: 'center',
 
     [theme.breakpoints.down('sm')]: {
       padding: theme.pad.sm,

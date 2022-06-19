@@ -8,7 +8,7 @@ import { components } from '../../slices'
 
 function Page(props) {
   const { children } = props
-  const { content, mainMenu, footer } = props
+  const { content, mainMenu, footer, theme } = props
 
   return (
     <>
@@ -21,7 +21,7 @@ function Page(props) {
       {content?.data?.slices && (
         <SliceZone slices={content.data.slices} components={components} />
       )}
-      <Footer data={footer} />
+      <Footer footer={footer} theme={theme} />
     </>
   )
 }
