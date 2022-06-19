@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   topline: {
@@ -9,20 +9,16 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     display: 'flex',
-    flexDirection: 'row',
-    paddingBottom: '20px',
-    ['@media (max-width:780px)']: {
-      gap: '58%',
-      marginBottom: '0px',
-    },
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   navItems: {
-    ['@media (max-width:780px)']: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
     display: 'flex',
     flexDirection: 'row',
-    gap: '32px',
+    gap: theme.pad.lg,
     alignItems: 'center',
   },
   mobile: {
@@ -33,23 +29,20 @@ const useStyles = makeStyles((theme) => ({
   },
 
   body: {
-    ['@media (max-width:780px)']: {
-      marginLeft: '16px',
+    padding: [theme.pad.sm, theme.pad.lg],
+
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.pad.sm,
     },
-    marginLeft: '120px',
-    marginTop: '16px',
-  },
-  image: {
-    flex: '0.9',
   },
   selected: {
     background: '#1A2530',
-    borderRadius: '500px',
+    fontSize: theme.typography.fontSizeLg,
+    borderRadius: 500,
     color: 'white',
-    padding: '10px 20px 10px 20px',
-    '&:hover': {
-      cursor: 'pointer',
-    },
+    padding: [theme.pad.xs * 1.5, theme.pad.sm],
+    cursor: 'pointer',
+
     ['@media (max-width:780px)']: {
       width: 'max-content',
       marginLeft: '16px',
@@ -62,12 +55,11 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
-    color: '#000000',
+    color: theme.typography.color,
+    fontSize: theme.typography.fontSizeLg,
   },
-
   activeLink: {
     textDecoration: 'underline',
-    color: '#000000',
   },
   mobileNav: {
     display: 'flex',
@@ -262,7 +254,7 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     background: 'white',
     zIndex: 1,
-  }
+  },
 }))
 
 // const useStyle = makeStyles({

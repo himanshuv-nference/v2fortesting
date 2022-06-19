@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import PublicationListingStyles from '../../public/styles/PublicationListingStyles'
 import styles from '../../layouts/Medical/MedicalStyles'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const pdffull = '/PublicationPageImages/Group 3895.svg'
 const twittericon = '/FooterImages/Combined-Shape (1).svg'

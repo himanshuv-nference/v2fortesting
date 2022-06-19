@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { useState } from 'react'
 const twittericon = '/FooterImages/Combined-Shape (1).svg'
 const linkIcon = '/FooterImages/Group 3627.svg'

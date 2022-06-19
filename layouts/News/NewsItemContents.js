@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { PrismicRichText } from '@prismicio/react'
 import Link from 'next/link'
 import * as prismicH from '@prismicio/helpers'

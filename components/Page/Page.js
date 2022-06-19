@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
-import Navbar from '../Navbar'
+import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
-import { useRouter } from 'next/router'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../../slices'
 
@@ -11,12 +10,9 @@ function Page(props) {
   const { children } = props
   const { content, mainMenu, footer } = props
 
-  const router = useRouter()
-  const showHeader = router.pathname !== '/covid' // TODO find a better way to do this
-
   return (
     <>
-      {showHeader && <Navbar menu={mainMenu} />}
+      <Navbar menu={mainMenu} />
       <NextSeo
         title={content?.data?.seoTitle}
         description={content?.data?.seoDescription}

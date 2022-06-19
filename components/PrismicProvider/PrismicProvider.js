@@ -3,7 +3,7 @@ import { PrismicProvider as RawPrismicProvider } from '@prismicio/react'
 import { Typography } from '@material-ui/core'
 import Link from 'next/link'
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -95,11 +95,13 @@ export default function PrismicProvider(props) {
         // span:
       }}
       linkResolver={linkResolver}
-      internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <a {...props}>{children}</a>
-        </Link>
-      )}
+      internalLinkComponent={({ href, children, ...props }) => {
+        return (
+          <Link href={href}>
+            <a {...props}>{children}</a>
+          </Link>
+        )
+      }}
     >
       {props.children}
     </RawPrismicProvider>

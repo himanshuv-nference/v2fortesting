@@ -1,7 +1,6 @@
 import { fetchPrismicGlobals, prismicClient } from '../utils/prismic'
 import { Page } from '../components'
 import HomepageContents from '../layouts/Homepage/HomepageContents'
-import * as prismic from '@prismicio/client'
 
 export default function Homepage(props) {
   return (
@@ -11,22 +10,20 @@ export default function Homepage(props) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const [content, data, pubInfo, globals] = await Promise.all([
-    prismicClient.getByType('homepage'),
-    prismicClient.query(
-      prismic.predicate.at('document.type', 'homepage_carousel'),
-    ),
-    prismicClient.query(prismic.predicate.at('document.type', 'publications')),
-    fetchPrismicGlobals,
+    prismicClient.getSingle('homepage'),
+    prismicClient.getAllByType('homepage_carousel'),
+    prismicClient.getAllByType('publications'),
+    fetchPrismicGlobals(),
   ])
 
   return {
     props: {
       id: 'homepage',
       content, // must be named content
-      data: data.results,
-      pubInfo: pubInfo.results,
+      data,
+      pubInfo,
       ...globals,
     },
   }

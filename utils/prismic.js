@@ -43,6 +43,7 @@ export const fetchPrismicGlobals = async () => {
     prismicClient.getSingle('main-menu'),
     prismicClient.getSingle('footer'),
   ])
+
   return {
     theme,
     mainMenu,

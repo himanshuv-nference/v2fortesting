@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { ButtonBase, Typography } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import GridItemModal from './GridItemModal'
 import cx from 'clsx'
 import { PrismicRichText } from '@prismicio/react'

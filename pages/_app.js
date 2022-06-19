@@ -1,6 +1,6 @@
 import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { QueryProvider } from '../components'
 import JssProvider from '../components/Styles/JssProvider'
 import ThemeProvider from '../components/Styles/ThemeProvider'

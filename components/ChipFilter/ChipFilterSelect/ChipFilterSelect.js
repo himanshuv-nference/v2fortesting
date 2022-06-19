@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import cx from 'clsx'
 import _ from 'lodash'
 import PropTypes from 'prop-types'

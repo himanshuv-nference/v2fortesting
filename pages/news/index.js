@@ -16,7 +16,7 @@ export async function getStaticProps() {
   const [content, news, globals] = await Promise.all([
     prismicClient.getByUID('page', id),
     prismicClient.getAllByType('news_room'),
-    fetchPrismicGlobals,
+    fetchPrismicGlobals(),
   ])
 
   return {

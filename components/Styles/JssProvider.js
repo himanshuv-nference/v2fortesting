@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { create } from 'jss'
 import jssExpand from 'jss-plugin-expand'
-import { StylesProvider, jssPreset } from '@material-ui/styles'
+import { StylesProvider, jssPreset } from '@material-ui/core/styles'
 
 /*
  * This provider allows us to customize which jss plugins

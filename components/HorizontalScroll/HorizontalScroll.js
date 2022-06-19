@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import cx from 'clsx'
 import { Hidden, IconButton } from '@material-ui/core'
 import LeftIcon from '@material-ui/icons/KeyboardArrowLeft'

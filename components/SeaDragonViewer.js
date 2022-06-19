@@ -4,7 +4,7 @@ import OpenSeaDragon from "openseadragon";
 import ZoomInIcon from '@material-ui/icons/ZoomIn';
 import ZoomOutIcon from '@material-ui/icons/ZoomOut';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const viewerStyles = makeStyles({
 

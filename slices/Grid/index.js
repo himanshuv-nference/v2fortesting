@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import Section from '../../components/Section/Section'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import cx from 'clsx'
 import GridItem from './GridItem'
 

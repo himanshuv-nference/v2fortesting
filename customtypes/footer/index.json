@@ -13,9 +13,16 @@
             "link": {
               "type": "Link",
               "config": {
-                "label": "Link",
+                "label": "Link Destination",
                 "placeholder": "",
                 "select": null
+              }
+            },
+            "linkText": {
+              "type": "Text",
+              "config": {
+                "label": "Link Text",
+                "placeholder": ""
               }
             }
           }
@@ -29,9 +36,16 @@
             "link": {
               "type": "Link",
               "config": {
-                "label": "Link",
+                "label": "Link Destination",
                 "placeholder": "",
                 "select": null
+              }
+            },
+            "linkText": {
+              "type": "Text",
+              "config": {
+                "label": "Link Text",
+                "placeholder": ""
               }
             }
           }
