@@ -33,6 +33,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '0 !important',
     color: theme.typography.colorLight,
   },
+  img: {
+    filter: `grayscale(1)`,
+    transition: theme.transitions.create('filter', { duration: 500 }),
+    '&:hover': {
+      filter: 'none',
+    },
+  },
 }))
 
 const GridItem = ({ item, slice, hasExpand }) => {
@@ -48,6 +55,7 @@ const GridItem = ({ item, slice, hasExpand }) => {
       {slice.primary.border && <div className={classes.fancyBorder} />}
       {item.photo?.url && (
         <Image
+          className={classes.img}
           src={item.photo?.url}
           alt={item.photo?.alt}
           width={300}
@@ -68,7 +76,11 @@ const GridItem = ({ item, slice, hasExpand }) => {
         field={item.description}
         components={{
           paragraph: ({ children, key }) => (
-            <Typography variant={'body1'} key={key} className={classes.description}>
+            <Typography
+              variant={'body1'}
+              key={key}
+              className={classes.description}
+            >
               {children}
             </Typography>
           ),
