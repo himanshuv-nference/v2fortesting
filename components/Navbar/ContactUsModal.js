@@ -171,7 +171,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                   </div>
 
                   <div className={styles.learnmore} onClick={handleSubmit}>
-                    <T className={styles.learnoretext}>Let's Talk</T>
+                    <T className={styles.learnoretext}>Let's Talk..</T>
                   </div>
                 </form>
               </div>
