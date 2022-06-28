@@ -99,7 +99,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          company: e,
+                          company: e.target.value,
                         })
                       }
                       placeholder={'Company'}
@@ -108,7 +108,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                     />
                     <TextField
                       value={formData.title}
-                      onChange={(e) => setFormData({ ...formData, title: e })}
+                      onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                       placeholder={'Title'}
                       variant={'standard'}
                       className={styles.nameInput}
@@ -120,7 +120,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          firstName: e,
+                          firstName: e.target.value,
                         })
                       }
                       className={styles.nameInput}
@@ -132,7 +132,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          lastName: e,
+                          lastName: e.target.value,
                         })
                       }
                       className={styles.nameInput}
@@ -142,7 +142,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                   </div>
                   <div className={styles.inputemailDiv}>
                     <TextField
-                      onChange={(e) => setFormData({ ...formData, email: e })}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       value={formData.email}
                       placeholder={'Email'}
                       variant={'standard'}
@@ -160,7 +160,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          message: e,
+                          message: e.target.value,
                         })
                       }
                       value={formData.message}

@@ -158,7 +158,7 @@ export default function FooterContactForm() {
                 variant={'standard'}
                 className={styles.inputmessage}
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e })}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
             </div>
 
